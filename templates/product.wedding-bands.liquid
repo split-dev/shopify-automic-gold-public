@@ -1,0 +1,212 @@
+{% comment %} Get first variant, or deep linked one {% endcomment %}
+{% assign current_variant = product.selected_or_first_available_variant %}
+
+<div itemscope itemtype="http://schema.org/Product" id="ProductWrapper" class="{{ product.handle }}">
+
+    <meta itemprop="url" content="{{ shop.url }}{{ product.url }}">
+    <meta itemprop="image" content="{{ product.featured_image.src | img_url: 'grande' }}">
+    <meta itemprop="brand" content="Automic Gold">
+    <meta itemprop="material" content="Solid 14k Gold">
+    <span class="visually-hidden" itemprop="name">{{ product.title }}</span>
+
+    <div class="product">
+        {% include 'breadcrumb' %}
+
+        <div class="product-heroine no--mobile-padding no--tablet-padding">
+
+            <div class="product-images">
+                <div id="three-d-content"></div>
+            </div>
+
+            <div class="product-plate ">
+
+                <div itemprop="offers" itemscope itemtype="http://schema.org/Offer" style="width: 100%;">
+                    <meta itemprop="priceCurrency" content="USD">
+                    <meta itemprop="url" content="{{ product.url }}">
+                    <link itemprop="availability" href="http://schema.org/InStock">
+
+                    <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm" class="product-plate__section">
+                        <div class="product-header">
+                            <div class="product-header__column">
+                                <div class="wedding-collection-container">
+                                    <div class="wedding-collection">Automic Gold Wedding Collection</div>
+                                </div>
+
+                                <h1 class="product-header__title">
+                                    {{ product.title }}
+                                </h1>
+                            </div>
+
+                            <span id="ProductPrice" class="product-header__price" itemprop="price" content="{{ current_variant.price | money_without_currency }}">
+                                <span class="product-header__price-sign">$</span>{{ current_variant.price | money_without_trailing_zeros | remove: "$"  }}
+                            </span>
+                        </div>
+
+                        {% if
+                            product.handle == 'curvy-mirror-band' or
+                            product.handle == 'curvy-matte-band' or
+                            product.handle == 'curvy-hammered-band' or
+                            product.handle == 'curvy-raw-band' or
+                            product.handle == 'curvy-wood-band'
+
+                        %}
+                            <input type="hidden" name="shape" value="curvy" id="shape"/>
+                        {% endif %}
+                        {% if
+                            product.handle == 'industrial-mirror-band' or
+                            product.handle == 'industrial-matte-band' or
+                            product.handle == 'industrial-hammered-band' or
+                            product.handle == 'industrial-raw-band' or
+                            product.handle == 'industrial-wood-band'
+                        %}
+                            <input type="hidden" name="shape" value="flat" id="shape"/>
+                        {% endif %}
+
+                        {% if
+                            product.handle == 'curvy-mirror-band' or
+                            product.handle == 'industrial-mirror-band'
+                        %}
+                            <input type="hidden" name="finish" value="mirror" id="finish"/>
+                        {% endif %}
+                        {% if
+                            product.handle == 'curvy-matte-band' or
+                            product.handle == 'industrial-matte-band'
+                        %}
+                            <input type="hidden" name="finish" value="matte" id="finish"/>
+                        {% endif %}
+                        {% if
+                            product.handle == 'curvy-raw-band' or
+                            product.handle == 'industrial-raw-band'
+                        %}
+                            <input type="hidden" name="finish" value="raw" id="finish"/>
+                        {% endif %}
+                        {% if
+                            product.handle == 'curvy-hammered-band' or
+                            product.handle == 'industrial-hammered-band'
+                        %}
+                            <input type="hidden" name="finish" value="hammered" id="finish"/>
+                        {% endif %}
+                        {% if
+                            product.handle == 'curvy-wood-band' or
+                            product.handle == 'industrial-wood-band'
+                        %}
+                            <input type="hidden" name="finish" value="wood" id="finish"/>
+                        {% endif %}
+
+                        {% include 'product-options' %}
+
+                        <select name="id" data-js="master-select" id="productSelect" class="visually-hidden">
+                            {% for variant in product.variants %}
+                                {% if variant.available %}
+                                    <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} data-sku="{{ variant.sku }}" value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money_with_currency }}</option>
+                                {% else %}
+                                    <option disabled="disabled">
+                                        {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+                                    </option>
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+
+                        <div class="buy-box">
+                            <button type="submit" name="add" id="AddToCart" data-js="add-to-cart" class="btn btn--wide buy-box__buy btn--swimming-pink-peach">
+                                <span id="AddToCartText">{{ 'products.product.add_to_cart' | t }}</span>
+                            </button>
+                        </div>
+
+                        <!-- <p class="affirm-as-low-as" data-page-type="product" data-affirm-color="white" data-amount="{{ current_variant.price }}"></p> -->
+
+                        {% if product.handle == 'ring-sizer' %}
+                            <div class="product__shipping-notice">
+                                Ships from New York City &bull; Processing time is 1 to 5 business days
+                            </div>
+                        {% else %}
+                            <div class="product__shipping-notice">
+                                Ships from New York City &bull; Processing time is 1 to 5 business days &bull; Free returns (US only)
+                            </div>
+                        {% endif %}
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="no--padding">
+            <section class="product__wedding-images">
+                {% assign image = product.images[0] %}
+                <img class="lazyload"
+                     alt="Automic Gold Reclaimed Solid 14k Gold {{ image.alt | escape }}"
+                     data-srcset="
+                        {{ image.src | img_url: '500x500' }} 500w,
+                        {{ image.src | img_url: '750x750' }} 750w,
+                        {{ image.src | img_url: '922x922' }} 922w,
+                        {{ image.src | img_url: '1000x1000' }} 1000w,
+                        {{ image.src | img_url: '1125x1125' }} 1125w,
+                        {{ image.src | img_url: '1242x1242' }} 1242w,
+                        {{ image.src | img_url: '1382x1382' }} 1382w,
+                        {{ image.src | img_url: '2000x2000' }} 2000w
+                     "
+                     sizes="
+                        (max-width: 767.98px) calc(100vw),
+                        (min-width: 768px) calc(100vw * 0.6)
+                     "
+                />
+                {% assign image = product.images[1] %}
+                <img class="lazyload"
+                     alt="Automic Gold Reclaimed Solid 14k Gold {{ image.alt | escape }}"
+                     data-srcset="
+                        {{ image.src | img_url: '500x500' }} 500w,
+                        {{ image.src | img_url: '750x750' }} 750w,
+                        {{ image.src | img_url: '922x922' }} 922w,
+                        {{ image.src | img_url: '1000x1000' }} 1000w,
+                        {{ image.src | img_url: '1125x1125' }} 1125w,
+                        {{ image.src | img_url: '1242x1242' }} 1242w,
+                        {{ image.src | img_url: '1382x1382' }} 1382w,
+                        {{ image.src | img_url: '2000x2000' }} 2000w
+                     "
+                     sizes="
+                        (max-width: 767.98px) calc(100vw),
+                        (min-width: 768px) calc(100vw * 0.6)
+                     "
+                />
+            </section>
+        </div>
+
+        <section class="product__description">
+            <h2 class="product__section-heading">The Deets</h2>
+
+            <div class="product__description-text rte" itemprop="description">
+                {{ product.description }}
+            </div>
+
+            <div class="product__specifications">
+                {% include 'product-specifications' %}
+            </div>
+        </section>
+    </div>
+
+    {% if
+        product.handle == 'curvy-mirror-band' or
+        product.handle == 'curvy-matte-band' or
+        product.handle == 'curvy-hammered-band' or
+        product.handle == 'curvy-raw-band' or
+        product.handle == 'curvy-wood-band' or
+        product.handle == 'industrial-mirror-band' or
+        product.handle == 'industrial-matte-band' or
+        product.handle == 'industrial-hammered-band' or
+        product.handle == 'industrial-raw-band' or
+        product.handle == 'industrial-wood-band'
+    %}
+        {% include 'wedding-sizes' %}
+    {% endif %}
+
+
+    <!-- {% unless product.handle == 'ring-sizer' %}
+        <section class="spaced--twice">
+            <h2 class="product__section-heading">Good to Know</h2>
+            {% include 'product-features' %}
+        </section>
+    {% endunless %} -->
+
+    {% include 'related-products' %}
+
+    {% include 'back-to-category' %}
+</div>

@@ -1,0 +1,304 @@
+<div class="page-width">
+    {% render 'breadcrumb' %}
+</div>
+
+<div class="page-width product-heroine no--mobile-padding no--tablet-padding">
+    <div class="product-images">
+        {% include "product-images" %}
+    </div>
+
+    <div class="product-plate">
+
+        <div itemprop="offers" itemscope itemtype="http://schema.org/Offer" style="width: 100%;">
+            <meta itemprop="priceCurrency" content="USD">
+            <meta itemprop="url" content="{{ product.url }}">
+            <link itemprop="availability" href="http://schema.org/InStock">
+
+            <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm" class="product-plate__section">
+                <div class="product-header">
+                    <div class="product-header__column">
+                        {% if
+                            product.handle == 'disk-earrings' or
+                            product.handle == 'disk-charm' or
+                            product.handle == 'disk-necklace' or
+                            product.handle == 'disk-ring'
+                        %}
+                            <div class="online-exclusive-container">
+                                <div class="online-exclusive">automicgold.com exclusive</div>
+                            </div>
+                        {% endif %}
+
+                        {% if
+                            product.handle == 'times-up-studs' or
+                            product.handle == 'times-up-earring'
+                        %}
+                            <div class="online-exclusive-container">
+                                <div class="online-exclusive">30% of sales goes to TIME'S UP</div>
+                            </div>
+                        {% endif %}
+
+                        {% if
+                            product.handle == 'one-of-a-kind-diamond-necklace'
+                        %}
+                            <div class="one-of-a-kind-container">
+                                <div class="one-of-a-kind-text">One of a kind item</div>
+                                <div class="one-of-a-kind-small">
+                                    This design is the only one in the world
+                                </div>
+                            </div>
+                        {% endif %}
+
+                        <h1 class="product-header__title">
+                            {{ product.title }}
+                        </h1>
+
+                        {% if product.handle == 'chain-ring-set' %}
+                            <p class="product__option-ring-set">A set of four rings of the same size</p>
+                        {% endif %}
+
+                        {% if product.handle != 'ring-sizer' and product.type != 'Loose Gem' and product.title != 'Journal' and product.title != 'Platinum Sapphire Ring' and product.title != "Wide Hoop" and product.title != "Small Tube Hoop" and product.title != "Small Endless Hoop" and product.title != "Large Tube Hoop" and product.title != "Large Endless Hoop" and product.title != "Polishing Cloth" %}
+                            <div class="product-header__material">Solid 14k Gold</div>
+                        {% endif %} 
+
+                        {% if product.tags contains 'hollow-hoop' %}
+                            <div class="product-header__material">Hollow 14k Gold</div>
+                        {% endif %}
+                        
+
+                        {% if product.type == 'Loose Gem' %}
+                            <div class="product-header__material">Loose Gem</div>
+                        {% endif %}
+                        
+                    </div>
+                    <span id="ProductPrice" class="product-header__price" itemprop="price" content="{{ current_variant.price | money_without_currency }}">
+                        <span class="product-header__price-sign">$</span>{{ current_variant.price | money_without_trailing_zeros | remove: "$"  }}
+                    </span>
+                </div>
+              
+                {% comment %} NO RETURNS ON BODY JEWELRY {% endcomment %}
+                {% if
+                    product.handle == 'circle-nose-stud' or
+                    product.handle == 'diamond-nose-stud' or
+                    product.handle == 'nose-ring-hoop' or
+                    product.handle == 'line-septum' or
+                    product.handle == 'triangle-septum' or
+                    product.handle == 'gemstone-septum' or
+                    product.handle == 'double-circle-septum' or 
+                    product.tags contains 'flatback' or
+                    product.tags contains 'piercing'
+                %}
+                  
+                    <div class="product__return-notice highlighted">
+                        Please note: All pierced jewelry is final sale for hygienic reasons.
+                    </div>
+                {% endif %}
+
+                {% render 'okendo-reviews-product-rating-summary', product: product %}
+
+                {% include 'product-options' %}
+
+                <select name="id" data-js="master-select" id="productSelect" class="visually-hidden">
+                    {% for variant in product.variants %}
+                        {% if variant.available %}
+                            <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} data-sku="{{ variant.sku }}" value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money_with_currency }}</option>
+                        {% else %}
+                            <option disabled="disabled">
+                                {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+                            </option>
+                        {% endif %}
+                    {% endfor %}
+                </select>
+
+                <div class="buy-box">
+                  <button type="submit" name="add" id="AddToCart" data-js="add-to-cart" class="btn btn--wide buy-box__buy btn--swimming-pink-peach">
+                      <span id="AddToCartText">{{ 'products.product.add_to_cart' | t }}</span>
+                  </button>
+                </div>
+
+                {%- include 'afterpay' -%}
+
+                {% if product.handle == 'ring-sizer' %}
+                    <div class="product__shipping-notice">
+                        Ships from New York City &bull; Processing time is 1 to 5 business days
+                    </div>
+                {% elsif product.tags contains 'processing time' %}
+                    <div class="product__shipping-notice">
+                        Ships from New York City &bull; processing time is 4-8 business days &bull; Free returns (US only)
+                    </div>
+                {% elsif product.tags contains 'made_to_order' %}
+                <div class="product__shipping-notice">
+                    Ships from New York City &bull; processing time is 4-8 business days &bull; Free returns (US only)
+                </div>
+                {% else %}
+                    <div class="product__shipping-notice">
+                        Ships from New York City &bull; Processing time is 1 to 5 business days &bull; Free returns (US only)
+                    </div>
+                {% endif %}
+            </form>
+
+            {% if product.handle == 'keeping-it-as-backup' %}
+                <form id="BackorderForm" class="backorder">
+                    <p>
+                        <label for="backorder-email" class="backorder__text">We will notify you when this item becomes available</label>
+                    </p>
+                    <input type="hidden" id="backorder-title" value="{{ product.title }}">
+                    <input type="hidden" id="backorder-url" value="{{ shop.url }}{{ product.url }}">
+
+                    <p class="input-group backorder__group">
+                        <input id="backorder-email" class="backorder__input input-group-field" type="email" placeholder="Email address" value="{{ customer.email }}">
+                    </p>
+
+                    <input id="backorder-submit" class="backorder__button btn" type="submit" value="Notify me">
+
+                    <div class="backorder__message" id="backorder-message"></div>
+                </form>
+            {% endif %}
+
+            <form id="BackorderForm" class="backorder" style="display: none">
+                <label for="backorder-email" class="backorder__text">We will notify you when this item becomes available</label>
+                <input type="hidden" id="backorder-title" value="{{ product.title }}">
+                <input type="hidden" id="backorder-url" value="{{ shop.url }}{{ product.url }}">
+                <div class="input-group backorder__group">
+                    <input id="backorder-email" class="backorder__input input-group-field" type="email" placeholder="Email address" value="{{ customer.email }}">
+                    <span class="input-group-btn">
+                        <input id="backorder-submit" class="backorder__button btn btn--small btn--peach-inverted" type="submit" value="Notify me">
+                    </span>
+                </div>
+                <div class="backorder__message" id="backorder-message"></div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.main-product.name",
+  "tag": "section",
+  "blocks": [
+    {
+      "type": "@app"
+    },
+    {
+      "type": "title",
+      "name": "t:sections.main-product.blocks.title.name",
+      "limit": 1
+    },
+    {
+      "type": "price",
+      "name": "t:sections.main-product.blocks.price.name",
+      "limit": 1
+    },
+    {
+      "type": "variant_picker",
+      "name": "t:sections.main-product.blocks.variant_picker.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "select",
+          "id": "picker_type",
+          "options": [
+            {
+              "value": "dropdown",
+              "label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.options__1.label"
+            },
+            {
+              "value": "button",
+              "label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.options__2.label"
+            }
+          ],
+          "default": "button",
+          "label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.label"
+        }
+      ]
+    },
+    {
+      "type": "buy_buttons",
+      "name": "t:sections.main-product.blocks.buy_buttons.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "show_dynamic_checkout",
+          "default": true,
+          "label": "t:sections.main-product.blocks.buy_buttons.settings.show_dynamic_checkout.label",
+          "info": "t:sections.main-product.blocks.buy_buttons.settings.show_dynamic_checkout.info"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_gift_card_recipient",
+          "default": true,
+          "label": "t:sections.main-product.blocks.buy_buttons.settings.show_gift_card_recipient.label",
+          "info": "t:sections.main-product.blocks.buy_buttons.settings.show_gift_card_recipient.info"
+        }
+      ]
+    },
+    {
+      "type": "description",
+      "name": "t:sections.main-product.blocks.description.name",
+      "limit": 1
+    },
+    {
+      "type": "custom_liquid",
+      "name": "t:sections.custom-liquid.name",
+      "settings": [
+        {
+          "type": "liquid",
+          "id": "custom_liquid",
+          "label": "t:sections.custom-liquid.settings.custom_liquid.label",
+          "info": "t:sections.custom-liquid.settings.custom_liquid.info"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_mobile_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 24
+    }
+  ]
+}
+{% endschema %}

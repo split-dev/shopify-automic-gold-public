@@ -1,0 +1,29 @@
+{% capture img_url %}{{ type }}-lineup.jpg{% endcapture %}
+
+{% capture link %}{{ shop.url }}{{ collection.url }}{% unless current_tags contains tag %}/{{ tag }}{% endunless %}{% endcapture %}
+
+{% comment %} {% assign is_faded = false %}
+{% if current_tags %}
+    {% assign is_faded = true %}
+    {% if current_tags contains tag %}
+        {% assign is_faded = false %}
+    {% endif %}
+{% endif %} {% endcomment %}
+
+<li>
+    <a class="holiday-lineup__line" href="{{ link }}products/{{ url }}" title="Automic Gold {{ name }} {{ type | capitalize }}">
+        <img
+            class="lazyload content"
+            data-srcset="
+                {{ img_url | file_img_url: '130x240' }} 130w,
+                {{ img_url | file_img_url: '260x420' }} 260w,
+                {{ img_url | file_img_url: '390x630' }} 390w,
+                {{ img_url | file_img_url: '520x840' }} 520w,
+                {{ img_url | file_img_url: '780x1260' }} 780w
+            "
+            sizes="{{ sizes }}"
+            alt="Automic Gold {{ name }} {{ type | capitalize }}"
+        />
+        <h3>{{ name }}</h3>
+    </a>
+</li>

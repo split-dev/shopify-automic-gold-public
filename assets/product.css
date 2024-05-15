@@ -1,0 +1,2996 @@
+.pink {
+  color: #fe5353;
+}
+.peach {
+  color: #ff9e70;
+}
+.highlighted {
+  color: #fc3;
+}
+.lavender {
+  color: #a974ff;
+}
+@-webkit-keyframes animation-swimming-gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  to {
+    background-position: 0 50%;
+  }
+}
+@keyframes animation-swimming-gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  to {
+    background-position: 0 50%;
+  }
+}
+.product__options .backing-selector .backing-selector__container input,
+.product__options .product__swatch-container input[type="radio"],
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+.swipe {
+  visibility: hidden;
+  width: 100%;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.05);
+}
+.swipe,
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.swipe__element {
+  float: left;
+  width: 100%;
+}
+.swipe-controls,
+.swipe__element {
+  position: relative;
+}
+.swipe-controls__next,
+.swipe-controls__prev {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  color: #43006a;
+  width: 20%;
+  font-size: 30px;
+  opacity: 0.7;
+  cursor: pointer;
+  outline: none;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.swipe-controls__next:active,
+.swipe-controls__next:focus,
+.swipe-controls__next:hover,
+.swipe-controls__prev:active,
+.swipe-controls__prev:focus,
+.swipe-controls__prev:hover {
+  opacity: 0.9;
+}
+.swipe-controls__next svg,
+.swipe-controls__prev svg {
+  flex: 0 0 auto;
+  margin: 15px;
+}
+.swipe-controls__prev {
+  left: 0;
+  justify-content: flex-start;
+}
+.swipe-controls__next {
+  right: 0;
+  justify-content: flex-end;
+}
+.swipe-note {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  padding: 15px 0 15px 20px;
+  z-index: 1;
+}
+.swipe-note .swipe-note__toggle {
+  line-height: 0;
+  padding: 8px 20px;
+}
+.swipe-note .swipe-note__toggle svg {
+  line-height: 0;
+}
+.swipe-note .swipe-note__toggle svg #cross {
+  display: none;
+}
+.swipe-note .swipe-note__toggle:active,
+.swipe-note .swipe-note__toggle:focus,
+.swipe-note .swipe-note__toggle:hover {
+  outline: none;
+}
+.swipe-note .swipe-note__toggle:active #background-circle,
+.swipe-note .swipe-note__toggle:focus #background-circle,
+.swipe-note .swipe-note__toggle:hover #background-circle {
+  stroke: #fe5353;
+}
+.swipe-note .swipe-note__toggle:active #question-mark,
+.swipe-note .swipe-note__toggle:focus #question-mark,
+.swipe-note .swipe-note__toggle:hover #question-mark {
+  fill: #fe5353;
+}
+.swipe-note .swipe-note__contents {
+  display: none;
+}
+.swipe-note .swipe-note__contents .swipe-note__text {
+  font-size: 13px;
+  line-height: 20px;
+  color: #ff9e70;
+}
+.swipe-note.is-open {
+  background: rgb(var(--color-base-background-2));
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.swipe-note.is-open .swipe-note__toggle #background-circle {
+  stroke: #ff9e70;
+}
+.swipe-note.is-open .swipe-note__toggle #question-mark {
+  display: none;
+}
+.swipe-note.is-open .swipe-note__contents,
+.swipe-note.is-open .swipe-note__toggle #cross {
+  display: block;
+}
+.slider-thumbnails {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.slider-thumbnails .slider-thumbnails__dot-container {
+  flex: 0 0 auto;
+  cursor: pointer;
+  padding: 10px 5px;
+  height: 27px;
+}
+.slider-thumbnails .slider-thumbnails__dot-container .slider-thumbnails__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #a974ff;
+  opacity: 0.5;
+}
+.slider-thumbnails
+  .slider-thumbnails__dot-container.active
+  .slider-thumbnails__dot {
+  background: #fc3;
+  opacity: 1;
+}
+@media screen and (min-width: 768px) {
+  .slider-thumbnails {
+    background: transparent;
+    position: relative;
+    top: -27px;
+  }
+}
+#ProductWrapper {
+  max-width: 1300px;
+  margin: auto;
+}
+#ProductWrapper.one-of-a-kind-diamond-necklace .one-of-a-kind-video {
+  max-width: 540px;
+  margin-bottom: 30px;
+}
+#ProductWrapper.one-of-a-kind-diamond-necklace .one-of-a-kind-video video {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  #ProductWrapper.one-of-a-kind-diamond-necklace .product__description {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, min-content);
+    grid-column-gap: 15px;
+  }
+  #ProductWrapper.one-of-a-kind-diamond-necklace
+    .product__description
+    .one-of-a-kind-video {
+    grid-column: 2;
+    grid-row: 1/4;
+    margin-bottom: 0;
+  }
+  #ProductWrapper.one-of-a-kind-diamond-necklace
+    .product__description
+    .product__section-heading {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  #ProductWrapper.one-of-a-kind-diamond-necklace
+    .product__description
+    .product__description-text {
+    grid-column: 1;
+    grid-row: 2;
+    width: auto;
+  }
+  #ProductWrapper.one-of-a-kind-diamond-necklace
+    .product__description
+    .product__specifications {
+    grid-column: 1;
+    grid-row: 3;
+    width: auto;
+  }
+}
+.product .breadcrumb {
+  margin-bottom: 15px;
+}
+.product-heroine {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.product-heroine .product-images > img {
+  width: 100%;
+}
+.product-heroine video.swipe__element {
+  max-height: 390px;
+}
+.product-heroine .product-plate {
+  overflow: hidden;
+  padding: 0 var(--page-width-x-paddings-mobile);
+}
+.product-heroine .product-plate .affirm-as-low-as {
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 480px) {
+  .product-heroine .product-plate {
+    padding: 0 var(--page-width-x-paddings-tablet);
+  }
+}
+@media screen and (min-width: 768px) {
+  .product-heroine {
+    flex-direction: row;
+  }
+  .product-heroine .product-images {
+    width: 50%;
+  }
+  .product-heroine video.swipe__element {
+    max-height: 868px;
+  }
+  .product-heroine .product-plate {
+    width: 50%;
+    margin-bottom: 27px;
+    display: flex;
+    padding: 0 var(--page-width-x-paddings-tablet) 0 20px;
+  }
+  .product-heroine .product-plate.gift-card {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  .product-heroine .product-plate {
+    padding: 0 0 0 30px;
+  }
+  .product-heroine .product-images {
+    width: 60%;
+  }
+  .product-heroine .product-plate {
+    width: 40%;
+  }
+}
+.product-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.product-header .product__option-ring-set {
+  color: #bbbacf;
+  margin-top: 3.75px;
+}
+.product-header .product-header__column {
+  display: flex;
+  flex-direction: column;
+}
+.product-header .product-header__column .product-header__title {
+  font-family: soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  margin-bottom: 0;
+}
+.product-header .product-header__column .product-header__card-notice {
+  display: block;
+  margin-top: 15px;
+  font-size: 13px;
+}
+.product-header .product-header__column .product-header__card-notice a {
+  font-family: soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  text-decoration: underline;
+  display: block;
+  margin-top: 15px;
+}
+.product-header .product-header__column .product-header__material {
+  font-family: soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  display: block;
+}
+.product-header .product-header__price {
+  font-size: 20px;
+}
+.product-header .product-header__price-sign {
+  font-size: 16px;
+  position: relative;
+  bottom: 1px;
+  padding-right: 2px;
+}
+@media screen and (min-width: 768px) {
+  .product-header {
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .product-header .product-header__price {
+    margin-top: 15px;
+  }
+}
+.online-exclusive-container {
+  margin-bottom: 15px;
+}
+.online-exclusive-container .online-exclusive {
+  font-family: soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: #fc3;
+  border: 1px solid #fc3;
+  padding: 4px 8px;
+  display: inline;
+  border-radius: 2px;
+}
+.one-of-a-kind-container {
+  margin-bottom: 15px;
+  border: 1px solid #fc3;
+  padding: 4px 8px 6px;
+  border-radius: 2px;
+  width: fit-content;
+}
+.one-of-a-kind-container .one-of-a-kind-text {
+  font-family: soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: #fc3;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+.one-of-a-kind-container .one-of-a-kind-small {
+  font-size: 16px;
+  font-size: 10.5px;
+  color: #fc3;
+  -webkit-font-smoothing: subpixel-antialiased;
+  line-height: 1.4;
+}
+.wedding-collection-container {
+  margin-bottom: 15px;
+}
+.wedding-collection-container .wedding-collection {
+  font-family: soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: rgb(var(--color-base-background-2));
+  background: #fce2e6;
+  padding: 3px 8px;
+  display: inline;
+  border-radius: 2px;
+}
+.product__shipping-notice {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 13px;
+  line-height: 1.4;
+}
+@media screen and (min-width: 768px) {
+  .product__shipping-notice {
+    margin-bottom: 0;
+  }
+}
+.product__options {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.product__options .product__option-name {
+  margin: 0;
+}
+.product__options .product__option-title {
+  padding-right: 0.7rem;
+}
+.product__options .product__swatch-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.25);
+}
+.product__options .product__swatch-container.swatch-zodiac-container {
+  flex-wrap: wrap;
+}
+.product__options
+  .product__swatch-container.swatch-zodiac-container
+  .product__swatch {
+  flex: 0 0 33.3%;
+  max-width: 33.3%;
+}
+.product__options .product__swatch {
+  font-size: 13px;
+  font-family: soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  flex: auto;
+  text-align: center;
+  height: 45px;
+  line-height: 41.85px;
+  border: 2px solid #5652a3;
+  background: rgb(var(--color-base-background-2));
+  user-select: none;
+  margin-right: -2px;
+  z-index: 1;
+  flex: 0 0 50%;
+}
+@media (min-width: 992px) {
+  .product__options .product__swatch {
+    flex: 0 0 33.3%;
+  }
+}
+.product__options .product__swatch:active,
+.product__options .product__swatch:focus,
+.product__options .product__swatch:hover {
+  background: #0b0056;
+}
+.product__options .product__swatch:first-of-type {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.product__options .product__swatch:last-of-type {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  margin-right: 0;
+}
+.product__options input[type="radio"]:checked + .product__swatch {
+  background: #240c72;
+  border-color: #fc3;
+  z-index: 2;
+}
+.product__options .swatch-letter-container .product__swatch {
+  height: auto;
+  padding: 15px 0;
+  line-height: 1;
+  width: 25%;
+  flex-direction: column;
+  justify-content: center;
+}
+.product__options .product__dropdown-container,
+.product__options .swatch-letter-container .product__swatch {
+  display: flex;
+  align-items: center;
+}
+.product__options .product__dropdown-container {
+  flex-wrap: nowrap;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.product__options .product__dropdown-container select {
+  flex-basis: auto;
+  padding-left: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 0;
+  min-width: 9.4rem;
+}
+.product__options .product__dropdown-container .product__dropdown-note {
+  font-size: 13px;
+  flex: 1 0;
+  padding-left: 15px;
+  line-height: 1.2;
+}
+.product__options .product__dropdown-container .product__dropdown-note a {
+  line-height: 1;
+}
+.product__options .swatch-bracelet-size-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  background: rgb(var(--color-base-background-2));
+  border-radius: 2px;
+  padding: 0 15px;
+}
+.product__options .swatch-bracelet-size-container .product__range-value {
+  font-family: soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  width: 60px;
+  text-align: center;
+  line-height: 1;
+  margin-top: 2px;
+}
+.product__options .swatch-bracelet-size-container .product__range {
+  width: 100%;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  height: 45px;
+  padding: 0;
+  background-color: rgb(var(--color-base-background-2));
+  background-size: 100%;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  border: none;
+}
+.product__options .swatch-bracelet-size-container .product__range:active,
+.product__options .swatch-bracelet-size-container .product__range:focus,
+.product__options .swatch-bracelet-size-container .product__range:hover {
+  outline: none;
+}
+.product__options
+  .swatch-bracelet-size-container
+  input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 45px;
+  width: 45px;
+  border: 2px solid #fe5353;
+  border-radius: 2px;
+  cursor: pointer;
+  background-color: rgb(var(--color-base-background-2));
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAwAgMAAAAEKTCGAAAADFBMVEVHcExXU6RWUqRWUqOAppVGAAAAA3RSTlMASePizoNQAAAAIElEQVR4AWNAgEw43gckIfg/kATjQcsaZSFiCxGDcAAALmSEbY0WjQoAAAAASUVORK5CYII=");
+  background-repeat: no-repeat;
+  background-size: 18px;
+  background-position: 50%;
+  margin-top: -22.5px;
+}
+.product__options
+  .swatch-bracelet-size-container
+  input[type="range"]:active::-webkit-slider-thumb,
+.product__options
+  .swatch-bracelet-size-container
+  input[type="range"]:hover::-webkit-slider-thumb {
+  background-color: #240c72;
+}
+.product__options
+  .swatch-bracelet-size-container
+  input[type="range"]::-moz-range-thumb {
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  height: 45px;
+  width: 45px;
+  border: 2px solid #fe5353;
+  border-radius: 2px;
+  cursor: pointer;
+  background-color: rgb(var(--color-base-background-2));
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAwAgMAAAAEKTCGAAAADFBMVEVHcExXU6RWUqRWUqOAppVGAAAAA3RSTlMASePizoNQAAAAIElEQVR4AWNAgEw43gckIfg/kATjQcsaZSFiCxGDcAAALmSEbY0WjQoAAAAASUVORK5CYII=");
+  background-repeat: no-repeat;
+  background-size: 18px;
+  background-position: 50%;
+  margin-top: -22.5px;
+}
+.product__options
+  .swatch-bracelet-size-container
+  input[type="range"]::-ms-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 45px;
+  width: 45px;
+  border: 2px solid #fe5353;
+  border-radius: 2px;
+  cursor: pointer;
+  background-color: rgb(var(--color-base-background-2));
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAwAgMAAAAEKTCGAAAADFBMVEVHcExXU6RWUqRWUqOAppVGAAAAA3RSTlMASePizoNQAAAAIElEQVR4AWNAgEw43gckIfg/kATjQcsaZSFiCxGDcAAALmSEbY0WjQoAAAAASUVORK5CYII=");
+  background-repeat: no-repeat;
+  background-size: 18px;
+  background-position: 50%;
+  margin-top: -22.5px;
+}
+.product__options
+  .swatch-bracelet-size-container
+  input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: transparent;
+}
+.product__options
+  .swatch-bracelet-size-container
+  input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: transparent;
+}
+.product__options
+  .swatch-bracelet-size-container
+  input[type="range"]::-ms-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: transparent;
+}
+.product__options .swatch-pair-single-container {
+  width: 70%;
+}
+.product__options .swatch-pair-single-container .product__swatch {
+  height: 35px;
+  line-height: 31.5px;
+}
+.product__options .product__length-option-name-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: baseline;
+}
+.product__options .product__length-option-name-container h4 {
+  text-transform: capitalize;
+  margin-right: 8px;
+}
+.product__options .product__length-option-name-container a {
+  display: block;
+  margin-bottom: 4px;
+}
+.product__options .engraving-selector {
+  background: rgb(var(--color-base-background-1));
+  border-radius: 2px;
+  padding: 10px 15px;
+  margin: 15px auto;
+}
+.product__options .engraving-selector.opened .engraving-selector__header {
+  justify-content: space-between;
+}
+.product__options
+  .engraving-selector.opened
+  .engraving-selector__header
+  .engraving-selector__button--add {
+  display: none;
+}
+.product__options
+  .engraving-selector.opened
+  .engraving-selector__header
+  .engraving-selector__button--remove {
+  display: block;
+}
+.product__options .engraving-selector.opened .engraving-selector__container {
+  display: flex;
+}
+.product__options .engraving-selector .engraving-selector__header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.product__options
+  .engraving-selector
+  .engraving-selector__header
+  .engraving-selector__button--add {
+  display: block;
+}
+.product__options
+  .engraving-selector
+  .engraving-selector__header
+  .engraving-selector__button--remove {
+  display: none;
+}
+.product__options
+  .engraving-selector
+  .engraving-selector__header
+  .engraving-selector__title {
+  font-family: soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  padding-right: 10px;
+  margin: 0;
+}
+.product__options
+  .engraving-selector
+  .engraving-selector__header
+  .engraving-selector__button {
+  font-family: soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: #ff9e70;
+  text-decoration: underline;
+}
+.product__options .engraving-selector .engraving-selector__container {
+  display: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 15px 0;
+}
+.product__options
+  .engraving-selector
+  .engraving-selector__container
+  .engraving-selector__description {
+  font-family: soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.product__options
+  .engraving-selector
+  .engraving-selector__container
+  .engraving-selector__input-container {
+  margin-bottom: 15px;
+  width: 100%;
+}
+.product__options
+  .engraving-selector
+  .engraving-selector__container
+  .engraving-selector__input-container
+  .engraving-selector__input {
+  color: rgb(var(--color-base-background-2));
+  background: #fff;
+  text-align: center;
+  border-bottom: 2px solid #fff;
+  letter-spacing: 2px;
+  -webkit-font-variant-ligatures: no-common-ligatures;
+  font-variant-ligatures: no-common-ligatures;
+  text-transform: uppercase;
+}
+.product__options
+  .engraving-selector
+  .engraving-selector__container
+  .engraving-selector__input-container
+  .engraving-selector__input::-webkit-input-placeholder {
+  color: hsla(0, 0%, 100%, 0.75);
+}
+.product__options
+  .engraving-selector
+  .engraving-selector__container
+  .engraving-selector__input-container
+  .engraving-selector__input::-moz-placeholder {
+  color: hsla(0, 0%, 100%, 0.75);
+}
+.product__options
+  .engraving-selector
+  .engraving-selector__container
+  .engraving-selector__input-container
+  .engraving-selector__input:-ms-input-placeholder {
+  color: hsla(0, 0%, 100%, 0.75);
+}
+.product__options
+  .engraving-selector
+  .engraving-selector__container
+  .engraving-selector__input-container
+  .engraving-selector__input::-ms-input-placeholder {
+  color: hsla(0, 0%, 100%, 0.75);
+}
+.product__options
+  .engraving-selector
+  .engraving-selector__container
+  .engraving-selector__input-container
+  .engraving-selector__input::placeholder {
+  color: hsla(0, 0%, 100%, 0.75);
+}
+.product__options
+  .engraving-selector
+  .engraving-selector__container
+  .engraving-selector__error {
+  display: none;
+  font-size: 13px;
+  font-family: soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  color: #f36060;
+}
+.product__options
+  .engraving-selector
+  .engraving-selector__container
+  .engraving-selector__error
+  a {
+  color: #f36060;
+}
+.product__options
+  .engraving-selector
+  .engraving-selector__container
+  .engraving-selector__notice {
+  font-size: 10.5px;
+  font-family: soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  color: #bbbacf;
+}
+.product__options
+  .engraving-selector.engraving-selector--band
+  .engraving-selector__input {
+  width: 100%;
+}
+.product__options
+  .engraving-selector.engraving-selector--band
+  .engraving-selector__preview {
+  background: #edc191;
+  width: 100%;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.product__options
+  .engraving-selector.engraving-selector--band
+  .engraving-selector__preview
+  .engraving-selector__preview-text {
+  font-family: soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: #403227;
+  text-shadow: 0 1px 0 rgba(255, 219, 184, 0.8), 0 -1px 0 rgba(9, 4, 4, 0.1);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+  text-transform: uppercase;
+}
+.product__options
+  .engraving-selector.engraving-selector--six
+  .engraving-selector__input {
+  width: 100%;
+}
+.product__options
+  .engraving-selector.engraving-selector--six
+  .engraving-selector__preview {
+  background: #edc191;
+  width: 100%;
+  height: 65px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.product__options
+  .engraving-selector.engraving-selector--six
+  .engraving-selector__preview
+  .engraving-selector__preview-text {
+  font-family: soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: #403227;
+  text-shadow: 0 1px 0 rgba(255, 219, 184, 0.8), 0 -1px 0 rgba(9, 4, 4, 0.1);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+  text-transform: uppercase;
+}
+.product__options
+  .engraving-selector.engraving-selector--seven
+  .engraving-selector__input {
+  width: 100%;
+}
+.product__options
+  .engraving-selector.engraving-selector--seven
+  .engraving-selector__preview {
+  background: #edc191;
+  width: 100%;
+  height: 65px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.product__options
+  .engraving-selector.engraving-selector--seven
+  .engraving-selector__preview
+  .engraving-selector__preview-text {
+  font-family: soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: #403227;
+  text-shadow: 0 1px 0 rgba(255, 219, 184, 0.8), 0 -1px 0 rgba(9, 4, 4, 0.1);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+  text-transform: uppercase;
+}
+.product__options
+  .engraving-selector.engraving-selector--bar
+  .engraving-selector__input {
+  text-transform: uppercase;
+  width: 67%;
+}
+.product__options
+  .engraving-selector.engraving-selector--bar
+  .engraving-selector__preview {
+  background: #edc191;
+  width: 67%;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.product__options
+  .engraving-selector.engraving-selector--bar
+  .engraving-selector__preview
+  .engraving-selector__preview-text {
+  font-family: soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #403227;
+  text-shadow: 0 1px 0 rgba(255, 219, 184, 0.8), 0 -1px 0 rgba(9, 4, 4, 0.1);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+.product__options
+  .engraving-selector.engraving-selector--square
+  .engraving-selector__input {
+  width: 65px;
+}
+.product__options
+  .engraving-selector.engraving-selector--square
+  .engraving-selector__preview {
+  background: #edc191;
+  width: 65px;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.product__options
+  .engraving-selector.engraving-selector--square
+  .engraving-selector__preview
+  .engraving-selector__preview-text {
+  font-family: soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 25px;
+  color: #403227;
+  text-shadow: 0 1px 0 rgba(255, 219, 184, 0.8), 0 -1px 0 rgba(9, 4, 4, 0.1);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+.product__options
+  .engraving-selector.engraving-selector--signet
+  .engraving-selector__input {
+  width: 65px;
+}
+.product__options
+  .engraving-selector.engraving-selector--signet
+  .engraving-selector__preview {
+  background: #edc191;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.product__options
+  .engraving-selector.engraving-selector--signet
+  .engraving-selector__preview
+  .engraving-selector__preview-text {
+  font-family: soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 25px;
+  color: #403227;
+  text-shadow: 0 1px 0 rgba(255, 219, 184, 0.8), 0 -1px 0 rgba(9, 4, 4, 0.1);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+.product__options
+  .engraving-selector.engraving-selector--disk
+  .engraving-selector__input {
+  width: 85px;
+}
+.product__options
+  .engraving-selector.engraving-selector--disk
+  .engraving-selector__preview {
+  border: 2px solid #fff;
+  width: 85px;
+  height: 85px;
+  border-radius: 43px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.product__options
+  .engraving-selector.engraving-selector--disk
+  .engraving-selector__preview
+  .engraving-selector__preview-text {
+  font-size: 32px;
+}
+.product__options .diamond-selector {
+  background: rgb(var(--color-base-background-1));
+  border-radius: 2px;
+  padding: 10px 15px;
+  margin: 15px auto;
+}
+.product__options .diamond-selector.opened .diamond-selector__header {
+  justify-content: space-between;
+}
+.product__options
+  .diamond-selector.opened
+  .diamond-selector__header
+  .diamond-selector__button--add {
+  display: none;
+}
+.product__options .diamond-selector.opened .diamond-selector__container,
+.product__options
+  .diamond-selector.opened
+  .diamond-selector__header
+  .diamond-selector__button--remove {
+  display: block;
+}
+.product__options .diamond-selector .diamond-selector__button {
+  font-family: soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: #ff9e70;
+  text-decoration: underline;
+}
+.product__options
+  .diamond-selector
+  .diamond-selector__button
+  + .diamond-selector__button {
+  margin-left: 15px;
+}
+.product__options .diamond-selector .diamond-selector__header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.product__options
+  .diamond-selector
+  .diamond-selector__header
+  .diamond-selector__button--add {
+  display: block;
+}
+.product__options
+  .diamond-selector
+  .diamond-selector__header
+  .diamond-selector__button--remove {
+  display: none;
+}
+.product__options
+  .diamond-selector
+  .diamond-selector__header
+  .diamond-selector__title {
+  font-family: soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  padding-right: 10px;
+  margin-bottom: 0;
+}
+.product__options .diamond-selector .diamond-selector__container {
+  display: none;
+  padding: 15px 0 5px;
+}
+.product__options
+  .diamond-selector
+  .diamond-selector__container
+  .diamond-selector__quantity {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.product__options
+  .diamond-selector
+  .diamond-selector__container
+  .diamond-selector__description {
+  text-align: center;
+  font-family: soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.product__options
+  .diamond-selector
+  .diamond-selector__container
+  .diamond-selector__image {
+  position: relative;
+  z-index: 1;
+}
+.product__options
+  .diamond-selector
+  .diamond-selector__container
+  .diamond-selector__image
+  .diamond-selector__image-container {
+  position: relative;
+  background: rgb(var(--color-base-background-2));
+  z-index: 1;
+}
+.product__options
+  .diamond-selector
+  .diamond-selector__container
+  .diamond-selector__image
+  .diamond-selector__image-container:before {
+  display: block;
+  content: "";
+  width: 100%;
+  padding-top: 47.22222%;
+}
+.product__options
+  .diamond-selector
+  .diamond-selector__container
+  .diamond-selector__image
+  .diamond-selector__image-container
+  > .content,
+.product__options
+  .diamond-selector
+  .diamond-selector__container
+  .diamond-selector__image
+  .diamond-selector__image-container
+  > picture
+  .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+.product__options
+  .diamond-selector
+  .diamond-selector__container
+  .diamond-selector__image
+  .diamond-selector__image-container
+  .content {
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.product__options
+  .diamond-selector
+  .diamond-selector__container
+  .diamond-selector__image
+  .diamond-selector__image-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  font-size: 10.5px;
+  font-family: soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  padding-bottom: 10px;
+  text-align: center;
+  color: rgb(var(--color-base-background-1));
+}
+.product__options
+  .diamond-selector
+  .diamond-selector__container
+  .diamond-selector__notice {
+  font-size: 13px;
+  font-family: soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  margin-top: 15px;
+  text-align: center;
+}
+.product__options
+  .diamond-selector
+  .diamond-selector__container[data-diamond="center"]
+  .diamond-selector__button--center {
+  color: #fe5353;
+}
+.product__options
+  .diamond-selector
+  .diamond-selector__container[data-diamond="center"]
+  .diamond-selector__button--three {
+  color: #ff9e70;
+}
+.product__options
+  .diamond-selector
+  .diamond-selector__container[data-diamond="center"]
+  .diamond-selector__description
+  .center {
+  display: block;
+}
+.product__options
+  .diamond-selector
+  .diamond-selector__container[data-diamond="center"]
+  .diamond-selector__description
+  .three {
+  display: none;
+}
+.product__options
+  .diamond-selector
+  .diamond-selector__container[data-diamond="center"]
+  .diamond-selector__image
+  .center {
+  display: block;
+}
+.product__options
+  .diamond-selector
+  .diamond-selector__container[data-diamond="center"]
+  .diamond-selector__image
+  .three {
+  display: none;
+}
+.product__options
+  .diamond-selector
+  .diamond-selector__container[data-diamond="three"]
+  .diamond-selector__button--center {
+  color: #ff9e70;
+}
+.product__options
+  .diamond-selector
+  .diamond-selector__container[data-diamond="three"]
+  .diamond-selector__button--three {
+  color: #fe5353;
+}
+.product__options
+  .diamond-selector
+  .diamond-selector__container[data-diamond="three"]
+  .diamond-selector__description
+  .center {
+  display: none;
+}
+.product__options
+  .diamond-selector
+  .diamond-selector__container[data-diamond="three"]
+  .diamond-selector__description
+  .three {
+  display: block;
+}
+.product__options
+  .diamond-selector
+  .diamond-selector__container[data-diamond="three"]
+  .diamond-selector__image
+  .center {
+  display: none;
+}
+.product__options
+  .diamond-selector
+  .diamond-selector__container[data-diamond="three"]
+  .diamond-selector__image
+  .three {
+  display: block;
+}
+.product__options .backing-selector {
+  background: rgb(var(--color-base-background-1));
+}
+.product__options
+  .backing-selector.opened
+  .backing-selector__header
+  .backing-selector__close {
+  display: block;
+}
+.product__options
+  .backing-selector.opened
+  .backing-selector__header
+  .backing-selector__open {
+  display: none;
+}
+.product__options .backing-selector.opened .backing-selector__container {
+  display: flex;
+}
+.product__options .backing-selector .backing-selector__header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 15px;
+  position: relative;
+}
+.product__options
+  .backing-selector
+  .backing-selector__header
+  .backing-selector__title {
+  font-size: 13px;
+  font-family: soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0;
+}
+.product__options
+  .backing-selector
+  .backing-selector__header
+  .backing-selector__title
+  .backing-selector__name {
+  font-family: soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+.product__options
+  .backing-selector
+  .backing-selector__header
+  .backing-selector__open {
+  font-size: 13px;
+  text-decoration: underline;
+  line-height: 1.2;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.product__options
+  .backing-selector
+  .backing-selector__header
+  .backing-selector__open:active,
+.product__options
+  .backing-selector
+  .backing-selector__header
+  .backing-selector__open:focus,
+.product__options
+  .backing-selector
+  .backing-selector__header
+  .backing-selector__open:hover {
+  color: #fc3;
+}
+.product__options
+  .backing-selector
+  .backing-selector__header
+  .backing-selector__close {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 15px;
+  line-height: 1;
+  cursor: pointer;
+}
+.product__options
+  .backing-selector
+  .backing-selector__header
+  .backing-selector__close:active
+  rect,
+.product__options
+  .backing-selector
+  .backing-selector__header
+  .backing-selector__close:focus
+  rect,
+.product__options
+  .backing-selector
+  .backing-selector__header
+  .backing-selector__close:hover
+  rect {
+  fill: #fc3;
+}
+.product__options .backing-selector .backing-selector__container {
+  display: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-bottom: 20px;
+  width: 100%;
+  position: relative;
+}
+.product__options
+  .backing-selector
+  .backing-selector__container
+  .backing-selector__swatch {
+  font-size: 13px;
+  font-family: soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  flex: auto;
+  text-align: center;
+  border: 2px solid #5652a3;
+  background: rgb(var(--color-base-background-1));
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-right: -2px;
+  z-index: 1;
+  padding: 15px 10px;
+}
+.product__options
+  .backing-selector
+  .backing-selector__container
+  .backing-selector__swatch:active,
+.product__options
+  .backing-selector
+  .backing-selector__container
+  .backing-selector__swatch:focus,
+.product__options
+  .backing-selector
+  .backing-selector__container
+  .backing-selector__swatch:hover {
+  background: #240c72;
+}
+.product__options
+  .backing-selector
+  .backing-selector__container
+  .backing-selector__illustration {
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.product__options
+  .backing-selector
+  .backing-selector__container
+  .backing-selector__option-name {
+  margin: 5px;
+  line-height: 1.2;
+}
+.product__options
+  .backing-selector
+  .backing-selector__container
+  .backing-selector__option-description {
+  font-family: soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+}
+.product__options
+  .backing-selector
+  .backing-selector__container
+  .backing-selector__swatch:first-of-type {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.product__options
+  .backing-selector
+  .backing-selector__container
+  .backing-selector__swatch:last-of-type {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  margin-right: 0;
+}
+.product__options
+  .backing-selector
+  .backing-selector__container
+  input[type="radio"]:checked
+  + .backing-selector__swatch {
+  border-color: #fc3;
+  background: #240c72;
+  z-index: 2;
+}
+.buy-box {
+  margin: 15px 0;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .buy-box {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .buy-box .btn {
+    font-size: 20px;
+    padding: 10px 40px;
+  }
+}
+.backorder {
+  margin-bottom: 30px;
+  background-color: rgb(var(--color-base-background-2));
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 2px;
+}
+.backorder .backorder__text {
+  font-size: 13px;
+  color: #ff9e70;
+  padding-left: 2px;
+}
+.backorder .backorder__message,
+.backorder .backorder__text {
+  font-family: soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+}
+.backorder .backorder__message {
+  display: none;
+  text-align: center;
+  color: #fce2e6;
+  margin-top: 15px;
+  font-size: 20px;
+  border-radius: 2px;
+  padding: 3px 8px;
+}
+.backorder.error .backorder__message,
+.backorder.success .backorder__message {
+  display: block;
+}
+.backorder.error .backorder__message {
+  background-color: #f36060;
+  color: #fce2e6;
+}
+.backorder.success .backorder__message {
+  background-color: #12c17d;
+  color: #fff;
+}
+.backorder .backorder__group {
+  display: flex;
+  margin-top: 7.5px;
+}
+.product__wedding-images {
+  margin-bottom: 60px;
+  margin-top: 60px;
+  padding: 0 15px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  grid-gap: 15px;
+}
+@media screen and (min-width: 767px) {
+  .product__wedding-images {
+    padding: 0 30px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 30px;
+  }
+}
+.product__description {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.product__description .product__description-text {
+  margin-bottom: 30px;
+}
+.product__description .product__description-text,
+.product__description .product__description-text p {
+  text-align: left !important;
+}
+.product__description .product__description-text h3 {
+  font-family: soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+}
+.product__description .product__description-text p {
+  font-family: soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+.product__description .product__specifications .product__specifications-table {
+  font-size: 13px;
+  margin: 0;
+  display: table;
+  border-collapse: collapse;
+  width: 100%;
+}
+.product__description
+  .product__specifications
+  .product__specifications-table
+  .specifications__row {
+  display: table-row;
+}
+.product__description
+  .product__specifications
+  .product__specifications-table
+  .specifications__name {
+  font-family: soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  border: 1px solid #211f4e;
+  display: table-cell;
+  padding: 10px;
+  line-height: 1.1;
+}
+.product__description
+  .product__specifications
+  .product__specifications-table
+  .specifications__value {
+  border: 1px solid #211f4e;
+  display: table-cell;
+  padding: 10px;
+  line-height: 1.2;
+}
+@media screen and (min-width: 768px) {
+  .product__description {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .product__description .product__section-heading {
+    width: 100%;
+  }
+  .product__description .product__description-text {
+    margin-bottom: 0;
+    width: calc(50% + 90px);
+    padding-right: 90px;
+  }
+  .product__description .product__specifications {
+    width: calc(50% - 90px);
+    margin: 0;
+  }
+}
+.product-feature {
+  margin: 15px auto;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.product-feature .product-feature__image {
+  width: 300px;
+  border-radius: 2px;
+}
+.product-feature .product-feature__description {
+  max-width: 300px;
+  margin: 30px 0;
+}
+@media screen and (min-width: 768px) {
+  .product-feature {
+    flex-direction: row;
+    align-items: center;
+  }
+  .product-feature .product-feature__description {
+    max-width: 100%;
+    margin-left: 30px;
+    width: 50%;
+  }
+}
+.product-feature:last-of-type {
+  margin-bottom: 0;
+}
+.product-feature-box {
+  background: #350b60;
+}
+.product-feature-box .product-feature-box__text {
+  align-items: flex-start;
+  padding: 15px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.product-feature-box .product-feature-box__text p {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 768px) {
+  .product-feature-box .product-feature-box__text {
+    text-shadow: none;
+    padding: 60px 90px;
+  }
+}
+.product-feature-wedding-engraving {
+  background: #211f4e;
+}
+.product-feature-wedding-engraving .molecule__text {
+  align-items: flex-start;
+  padding: 15px;
+}
+@media screen and (min-width: 768px) {
+  .product-feature-wedding-engraving .molecule__text {
+    padding: 60px 90px;
+  }
+}
+.product-feature-chain {
+  background: rgb(var(--color-base-background-2));
+}
+.product-feature-chain .product-feature-chain__text {
+  align-items: flex-start;
+  padding: 15px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.product-feature-chain .product-feature-chain__text p {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 768px) {
+  .product-feature-chain .product-feature-chain__text {
+    text-shadow: none;
+    padding: 60px 90px;
+  }
+}
+.product-feature-lock {
+  background: #211f4e;
+}
+.product-feature-lock .product-feature-lock__text {
+  align-items: flex-start;
+  padding: 15px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.product-feature-lock .product-feature-lock__text p {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 768px) {
+  .product-feature-lock .product-feature-lock__text {
+    text-shadow: none;
+    padding: 60px 90px;
+  }
+}
+.product-feature-backings {
+  background: #350b60;
+  color: #fce2e6;
+  padding: 30px;
+}
+.product-feature-backings .product-feature-backings__header {
+  margin: 0;
+}
+.product-feature-backings .product-feature-backings__container {
+  margin: 15px 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+}
+.product-feature-backings
+  .product-feature-backings__container
+  .product-feature-backings__section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  flex-grow: 1;
+  align-items: center;
+  margin: 10px 0;
+}
+.product-feature-backings
+  .product-feature-backings__container
+  .product-feature-backings__section
+  .product-feature-backings__image {
+  width: 40%;
+  max-width: 150px;
+  margin-left: 15px;
+}
+.product-feature-backings
+  .product-feature-backings__container
+  .product-feature-backings__section
+  .product-feature-backings__explanation {
+  font-size: 13px;
+  width: 60%;
+  margin-right: 15px;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+.product-feature-backings
+  .product-feature-backings__container
+  .product-feature-backings__section
+  .product-feature-backings__explanation
+  h4 {
+  font-size: 13px;
+  font-family: soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  display: inline;
+}
+@media screen and (min-width: 768px) {
+  .product-feature-backings {
+    padding: 60px 60px 90px;
+  }
+  .product-feature-backings .product-feature-backings__header {
+    margin: 0 0 60px;
+    width: 60%;
+  }
+  .product-feature-backings .product-feature-backings__container {
+    margin: 30px 0 0;
+    max-width: 1100px;
+    flex-direction: row;
+  }
+  .product-feature-backings
+    .product-feature-backings__container
+    .product-feature-backings__section {
+    margin: 0;
+    align-items: flex-start;
+    flex-direction: column-reverse;
+  }
+  .product-feature-backings
+    .product-feature-backings__container
+    .product-feature-backings__section
+    .product-feature-backings__image {
+    width: 100%;
+    margin: 0;
+  }
+  .product-feature-backings
+    .product-feature-backings__container
+    .product-feature-backings__section
+    .product-feature-backings__explanation {
+    font-size: 16px;
+    text-align: left;
+    width: auto;
+    margin-top: 10px;
+    margin-right: 60px;
+    max-width: 350px;
+  }
+  .product-feature-backings
+    .product-feature-backings__container
+    .product-feature-backings__section
+    .product-feature-backings__explanation
+    h4 {
+    font-size: 16px;
+  }
+  .product-feature-backings
+    .product-feature-backings__container
+    .product-feature-backings__section:last-of-type
+    .product-feature-backings__explanation {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .product-feature-backings,
+  .product-feature-box,
+  .product-feature-chain,
+  .product-feature-lock {
+    margin: 30px 0;
+  }
+}
+.related-products {
+  background: rgb(var(--color-base-background-2));
+  overflow: hidden;
+}
+.related-products .related-products__header {
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+.related-products .related-products__products {
+  margin-bottom: 60px;
+}
+.related-products
+  .related-products__products.teeny-tiny-circle-earring
+  .teeny-tiny-circle-earring
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.teeny-tiny-circle-earring
+  .teeny-tiny-circle-earring
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.tiny-circle-earring
+  .tiny-circle-earring
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.tiny-circle-earring
+  .tiny-circle-earring
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.medium-circle-earring
+  .medium-circle-earring
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.medium-circle-earring
+  .medium-circle-earring
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.large-circle-earring
+  .large-circle-earring
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.large-circle-earring
+  .large-circle-earring
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.tiny-square-earring
+  .tiny-square-earring
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.tiny-square-earring
+  .tiny-square-earring
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.medium-square-earring
+  .medium-square-earring
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.medium-square-earring
+  .medium-square-earring
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.tiny-line-earring
+  .tiny-line-earring
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.tiny-line-earring
+  .tiny-line-earring
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.medium-line-earring
+  .medium-line-earring
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.medium-line-earring
+  .medium-line-earring
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.tall-line-earring
+  .tall-line-earring
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.tall-line-earring
+  .tall-line-earring
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.small-hoop-earring
+  .small-hoop-earring
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.small-hoop-earring
+  .small-hoop-earring
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.medium-hoop-earring
+  .medium-hoop-earring
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.medium-hoop-earring
+  .medium-hoop-earring
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.large-hoop-earring
+  .large-hoop-earring
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.large-hoop-earring
+  .large-hoop-earring
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.mini-threader
+  .mini-threader
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.mini-threader
+  .mini-threader
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products .related-products__products.threader .threader .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.threader
+  .threader
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.circle-threader
+  .circle-threader
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.circle-threader
+  .circle-threader
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.bead-chain-ring
+  .bead-chain-ring
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.bead-chain-ring
+  .bead-chain-ring
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.line-ring
+  .line-ring
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.line-ring
+  .line-ring
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.wave-ring
+  .wave-ring
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.wave-ring
+  .wave-ring
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.bar-earring
+  .bar-earring
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.bar-earring
+  .bar-earring
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.triangle-earring
+  .triangle-earring
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.triangle-earring
+  .triangle-earring
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.open-circle-earring
+  .open-circle-earring
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.open-circle-earring
+  .open-circle-earring
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.chain-loop
+  .chain-loop
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.chain-loop
+  .chain-loop
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.line-dangle
+  .line-dangle
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.line-dangle
+  .line-dangle
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products .related-products__products.numbers .numbers .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.numbers
+  .numbers
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products .related-products__products.initials .initials .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.initials
+  .initials
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.chain-bracelet
+  .chain-bracelet
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.chain-bracelet
+  .chain-bracelet
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.line-bracelet
+  .line-bracelet
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.line-bracelet
+  .line-bracelet
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.hand-bracelet
+  .hand-bracelet
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.hand-bracelet
+  .hand-bracelet
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.line-bangle
+  .line-bangle
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.line-bangle
+  .line-bangle
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.open-circle-bracelet
+  .open-circle-bracelet
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.open-circle-bracelet
+  .open-circle-bracelet
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.connector
+  .connector
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.connector
+  .connector
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products .related-products__products.extender .extender .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.extender
+  .extender
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.smallest-huggie-hoops
+  .smallest-huggie-hoops
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.smallest-huggie-hoops
+  .smallest-huggie-hoops
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.smaller-huggie-hoops
+  .smaller-huggie-hoops
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.smaller-huggie-hoops
+  .smaller-huggie-hoops
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.small-huggie-hoops
+  .small-huggie-hoops
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.small-huggie-hoops
+  .small-huggie-hoops
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.heart-bracelet
+  .heart-bracelet
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.heart-bracelet
+  .heart-bracelet
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.heart-necklace
+  .heart-necklace
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.heart-necklace
+  .heart-necklace
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.heart-earring
+  .heart-earring
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.heart-earring
+  .heart-earring
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.curvy-mirror-band
+  .curvy-mirror-band
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.curvy-mirror-band
+  .curvy-mirror-band
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.curvy-matte-band
+  .curvy-matte-band
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.curvy-matte-band
+  .curvy-matte-band
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.curvy-hammered-band
+  .curvy-hammered-band
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.curvy-hammered-band
+  .curvy-hammered-band
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.curvy-raw-band
+  .curvy-raw-band
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.curvy-raw-band
+  .curvy-raw-band
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.industrial-mirror-band
+  .industrial-mirror-band
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.industrial-mirror-band
+  .industrial-mirror-band
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.industrial-matte-band
+  .industrial-matte-band
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.industrial-matte-band
+  .industrial-matte-band
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.industrial-hammered-band
+  .industrial-hammered-band
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.industrial-hammered-band
+  .industrial-hammered-band
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.industrial-raw-band
+  .industrial-raw-band
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.industrial-raw-band
+  .industrial-raw-band
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.garnet-ring
+  .garnet-ring
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.garnet-ring
+  .garnet-ring
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.amethyst-ring
+  .amethyst-ring
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.amethyst-ring
+  .amethyst-ring
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.aquamarine-ring
+  .aquamarine-ring
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.aquamarine-ring
+  .aquamarine-ring
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.diamond-ring
+  .diamond-ring
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.diamond-ring
+  .diamond-ring
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.emerald-ring
+  .emerald-ring
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.emerald-ring
+  .emerald-ring
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.moonstone-ring
+  .moonstone-ring
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.moonstone-ring
+  .moonstone-ring
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.ruby-ring
+  .ruby-ring
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.ruby-ring
+  .ruby-ring
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.peridot-ring
+  .peridot-ring
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.peridot-ring
+  .peridot-ring
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.sapphire-ring
+  .sapphire-ring
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.sapphire-ring
+  .sapphire-ring
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.opal-ring
+  .opal-ring
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.opal-ring
+  .opal-ring
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.blue-topaz-ring
+  .blue-topaz-ring
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.blue-topaz-ring
+  .blue-topaz-ring
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.turquoise-ring
+  .turquoise-ring
+  .product-card {
+  border-color: #ff9e70;
+}
+.related-products
+  .related-products__products.turquoise-ring
+  .turquoise-ring
+  .product-card__header {
+  color: #ff9e70;
+  border-color: #ff9e70;
+}
+.product-buybox {
+  text-align: center;
+  margin: 30px auto;
+}
+.product-buybox .affirm-as-low-as {
+  margin-top: 30px;
+}
+.product-buybox .product__shipping-notice {
+  margin-top: 0;
+}
+.final-sale-text {
+  font-weight: 700;
+  color: #fe5353;
+  text-transform: uppercase;
+  margin-bottom: 7.5px;
+}
+.final-sale-notice,
+.final-sale-text {
+  font-size: 13px;
+  font-family: soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  margin-top: 7.5px;
+}
+.final-sale-notice {
+  font-weight: 600;
+}
+.affirm-as-low-as {
+  font-size: 10.5px;
+}
+@media screen and (min-width: 768px) {
+  .affirm-as-low-as {
+    font-size: 13px;
+  }
+}
+.gift-card__image {
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+  border-radius: 2px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+}
+.gift-card__image .planets__text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.gift-card__image .planets__text .planets__text-first {
+  font-size: 20px;
+  font-family: soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  line-height: 1;
+}
+.gift-card__image .planets__text .planets__text-second {
+  font-family: soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 49px;
+  color: #fe5353;
+  line-height: 1;
+}
+@media screen and (min-width: 768px) {
+  .gift-card__image .planets__text .planets__text-first {
+    font-size: 32px;
+  }
+  .gift-card__image .planets__text .planets__text-second {
+    font-size: 76px;
+  }
+}
+.gift-card__image .planets {
+  z-index: 0;
+}
+.gift-card-wrapper {
+  max-width: 1000px;
+  margin: 60px auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.gift-card-wrapper .logo {
+  height: 50px;
+}
+.gift-card-wrapper .logo .logo__text {
+  justify-content: center;
+}
+.gift-card-wrapper .giftcard__title {
+  text-align: center;
+  margin: 0;
+}
+.gift-card-wrapper .giftcard__title .giftcard__title-top {
+  font-family: soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.gift-card-wrapper .giftcard__title .giftcard__title-bottom {
+  font-family: Boldline, soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 49px;
+}
+.gift-card-wrapper .giftcard {
+  width: 100%;
+  padding: 15px;
+}
+.gift-card-wrapper .giftcard__wrap {
+  margin: 60px auto;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 450px;
+}
+.gift-card-wrapper .giftcard__wrap .giftcard__ribbon {
+  display: block;
+  line-height: 0;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  right: 15px;
+  height: 100%;
+}
+.gift-card-wrapper .giftcard__wrap .giftcard__ribbon img {
+  height: 100%;
+}
+.gift-card-wrapper .giftcard__wrap .giftcard__text {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  padding: 0 15px;
+}
+@media screen and (min-width: 768px) {
+  .gift-card-wrapper .giftcard__wrap .giftcard__text {
+    padding: 0 30px;
+  }
+}
+.gift-card-wrapper .giftcard__wrap .giftcard__name {
+  font-family: soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #fe5353;
+  margin-bottom: 30px;
+}
+.gift-card-wrapper .giftcard__wrap .giftcard__amount {
+  font-size: 62px;
+  font-family: soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 30px;
+}
+.gift-card-wrapper .giftcard__wrap .giftcard__instructions {
+  font-family: soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  max-width: 75%;
+}
+.gift-card-wrapper .giftcard__wrap .giftcard__code {
+  font-family: monospace;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 15px;
+  line-height: 1;
+}
+.gift-card-wrapper .giftcard__actions,
+.gift-card-wrapper .giftcard__qr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.gift-card-wrapper .giftcard__qr {
+  flex-wrap: nowrap;
+  margin: 60px auto;
+  text-align: center;
+  width: 67%;
+}
+.gift-card-wrapper .giftcard__qr .giftcard__qr-text {
+  font-size: 13px;
+  font-family: soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.wedding-sizes {
+  overflow: hidden;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.wedding-sizes.page-wedding {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgb(var(--color-base-background-1))),
+    to(rgb(var(--color-base-background-2)))
+  );
+  background-image: linear-gradient(180deg, rgb(var(--color-base-background-1)), rgb(var(--color-base-background-2)));
+}
+.wedding-sizes[data-size="1.2mm"] .wedding-sizes__grid {
+  display: none;
+}
+.wedding-sizes[data-size="1.2mm"] .wedding-sizes__grid[data-size="1.2mm"] {
+  display: grid;
+}
+.wedding-sizes[data-size="1.2mm"]
+  .wedding-sizes__selector
+  button[data-size="1.2mm"] {
+  color: #a974ff;
+  text-decoration: none;
+  cursor: default;
+}
+.wedding-sizes[data-size="2mm"] .wedding-sizes__grid {
+  display: none;
+}
+.wedding-sizes[data-size="2mm"] .wedding-sizes__grid[data-size="2mm"] {
+  display: grid;
+}
+.wedding-sizes[data-size="2mm"]
+  .wedding-sizes__selector
+  button[data-size="2mm"] {
+  color: #a974ff;
+  text-decoration: none;
+  cursor: default;
+}
+.wedding-sizes[data-size="3mm"] .wedding-sizes__grid {
+  display: none;
+}
+.wedding-sizes[data-size="3mm"] .wedding-sizes__grid[data-size="3mm"] {
+  display: grid;
+}
+.wedding-sizes[data-size="3mm"]
+  .wedding-sizes__selector
+  button[data-size="3mm"] {
+  color: #a974ff;
+  text-decoration: none;
+  cursor: default;
+}
+.wedding-sizes[data-size="4mm"] .wedding-sizes__grid {
+  display: none;
+}
+.wedding-sizes[data-size="4mm"] .wedding-sizes__grid[data-size="4mm"] {
+  display: grid;
+}
+.wedding-sizes[data-size="4mm"]
+  .wedding-sizes__selector
+  button[data-size="4mm"] {
+  color: #a974ff;
+  text-decoration: none;
+  cursor: default;
+}
+.wedding-sizes[data-size="5mm"] .wedding-sizes__grid {
+  display: none;
+}
+.wedding-sizes[data-size="5mm"] .wedding-sizes__grid[data-size="5mm"] {
+  display: grid;
+}
+.wedding-sizes[data-size="5mm"]
+  .wedding-sizes__selector
+  button[data-size="5mm"] {
+  color: #a974ff;
+  text-decoration: none;
+  cursor: default;
+}
+.wedding-sizes[data-size="6mm"] .wedding-sizes__grid {
+  display: none;
+}
+.wedding-sizes[data-size="6mm"] .wedding-sizes__grid[data-size="6mm"] {
+  display: grid;
+}
+.wedding-sizes[data-size="8mm"] .wedding-sizes__grid {
+  display: none;
+}
+.wedding-sizes[data-size="8mm"] .wedding-sizes__grid[data-size="8mm"] {
+  display: grid;
+}
+.wedding-sizes[data-size="6mm"]
+  .wedding-sizes__selector
+  button[data-size="6mm"] {
+  color: #a974ff;
+  text-decoration: none;
+  cursor: default;
+}
+.wedding-sizes[data-size="8mm"]
+  .wedding-sizes__selector
+  button[data-size="8mm"] {
+  color: #a974ff;
+  text-decoration: none;
+  cursor: default;
+}
+.wedding-sizes.page-wedding .wedding-sizes__header {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.wedding-sizes.page-wedding .wedding-sizes__selector {
+  text-align: center;
+}
+.wedding-sizes .wedding-sizes__header {
+  text-align: center;
+  max-width: 500px;
+  margin-bottom: 30px;
+}
+.wedding-sizes .wedding-sizes__header h3 {
+  font-size: 16px;
+  line-height: 1.1;
+  font-family: soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  color: #fe5353;
+}
+.wedding-sizes .wedding-sizes__header p {
+  font-size: 13px;
+}
+.wedding-sizes .wedding-sizes__selector {
+  margin: 30px auto;
+}
+.wedding-sizes .wedding-sizes__selector div {
+  display: block;
+  font-size: 13px;
+}
+.wedding-sizes .wedding-sizes__selector button {
+  text-decoration: underline;
+  margin: 0 5px;
+  padding: 0 3px;
+  cursor: pointer;
+  font-family: soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+}
+.wedding-sizes .wedding-sizes__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-column-gap: 7.5px;
+  grid-row-gap: 7.5px;
+  margin: 30px 0;
+}
+.wedding-sizes .wedding-sizes__example {
+  text-align: center;
+}
+.wedding-sizes .wedding-sizes__example div {
+  position: relative;
+  background: rgb(var(--color-base-background-2));
+}
+.wedding-sizes .wedding-sizes__example div:before {
+  display: block;
+  content: "";
+  width: 100%;
+  padding-top: 125%;
+}
+.wedding-sizes .wedding-sizes__example div > .content,
+.wedding-sizes .wedding-sizes__example div > picture .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+.wedding-sizes .wedding-sizes__example img {
+  text-indent: -9999px;
+}
+.wedding-sizes h4 {
+  font-size: 13px;
+  margin-bottom: 7.5px;
+  font-family: soleil, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+}
+@media screen and (min-width: 768px) {
+  .wedding-sizes,
+  .wedding-sizes .wedding-sizes__header {
+    /* text-align: left; */
+  }
+  .wedding-sizes .wedding-sizes__header h3 {
+    font-size: 25px;
+  }
+  .wedding-sizes .wedding-sizes__header p {
+    font-size: 16px;
+  }
+  .wedding-sizes .wedding-sizes__selector {
+    /* text-align: left; */
+  }
+  .wedding-sizes .wedding-sizes__selector div {
+    display: inline;
+    font-size: 16px;
+  }
+  .wedding-sizes .wedding-sizes__selector button:first-of-type {
+    margin-left: 15px;
+  }
+  .wedding-sizes .wedding-sizes__grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+  }
+}
+.chain-length-section img {
+    width: 100%;
+}

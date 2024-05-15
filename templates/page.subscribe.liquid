@@ -1,0 +1,48 @@
+<div class="subscribe-5050 spaced--thrice">
+    <div class="text-block">
+        <h1>Subscribe</h1>
+
+        <p>
+            If you like what we do and what we stand for - subscribe!
+        </p>
+
+        <p>
+            You will be the first to know about new shiny things.
+        </p>
+
+        <p>
+            We take email seriously - you will not be spammed.
+        </p>
+
+        <div>
+            {% form 'customer' %}
+                {{ form.errors | default_errors }}
+                {% if form.posted_successfully? %}
+                    <p class="note form-success">{{ 'general.newsletter_form.confirmation' | t }}</p>
+                {% else %}
+                    <input type="hidden" name="contact[tags]" value="stay-tuned-form">
+
+                    <div class="inner">
+                        <input
+                            id="Email" class="subscribe-box__input"
+                            type="email"
+                            value="{% if customer %}{{ customer.email }}{% endif %}"
+                            placeholder="Email Address" name="contact[email]"
+                            aria-label="Email"
+                            autocorrect="off"
+                            autocapitalize="off"
+                        >
+
+                        <button class="subscribe-box__button btn btn--on-regal btn--highlighted" type="submit" name="subscribe">
+                            Submit
+                        </button>
+                    </div>
+                {% endif %}
+            {% endform %}
+        </div>
+    </div>
+
+    <div class="image-block">
+        <img src="{{ 'subscribe-5050.png' | file_url }}" alt="Two overlapping images, one with a Heart Necklace the other with a models hands in a heart gesture wearing Automic Gold rings" />
+    </div>
+</div>

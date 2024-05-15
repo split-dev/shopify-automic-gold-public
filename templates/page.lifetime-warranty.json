@@ -1,0 +1,26 @@
+{
+  "sections": {
+    "richtext": {
+      "type": "rich-text",
+      "custom_css": [
+        "h1 {margin-bottom: 36px;}",
+        "h2 {margin-top: 36px; margin-bottom: 24px;}",
+        "a {color: rgb(var(--color-highlighted-elements));}"
+      ],
+      "settings": {
+        "rich_text": "<h1>Lifetime Guarantee<\/h1><p>We at Automic Gold strive to create durable and stunning fine jewelry. Everything we make is produced with sustainable materials, hand-crafted by our expert jewelers, thoroughly inspected before shipping, and is backed by a limited lifetime warranty. If your jewelry is delivered with manufacturer defects, we will repair it for free within three years of purchase. For repairs that are not considered manufacturer’s defects or for orders outside of the three-year window, we will repair your piece for a fee. Fees are dependent on the type of jewelry, the amount of damage, and whether you are missing parts or pieces. <\/p><p>This warranty does not cover normal wear and tear (including but not limited to scratches, dents, misshapen ring bands, stretched chains, or any cracks, scratches, or discoloration to gemstones that occur from wear or exposure to chemicals or liquids). It also does not cover lost or stolen jewelry after you’ve successfully received it. <\/p><p>If you didn’t receive your package because it was lost or stolen and you purchased Route package protection, please <a href=\"https:\/\/claims.route.com\/\" target=\"_blank\" title=\"Route Claims\">contact them<\/a> for help. If you opted out of Route when placing your order, Automic Gold is not responsible for missing packages.<\/p><p>We recommend adding your valuable jewelry to homeowners or renters insurance to protect them against loss.<\/p><p>Third-party work on your jewelry voids all warranties. <\/p><h3><\/h3><h3><\/h3><h3>Resizing, Repolishing and Replating Services<\/h3><p>We offer highly affordable, fast, in-house care, maintenance, and repairs for all of our jewelry! Automic Gold can resize or modify jewelry for a fee starting at $20. We advise against resizing rings more than 2 sizes up or down. Precious metal jewelry can lose its shine over time. Repolishing services start at $10, however fees will depend on the type of jewelry and amount of wear.<\/p><p>For an additional fee, we can replate any Automic Gold <a href=\"https:\/\/www.automicgold.com\/blogs\/automic-blog\/why-does-gold-have-different-colors\"><span style=\"text-decoration:underline\">rhodium-plated<\/span><\/a> jewelry to help you keep your pieces looking gorgeous!<\/p><p>For repairs, resizing, repolishing, or replating, please reach out to <a href=\"mailto:care@automicgold.com\"><span style=\"text-decoration:underline\">our Care Team<\/span><\/a> with your order number for a quote.<\/p><p>For more information on our policies, please visit our <a href=\"https:\/\/www.automicgold.com\/pages\/faq\"><span style=\"text-decoration:underline\">FAQ page<\/span><\/a>.<\/p>",
+        "max_width": 1500,
+        "content_alignment": "left",
+        "content_alignment_mobile": "left",
+        "horizontal_alignment": "start",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "padding_top_mobile": 24,
+        "padding_bottom_mobile": 24
+      }
+    }
+  },
+  "order": [
+    "richtext"
+  ]
+}

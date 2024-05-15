@@ -1,0 +1,86 @@
+{% paginate blog.articles by 5 %}
+
+{% comment %}
+This template is also used for listing out articles of a specific tag.
+You can change layouts or styles by checking if current_tags is true.
+{% endcomment %}
+
+<div class="blog-header spaced">
+    <div class="blog-header__name">
+        <div>
+            <h1 class="blog-header__text">{{ blog.title }}</h1>
+        </div>
+        <div>
+            <p>Tips, tutorials and bits of knowledge <br/>coming from <a href="{{ shop.url }}/pages/about-us">Automic Gold staff</a></p>
+        </div>
+    </div>
+</div>
+
+<div class="grid">
+
+    <div class="grid__item large--three-quarters push--large--one-eighth">
+
+        {% if current_tags %}
+            <h3>{{ blog.title | link_to: blog.url }} &mdash; {{ current_tags.first }}</h3>
+        {% endif %}
+
+        {% for article in blog.articles %}
+
+            <div class="article post-card">
+
+                <div class="post-card__image">
+                    {% if article.image %}
+                        <a class="article__featured-image no--underline" href="{{ article.url }}">
+                            <img
+                                src="{{ article.image | img_url: '1000x1000' }}"
+                                srcset="
+                            {{ article.image | img_url: '1000x562' }} 1000w,
+                            {{ article.image | img_url: '1500x844' }} 1000w"
+                                sizes="(max-width: 767.98px) calc(100vw),(min-width: 768px) and (max-width: 1199.98px) calc((100vw - 120px) * 0.75),(min-width: 1155px) calc((100vw - 180px) * 0.75)"
+                            >
+                        </a>
+                    {% endif %}
+                </div>
+
+                <div class="post-card__text">
+
+                    <a href="{{ article.url }}" class="no--underline"><h2 class="post-card__title">{{ article.title }}</h2></a>
+                    {% capture author %}<span>{{ article.author }}</span>{% endcapture %}
+                    {% capture date %}<time datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: format: 'month_day_year' }}</time>{% endcapture %}
+                    <div class="post-card__byline space-bottom-x05">{{ 'blogs.article.author_on_date_html' | t: author: author, date: date }}</div>
+
+                    <div class="rte">
+                        {% if article.excerpt.size > 0 %}
+                            <p>
+                                {{ article.excerpt }} <a class="post-card__more" href="{{ article.url }}">READ MORE ></a>
+                            </p>
+                        {% else %}
+                            <p>{{ article.content | strip_html | truncatewords: 15 }} <a class="post-card__more" href="{{ article.url }}">READ MORE ></a></p>
+                        {% endif %}
+                    </div>
+                </div>
+
+            </div>
+
+            {% unless forloop.last %}<hr>{% endunless %}
+
+        {% endfor %}
+
+        {% if paginate.pages > 1 %}
+            <hr>
+            <div class="pagination">
+                {{ paginate | default_pagination }}
+            </div>
+        {% endif %}
+
+    </div>
+
+    {% comment %}
+    <div class="grid__item large--one-quarter">
+        {% include 'blog-sidebar' %}
+    </div>
+    {% endcomment %}
+
+</div>
+
+{% endpaginate %}

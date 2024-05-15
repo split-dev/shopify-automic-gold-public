@@ -1,0 +1,79 @@
+{%- if predictive_search.performed -%}
+  <div id="predictive-search-results">
+    {%- if predictive_search.resources.products.size > 0 -%}
+      <ul role="listbox" aria-labelledby="predictive-search-products">
+        {%- for product in predictive_search.resources.products -%}
+          <li role="option">
+            <a href="{{ product.url }}">
+              {{ product | image_url: width: 200 | image_tag }}
+              <p>
+                <span>{{ product.title }}</span>
+                <small>{{ product.price | money }}</small>
+              </p>
+            </a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+  </div>
+{%- endif -%}
+
+<style>
+  .search-container__input {
+    text-align: center;
+    text-transform: uppercase;
+  }
+  form.search-container__form {
+    width: 100%;
+    min-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #predictive-search-results {
+    width: 50vw;
+    margin-top: 30px;
+  }
+  @media (max-width: 1440px) {
+    #predictive-search-results {
+      width: 70vw;
+    }
+  }
+  @media (max-width: 768px) {
+    #predictive-search-results {
+      width: 90vw;
+    }
+  }
+  #predictive-search-results ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    height: 45vh;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #ffcc33 #08003c;
+  }
+  li {
+    list-style-type: none;
+    width: 25%;
+    padding: 10px;
+  }
+  @media (max-width: 768px) {
+    li {
+      width: 50%;
+    }
+  }
+  li a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+  }
+  li a img {
+    width: 100%;
+    height: auto;
+  }
+  li a p {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+</style>

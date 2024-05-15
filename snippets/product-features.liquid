@@ -1,0 +1,43 @@
+{% if product.tags contains 'feature_band_engraving' %}
+    {% include 'product-feature', feature: 'wedding-engraving' %}
+{% endif %}
+
+{% if product.tags contains 'feature_essential_chain' %}
+    {% include 'product-feature', feature: 'essential-chain' %}
+{% endif %}
+
+{% if product.tags contains 'feature_bead_chain' %}
+    {% include 'product-feature', feature: 'bead-chain' %}
+{% endif %}
+
+{% if product.tags contains 'feature_butch_chain'  %}
+    {% include 'product-feature', feature: 'butch-chain' %}
+{% endif %}
+
+{% if product.tags contains 'feature_cable_chain'  %}
+    {% include 'product-feature', feature: 'cable-chain' %}
+{% endif %}
+
+{% if product.tags contains 'feature_lobster_lock' %}
+    {% include 'product-feature', feature: 'lobster-lock' %}
+{% endif %}
+
+{% if product.tags contains 'feature_spring_lock' %}
+    {% include 'product-feature', feature: 'spring-lock' %}
+{% endif %}
+
+{% if product.tags contains 'feature_two_backings' %}
+    {% include 'product-feature', feature: 'two-backs' %}
+{% endif %}
+
+{% if product.tags contains 'feature_three_backings' %}
+    {% include 'product-feature', feature: 'three-backs' %}
+{% endif %}
+
+{% unless
+    product.handle == 'forever-on-bracelet' or
+    product.handle == 'forever-on-chain'
+%}
+    {% include 'product-feature', feature: 'box' %}
+{% endunless %}
+

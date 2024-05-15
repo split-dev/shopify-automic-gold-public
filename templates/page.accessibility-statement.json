@@ -1,0 +1,26 @@
+{
+  "sections": {
+    "richtext": {
+      "type": "rich-text",
+      "custom_css": [
+        "h1 {margin-bottom: 36px;}",
+        "h2 {margin-top: 36px; margin-bottom: 24px;}",
+        "a {color: rgb(var(--color-highlighted-elements));}"
+      ],
+      "settings": {
+        "rich_text": "<h1>{{ page.title }}<\/h1><p>Updated: December 2023<\/p><h2><strong>General<\/strong><\/h2><p>We aim to make our services accessible for all. Everyone deserves independence, fairness, and ease of use, so we follow the Web Content Accessibility Guidelines (WCAG) 2.1, Level A and AA.<\/p><h2><strong>Disclaimer<\/strong><\/h2><p>We are dedicated to updating and improving the accessibility of our site and services, identifying and rectifying every barrier. Although we strive to ensure all pages and content are as easy to navigate as possible, some of them might not yet be fully adjusted to our high accessibility standards.<\/p><p>For any issues with accessing our content or for assistance with any part of our website, let us know. Our normal business hours are Monday, Tuesday, Thursday, and Friday 9AM-5PM EST, but we’ll get back to you as soon as possible.<\/p><p><strong>Contact Us<\/strong><\/p><p>Need help with any of our products or services?<br\/><strong>Customer Support Email: <\/strong><a href=\"mailto:care@automicgold.com\"><span style=\"text-decoration:underline\">care@automicgold.com<\/span><br\/><\/a><strong>Customer Support Phone:<\/strong> 888-996-8866<\/p><p>Want to report an issue or leave feedback about our accessibility?<br\/><strong>Email: <\/strong><a href=\"mailto:accessibility@automicgold.com\"><span style=\"text-decoration:underline\">accessibility@automicgold.com<\/span><\/a><\/p>",
+        "max_width": 1500,
+        "content_alignment": "left",
+        "content_alignment_mobile": "left",
+        "horizontal_alignment": "start",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "padding_top_mobile": 24,
+        "padding_bottom_mobile": 24
+      }
+    }
+  },
+  "order": [
+    "richtext"
+  ]
+}

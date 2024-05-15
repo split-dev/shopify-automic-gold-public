@@ -1,0 +1,101 @@
+{{ 'text-type-3.out.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section--{{ section.id }} {
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+  }
+
+  @media screen and (min-width: 768px) {
+      .section--{{ section.id }} {
+          padding-top: {{ section.settings.padding_top }}px;
+          padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+  }
+{%- endstyle -%}
+
+<div class="page-width text-center section--{{ section.id }}">
+    <div class="queers-rock-text-container mx-auto">
+        {{ section.settings.text }}
+        {%- if section.settings.image != blank -%}
+            {{ section.settings.image | image_url: width: 400 | image_tag: widths: '375, 400' }}
+        {%- else -%}
+            {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+        {%- endif -%}
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Text type 3",
+    "tag": "section",
+    "disabled_on": {
+        "groups": ["header", "footer"]
+    },
+    "settings": [
+        {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        },     
+        {
+            "type": "header",
+            "content": "t:sections.all.padding.section_padding_heading"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 100,
+            "step": 2,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_top",
+            "default": 32
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 100,
+            "step": 2,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_bottom",
+            "default": 32
+        },
+        {
+            "type": "header",
+            "content": "t:sections.all.padding.section_padding_mobile_heading"
+        },
+        {
+            "type": "range",
+            "id": "padding_top_mobile",
+            "min": 0,
+            "max": 100,
+            "step": 2,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_top",
+            "default": 24
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom_mobile",
+            "min": 0,
+            "max": 100,
+            "step": 2,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_bottom",
+            "default": 24
+        }
+    ],
+    "presets": [
+        {
+            "name": "Text type 3"
+        }
+    ]
+}
+{% endschema %}

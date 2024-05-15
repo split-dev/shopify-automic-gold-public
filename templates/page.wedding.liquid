@@ -1,0 +1,180 @@
+<div class="page-cover">
+    <div class="no--padding">
+        <header class="cover wedding-header">
+            <div class="cover__image">
+                <picture>
+                    {% comment %}iPad-like ratio, width to height ratio of 3/4 to 5/4 (square image){% endcomment %}
+                    <source
+                        srcset="
+                            {{ 'wedding-banner--square.jpg' | file_img_url: '1000x1000' }} 1000w,
+                            {{ 'wedding-banner--square.jpg' | file_img_url: '1500x1500' }} 1500w
+                        "
+                        sizes="100vw"
+                        media="(min-aspect-ratio: 3/4) and (max-aspect-ratio: 5/4)"
+                    />
+
+                    {% comment %}Narrow screens, up tp width to height ratio of 3/2 (tall image){% endcomment %}
+                    <source
+                        srcset="
+                            {{ 'wedding-banner--mobile.jpg' | file_img_url: '750x960' }} 750w,
+                            {{ 'wedding-banner--mobile.jpg' | file_img_url: '1125x1440' }} 1125w,
+                            {{ 'wedding-banner--mobile.jpg' | file_img_url: '1200x2262' }} 1200w
+                        "
+                        sizes="100vw"
+                        media="(max-aspect-ratio: 3/4)"
+                    />
+
+                    {% comment %}Ratios wider than width to height 3/2 (wide image){% endcomment %}
+                    <img
+                        srcset="
+                            {{ 'wedding-banner--desktop.jpg' | file_img_url: '2000x1179' }} 2000w,
+                            {{ 'wedding-banner--desktop.jpg' | file_img_url: '1500x884' }} 1500w,
+                            {{ 'wedding-banner--desktop.jpg' | file_img_url: '1200x707' }} 1200w,
+                            {{ 'wedding-banner--desktop.jpg' | file_img_url: '900x530' }} 900w
+                        "
+                        sizes="100vw"
+                        alt="Automic Gold Sustainable and Ethically Made Wedding Band Collection"
+                    />
+                </picture>
+            </div>
+
+            <div class="page-width">
+                <div class="cover__text cover__text-center wedding-header__text">
+                    <h1>Wedding</h1>
+                    <p>Automic Gold’s own line of wedding rings that are ethically made, size inclusive and customizable.</p>
+                </div>
+            </div>
+        </header>
+    </div>
+</div>
+
+<div class="collection-hat">
+    <nav class="collection-navigation">
+        <ul>
+            <li><a href="{{ shop.url }}/collections/all">All</a></li>
+            <li><a href="{{ shop.url }}/collections/rings">Rings</a></li>
+            <li><a href="{{ shop.url }}/collections/earrings">Earrings</a></li>
+            <li><a href="{{ shop.url }}/collections/necklaces">Necklaces</a></li>
+            <li><a href="{{ shop.url }}/collections/bracelets">Bracelets</a></li>
+            <li><a href="{{ shop.url }}/collections/charms">Charms</a></li>
+            <li class="active"><a href="{{ shop.url }}/pages/wedding-rings">Weddings</a></li>
+            <li><a href="{{ shop.url }}/pages/body-jewelry">Body&nbsp;jewelry</a></li>
+        </ul>
+    </nav>
+</div>
+
+<!-- TODO: BREADCRUMB -->
+
+{% assign sizes = '
+    (max-width: 479px) calc((100vw - 30px) * 0.5),
+    (min-width: 480px) and (max-width: 767.98px) calc((100vw - 60px) * 0.5),
+    (min-width: 768px) and (max-width: 1199.98px) calc((100vw - 120px) * 0.5),
+    (min-width: 1200px) calc((100vw - 180px) * 0.5)'
+%}
+
+{% comment %} {% paginate collection.products by 50 %}
+
+    <div class="pgrid collection-pgrid">
+        {% for product in collection.products %}
+            {% include 'product-card' %}
+        {% endfor %}
+
+        {% if collection.image %}
+            <div class="collection-inline-image">
+                <img
+                    class="lazyload"
+                    data-srcset="
+                        {{ collection.image | img_url: '1242x1490' }} 1242w,
+                        {{ collection.image | img_url: '1152x1382' }} 1152w,
+                        {{ collection.image | img_url: '1035x1241' }} 1035w,
+                        {{ collection.image | img_url: '768x921' }} 768w,
+                        {{ collection.image | img_url: '600x720' }} 600w
+                    "
+                    sizes="
+                        (max-width: 479px) calc(100vw - 30px),
+                        (min-width: 480px) and (max-width: 767.98px) calc(100vw - 60px),
+                        (min-width: 768px) and (max-width: 1199.98px) calc((100vw - 120px - 15px) * 0.666667),
+                        (min-width: 1200px) calc((100vw - 180px - 30px) * 0.5)
+                    "
+                    alt="Automic Gold Shop All Radically Wearable Bracelets"
+                />
+            </div>
+        {% endif %}
+    </div>
+
+    {% if paginate.pages > 1 %}
+        <div class="collection-pagination pagination">
+            {{ paginate | default_pagination}}
+        </div>
+    {% endif %}
+
+{% endpaginate %} {% endcomment %}
+
+<section class="no--padding wedding-finishes">
+
+    <div class="wedding-finish">
+        <div class="wedding-finish__curvy">
+            {% include 'product-card', product: all_products.curvy-mirror-band, sizes: sizes %}
+        </div>
+
+        <div class="wedding-finish__industrial">
+            {% include 'product-card', product: all_products.industrial-mirror-band, sizes: sizes %}
+        </div>
+    </div>
+
+    <div class="wedding-finish">
+        <div class="wedding-finish__curvy">
+            {% include 'product-card', product: all_products.curvy-matte-band, sizes: sizes %}
+        </div>
+
+        <div class="wedding-finish__industrial">
+            {% include 'product-card', product: all_products.industrial-matte-band, sizes: sizes %}
+        </div>
+    </div>
+
+    <div class="wedding-finish">
+        <div class="wedding-finish__curvy">
+            {% include 'product-card', product: all_products.curvy-hammered-band, sizes: sizes %}
+        </div>
+
+        <div class="wedding-finish__industrial">
+            {% include 'product-card', product: all_products.industrial-hammered-band, sizes: sizes %}
+        </div>
+    </div>
+
+    <div class="wedding-finish">
+        <div class="wedding-finish__curvy">
+            {% include 'product-card', product: all_products.curvy-raw-band, sizes: sizes %}
+        </div>
+
+        <div class="wedding-finish__industrial">
+            {% include 'product-card', product: all_products.industrial-wood-band, sizes: sizes %}
+        </div>
+    </div>
+</section>
+
+<section class="wedding-engraving">
+    <div class="molecule no--mobile-overlay molecule--reversed">
+        <div class="molecule__uhaul">
+            <span class="visually-hidden">Video showing engraving on Automic Gold wedding band</span>
+            <div>
+                <video class="content" loop muted autoplay playsinline>
+                    <source src="//dfaankvzyirrl.cloudfront.net/website/shared/engravedweddingband.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div class="molecule__text">
+            <h3>Engraved & personal</h3>
+            <p>
+                Up to thirty characters can be engraved<br/>on the inside of the band.
+            </p>
+
+            <p>
+                Want to engrave something special<br/>inside or outside the ring?<br/>
+                <a href="{{ shop.url }}/pages/custom-orders">We can make it happen boop</a>.
+            </p>
+        </div>
+    </div>
+</section>
+
+{% comment %} {% include 'wedding-sizes' %} {% endcomment %}

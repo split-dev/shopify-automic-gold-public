@@ -1,0 +1,47 @@
+<div class="collection-sorting {% if is_collection_sorted %}collection-sorting__active{% endif %}">
+    <select class="collection-sorting__select" name="SortBy" id="SortBy" style="background-image: url({{ 'ico-select.svg' | asset_url }})">
+        <option value="manual">
+            {% if is_collection_sorted == false %}
+                Sort products
+            {% else %}
+                {{ 'collections.sorting.featured' | t }}
+            {% endif %}
+        </option>
+        <option value="best-selling">{{ 'collections.sorting.best_selling' | t }}</option>
+        <option value="price-ascending">{{ 'collections.sorting.price_ascending' | t }}</option>
+        <option value="price-descending">{{ 'collections.sorting.price_descending' | t }}</option>
+        <option value="created-descending">{{ 'collections.sorting.date_descending' | t }}</option>
+        <option value="created-ascending">{{ 'collections.sorting.date_ascending' | t }}</option>
+    </select>
+</div>
+
+<script>
+    /*============================================================================
+     Inline JS because collection liquid object is only available
+     on collection pages and not external JS files
+     ==============================================================================*/
+    Shopify.queryParams = {};
+    if (location.search.length) {
+        for (var aKeyValue, i = 0, aCouples = location.search.substr(1).split('&'); i < aCouples.length; i++) {
+            aKeyValue = aCouples[i].split('=');
+            if (aKeyValue.length > 1) {
+                Shopify.queryParams[decodeURIComponent(aKeyValue[0])] = decodeURIComponent(aKeyValue[1]);
+            }
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function initializeSorting() {
+        $('#SortBy')
+            .val('{{ collection.sort_by | default: collection.default_sort_by }}')
+            .bind('change', function() {
+                var sort_value = jQuery(this).val();
+                Shopify.queryParams.sort_by = sort_value;
+
+                if (typeof ga === 'function') {
+                    ga('send', 'event', 'Sorting Change', '{{ collection.title }}', sort_value);
+                }
+
+                location.search = jQuery.param(Shopify.queryParams);
+            });
+    });
+</script>

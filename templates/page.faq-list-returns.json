@@ -1,0 +1,200 @@
+{
+  "wrapper": "div#faq-wrapp",
+  "sections": {
+    "banner": {
+      "type": "faq-banner",
+      "settings": {
+        "image_desktop": "shopify://shop_images/banner-faq.png",
+        "image_mobile": "shopify://shop_images/banner-faq--mobile.png",
+        "title": "<p>Frequently Asked </p><p>Questions</p>"
+      }
+    },
+    "section_faq_list_mbXNzx": {
+      "type": "section-faq-list",
+      "settings": {
+        "url": "shopify://pages/faq"
+      }
+    },
+    "section_faq_list_NCFjKN": {
+      "type": "section-faq-hide-list",
+      "blocks": {
+        "item_UhwQfy": {
+          "type": "item",
+          "settings": {
+<<<<<<< HEAD
+            "title": "\"Do you offer free returns?\"",
+            "text": "<p>If you live in the US, yes! When you return items within 30 days of the delivery date, you’ll get a prepaid shipping label. We’ll refund you the cost of the item(s) (not shipping costs or route package protection) once we get your package back. <a href=\"mailto:care@automicgold.com\" target=\"_blank\" title=\"Automic Gold Customer Service Email\"><span style=\"text-decoration:underline\">Email us</span></a> to place a return.</p>"
+=======
+            "title": "Do you offer free returns?",
+            "text": "<p>If you live in the US, yes! When you return items within 30 days of the delivery date, you’ll get a prepaid shipping label. We’ll refund you the cost of the item(s) (not shipping costs or route package protection) once we get your package back. <a href=\"mailto:care@automicgold.com\" target=\"_blank\" title=\"Automic Gold Customer Service Email\"><span style=\"text-decoration:underline\">Email us<\/span><\/a> to place a return.<\/p>"
+>>>>>>> d8c1dd54ef4ee992d3eb92e21ff4be11e6e21f9d
+          }
+        },
+        "item_9BYtbH": {
+          "type": "item",
+          "settings": {
+<<<<<<< HEAD
+            "title": "“Can I return my custom or engraved order?”",
+            "text": "<p>These are final sale and ineligible for return or exchange. You can <a href=\"mailto:care@automicgold.com\" target=\"_blank\" title=\"Automic Gold Customer Service Email\"><span style=\"text-decoration:underline\">reach out</span></a> to us for resizing, repairs, or modifications, but these come with an extra cost. </p>"
+=======
+            "title": "Can I return my custom or engraved order?",
+            "text": "<p>These are final sale and ineligible for return or exchange. You can <a href=\"mailto:care@automicgold.com\" target=\"_blank\" title=\"Automic Gold Customer Service Email\"><span style=\"text-decoration:underline\">reach out<\/span><\/a> to us for resizing, repairs, or modifications, but these come with an extra cost. <\/p>"
+>>>>>>> d8c1dd54ef4ee992d3eb92e21ff4be11e6e21f9d
+          }
+        },
+        "item_XMFFTf": {
+          "type": "item",
+          "settings": {
+<<<<<<< HEAD
+            "title": "\"Do earrings count as “final sale” pierced jewelry? \"",
+            "text": "<p>Nope, earrings are returnable! Our listings for final sale pierced body jewelry will say this below the price: “All pierced jewelry is final sale for hygienic reasons.” If that text isn’t there, you can return the piece!</p>"
+=======
+            "title": "Do earrings count as “final sale” pierced jewelry?",
+            "text": "<p>Nope, earrings are returnable! Our listings for final sale pierced body jewelry will say this below the price: “All pierced jewelry is final sale for hygienic reasons.” If that text isn’t there, you can return the piece!<\/p>"
+>>>>>>> d8c1dd54ef4ee992d3eb92e21ff4be11e6e21f9d
+          }
+        },
+        "item_VTNUAX": {
+          "type": "item",
+          "settings": {
+<<<<<<< HEAD
+            "title": "\"Did you receive my return package?\"",
+            "text": "<p>Check your package’s tracking number! If it says it’s delivered, we likely have it and are currently working on it.</p>"
+=======
+            "title": "Did you receive my return package?",
+            "text": "<p>Check your package’s tracking number! If it says it’s delivered, we likely have it and are currently working on it.<\/p>"
+>>>>>>> d8c1dd54ef4ee992d3eb92e21ff4be11e6e21f9d
+          }
+        },
+        "item_PR8FH3": {
+          "type": "item",
+          "settings": {
+<<<<<<< HEAD
+            "title": "\"I’m not in love with my final sale item. What should I do?\"",
+            "text": "<p>We don’t offer refunds on these items under any circumstances, but please <a href=\"mailto:custom@automicgold.com\" target=\"_blank\" title=\"Automic Gold Custom Email\"><span style=\"text-decoration:underline\">contact us</span></a> and we can work with you to make changes (extra fees may apply) or offer store credit for certain raw materials (gold, silver, platinum, and natural precious stones: diamonds, emeralds, rubies, and sapphires).</p>"
+=======
+            "title": "I’m not in love with my final sale item. What should I do?",
+            "text": "<p>We don’t offer refunds on these items under any circumstances, but please <a href=\"mailto:custom@automicgold.com\" target=\"_blank\" title=\"Automic Gold Custom Email\"><span style=\"text-decoration:underline\">contact us<\/span><\/a> and we can work with you to make changes (extra fees may apply) or offer store credit for certain raw materials (gold, silver, platinum, and natural precious stones: diamonds, emeralds, rubies, and sapphires).<\/p>"
+>>>>>>> d8c1dd54ef4ee992d3eb92e21ff4be11e6e21f9d
+          }
+        },
+        "item_qdYNGy": {
+          "type": "item",
+          "settings": {
+<<<<<<< HEAD
+            "title": "\"What’s your holiday return policy?\"",
+            "text": "<p>For orders placed from November 25th to December 15th, we extend the return and exchange window to January 15th. Anything purchased outside of these dates has our standard 30 day return policy.</p>"
+=======
+            "title": "What’s your holiday return policy?",
+            "text": "<p>For orders placed from November 25th to December 15th, we extend the return and exchange window to January 15th. Anything purchased outside of these dates has our standard 30 day return policy.<\/p>"
+>>>>>>> d8c1dd54ef4ee992d3eb92e21ff4be11e6e21f9d
+          }
+        },
+        "item_yVETRH": {
+          "type": "item",
+          "settings": {
+<<<<<<< HEAD
+            "title": "\"I received a free gift with my order. Will I need to return it with my items?\"",
+            "text": "<p>Yes. If not returned, we will deduct the gift’s normal cost from your refund.</p>"
+=======
+            "title": "I received a free gift with my order. Will I need to return it with my items?",
+            "text": "<p>Yes. If not returned, we will deduct the gift’s normal cost from your refund.<\/p>"
+>>>>>>> d8c1dd54ef4ee992d3eb92e21ff4be11e6e21f9d
+          }
+        }
+      },
+      "block_order": [
+        "item_UhwQfy",
+        "item_9BYtbH",
+        "item_XMFFTf",
+        "item_VTNUAX",
+        "item_PR8FH3",
+        "item_qdYNGy",
+        "item_yVETRH"
+      ],
+      "settings": {
+        "tab_name": "General"
+      }
+    },
+    "section_faq_list_QcMHtV": {
+      "type": "section-faq-hide-list",
+      "blocks": {
+        "item_MkAALh": {
+          "type": "item",
+          "settings": {
+<<<<<<< HEAD
+            "title": "“Where’s my refund?”",
+            "text": "<p>It usually takes 3-5 business days for the refund to show up in your account. If it’s still not there after 5 business days, contact your bank. </p>"
+=======
+            "title": "Where’s my refund?",
+            "text": "<p>It usually takes 3-5 business days for the refund to show up in your account. If it’s still not there after 5 business days, contact your bank. <\/p>"
+>>>>>>> d8c1dd54ef4ee992d3eb92e21ff4be11e6e21f9d
+          }
+        },
+        "item_DAW4GQ": {
+          "type": "item",
+          "settings": {
+<<<<<<< HEAD
+            "title": "“I have a new card/account. Can you send the money there instead?”",
+            "text": "<p>We can only issue refunds to the original payment method or an Automic Gold gift card. Contact your bank if you need more help.</p>"
+=======
+            "title": "I have a new card\/account. Can you send the money there instead?",
+            "text": "<p>We can only issue refunds to the original payment method or an Automic Gold gift card. Contact your bank if you need more help.<\/p>"
+>>>>>>> d8c1dd54ef4ee992d3eb92e21ff4be11e6e21f9d
+          }
+        },
+        "item_eAEkAH": {
+          "type": "item",
+          "settings": {
+<<<<<<< HEAD
+            "title": "\"Can I exchange my return instead?\"",
+            "text": "<p>Sure! We happily accept exchanges for non-final sale items within 30-days of the delivery date. Exchanges are free within the US. For international exchanges, shipping fees will apply depending on the region. <a href=\"mailto:care@automicgold.com\" target=\"_blank\" title=\"Automic Gold Customer Service Email\"><span style=\"text-decoration:underline\">Contact us</span></a> to exchange your item!</p>"
+=======
+            "title": "Can I exchange my return instead?",
+            "text": "<p>Sure! We happily accept exchanges for non-final sale items within 30-days of the delivery date. Exchanges are free within the US. For international exchanges, shipping fees will apply depending on the region. <a href=\"mailto:care@automicgold.com\" target=\"_blank\" title=\"Automic Gold Customer Service Email\"><span style=\"text-decoration:underline\">Contact us<\/span><\/a> to exchange your item!<\/p>"
+>>>>>>> d8c1dd54ef4ee992d3eb92e21ff4be11e6e21f9d
+          }
+        },
+        "item_7Lehf3": {
+          "type": "item",
+          "settings": {
+<<<<<<< HEAD
+            "title": "\"Will I be charged a restocking fee?\"",
+            "text": "<p>For items outside the 30-day return window, items that show visible wear, and items returned in an unhygienic state, yes. For that last case, we will only issue refunds with store credit.</p>"
+=======
+            "title": "Will I be charged a restocking fee?",
+            "text": "<p>For items outside the 30-day return window, items that show visible wear, and items returned in an unhygienic state, yes. For that last case, we will only issue refunds with store credit.<\/p>"
+>>>>>>> d8c1dd54ef4ee992d3eb92e21ff4be11e6e21f9d
+          }
+        }
+      },
+      "block_order": [
+        "item_MkAALh",
+        "item_DAW4GQ",
+        "item_eAEkAH",
+        "item_7Lehf3"
+      ],
+      "settings": {
+        "tab_name": "Refunds & Exchanges"
+      }
+    },
+    "faq-custom": {
+      "type": "faq-custom-text",
+      "settings": {
+        "text_1": "<p>Have any more questions? Email us <a href=\"mailto:care@automicgold.com\" target=\"_blank\" title=\"Automic Gold customer service email\">care@automicgold.com</a></p>",
+        "text_2": "<p>Have any more questions? Email us.<br/><a href=\"mailto:care@automicgold.com\" target=\"_blank\" title=\"Automic Gold customer service email\">care@automicgold.com</a></p>",
+        "padding_top": 32,
+        "padding_bottom": 8,
+        "padding_top_mb": 24,
+        "padding_bottom_mb": 24
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "section_faq_list_mbXNzx",
+    "section_faq_list_NCFjKN",
+    "section_faq_list_QcMHtV",
+    "faq-custom"
+  ]
+}

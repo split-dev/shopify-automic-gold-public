@@ -1,0 +1,200 @@
+@import "../settings/variables";
+@import "../settings/bootstrap-media";
+
+#faq-wrapp {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-faq-hide-list {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  left: -100%;
+  pointer-events: none;
+}
+
+.faq-list {
+  &__title {
+    padding: 0 0 12px 0;
+    text-align: left;
+
+    @include media-breakpoint-up(md) {
+      padding: 24px 0;
+      text-align: center;
+    }
+
+    a {
+      display: block;
+      color: rgb(var(--color-highlighted-elements));
+      padding: 12px 0;
+      margin-bottom: 12px;
+
+      @include media-breakpoint-up(md) {
+        display: none;
+      }
+    }
+
+    h2 {
+      margin-bottom: 0;
+    }
+  }
+
+  // .faq-list__head-tabs
+
+  &__head-tabs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: stretch;
+    grid-gap: 8px;
+    gap: 8px;
+    flex-wrap: wrap;
+    padding: 26px 0;
+    @include media-breakpoint-up(lg) {
+      flex-wrap: nowrap;
+    }
+
+    .tablinks {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: rgb(var(--color-base-text));
+      border: 1px solid rgb(var(--color-base-text));
+      padding: 20px 15px;
+      flex-basis: calc(50% - 8px);
+      cursor: pointer;
+      outline: none !important;
+      transition: 0.3s;
+      min-width: 130px;
+      min-height: 92px;
+      font-weight: 600;
+      @include media-breakpoint-up(md) {
+        max-width: 170px;
+        flex: 1 1 0;
+      }
+      @include media-breakpoint-up(lg) {
+        max-width: 170px;
+      }
+
+      &:hover {
+        color: rgb(var(--color-base-background-1));
+        background-color: rgb(var(--color-highlighted-elements));
+      }
+
+      &.active {
+        color: rgb(var(--color-base-background-1));
+        background-color: rgb(var(--color-highlighted-elements));
+      }
+    }
+  }
+
+  // .faq-list__quests
+
+  &__quests {
+    max-width: 601px;
+    width: 100%;
+    margin: 6px auto 0;
+
+    /* Style the tab */
+    .tab {
+      overflow: hidden;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+      display: none;
+      border-top: none;
+    }
+
+    .tabcontent {
+      animation: fadeEffect 1s; /* Fading effect takes 1 second */
+    }
+
+    /* Go from zero to full opacity */
+    @keyframes fadeEffect {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Style the button that is used to open and close the collapsible content */
+    .collapsible {
+      position: relative;
+      color: rgb(var(--color-base-text));
+      cursor: pointer;
+      padding: 10px 40px 10px 10px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      border-bottom: 1px solid rgb(var(--color-highlighted-elements));
+
+      @include media-breakpoint-up(md) {
+        padding: 26px 0;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEiIGhlaWdodD0iMTciIHZpZXdCb3g9IjAgMCAxMSAxNyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgaWQ9IkFycm93IEFuZ2xlcy9WYXJpYW50NCI+CjxwYXRoIGlkPSJWZWN0b3IgMTAiIGQ9Ik0xLjUgMUw5LjUgOC41TDEuNSAxNiIgc3Ryb2tlPSIjRkZDQzMzIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L2c+Cjwvc3ZnPgo=");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 8px;
+        height: 15px;
+        right: 18px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        transition: 0.3s;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      &.active {
+        &::after {
+          transform: rotate(90deg);
+        }
+      }
+    }
+
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+
+    .active + .content {
+      grid-template-rows: 1fr;
+      border-bottom: 1px solid rgb(var(--color-highlighted-elements));
+      // padding: 16px 10px;
+      // @include media-breakpoint-up(md) {
+      //   padding: 32px 0;
+      // }
+    }
+
+    /* Style the collapsible content. Note: hidden by default */
+    .content {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: 0.2s ease-out;
+      .content-inner {
+        overflow: hidden;
+        & > div {
+          padding: 16px 10px;
+          @include media-breakpoint-up(md) {
+            padding: 32px 0;
+          }
+        }
+      }
+      &:last-of-type {
+        margin-bottom: 16px;
+      }
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

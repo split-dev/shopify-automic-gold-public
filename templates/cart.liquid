@@ -1,0 +1,96 @@
+{% comment %}
+    For info on test orders:
+- General http://docs.shopify.com/manual/your-store/orders/test-orders
+- Shopify Payments - http://docs.shopify.com/manual/more/shopify-payments/testing-shopify-payments
+{% endcomment %}
+
+<div class="page-width">
+    {% if cart.item_count > 0 %}
+        <h1 class="cart__header">Your Cart</h1>
+    
+        <form action="/cart" method="post" novalidate class="cart">
+    
+            <div class="cart__items">
+    
+                {% for item in cart.items %}
+                    {% assign cart_product = all_products[item.product.handle] %}
+    
+                    <div class="cart__row">
+    
+                        <a href="{{ item.url | within: collections.all }}" class="cart__product-image">
+                            <img src="{{ item | img_url: 'medium' }}" alt="{{ item.title | escape }}">
+                        </a>
+    
+                        <div class="cart__product-details">
+                            <a href="{{ item.url }}" class="cart__product-name">
+                                {{ item.product.title }}
+                            </a>
+    
+                            {% unless item.variant.title contains 'Default' %}
+                                <div class="cart__product-variation">{{ item.variant.title }}</div>
+                            {% endunless %}
+    
+                            {% assign property_size = item.properties | size %}
+    
+                            {% if property_size > 0 %}
+                                {% for p in item.properties %}
+                                    {{ p.first }}:
+    
+                                    {% comment %}Check if there was an uploaded file associated{% endcomment %}
+                                    {% if p.last contains '/uploads/' %}
+                                        <a href="{{ p.last }}">{{ p.last | split: '/' | last }}</a>
+                                    {% else %}
+                                        {{ p.last }}
+                                    {% endif %}
+    
+                                    <br>
+                                {% endfor %}
+                            {% endif %}
+    
+                            <div class="cart__product-qty">
+                                <input type="number" name="updates[]" id="updates_{{ item.key }}" data-id="{{ item.key }}" value="{{ item.quantity }}" min="0">
+                            </div>
+    
+                            <div class="cart__product-price">
+                                {{ item.line_price | money_without_trailing_zeros }}
+                            </div>
+    
+                            <a href="/cart/change?line={{ forloop.index }}&amp;quantity=0" class="cart__product-remove">
+                                <small>{{ 'cart.general.remove' | t }}</small>
+                            </a>
+                        </div>
+    
+                    </div>
+                {% endfor %}
+            </div>
+    
+    
+            <div class="cart__footer">
+                <div class="cart__footer-row">
+                    <div class="cart__footer-row-name">Subtotal</div>
+                    <div class="cart__footer-row-filler bg-dot"></div>
+                    <div class="cart__footer-row-value">{{ cart.total_price | money_without_trailing_zeros }}</div>
+                </div>
+    
+                <div class="cart__footer-row">
+                    <div class="cart__footer-row-name">Shipping</div>
+                    <div class="cart__footer-row-filler bg-dot"></div>
+                    <div class="cart__footer-row-value">Free</div>
+                </div>
+    
+                <div class="cart__footer-buttons">
+                    <button type="submit" name="update" class="update-cart">{{ 'cart.general.update' | t }}</button>
+                    <button type="submit" name="checkout" class="btn btn--large btn--swimming-pink-peach">Checkout</button>
+                </div>
+    
+                <!-- <div class="cart__footer-row">
+                    <p class="affirm-as-low-as" data-page-type="cart" data-affirm-color="white" data-amount="{{cart.total_price}}"></p>
+                </div> -->
+            </div>
+        </form>
+    {% else %}
+        <h2>{{ 'cart.general.title' | t }}</h2>
+        <p>{{ 'cart.general.empty' | t }}</p>
+        <p>{{ 'cart.general.continue_browsing_html' | t }}</p>
+    {% endif %}    
+</div>

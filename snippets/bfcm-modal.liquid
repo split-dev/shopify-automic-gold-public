@@ -1,0 +1,47 @@
+<div class="modal" id="modal-1" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+
+            <div class="molecule no--mobile-overlay molecule--reversed">
+                <div class="molecule__image">
+                    <div class="modal__image-container">
+                        <picture>
+                            <source
+                                srcset="
+                                    {{ 'bfcm-modal-image-mobile.jpg' | file_img_url: '750x600' }} 750w,
+                                    {{ 'bfcm-modal-image-mobile.jpg' | file_img_url: '500x400' }} 500w,
+                                    {{ 'bfcm-modal-image-mobile.jpg' | file_img_url: '250x200' }} 250w
+                                "
+                                sizes="250px"
+                                media="(max-width: 767.98px)"
+                            />
+
+                            <img
+                                class="content"
+                                srcset="
+                                    {{ 'bfcm-modal-image.jpg' | file_img_url: '750x750' }} 750w,
+                                    {{ 'bfcm-modal-image.jpg' | file_img_url: '500x500' }} 500w,
+                                    {{ 'bfcm-modal-image.jpg' | file_img_url: '375x375' }} 375w,
+                                "
+                                sizes="375px"
+                                alt="Automic Gold Pierced and Non-Pierced Line Septum Earrings"
+                            />
+                        </picture>
+                    </div>
+                </div>
+                <div class="molecule__text v-center text-center">
+                    <h2 class="modal__title" id="modal-1-title">
+                        Receive a free Line Septum
+                    </h2>
+                    <p>
+                        Your choice of pierced or non pierced Line Septum with purchases over $200.
+                    </p>
+                    <a href="{{ shop.url }}/collections/all" class="btn btn--pink-inverted space-bottom-x025">Shop now</a>
+                    <small>Offer ends Nov. 30</small>
+                </div>
+            </div>
+    
+            <button class="modal__close" aria-label="Close modal" data-micromodal-close>✕</button>
+        </div>
+    </div>
+</div>

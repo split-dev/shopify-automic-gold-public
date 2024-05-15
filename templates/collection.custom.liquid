@@ -1,0 +1,114 @@
+<div class="collection-header">
+    {% render 'collection-header', tag: 'nameplates', name: 'Nameplates', subheader: '100% Custom. Personalized nameplates designed by you and handmade by us.', alt: 'A model&#39;s wearing a Small Custom Nameplate, Medium Custom Nameplate, and Large Custom Nameplate layered' %}
+</div>
+
+{% assign sizes = '
+    (max-width: 479px) calc((100vw - 30px) * 0.5),
+    (min-width: 480px) and (max-width: 767.98px) calc((100vw - 60px) * 0.5),
+    (min-width: 768px) and (max-width: 1199.98px) calc((100vw - 120px) * 0.5),
+    (min-width: 1200px) calc((100vw - 180px) * 0.5)'
+%}
+
+<div class="collection-utils page-width">
+    {% include 'breadcrumb' %}
+    {% include 'collection-sorting' %}
+</div>
+
+{% paginate collection.products by 50 %}
+
+    <div class="pgrid collection-pgrid page-width">
+        {% for product in collection.products %}
+            {% include 'product-card-custom' %}
+        {% endfor %}
+
+        {% if collection.image %}
+            <div class="collection-inline-image">
+                <img
+                    class="lazyload"
+                    data-srcset="
+                        {{ collection.image | img_url: '1242x1490' }} 1242w,
+                        {{ collection.image | img_url: '1152x1382' }} 1152w,
+                        {{ collection.image | img_url: '1035x1241' }} 1035w,
+                        {{ collection.image | img_url: '768x921' }} 768w,
+                        {{ collection.image | img_url: '600x720' }} 600w
+                    "
+                    sizes="
+                        (max-width: 479px) calc(100vw - 30px),
+                        (min-width: 480px) and (max-width: 767.98px) calc(100vw - 60px),
+                        (min-width: 768px) and (max-width: 1199.98px) calc((100vw - 120px - 15px) * 0.666667),
+                        (min-width: 1200px) calc((100vw - 180px - 30px) * 0.5)
+                    "
+                    alt="Various Automic Gold wedding bands of solid 14k yellow, white, rose, and champagne gold stacked in an almost-pyramid"
+                />
+            </div>
+        {% endif %}
+    </div>
+
+    {% if paginate.pages > 1 %}
+        <div class="collection-pagination pagination">
+            {{ paginate | default_pagination}}
+        </div>
+    {% endif %}
+
+{% endpaginate %}
+
+
+
+<div class="spaced--twice page-width">
+    <div class="molecule no--mobile-overlay">
+        <div class="molecule__text">
+            <h2>A different font, drawing or gems?</h2>
+            <h3>We can make it for you!</h3>
+
+            <p>
+                Reach out now to get a quote for your nameplate.
+            </p>
+
+            <a href="mailto:al@automicgold.com?subject=Custom Order Inquiry&body=[Thank you for interest in a custom order with us - yay! Please fill in the details below and hit send]%0d%0a%0d%0a1. Describe your idea:%0d%0a
+2. What metal would you like it in?%0d%0a
+3. In case of gold, what color gold?%0d%0a
+4. What is your timeline?%0d%0a
+5. What is your budget?%0d%0a
+6. What size/length/thickness apply to your design?%0d%0a%0d%0a
+(Please include any drawings or reference images if you have)" title="Send us a custom order request" class="btn btn--on-base">Create Your Perfect Nameplate</a>
+        </div> 
+
+        <div class="molecule__uhaul page-width">
+            <div class="two-by-two m-two-by-two gap-quarter">
+                <div class="custom__order one-one">
+                    <div class="custom__order-image">
+                        <img class="lazyload" alt='Emily Nameplate'
+                             data-featherlight="{{ 'nameplates_create_example_1.jpg' | file_img_url: '1080x1350' }}"
+                             srcset="
+                           {{ 'nameplates_create_example_1.jpg' | file_img_url: '540x675' }} 540w,
+                           {{ 'nameplates_create_example_1.jpg' | file_img_url: '1080x1350' }} 1080w
+                         "
+                             sizes="{{ sizes }}"
+                        />
+                    </div>
+                    {% comment %} <div class="custom__order-description">
+                        <h3>Emily Nameplate</h3>
+                        <p>"Emily" nameplate necklace, 0.5" wide on a 15" chain.</p>
+                    </div> {% endcomment %}
+                </div>
+
+                <div class="custom__order two-one">
+                    <div class="custom__order-image">
+                        <img class="lazyload" alt='Ariana Nameplate'
+                             data-featherlight="{{ 'nameplates_create_example_2.jpg' | file_img_url: '1080x1350' }}"
+                             srcset="
+                           {{ 'nameplates_create_example_2.jpg' | file_img_url: '540x675' }} 540w,
+                           {{ 'nameplates_create_example_2.jpg' | file_img_url: '1080x1350' }} 1080w
+                         "
+                             sizes="{{ sizes }}"
+                        />
+                    </div>
+                    {% comment %} <div class="custom__order-description">
+                        <h3>Ariana Nameplate</h3>
+                        <p>"Ariana" nameplate necklace, 1.2" width, on a 18" chain.</p>
+                    </div> {% endcomment %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

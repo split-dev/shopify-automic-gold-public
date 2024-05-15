@@ -1,0 +1,9 @@
+{% comment %} This is a template file located in template folder {% endcomment %}
+{% layout none %}
+<div id="content">
+    {%- for product in collection.products limit: 24 -%}
+        <li class="featured-products__item swiper-slide">
+          {% render 'product-card', product: product, show_secondary_image: true %}
+        </li>
+    {%- endfor -%}
+</div>

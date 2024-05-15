@@ -1,0 +1,172 @@
+{% assign is_collection_sorted = false %}
+{% if collection.sort_by and collection.sort_by != '' and collection.sort_by != 'manual' %}
+    {% assign is_collection_sorted = true %}
+{% endif %}
+
+<header class="page-cover no--padding engagement-header-mobile">
+    <div class="cover engagement-header-image-mobile">
+        <div class="cover__image engagement-cover-image">
+            <picture>
+                {% comment %}iPad-like ratio, width to height ratio of 3/4 to 5/4 (tall image){% endcomment %}
+                <source
+                    srcset="
+                        {{ 'pride-collection-header-image-mobile.jpg' | file_img_url: '1000x1000' }} 1000w,
+                        {{ 'pride-collection-header-image-mobile.jpg' | file_img_url: '1500x1500' }} 1500w,
+                        {{ 'pride-collection-header-image-mobile.jpg' | file_img_url: '2000x2000' }} 2000w
+                    "
+                    sizes="100vw"
+                    media="(min-aspect-ratio: 3/4) and (max-aspect-ratio: 5/4)"
+                />
+                {% comment %}Narrow screens, up tp width to height ratio of 3/2 (square image){% endcomment %}
+                <source
+                    srcset="
+                        {{ 'pride-collection-header-image-mobile.jpg' | file_img_url: '580x812' }} 580w,
+                        {{ 'pride-collection-header-image-mobile.jpg' | file_img_url: '690x966' }} 690w,
+                        {{ 'pride-collection-header-image-mobile.jpg' | file_img_url: '1035x1449' }} 1035w,
+                        {{ 'pride-collection-header-image-mobile.jpg' | file_img_url: '1152x1613' }} 1152w,
+                        {{ 'pride-collection-header-image-mobile.jpg' | file_img_url: '1416x1982' }} 1416w
+                    "
+                    sizes="100vw"
+                    media="(max-aspect-ratio: 3/4)"
+                />
+                {% comment %}Ratios wider than width to height 3/2 (wide image){% endcomment %}
+                <img
+                    srcset="
+                        {{ 'pride-collection-header-image-mobile.jpg' | file_img_url: '2000x1280' }} 2000w,
+                        {{ 'pride-collection-header-image-mobile.jpg' | file_img_url: '1538x984' }} 1538w,
+                        {{ 'pride-collection-header-image-mobile.jpg' | file_img_url: '1384x886' }} 1384w,
+                        {{ 'pride-collection-header-image-mobile.jpg' | file_img_url: '769x492' }} 769w
+                    "
+                    sizes="100vw"
+                    alt=""
+                />
+            </picture>
+        </div>
+    </div>
+    <div class="engagement-header-left">
+        <div class="engagement-header-text-container-mobile">
+            <div class="engagement-header-text page-width pride-header-text-container-mobile">
+                <h1 class="engagement-header-collection">Collection</h1>
+                <h1 class="engagement-header-engagement">Pride</h1>
+                <p class="engagement-subheader">
+                    Discover our Pride Collection this June, featuring a dazzling array of colorful gems and 14K solid gold. Orders $99+ will receive a free Pride bandana created by a local queer artist. Don't miss out, we have limited quantities so get yours while supplies last.
+                </p>
+                <p class="pride-disclaimer">
+                    *Minimal packaging excluded from offer
+                </p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<header class="page-cover no--padding engagement-header-desktop">
+    <div class="pride-collection-desktop-left">
+        <div class="engagement-header-text-container-desktop">
+            <div class="engagement-header-text page-width">
+                <h1 class="engagement-header-collection">Collection</h1>
+                <h1 class="engagement-header-engagement">Pride</h1>
+                <p class="engagement-subheader pride-collection-subheader">
+                    Discover our Pride Collection this June, featuring a dazzling array of colorful gems and 14K solid gold. Orders $99+ will receive a free Pride bandana created by a local queer artist. Don't miss out, we have limited quantities so get yours while supplies last.
+                </p>
+                <p class="pride-disclaimer">
+                    *Minimal packaging excluded from offer
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="engagement-header-desktop-right">
+        <div class="cover__image">
+            <picture>
+                {% comment %}iPad-like ratio, width to height ratio of 3/4 to 5/4 (tall image){% endcomment %}
+                <source
+                    srcset="
+                        {{ 'pride-collection-header-image-desktop.jpg' | file_img_url: '1000x1000' }} 1000w,
+                        {{ 'pride-collection-header-image-desktop.jpg' | file_img_url: '1500x1500' }} 1500w,
+                        {{ 'pride-collection-header-image-desktop.jpg' | file_img_url: '2000x2000' }} 2000w
+                    "
+                    sizes="100vw"
+                    media="(min-aspect-ratio: 3/4) and (max-aspect-ratio: 5/4)"
+                />
+                {% comment %}Narrow screens, up tp width to height ratio of 3/2 (square image){% endcomment %}
+                <source
+                    srcset="
+                        {{ 'pride-collection-header-image-desktop.jpg' | file_img_url: '580x812' }} 580w,
+                        {{ 'pride-collection-header-image-desktop.jpg' | file_img_url: '690x966' }} 690w,
+                        {{ 'pride-collection-header-image-desktop.jpg' | file_img_url: '1035x1449' }} 1035w,
+                        {{ 'pride-collection-header-image-desktop.jpg' | file_img_url: '1152x1613' }} 1152w,
+                        {{ 'pride-collection-header-image-desktop.jpg' | file_img_url: '1416x1982' }} 1416w
+                    "
+                    sizes="100vw"
+                    media="(max-aspect-ratio: 3/4)"
+                />
+                {% comment %}Ratios wider than width to height 3/2 (wide image){% endcomment %}
+                <img
+                    srcset="
+                        {{ 'pride-collection-header-image-desktop.jpg' | file_img_url: '2000x1280' }} 2000w,
+                        {{ 'pride-collection-header-image-desktop.jpg' | file_img_url: '1538x984' }} 1538w,
+                        {{ 'pride-collection-header-image-desktop.jpg' | file_img_url: '1384x886' }} 1384w,
+                        {{ 'pride-collection-header-image-desktop.jpg' | file_img_url: '769x492' }} 769w
+                    "
+                    sizes="100vw"
+                    alt=""
+                />
+            </picture>
+        </div>
+    </div>
+</header>
+<nav class="collection-navigation">
+    <ul>
+        <li class="active"><a href="{{ shop.url }}/collections/all">All</a></li>
+        <li><a href="{{ shop.url }}/collections/rings">Rings</a></li>
+        <li><a href="{{ shop.url }}/collections/earrings">Earrings</a></li>
+        <li><a href="{{ shop.url }}/collections/necklaces">Necklaces</a></li>
+        <li><a href="{{ shop.url }}/collections/bracelets">Bracelets</a></li>
+        <li><a href="{{ shop.url }}/collections/charms">Charms</a></li>
+        <li><a href="{{ shop.url }}/collections/body-jewelry">Body&nbsp;Jewelry</a></li>
+        <li><a href="{{ shop.url }}/collections/wedding">Wedding</a></li>
+    </ul>
+</nav>
+
+<div class="collection-utils page-width">
+    {% include 'breadcrumb' %}
+    {% include 'collection-sorting' %}
+</div>
+
+{% paginate collection.products by 50 %}
+    <div class="pgrid page-width">
+        {% for product in collection.products %}
+            {% include 'product-card' %}
+        {% endfor %}
+
+        {% if collection.image %}
+            <div class="collection-inline-image">
+                <img
+                    class="lazyload"
+                    data-srcset="
+                        {{ collection.image | img_url: '1242x1490' }} 1242w,
+                        {{ collection.image | img_url: '1152x1382' }} 1152w,
+                        {{ collection.image | img_url: '1035x1241' }} 1035w,
+                        {{ collection.image | img_url: '768x921' }} 768w,
+                        {{ collection.image | img_url: '600x720' }} 600w
+                    "
+                    sizes="
+                        (max-width: 479px) calc(100vw - 30px),
+                        (min-width: 480px) and (max-width: 767.98px) calc(100vw - 60px),
+                        (min-width: 768px) and (max-width: 1199.98px) calc((100vw - 120px - 15px) * 0.666667),
+                        (min-width: 1200px) calc((100vw - 180px - 30px) * 0.5)
+                    "
+                    alt="A model sitting with one knee bent wearing various Automic Gold chains, rings, earrings, ear cuffs, bracelets, and nose ring"
+                />
+            </div>
+        {% else %}
+            {% comment %} {% include 'wedding-plug' %} {% endcomment %}
+        {% endif %}
+    </div>
+
+    {% if paginate.pages > 1 %}
+        <div class="collection-pagination pagination">
+            {{ paginate | default_pagination }}
+        </div>
+    {% endif %}
+
+{% endpaginate %}

@@ -1,0 +1,150 @@
+{
+  "sections": {
+    "richtext": {
+      "type": "text-type-1",
+      "settings": {
+        "heading": "Owned and proud",
+        "title": "We are a queer, trans-owned business",
+        "text": "<p>People often ask why we mention that we’re a trans-owned and queer-operated jewelry business at every opportunity.<\/p>",
+        "padding_top": 32,
+        "padding_bottom": 60,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "2d1a9df7-12d4-49b3-95af-d63444281b0e": {
+      "type": "text-type-2",
+      "settings": {
+        "text_column_1": "<p><strong>&lt;1%<\/strong><\/p><h3>of US businesses are LGBTQ owned<\/h3>",
+        "text_column_2": "<p><strong>&lt;.02%<\/strong><\/p><h3>are owned by transgender people<\/h3>",
+        "text": "<p>A nonbinary lesbian-owned jewelry brand? Even rarer.<\/p><p>We think it’s only fair to be loud about it to balance that out. We want these ratios higher and we hope to encourage more of our community to be part of them!<\/p>",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_mobile": 24,
+        "padding_bottom_mobile": 24
+      }
+    },
+    "7ac5c14d-ab2a-4acc-a96b-8e33075ce7b4": {
+      "type": "image-list-type-1",
+      "blocks": {
+        "c63db8f8-3ea3-43f2-8c31-f4562ca95379": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/beyond-boundaries-image-1.jpg"
+          }
+        },
+        "ec5e6749-4f38-4d1a-a225-fd3bd41f6225": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/beyond-boundaries-image-2.jpg"
+          }
+        },
+        "52855d64-57b1-4363-89a1-45c203e107ca": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/beyond-boundaries-image-3.jpg"
+          }
+        },
+        "f694e085-05d0-4f16-950c-15234c941c88": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/beyond-boundaries-image-4.jpg"
+          }
+        },
+        "af014824-c5a3-4a41-8b4e-c1413bf3ea9f": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/beyond-boundaries-image-5.jpg"
+          }
+        },
+        "678e44c8-bc48-4433-a60a-41a4277f51e1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/beyond-boundaries-image-6.jpg"
+          }
+        },
+        "3551d356-e0ff-4cf0-8914-73f4ade4cf9c": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/beyond-boundaries-image-7.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "c63db8f8-3ea3-43f2-8c31-f4562ca95379",
+        "ec5e6749-4f38-4d1a-a225-fd3bd41f6225",
+        "52855d64-57b1-4363-89a1-45c203e107ca",
+        "f694e085-05d0-4f16-950c-15234c941c88",
+        "af014824-c5a3-4a41-8b4e-c1413bf3ea9f",
+        "678e44c8-bc48-4433-a60a-41a4277f51e1",
+        "3551d356-e0ff-4cf0-8914-73f4ade4cf9c"
+      ],
+      "settings": {
+        "text": "<p><strong>Beyond Boundaries, Beyond Binaries<\/strong><\/p><p><a href=\"https:\/\/www.automicgold.com\/pages\/about-our-founder\"><span style=\"text-decoration:underline\">Our genderqueer founder<\/span><\/a> designed Automic Gold jewelry to mix and warp the feminine, masculine, in-between, and outside, to make fine jewelry for every expression and style.<\/p>",
+        "padding_top": 60,
+        "padding_bottom": 32,
+        "padding_top_mobile": 24,
+        "padding_bottom_mobile": 24
+      }
+    },
+    "b0a01f45-1c30-4063-836c-8629ff0ef20e": {
+      "type": "text-type-3",
+      "settings": {
+        "text": "<p><strong>Our Ever-growing Found Family <\/strong><\/p><p>To queers who rock our jewelry, to engaged and married folks who chose us for their special occasion, and to everyone else who supports us so fiercely, we can’t thank you enough!<\/p>",
+        "image": "shopify:\/\/shop_images\/about-us-thankful-rainbow.png",
+        "padding_top": 16,
+        "padding_bottom": 32,
+        "padding_top_mobile": 24,
+        "padding_bottom_mobile": 24
+      }
+    },
+    "9cc2cbd0-7820-4b20-ac0b-e7655165a8d0": {
+      "type": "image-list-type-2",
+      "blocks": {
+        "258cc743-6313-43e6-bed3-b07f5a407931": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/about-us-thankful-couples-1.jpg"
+          }
+        },
+        "f1386d15-a811-4fd2-b2fa-e39a9dc81ac8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/about-us-thankful-couples-2.jpg"
+          }
+        },
+        "aadfdcd0-99db-4842-8313-d8ff9f3c06f9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/about-us-thankful-couples-3.png"
+          }
+        },
+        "6ea3dfbd-2f67-4cea-9dcb-e814675254f9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/about-us-thankful-couples-4.png"
+          }
+        }
+      },
+      "block_order": [
+        "258cc743-6313-43e6-bed3-b07f5a407931",
+        "f1386d15-a811-4fd2-b2fa-e39a9dc81ac8",
+        "aadfdcd0-99db-4842-8313-d8ff9f3c06f9",
+        "6ea3dfbd-2f67-4cea-9dcb-e814675254f9"
+      ],
+      "settings": {
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "padding_top_mobile": 24,
+        "padding_bottom_mobile": 24
+      }
+    }
+  },
+  "order": [
+    "richtext",
+    "2d1a9df7-12d4-49b3-95af-d63444281b0e",
+    "7ac5c14d-ab2a-4acc-a96b-8e33075ce7b4",
+    "b0a01f45-1c30-4063-836c-8629ff0ef20e",
+    "9cc2cbd0-7820-4b20-ac0b-e7655165a8d0"
+  ]
+}

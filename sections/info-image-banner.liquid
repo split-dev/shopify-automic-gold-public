@@ -1,0 +1,165 @@
+{{ 'info-image-banner.out.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section--{{ section.id }} {
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+  }
+
+  @media screen and (min-width: 768px) {
+  .section--{{ section.id }} {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+  }
+{%- endstyle -%}
+
+<div class="info-image-banner">
+  <div class="page-width section--{{ section.id }}">
+    <div class="info-image-banner__row">
+      <div class="info-image-banner__column">
+        <div class="d-flex flex-wrap info-image-banner__blocks">
+          {%- for block in section.blocks -%}
+            <div class="info-column__item position-relative" {{ block.shopify_attributes }}>
+              <div class="position-relative" style="padding-bottom: 67.75%;">
+                {{
+                  block.settings.image
+                  | image_url: width: 428
+                  | image_tag: widths: '214, 321, 428', class: 'position-absolute w-100 h-100'
+                }}
+              </div>
+              <a class="info-column__item__link text-center d-block link--full" href="{{ block.settings.button_link }}">
+                {{- block.settings.button_text -}}
+              </a>
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+      <div class="info-image-banner__column info-column">
+        <div class="info-column__header">
+          <h2 class="info-column__title">
+            {{ section.settings.title }}
+          </h2>
+          <h5 class="info-column__subtitle">
+            {{ section.settings.subtitle }}
+          </h5>
+
+          <div class="rte">
+            {{ section.settings.text }}
+          </div>
+        </div>
+        <div class="info-column__footer">
+          <p class="info-column__text">
+            {{ section.settings.items_title }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Info image banner",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Jewelry for a  better future"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Ethical, comfortable and for everyone."
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 32
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_mobile_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 24
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "default": "Shop Now",
+          "label": "Button text"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Info image banner"
+    }
+  ]
+}
+{% endschema %}

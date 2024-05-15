@@ -1,0 +1,92 @@
+{
+  "sections": {
+    "banner": {
+      "type": "cover-image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/care--hero.png",
+        "image_mobile": "shopify:\/\/shop_images\/care--hero-mobile.png",
+        "text": "<h1>Jewelry Care<\/h1>"
+      }
+    },
+    "55845ea1-7124-4816-a003-d5954ec82496": {
+      "type": "info-tabs",
+      "blocks": {
+        "9a7d32a5-8ef7-4244-8471-5cbccb921af9": {
+          "type": "video-list",
+          "settings": {
+            "title": "Metal Only Care",
+            "description": "<p>We make our jewelry with solid 14k gold and 950 platinum. These metals aren’t afraid of water or chemicals, so you can wear them every day!<\/p><p>Cleaning your solid gold or platinum jewelry is super simple. Using a soft brush or cloth, gently scrub your jewelry with mild soap and water. For tough messes, soak it overnight in a cup of soapy water.<\/p><p>If the metal is scratched, wipe the visible parts of the metal with our polishing cloth while applying pressure. If scratches are serious and don’t budge, we’ll happily re-polish your piece for you—just let <a href=\"mailto:care@automicgold.com\"><span style=\"text-decoration:underline\">our care team<\/span><\/a> know! <\/p>",
+            "heading_1": "1. Soap",
+            "video_src_1": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/411f65fe049a4648a79357db40c86574.mp4",
+            "overlay_text_1": "",
+            "heading_2": "2. Warm water",
+            "video_src_2": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/1574e1294fe149b6a1466d353713ed71.mp4",
+            "overlay_text_2": "",
+            "heading_3": "3. Leave it in overnight",
+            "video_src_3": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/f200b153d1b049a8963a718cea18aacd.mp4",
+            "overlay_text_3": "",
+            "heading_4": "4. Close the drain",
+            "video_src_4": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/6283d63ca59d4b50a8621f945c01bea6.mp4",
+            "overlay_text_4": "",
+            "heading_5": "5. Use soft brush",
+            "video_src_5": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/1556d1a3637f4598aeb5ccd36e06a676.mp4",
+            "overlay_text_5": "",
+            "heading_6": "6. Wet a clean cloth",
+            "video_src_6": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/9757415be1184d72b9c3af6bfb6c2145.mp4",
+            "overlay_text_6": "",
+            "heading_7": "7. Wipe 'til ✨✨✨",
+            "video_src_7": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/cdeee936301f4747adede092385949a8.mp4",
+            "overlay_text_7": "",
+            "heading_8": "Extra tip!",
+            "video_src_8": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/ebcc6c9c749e411ea89fb85afe3779e5.mp4\" type=\"video\/mp4",
+            "overlay_text_8": "If backings become loose, squeeze them between fingers to tighten."
+          }
+        },
+        "43b5f78c-a9ba-486b-97da-34bc6283745e": {
+          "type": "tiles",
+          "settings": {
+            "title": "Metal With Gem Care",
+            "description": "<h2>Metal With Gem Care<\/h2><p>Jewelry with certain gems will need a little more care than plain metal jewelry. Make sure not to use hot water or any harsh cleaners (e.g., disinfectant wipes) on the stones, as many are too delicate for it and react negatively to heat or chemical compounds.<\/p>",
+            "description_1": "<h3>Diamond<\/h3><p><a href=\"https:\/\/www.automicgold.com\/search?q=diamond\" target=\"_blank\" title=\"Automic Gold Diamond Jewelry\">Diamonds<\/a> are tough babes, literally. Diamond is THE hardest mineral on earth and can only be scratched by another diamond. Working out, hanging out, washing your hands or going for a swim...you can wear your diamonds 24\/7 without worry. To clean your diamond jewelry: gently scrub with a soft brush, adding a little warm water and mild soap; wipe with a soft-lint free cloth to restore its bright shine.<\/p>",
+            "image_1": "shopify:\/\/shop_images\/care--diamond.png",
+            "description_2": "<h3>Hard Non-Porous<\/h3><p>Gold with <a href=\"https:\/\/www.automicgold.com\/search?q=sapphire\" target=\"_blank\" title=\"Automic Gold Sapphire Jewelry\">Sapphires<\/a>, <a href=\"https:\/\/www.automicgold.com\/search?q=ruby\" target=\"_blank\" title=\"Automic Gold Ruby Jewelry\">Rubies<\/a> or <a href=\"https:\/\/www.automicgold.com\/search?q=Moissanite\" target=\"_blank\" title=\"Automic Gold Moissanite Jewelry\">Moissanites<\/a>: These stones are hard and non-porous; they can handle your workouts, hangouts, and just about anything else. You only need to take them off when you're doing intense work. To clean these babes, use a little mild soap with water and scrub with a soft cloth.<\/p>",
+            "image_2": "shopify:\/\/shop_images\/care--hard-non-porous.png",
+            "description_3": "<h3>Soft Non-Porous<\/h3><p>When a stone is non-porous it isn’t harmed by water or everyday chemicals like soaps, lotions or perfumes; so you can wear them everyday. Stones like <a href=\"https:\/\/www.automicgold.com\/search?q=aquamarine\" target=\"_blank\" title=\"Automic Gold Aquamarine Jewelry\">Aquamarine<\/a>, <a href=\"https:\/\/www.automicgold.com\/search?q=peridot\" target=\"_blank\" title=\"Automic Gold Peridot Jewelry\">Peridot<\/a>, <a href=\"https:\/\/www.automicgold.com\/search?q=garnet\" target=\"_blank\" title=\"Automic Gold Garnet Jewelry\">Garnet<\/a>, <a href=\"https:\/\/www.automicgold.com\/search?q=amethyst\" target=\"_blank\" title=\"Automic Gold Amethyst Jewelry\">Amethyst<\/a>, <a href=\"https:\/\/www.automicgold.com\/search?q=citrine\" target=\"_blank\" title=\"Automic Gold Citrine Jewelry\">Citrine<\/a>, <a href=\"https:\/\/www.automicgold.com\/search?q=moonstone\" target=\"_blank\" title=\"Automic Gold Moonstone Jewelry\">Moonstone<\/a>, <a href=\"https:\/\/www.automicgold.com\/search?q=opal\" target=\"_blank\" title=\"Automic Gold Opal Jewelry\">Australian Opals<\/a>, <a href=\"https:\/\/www.automicgold.com\/search?q=topaz\" target=\"_blank\" title=\"Automic Gold Topaz Jewelry\">Topaz<\/a>, <a href=\"https:\/\/www.automicgold.com\/search?q=alexandrite\" target=\"_blank\" title=\"Automic Gold Alexandrite Jewelry\">Alexandrite<\/a>, <a href=\"https:\/\/www.automicgold.com\/search?q=tourmaline\" target=\"_blank\" title=\"https:\/\/www.autoAutomic Gold Tourmaline Jewelrymicgold.com\/search?q=tourmaline\">Tourmaline<\/a>, Morganite, Spinel, Zircon, and <a href=\"https:\/\/www.automicgold.com\/search?q=tanzanite\" target=\"_blank\" title=\"Automic Gold Tanzanite Jewelry\">Tanzanite<\/a> can handle your day-to-day life and keep you looking gorgeous. Take these pieces off when doing any hard labor or working out to avoid scratching or chipping. Keep them looking gorgeous by occasionally cleaning with mild soapy water and a soft cloth.<\/p>",
+            "image_3": "shopify:\/\/shop_images\/care--soft-non-porous.png",
+            "description_4": "<h3>Soft Porous<\/h3><p>Some jewelry needs a little extra love and care. Stones like <a href=\"https:\/\/www.automicgold.com\/search?q=emerald\" target=\"_blank\" title=\"Automic Gold Emerald Jewelry\">Emerald<\/a>, <a href=\"https:\/\/www.automicgold.com\/search?q=pearl\" target=\"_blank\" title=\"Automic Gold Pearl Jewelry\">Pearls<\/a>, <a href=\"https:\/\/www.automicgold.com\/search?q=turquoise\" target=\"_blank\" title=\"Automic Gold Turquoise Jewelry\">Turquoise<\/a>, <a href=\"https:\/\/www.automicgold.com\/search?q=Onyx\" target=\"_blank\" title=\"Automic Gold Onyx Jewelry\">Onyx<\/a>, <a href=\"https:\/\/www.automicgold.com\/search?q=jade\" target=\"_blank\" title=\"Automic Gold Jade Jewelry\">Jade<\/a>, Amber, Coral, Lapis Lazuli, <a href=\"https:\/\/www.automicgold.com\/search?q=tiger+eye\" target=\"_blank\" title=\"Automic Gold Tiger Eye Jewelry\">Tiger Eye<\/a>, and non-Australian Opals, can be damaged by lotions and perfumes; they should be the last thing you put on and the first thing you take off. These stones need a little help to stay at their most beautiful; take them off before washing your hands, working out, bathing or doing any hard labor in order to prevent breaking, cracking or scratching. Use only a soft, dry or slightly damp cloth to wipe them clean.<\/p>",
+            "image_4": "shopify:\/\/shop_images\/care--soft-porous.png"
+          }
+        },
+        "cad841dd-af39-4417-bd37-cac3d8791d0e": {
+          "type": "description",
+          "settings": {
+            "title": "Gemstone Setting Care",
+            "heading": "<h2>Gemstone Setting Care<\/h2>",
+            "description": "<p>How to Check Your Gemstone Settings:<\/p><p>Bumping or dropping your jewelry, catching it on clothing, or even just normal everyday wear can cause your stone’s setting to loosen and wear down. Some metals (like gold) are softer than others and some setting types are more secure than others.<\/p>",
+            "main_text": "<p>Bezel settings are always the best bet because the stone is protected all the way around. Prong settings tend to be less secure since they only partially cover the stone and protrude outwards from the jewelry. That said, the more prongs the setting has, the safer your stone is. An 8-prong ring will be much more secure than a 3-prong ring. Stone shape is also a factor, though—for stone shapes with corners (emerald, marquise, princess, etc.), it’s most important to have prongs on the corners as those parts of the stone are most prone to breaking off.<\/p><p>To make sure your stones stay secure, check their settings every few weeks with these easy steps:<\/p><ol><li>Check for any twisted, open or bent prongs, chipped stones, or worn-down metal.<\/li><li>Softly tap on the stone with your fingernail. If the setting is secure, the stone won’t move.<\/li><li>Put the tip of your fingernail on the side of your stone and gently try to rock it back and forth. Again, secure stones won’t move.<\/li><li>Gently shake the jewelry close to your ear. If you hear any rattling, your setting might be worn down.<\/li><\/ol><p>If your piece has prongs instead of a bezel, be extra gentle when cleaning it! Applying too much force on the prongs can bend or damage them, which loosens the stones and puts them at greater risk of falling out. It’s best to only brush or wipe down the bottom and sides of prong settings.<\/p>",
+            "image": "shopify:\/\/shop_images\/care--setting.png",
+            "bottom_text": "<p>If you see or hear anything wrong with your setting, take off your jewelry immediately. Do not attempt to fix your jewelry yourself, as this could result in the setting breaking further which puts your stone at risk of getting damaged or lost. If your Automic Gold jewelry needs repair, please <a href=\"mailto:care@automicgold.com\" target=\"_blank\" title=\"Email Care at Automic Gold.com \">Contact Us<\/a> to initiate the repair process. Please visit our <a href=\"https:\/\/www.automicgold.com\/pages\/faq\" target=\"_blank\" title=\"Automic Gold FAQ page\">F.A.Q.<\/a> page for warranty and repair information.<\/p><p>With just a tiny bit of care, your gold jewelry can last you (literally) a lifetime.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "9a7d32a5-8ef7-4244-8471-5cbccb921af9",
+        "43b5f78c-a9ba-486b-97da-34bc6283745e",
+        "cad841dd-af39-4417-bd37-cac3d8791d0e"
+      ],
+      "custom_css": [
+        ".info-tabs__module {padding-top: 50vh;}"
+      ],
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "55845ea1-7124-4816-a003-d5954ec82496"
+  ]
+}

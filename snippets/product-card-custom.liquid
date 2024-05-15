@@ -1,0 +1,164 @@
+{% unless sizes %}
+    {% assign sizes = '
+        (max-width: 479px) calc((100vw - 30px - 15px) * 0.5),
+        (min-width: 480px) and (max-width: 767.98px) calc((100vw - 60px - 15px) * 0.5),
+        (min-width: 768px) and (max-width: 1199.98px) calc((100vw - 120px - 30px) * 0.333334),
+        (min-width: 1200px) calc((100vw - 180px - 45px) * 0.25)'
+    %}
+{% endunless %}
+
+{% assign new = false %}
+
+{% unless class %}
+    {% assign class = 'product-card-item' %}
+{% endunless %}
+
+{% unless hide_price %}
+    {% assign hide_price = false %}
+{% endunless %}
+
+{% unless hide_size %}
+    {% assign hide_size = false %}
+{% endunless %}
+
+
+<div class="{{ class }}">
+
+    <a href="{{ product.url }}" title="{{ product.title }}" class="product-card">
+        <div class="product-card__image-holder">
+            <img
+                class="lazyload product-card__image"
+                alt="Automic Gold 14k Gold {{ product.title | escape }}"
+                src="{{ 'loading-image.gif' | file_img_url: '325x325', crop: 'center' }}"
+                data-srcset="
+                    {{ product.featured_image.src | img_url: '150x150', crop: 'center' }} 150w,
+                    {{ product.featured_image.src | img_url: '266x266', crop: 'center' }} 266w,
+                    {{ product.featured_image.src | img_url: '322x322', crop: 'center' }} 322w,
+                    {{ product.featured_image.src | img_url: '540x540', crop: 'center' }} 540w,
+                    {{ product.featured_image.src | img_url: '483x483', crop: 'center' }} 483w,
+                    {{ product.featured_image.src | img_url: '684x684', crop: 'center' }} 684w,
+                    {{ product.featured_image.src | img_url: '978x978', crop: 'center' }} 978w,
+                    {{ product.featured_image.src | img_url: '1026x1026', crop: 'center' }} 1026w,
+                    {{ product.featured_image.src | img_url: '574x574', crop: 'center' }} 574w,
+                    {{ product.featured_image.src | img_url: '861x861', crop: 'center' }} 861w,
+                    {{ product.featured_image.src | img_url: '1200x1200', crop: 'center' }} 1200w,
+                    {{ product.featured_image.src | img_url: '1500x1500', crop: 'center' }} 1500w
+                "
+                sizes="{{ sizes }}"
+            />
+
+            {% if
+                product.handle != 'custom-letter-ring' and
+                product.handle != 'custom-letter-necklace' and
+                product.handle != 'custom-letter-charm' and
+                product.handle != 'custom-letter-bracelet' and
+                product.handle != 'custom-letter-earring'
+            %}
+                <picture>
+                    <source
+                        srcset="{{ 'loading-image.gif' | file_img_url: '325x325', crop: 'center' }}"
+                        sizes="{{ sizes }}"
+                        media="(hover: none)"
+                    />
+
+                    <img
+                        class="lazyload product-card__image-two"
+                        alt="Automic Gold 14k Gold {{ product.title | escape }}"
+                        data-srcset="
+                            {{ product.images[1].src | img_url: '150x150', crop: 'center' }} 150w,
+                            {{ product.images[1].src | img_url: '266x266', crop: 'center' }} 266w,
+                            {{ product.images[1].src | img_url: '322x322', crop: 'center' }} 322w,
+                            {{ product.images[1].src | img_url: '540x540', crop: 'center' }} 540w,
+                            {{ product.images[1].src | img_url: '483x483', crop: 'center' }} 483w,
+                            {{ product.images[1].src | img_url: '684x684', crop: 'center' }} 684w,
+                            {{ product.images[1].src | img_url: '978x978', crop: 'center' }} 978w,
+                            {{ product.images[1].src | img_url: '1026x1026', crop: 'center' }} 1026w,
+                            {{ product.images[1].src | img_url: '574x574', crop: 'center' }} 574w,
+                            {{ product.images[1].src | img_url: '861x861', crop: 'center' }} 861w,
+                            {{ product.images[1].src | img_url: '1200x1200', crop: 'center' }} 1200w,
+                            {{ product.images[1].src | img_url: '1500x1500', crop: 'center' }} 1500w
+                        "
+                        sizes="{{ sizes }}"
+                    />
+                </picture>
+            {% endif %}
+
+            {% unless hide_month %}
+                {% if product.handle contains 'garnet' or product.tags contains 'january' %}
+                    <div class="product-card__month">January birthstone</div>
+                {% endif %}
+                {% if product.handle contains 'amethyst' or product.tags contains 'february' %}
+                    <div class="product-card__month">February birthstone</div>
+                {% endif %}
+                {% if product.handle contains 'aquamarine' or product.tags contains 'march' %}
+                    <div class="product-card__month">March birthstone</div>
+                {% endif %}
+                {% if product.handle contains 'diamond' or product.tags contains 'april' %}
+                    <div class="product-card__month">April birthstone</div>
+                {% endif %}
+                {% if product.handle contains 'emerald' or product.tags contains 'may' %}
+                    <div class="product-card__month">May birthstone</div>
+                {% endif %}
+                {% if product.handle contains 'moonstone' or product.tags contains 'june' %}
+                    <div class="product-card__month">June birthstone</div>
+                {% endif %}
+                {% if product.handle contains 'ruby' or product.tags contains 'july' %}
+                    <div class="product-card__month">July birthstone</div>
+                {% endif %}
+                {% if product.handle contains 'peridot' or product.tags contains 'august' %}
+                    <div class="product-card__month">August birthstone</div>
+                {% endif %}
+                {% if product.handle contains 'sapphire' or product.tags contains 'september' %}
+                    <div class="product-card__month">September birthstone</div>
+                {% endif %}
+                {% if product.handle contains 'opal' or product.tags contains 'october' %}
+                    <div class="product-card__month">October birthstone</div>
+                {% endif %}
+                {% if product.handle contains 'citrine' or product.tags contains 'november' %}
+                    <div class="product-card__month">November birthstone</div>
+                {% endif %}
+                {% if product.handle contains 'turquoise' or product.tags contains 'december' %}
+                    <div class="product-card__month">December birthstone</div>
+                {% endif %}
+            {% endunless %}
+        </div>
+
+        <div class="product-card__header">
+            <div class="product-card__title">{{ product.title }}</div>
+            <div class="product-card__metal">
+                {% if hide_size == false %}
+                    {% comment %} Not sure how many products are actually supposed to have this so implementing a tag to fix the ones that aren't {% endcomment %}
+                    {% unless product.tags contains 'hide-size' %}
+                        {% if product.metafields.global.shortname %}
+                            {{ product.metafields.global.shortname }}
+                        {% endif %}
+                    {% endunless %}
+                {% endif %}
+            </div>
+
+            {% unless hide_price %}
+                <div class="product-card__price">
+                    {% unless product.handle == 'ring-sizer' or product.title == "Platinum Sapphire Ring" or product.tags contains 'hollow-hoop' or product.title == "Minimal Packaging" or product.title == "Polishing Cloth" %}
+                        14k solid gold&nbsp;&nbsp;/&nbsp;
+                    {% endunless %}
+                    {% if product.tags contains 'hollow-hoop' %}
+                        14k hollow gold&nbsp;&nbsp;/&nbsp;
+                    {% endif %}
+
+                    {% if product.price_varies %}
+                        <span>$</span>{{ product.price_min | divided_by: 100 }}+
+                    {% else %}
+                        <span>$</span>{{ product.price | divided_by: 100 }}
+                    {% endif %}
+                </div>
+            {% endunless %}
+
+            {% render 'okendo-reviews-product-rating-summary', product: product %}
+        </div>
+
+        {% if new %}
+            <div class="product-card__new">NEW</div>
+        {% endif %}
+    </a>
+
+</div>

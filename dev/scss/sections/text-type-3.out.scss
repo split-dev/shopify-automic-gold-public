@@ -1,0 +1,25 @@
+@import "../settings/variables";
+@import "../settings/bootstrap-media";
+
+.queers-rock-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 50rem;
+    strong {
+        color: rgb(var(--color-highlighted-elements));
+    }
+    img, svg {
+        padding-top: 3rem;
+        width: 100%;
+        max-width: 320px;
+    }
+    svg {
+        fill: rgb(var(--color-highlighted-elements));
+    }
+}
+@media screen and (max-width: 767.98px) {
+    .queers-rock-text-container {
+      width: auto;
+    }
+} 

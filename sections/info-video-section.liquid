@@ -1,0 +1,125 @@
+{% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
+{{ 'info-video.out.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+.section-{{ section.id }}-padding {
+  padding-top: {{ section.settings.padding_top_mb }}px;
+  padding-bottom: {{ section.settings.padding_bottom_mb }}px;
+}
+
+@media screen and (min-width: 768px) {
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+}
+{%- endstyle -%}
+
+<div class="info-video section-{{ section.id }}-padding page-width">
+    <div class="info-video__wrapper">
+        <div class="info-video__left">
+            {% if section.settings.title != blank %}
+                <div class="info-video__title">
+                    <h2>{{ section.settings.title }}</h2>
+                </div>
+            {% endif %}
+            {% if section.settings.desc != blank %}
+                <div class="info-video__desc">
+                    {{ section.settings.desc }}
+                </div>
+            {% endif %}
+            {% if section.settings.video != blank %}
+                <div class="info-video__video">
+                    {{ section.settings.video }}
+                </div>
+            {% endif %}
+        </div>
+        <div class="info-video__right">
+            {% if section.settings.image != blank %}
+                <div class="info-video__image" style="max-width: 100%; --aspect-ratio: {{section.settings.image.aspect_ratio}}">
+                    <img src="{{ section.settings.image | image_url: width: 750 }}" alt="{{ section.settings.image.alt }}">
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    
+  
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.info-video.name",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:sections.info-video.settings.title.content"
+    },
+    {
+      "type": "richtext",
+      "id": "desc",
+      "label": "t:sections.info-video.settings.desc.content"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.info-video.settings.image.content"
+    },
+    {
+        "type": "liquid",
+        "id": "video",
+        "label": "t:sections.info-video.settings.video.content"
+    },
+    {
+        "type": "header",
+        "content": "Section space"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 160,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding top desktop",
+        "default": 80
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 160,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding bottom desktop",
+        "default": 80
+      },
+      {
+        "type": "range",
+        "id": "padding_top_mb",
+        "min": 0,
+        "max": 120,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding top mobile",
+        "default": 80
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom_mb",
+        "min": 0,
+        "max": 120,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding bottom mobile",
+        "default": 80
+      }
+  ],
+  "presets": [
+    {
+    "name": "t:sections.info-video.name"
+    }
+]
+}
+{% endschema %}

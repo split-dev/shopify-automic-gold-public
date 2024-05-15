@@ -1,0 +1,193 @@
+{% unless template == 'index' or template == 'cart' %}
+    <nav class="breadcrumb" role="navigation" aria-label="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+        <span itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+            <meta itemprop="position" content="1" />
+            <a itemscope itemtype="https://schema.org/WebPage" itemprop="item"
+                href="{{ shop.url }}" itemid="{{ shop.url }}" title="home"
+            ><span itemprop="name">Home</span></a>
+        </span>
+        {% if template contains 'product' %}
+            {% if collection and collection.handle %}
+                <span aria-hidden="true">/</span>
+                <span
+                    itemscope
+                    itemprop="itemListElement"
+                    itemtype="http://schema.org/ListItem"
+                >
+                    <meta itemprop="position" content="2" />
+                    {% capture url %}{{ shop.url }}/collections/{{ collection.handle }}{% endcapture %}
+                    <a
+                        itemscope
+                        itemtype="https://schema.org/WebPage"
+                        itemprop="item"
+                        href="{{ url }}"
+                        itemid="{{ url }}"
+                    ><span itemprop="name">{{ collection.title }}</span></a>
+                </span>
+            {% else %}
+                {% if
+                    product.handle == 'curvy-mirror-band' or
+                    product.handle == 'curvy-matte-band' or
+                    product.handle == 'curvy-hammered-band' or
+                    product.handle == 'curvy-raw-band' or
+                    product.handle == 'curvy-wood-band' or
+                    product.handle == 'industrial-mirror-band' or
+                    product.handle == 'industrial-matte-band' or
+                    product.handle == 'industrial-hammered-band' or
+                    product.handle == 'industrial-raw-band' or
+                    product.handle == 'industrial-wood-band'
+                %}
+                    <span aria-hidden="true">/</span>
+                    <span itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+                        <meta itemprop="position" content="2" />
+                            <a
+                                itemscope itemtype="https://schema.org/WebPage" itemprop="item"
+                                href="{{ shop.url }}/collections/wedding"
+                                itemid="{{ shop.url }}/collections/wedding"
+                                title="Wedding Rings"
+                            ><span itemprop="name">Wedding rings</span></a>
+                            <meta itemprop="position" content="2" />
+                    </span>
+                {% elsif
+                    product.handle == 'custom-letter-ring' or
+                    product.handle == 'custom-letter-necklace' or
+                    product.handle == 'custom-letter-charm' or
+                    product.handle == 'custom-letter-bracelet' or
+                    product.handle == 'custom-letter-earring'
+                %}
+                    <span aria-hidden="true">/</span>
+                    <span itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+                    <meta itemprop="position" content="2" />
+                        <a
+                            itemscope itemtype="https://schema.org/WebPage" itemprop="item"
+                            href="{{ shop.url }}/collections/nameplates"
+                            itemid="{{ shop.url }}/collections/nameplates"
+                            title="Custom eltter collection"
+                        ><span itemprop="name">Custom letter collection</span></a>
+                        <meta itemprop="position" content="2" />
+                    </span>
+                {% elsif product.type == 'Necklaces' %}
+                    <span aria-hidden="true">/</span>
+                    <span itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+                        <meta itemprop="position" content="2" />
+                            <a
+                            itemscope itemtype="https://schema.org/WebPage" itemprop="item"
+                            href="{{ shop.url }}{{ collections['Necklaces'].url }}"
+                            itemid="{{ shop.url }}{{ collections['Necklaces'].url }}"
+                            title="{{ collections['Necklaces'].title }}"
+                            ><span itemprop="name">Necklaces</span></a>
+                            <meta itemprop="position" content="2" />
+                    </span>
+                {% elsif product.type == 'Rings' %}
+                    <span aria-hidden="true">/</span>
+                    <span itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+                        <meta itemprop="position" content="2" />
+                            <a itemscope itemtype="https://schema.org/WebPage" itemprop="item"
+                            href="{{ shop.url }}{{ collections['Rings'].url }}"
+                            itemid="{{ shop.url }}{{ collections['Rings'].url }}"
+                            title="{{ collections['Rings'].title }}"
+                            ><span itemprop="name">Rings</span></a>
+                            <meta itemprop="position" content="2" />
+                    </span>
+                {% elsif product.type == 'Bracelets' %}
+                    <span aria-hidden="true">/</span>
+                    <span itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+                        <meta itemprop="position" content="2" />
+                            <a itemscope itemtype="https://schema.org/WebPage" itemprop="item"
+                            href="{{ shop.url }}{{ collections['Bracelets'].url }}"
+                            itemid="{{ shop.url }}{{ collections['Bracelets'].url }}"
+                            title="{{ collections['Bracelets'].title }}"
+                            ><span itemprop="name">Bracelets</span></a>
+                            <meta itemprop="position" content="2" />
+                    </span>
+                {% elsif product.type == 'Earring' %}
+                    <span aria-hidden="true">/</span>
+                    <span itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+                        <meta itemprop="position" content="2" />
+                            <a itemscope itemtype="https://schema.org/WebPage" itemprop="item"
+                            href="{{ shop.url }}{{ collections['Earrings'].url }}"
+                            itemid="{{ shop.url }}{{ collections['Earrings'].url }}"
+                            title="{{ collections['Earrings'].title }}"
+                            ><span itemprop="name">Earrings</span></a>
+                            <meta itemprop="position" content="2" />
+                    </span>
+                {% else %}
+                    <span aria-hidden="true">/</span>
+                    <span itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+                        <meta itemprop="position" content="2" />
+                            <a itemscope itemtype="https://schema.org/WebPage" itemprop="item"
+                            href="{{ shop.url }}{{ collections['All'].url }}"
+                            itemid="{{ shop.url }}{{ collections['All'].url }}"
+                            title="{{ collections['All'].title }}"
+                            ><span itemprop="name">All jewelry</span></a>
+                            <meta itemprop="position" content="2" />
+                    </span>
+                {% endif %}
+            {% endif %}
+            <span aria-hidden="true">/</span>
+            <span
+                itemscope
+                itemprop="itemListElement"
+                itemtype="http://schema.org/ListItem"
+            >
+                <meta itemprop="position" content="3" />
+                <span
+                    itemscope
+                    itemtype="https://schema.org/WebPage"
+                    itemprop="item"
+                >
+                    <span itemprop="name">{{ product.title }}</span>
+                </span>
+            </span>
+        {% elsif template contains 'collection' and collection.handle %}
+            <span aria-hidden="true">/</span>
+            <span itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+                <meta itemprop="position" content="2" />
+                <a itemscope itemtype="http://schema.org/WebPage" itemprop="item" itemid="{{ shop.url }}/collections/all" href="{{ shop.url }}/collections/all" title="Shop All">
+                    <span itemprop="name">Shop all</span></a>
+            </span>
+            <span aria-hidden="true">/</span>
+            {% if current_tags %}
+                <span itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+                    <meta itemprop="position" content="3" />
+                    <a itemscope itemtype="http://schema.org/WebPage" itemprop="item" itemid="{{ collection.url }}" href="{{ collection.url }}" title="{{ collection.title }}">
+                        <span itemprop="name">{{ collection.title }}</span></a>
+                </span>
+                <span aria-hidden="true">/</span>
+                <span itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+                    <meta itemprop="position" content="4" />
+                    <span itemscope itemtype="http://schema.org/WebPage" itemprop="item">
+                        <span itemprop="name">{{ current_tags | join: ' ' | capitalize }}</span>
+                    </span>
+                </span>
+            {% else %}
+                <span itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+                    <meta itemprop="position" content="3" />
+                    <span itemscope itemtype="http://schema.org/WebPage" itemprop="item">
+                        <span itemprop="name">{{ collection.title }}</span>
+                    </span>
+                </span>
+            {% endif %}
+        {% elsif template == 'blog' %}
+            <span aria-hidden="true">/</span>
+            {% if current_tags %}
+                {{ blog.title | link_to: blog.url }}
+                <span aria-hidden="true">/</span>
+                <span>{{ current_tags | join: " + " }}</span>
+            {% else %}
+                <span>{{ blog.title }}</span>
+            {% endif %}
+        {% elsif template == 'article' %}
+            <span aria-hidden="true">/</span>
+            {{ blog.title | link_to: blog.url }}
+            <span aria-hidden="true">/</span>
+            <span>{{ article.title }}</span>
+        {% elsif template contains 'page' %}
+            <span aria-hidden="true">/</span>
+            <span>{{ page.title }}</span>
+        {% else %}
+            <span aria-hidden="true">/</span>
+            <span>{{ page_title }}</span>
+        {% endif %}
+    </nav>
+{% endunless %}

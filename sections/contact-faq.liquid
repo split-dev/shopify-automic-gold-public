@@ -1,0 +1,108 @@
+{{ 'contact-faq.out.css' | asset_url | stylesheet_tag }}
+
+<style>
+    .contact-faq {
+        background-color: {{ section.settings.background }};
+    }
+</style>
+
+{%- style -%}
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top_mb }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mb }}px;
+    }
+    
+    @media screen and (min-width: 768px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+{%- endstyle -%}
+
+<div class="contact-faq section-{{ section.id }}-padding">
+    <div class="page-width">
+        <div class="contact-faq-wrapper">
+            {% if section.settings.contact_faq_title %}
+                <h2 class="contact-faq-title">{{ section.settings.contact_faq_title }}</h2>
+            {% endif %}
+            {% if section.settings.contact_faq_subtitle %}
+                <p class="contact-faq-subtitle">{{ section.settings.contact_faq_subtitle }}</p>
+            {% endif %}
+          </div>
+    </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Contact FAQ",
+    "settings": [
+      {
+        "type": "color",
+        "id": "background",
+        "label": "Background"
+      },
+      {
+        "type": "text",
+        "id": "contact_faq_title",
+        "label": "Title",
+        "default": "Have you checked our F.A.Q.?"
+      },
+      {
+        "type": "text",
+        "id": "contact_faq_subtitle",
+        "label": "Subtitle",
+        "default": "Visit our F.A.Q page to learn more about questions you may have!"
+      },
+      {
+        "type": "header",
+        "content": "Section space"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 160,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding top desktop",
+        "default": 80
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 160,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding bottom desktop",
+        "default": 80
+      },
+      {
+        "type": "range",
+        "id": "padding_top_mb",
+        "min": 0,
+        "max": 120,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding top mobile",
+        "default": 80
+      }, {
+        "type": "range",
+        "id": "padding_bottom_mb",
+        "min": 0,
+        "max": 120,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding bottom mobile",
+        "default": 80
+      }
+    ],
+    "presets": [
+      {
+        "name": "Contact FAQ"
+      }
+    ]
+  }
+{% endschema %}

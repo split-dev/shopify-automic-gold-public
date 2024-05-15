@@ -1,0 +1,130 @@
+{{ 'contact.out.css' | asset_url | stylesheet_tag }}
+
+<style>
+    .contact__bg {
+        background-color: {{ section.settings.background }};
+    }
+</style>
+
+{%- style -%}
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top_mb }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mb }}px;
+    }
+    
+    @media screen and (min-width: 768px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+{%- endstyle -%}
+
+<div class="page-width contact section-{{ section.id }}-padding">
+  <div class="contact-wrapper">
+    <h1 class="contact__title cover__text-center">{{ page.title }}</h1>
+  </div>
+</div>
+
+<div class="contact__bg">
+    <div class="contact__inner">
+        <ul class="contact__inner-items">
+            {% for block in section.blocks %}
+                {% if block.settings.image != blank %}
+                    <li class="contact__inner-item rte">
+                        <div class="item-image"><img src="{{ block.settings.image | image_url: width: 100 }}"></div>
+                        <div class="item-info">
+                            <h2>{{ block.settings.title }}</h2>
+                            {{ block.settings.description }}
+                        </div>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+      </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Contact Us",
+    "settings": [
+      {
+        "type": "color",
+        "id": "background",
+        "label": "Background"
+      },
+      {
+        "type": "header",
+        "content": "Section space"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 160,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding top desktop",
+        "default": 80
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 160,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding bottom desktop",
+        "default": 80
+      },
+      {
+        "type": "range",
+        "id": "padding_top_mb",
+        "min": 0,
+        "max": 120,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding top mobile",
+        "default": 80
+      }, {
+        "type": "range",
+        "id": "padding_bottom_mb",
+        "min": 0,
+        "max": 120,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding bottom mobile",
+        "default": 80
+      }
+    ],
+    "max_blocks": 4,
+    "blocks": [
+      {
+        "type": "item",
+        "name": "Item block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "richtext",
+            "id": "description",
+            "label": "Description text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Contact Us"
+      }
+    ]
+  }
+{% endschema %}

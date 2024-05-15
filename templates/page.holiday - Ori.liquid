@@ -1,0 +1,414 @@
+<style>
+    .holiday-header {
+        display: block;
+        border-bottom: 1px solid #FFCC33;
+    }
+
+    .inner {
+    z-index: 1;
+    }
+
+    .text__block {
+        position: absolute;
+        top: 20vh;
+        left: 9vw;
+        padding-bottom: 5vh;
+    }
+
+    .image__block img {
+        width: 100vw;
+        margin-bottom: -6px;
+}
+
+    .holiday-sets-container {
+        border-top: 1px solid #FFCC33;
+        padding-top: 6vh;
+    }
+
+    .holiday-sets-container div {
+    text-align:center;
+}
+
+/* .holiday-sets-container {
+  display: flex;
+} */
+
+/* nav .holiday-lineup {
+  display: flex;
+  flex-direction: row; 
+}*/
+
+.holiday-lineup ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0 0 0 0 !important;
+  }
+  
+  /* @media screen and (min-width: 768px) {
+    .holiday-lineup ul {
+      flex-direction: column;
+    }
+  } */
+  
+  .holiday-lineup li {
+    position: relative;
+    padding: 0 .5vw 0 0;
+  }
+  
+  .holiday-lineup img {
+    object-fit: cover;
+    width: 13rem;
+    height: 18rem;
+    min-width: 11rem; 
+  }
+  
+  .holiday-lineup a {
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  
+  .holiday-lineup h3 {
+    position: absolute;
+    top: 1.5rem;
+    width: 92%;
+    font-size: .8rem;
+    text-align: center;
+  }
+  
+  .holiday-lineup button {
+    z-index: 1;
+  }
+
+@media(min-width: 768px){
+        .holiday-header .text__block {
+            top: calc(1.5rem + 3vw);
+        }
+}
+
+    .holiday-header .text__block .inner h1 {
+        font-size: 4rem;
+    }
+
+    #scrollNav {
+        margin: 10px 0 10px 0;       
+    }
+
+    #scrollNav ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        list-style: none;
+        margin-left: 0;
+        text-align: left;
+    }
+
+    #scrollNav ul {
+    padding-top: 10px}
+
+    #scrollNav ul li {
+        cursor: pointer;
+        text-transform: uppercase;
+        font-weight: 600;
+        transition: all ease 300ms;
+        text-align: center;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    #scrollNav ul li.active {
+        color: #FFCC33;
+    }
+
+    @media(min-width: 768px){
+        #scrollNav ul {
+            max-width: 670px;
+            margin: 0 auto;
+        }
+
+        #scrollNav ul li {
+            flex: 0 0 25%;
+            max-width: 25%;
+        }
+
+        #scrollNav ul li:hover {
+            color: #FFCC33;
+        }
+    }
+
+@media(min-width: 768px){
+    .holiday-lineup ul {
+        flex-wrap: wrap;
+    }
+}
+    .holiday-lineup-card {
+        margin: 0 0 0 0;
+}
+
+
+    section.holiday-section {
+        position: relative;
+    }
+
+    section.holiday-section .decorative-snowflake {
+        position: absolute;
+        top: -150px;
+    }
+
+    section.holiday-section .decorative-curve {
+        position: absolute;
+        z-index: -1;
+        top: 200px;
+        left: -200px;
+    }
+
+    section.holiday-section .bundle-grid {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .bundle-grid .product-card-item {
+        flex: 0 0 calc(50% - 5px);
+        max-width: calc(50% - 5px);
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    {% comment %} @media(max-width: 767.98px){
+        .bundle-grid .product-card-item:nth-child(even) {
+            margin-right: 0;
+        }
+    }
+
+    @media(min-width: 768px){
+        .bundle-grid .product-card-item {
+            flex: 0 0 calc(25% - 10px);
+            max-width: calc(25% - 10px);
+        }
+    } {% endcomment %}
+
+    section.holiday-section .see-more {
+        display: block;
+        color: #FFCC33;
+    }
+
+    .winter-scene {
+        margin-top: -100px;
+    }
+    {% comment %} @media(min-width: 768px){
+        .winter-scene {
+            margin-top: -150px;
+        }
+    } {% endcomment %}
+
+</style>
+
+{% assign hide_month = true %}
+
+<div class="page-cover">
+    <div class="no--padding"> 
+        <header class="holiday-header">
+            <div class="image__block">
+                <picture>
+
+                          <img
+                srcset="
+                    {{ 'holiday-hero--desktop.jpg' | file_img_url: '2000x1179' }} 2000w,
+                    {{ 'holiday-hero--desktop.jpg' | file_img_url: '1500x884' }} 1500w,
+                    {{ 'holiday-hero--desktop.jpg' | file_img_url: '1200x707' }} 1200w,
+                    {{ 'holiday-hero--desktop.jpg' | file_img_url: '900x530' }} 900w
+                "
+                sizes="100vw"
+                alt="A 14k yellow gold Shimmer Ring, Hammer Ring, and Bead Chain Ring draped diagonally on a blue satin background"
+            />
+                    {% comment %}iPad-like ratio, width to height ratio of 3/4 to 5/4 (square image){% endcomment %}
+                    <source
+                        srcset="
+                            {{ 'holiday-hero--tablet.png' | file_img_url: '1000x1000' }} 1000w,
+                            {{ 'holiday-hero--tablet.png' | file_img_url: '1500x1500' }} 1500w
+                        "
+                        sizes="100vw"
+                        media="(min-aspect-ratio: 3/4) and (max-aspect-ratio: 5/4)"
+                    />
+
+                    {% comment %}Narrow screens, up tp width to height ratio of 3/2 (tall image){% endcomment %}
+                    <source
+                        srcset="
+                            {{ 'holiday-hero--tablet.png' | file_img_url: '750x960' }} 750w,
+                            {{ 'holiday-hero--tablet.png' | file_img_url: '1125x1440' }} 1125w,
+                            {{ 'holiday-hero--tablet.png' | file_img_url: '1200x2262' }} 1200w
+                        "
+                        sizes="100vw"
+                        media="(max-aspect-ratio: 3/4)"
+                    />
+
+                    {% comment %}Ratios wider than width to height 3/2 (wide image){% endcomment %}
+                    {% comment %} <img
+                        srcset="
+                            {{ 'holiday-hero--desktop.jpg' | file_img_url: '2000x1179' }} 2000w,
+                            {{ 'holiday-hero--desktop.jpg' | file_img_url: '1500x884' }} 1500w,
+                            {{ 'holiday-hero--desktop.jpg' | file_img_url: '1200x707' }} 1200w,
+                            {{ 'holiday-hero--desktop.jpg' | file_img_url: '900x530' }} 900w
+                        "
+                        sizes="100vw"
+                        alt="A 14k yellow gold Shimmer Ring, Hammer Ring, and Bead Chain Ring draped diagonally on a blue satin background"
+                    />  {% endcomment %}
+                </picture>
+            </div>
+            <div class="text__block">
+                <div class="inner">
+                    <h1>Holiday <br />cheer is here</h1>
+                    <p>Shop our gift items this holiday season!</p>
+                </div>
+            </div>
+        
+    </div>
+</div>
+
+<nav id="scrollNav" class="spaced--twice scroll-navigation">
+    <ul>
+        <li class="scroll-item active" data-scroll="giftsets">Gift Sets</li>
+        <li class="scroll-item" data-scroll="under100">Under $100</li>
+        <li class="scroll-item" data-scroll="under250">Under $250</li>
+        <li class="scroll-item" data-scroll="under500">Under $500</li>
+    </ul>
+</nav>
+
+{% assign sizes = '
+    (max-width: 479px) calc((100vw - 30px) * 0.5),
+    (min-width: 480px) and (max-width: 767.98px) calc((100vw - 60px) * 0.5),
+    (min-width: 768px) and (max-width: 1199.98px) calc((100vw - 120px) * 0.5),
+    (min-width: 1200px) calc((100vw - 180px) * 0.5)'
+%}
+
+<div class="holiday-sets-container no--mobile-padding" data-anchor="giftsets">
+    <div class="page-width">
+        <h2 class="hp6-categories__header">Gift Sets</h2>
+         <h3>Give your favorite pieces to your favorite people with our holiday bundles!</h3>
+    </div> 
+    
+       <nav class="holiday-lineup">
+            <ul class="holiday-lineup-card">
+                {% include 'holiday-lineup', type: 'sparkle', name: 'Show Me Sparkle Set', url: 'show-me-the-sparkle-set' %}
+                {% include 'holiday-lineup', type: 'ear', name: 'Ear Candy Set', url: 'ear-candy-set'  %}
+                {% include 'holiday-lineup', type: 'stacked', name: 'Super Stacked Set', url: 'super-stacked-set'  %}
+                {% include 'holiday-lineup', type: 'lined', name: 'Lined Up Set', url: 'lined-up-set'  %}
+                {% include 'holiday-lineup', type: 'dotted', name: 'On The Dotted Line Set', url: 'on-the-dotted-line-set'  %}
+            </ul>
+        </nav>
+    
+    </div> 
+
+{% comment %} <section class="holiday-section spaced--twice" data-anchor="bundle">
+    <div class="holiday-category">
+        <h2 class="">Bundles</h2>
+        <p class="space-bottom-x1">Give your favorite solid gold pieces to your favorite people with our holiday bundles!</p>
+    </div>
+
+    <div class="bundle-grid">
+        {% include 'product-card', product: all_products.bee-set, sizes: sizes %}
+        {% include 'product-card', product: all_products.piercing-set, sizes: sizes %}
+        {% include 'product-card', product: all_products.septum-set, sizes: sizes %} 
+        {% include 'product-card', product: all_products.rings-set, sizes: sizes %} 
+    </div>
+</section> {% endcomment %}
+
+<section class="holiday-section spaced--twice" data-anchor="under100">
+    <img class="decorative-snowflake" src="{{ 'holiday--snowflakes.png' | file_url }}" alt="" />
+
+    <div class="holiday-category">
+        <h2 class="">Under $100</h2>
+        <p class="space-bottom-x1">Solid gold jewelry that won’t break the bank, shop pieces under $100</p>
+    </div>
+
+    <div class="pgrid roomy">
+        {% include 'product-card', product: all_products.small-seamless-huggie-hoops, sizes: sizes %}
+        {% include 'product-card', product: all_products.line-septum, sizes: sizes %}
+        {% include 'product-card', product: all_products.bead-chain-ring, sizes: sizes %} 
+        {% include 'product-card', product: all_products.mini-threader, sizes: sizes %} 
+        {% include 'product-card', product: all_products.initial, sizes: sizes %}
+        {% include 'product-card', product: all_products.medium-line-earring, sizes: sizes %}
+    </div>
+    <a href="{{ shop.url }}/collections/under-100" title="See More Gifts under $100" class="see-more spaced">See More Gifts under $100</a>
+</section>
+
+<section class="holiday-section spaced--twice" data-anchor="under250">
+    <div class="holiday-category">
+        <h2 class="">Under $250</h2>
+        <p class="space-bottom-x1">Give the gift of glam with our 14k jewelry under $250</p>
+    </div>
+
+    <div class="pgrid roomy">
+        {% include 'product-card', product: all_products.essential-chain, sizes: sizes %}
+        {% include 'product-card', product: all_products.double-cuff, sizes: sizes %}
+        {% include 'product-card', product: all_products.wave-ring, sizes: sizes %} 
+        {% include 'product-card', product: all_products.snake-hoop-piercing, sizes: sizes %} 
+        {% include 'product-card', product: all_products.butch-ring, sizes: sizes %}
+        {% include 'product-card', product: all_products.gemstone-septum, sizes: sizes %} 
+    </div>
+    <a href="{{ shop.url }}/collections/under-250" title="See More Gifts under $250" class="see-more spaced">See More Gifts under $250</a>
+</section>
+
+<section class="holiday-section" data-anchor="under500">
+    <div class="holiday-category">
+        <h2 class="">Under $500</h2>
+        <p class="space-bottom-x1">Amazing gifts for amazing people, shop our 14k gold jewelry under $500</p>
+    </div>
+ 
+    <div class="pgrid roomy">
+        {% include 'product-card', product: all_products.bound-together-necklace, sizes: sizes %}
+        {% include 'product-card', product: all_products.opal-ring, sizes: sizes %}
+        {% include 'product-card', product: all_products.butch-bracelet, sizes: sizes %}
+        {% include 'product-card', product: all_products.signet-ring, sizes: sizes %} 
+        {% include 'product-card', product: all_products.star-disk-necklace, sizes: sizes %} 
+        {% include 'product-card', product: all_products.round-box-chain, sizes: sizes %} 
+    </div>
+    <a href="{{ shop.url }}/collections/under-500" title="See More Gifts under $500" class="see-more spaced">See More Gifts under $500</a>
+</section>
+
+
+
+<div class="winter-scene no--padding">
+    <img src="{{ 'holiday--winter-scene.png' | file_url }}" alt="Illustration of rolling snowy hills and snowfall" />
+</div>
+
+<div class="holiday__giftfooter v-center">
+<section class="molecule no--mobile-overlay section__gift-ribbon">
+<div class="molecule__image text-right-desktop">
+        <img loading="lazy" alt="Automic Gold Gift Card"
+             srcset="
+               {{ 'gift-ribbon.jpg' | file_img_url: '1000x1000' }} 1000w,
+               {{ 'gift-ribbon.jpg' | file_img_url: '500x500' }} 500w
+             "
+             sizes="500px"
+             style="width: 500px; height: 500px; object-fit: cover;"
+        />
+    </div>
+    <div class="molecule__text text-center">
+        <h2>Add Some Flair</h2>
+
+        <p class="space-bottom-x1">Make your gift stand out with our gift ribbon!</p>
+
+        <a href="{{ page.content }}" title="Send us a custom order request" class="btn btn--wide">Shop Now</a>
+    </div>
+</section>
+<section class="molecule no--mobile-overlay section__gift-card">
+    <div class="molecule__text text-center">
+        <h2>Don't have time to choose?</h2>
+
+        <p class="space-bottom-x1">Purchase our Digital Gift Card! <br/> A gift that it is immediately available to use!</p>
+
+        <a href="{{ page.content }}" title="Send us a custom order request" class="btn btn--wide">Shop Now</a>
+    </div>
+    <div class="molecule__image">
+        <img loading="lazy" alt="Automic Gold Gift Card"
+             srcset="
+               {{ 'digital-gift-card.jpg' | file_img_url: '1000x1000' }} 1000w,
+               {{ 'digital-gift-card.jpg' | file_img_url: '500x500' }} 500w
+             "
+             sizes="500px"
+             style="width: 500px; height: 500px; object-fit: cover;"
+        />
+    </div>
+</section>
+</div>

@@ -1,0 +1,161 @@
+{{ 'pre-footer-links.out.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+    .section--{{ section.id }} {
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+      border-top: none;
+      border-bottom: none;
+    }
+
+    @media screen and (min-width: 768px) {
+    .section--{{ section.id }} {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+      border-top: 1px solid #ffcc33;
+      border-bottom: 1px solid #ffcc33;
+      }
+    }
+{%- endstyle -%}
+
+<div class="pre-footer-links section--{{ section.id }}">
+    <div class="pre-footer-links__wrapper info-column page-width">
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+        {%- when 'left_column' -%}
+          <div class="pre-footer-links__left left-column press-footer-left" {{ block.shopify_attributes }}>
+              <h3 class="left-column__title highlighted">{{ block.settings.l_c_title }}</h3>
+              <p class="left-column__text">{{ block.settings.l_c_text }}</p>
+          </div>
+           {%- endcase -%}
+      {%- endfor -%}
+
+
+          <div class="pre-footer-links__right right-column press-footer-right">
+              <div class="right-column__first pfr-column-1">
+                {%- for block in section.blocks -%}
+                  {%- case block.type -%}
+                  {%- when 'right_column' -%}
+                      <a
+                          {{ block.shopify_attributes }}
+                          title="{{ block.settings.image.alt }}"
+                          href="{{ block.settings.image_link }}"
+                          class="right-column__link right-column__link_{{ forloop.index0 }} press-in-media__link"
+                          target="_blank">
+                            {%- if block.settings.image != blank -%}
+                                {{ block.settings.image | image_url: width: 325 | image_tag:
+                                loading: lazy,
+                                widths: '425, 850',
+                                class: 'right-column__image press-in-media__image lazyload',
+                                alt: block.settings.image.alt | escape
+                                }}
+                            {%- endif -%}
+                         </a>
+                    {%- endcase -%}
+                {%- endfor -%}
+              </div>
+          </div>
+
+      </div>
+</div>
+
+{% schema %}
+{
+  "name": "Pre footer links",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 32
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_mobile_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 24
+    }
+  ],
+  "max_blocks": 6,
+  "blocks": [
+    {
+      "type": "left_column",
+      "name": "Text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "l_c_title",
+          "default": "Press Links",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "l_c_text",
+          "default": "Check out the articles written about our Founder, AL Sandimirova.",
+          "label": "Text"
+        }
+      ]
+    },
+    {
+      "type": "right_column",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "image_link",
+          "label": "Image link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Pre footer links"
+    }
+  ]
+}
+{% endschema %}

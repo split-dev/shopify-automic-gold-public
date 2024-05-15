@@ -1,0 +1,36 @@
+{% comment %}
+    Required attributes:
+     - id (used for link and image src)
+
+    Optional attributes:
+     - username (defaults to 'automicgold')
+{% endcomment %}
+
+{% unless username %}
+    {% assign username = 'automicgold' %}
+{% endunless %}
+
+{% capture img_url %}instapost-{{ id }}.jpg{% endcapture %}
+
+<div class="instapost">
+    <div class="instapost__image-container">
+        <img class="instapost__image lazyload"
+             data-srcset="
+                {{ img_url | file_img_url: '414x414', crop: 'center' }} 414w,
+                {{ img_url | file_img_url: '810x810', crop: 'center' }} 810w,
+                {{ img_url | file_img_url: '1080x1080', crop: 'center' }} 1080w
+             "
+             sizes="
+                (max-width: 479px) calc(50vw * 0.5),
+                (min-width: 480px) and (max-width: 767.98px) calc((100vw - 60px) * 0.5),
+                (min-width: 768px) and (max-width: 1199.98px) calc((100vw - 60px) * 0.33),
+                (min-width: 1200px) calc((100vw - 180px) * 0.33)
+            "
+             alt="{{ username }}'s Instagram Post"
+        />
+        <a target="_blank" href="https://www.instagram.com/p/{{ id }}" class="instapost__footer">
+            <div class="instapost__username">{{ username }}</div>
+            <div class="instapost__logo">{% include 'svg_instagram' %}</div>
+        </a>
+    </div>
+</div>

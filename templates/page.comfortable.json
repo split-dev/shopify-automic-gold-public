@@ -1,0 +1,188 @@
+{
+  "sections": {
+    "richtext": {
+      "type": "rich-text",
+      "settings": {
+        "rich_text": "<h1><strong>The Most Comfortable Jewelry <\/strong><\/h1><h1><strong>You’ll Ever Wear.<\/strong><\/h1>",
+        "max_width": 640,
+        "content_alignment": "center",
+        "content_alignment_mobile": "center",
+        "horizontal_alignment": "center",
+        "padding_top": 64,
+        "padding_bottom": 100,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 16
+      }
+    },
+    "4b753c2e-f475-484e-869f-7e2c9b40d11f": {
+      "type": "text-with-grid-media",
+      "blocks": {
+        "template--14480745726046__4b753c2e-f475-484e-869f-7e2c9b40d11f-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/comfortable-jewelry-1.jpg",
+            "image_fit": "image-contain"
+          }
+        }
+      },
+      "block_order": [
+        "template--14480745726046__4b753c2e-f475-484e-869f-7e2c9b40d11f-image-1"
+      ],
+      "custom_css": [
+        "@media screen and (min-width: 768px) {.text-media-grid__image-container img {object-position: right; }}",
+        "@media screen and (max-width: 767.98px) {.text-media-grid__text-container {order: 2; } .text-media-grid__image-container img {object-fit: cover; }}"
+      ],
+      "settings": {
+        "text": "<h2><strong>Metal<\/strong><\/h2><p>Solid 14k gold and 950 platinum are your skin’s tarnish-proof best friends.<\/p><h2><strong>Testing<\/strong><\/h2><p>Members of our small team wear each new design for weeks before release.<\/p><h2><strong>Control<\/strong><\/h2><p>Everything is handmade in our New York City studio, so we have full control over quality, sourcing, production, and working conditions.<\/p>",
+        "button_name": "",
+        "button_link": "",
+        "full_width_image_mobile": false,
+        "media_grid_max_width": 700,
+        "image_max_height": 550,
+        "image_min_height": 450,
+        "tag_names": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 24,
+        "padding_bottom_mobile": 24
+      }
+    },
+    "660553e4-5c27-48ec-a6e7-54afb1ad2116": {
+      "type": "text-with-img-btn",
+      "blocks": {
+        "template--14483332005982__660553e4-5c27-48ec-a6e7-54afb1ad2116-block-1": {
+          "type": "block",
+          "settings": {
+            "heading": "Everyday Studs ",
+            "description": "<p>You’ll forget you’re even wearing them!<\/p>",
+            "title": "The post",
+            "text": "<p>All Automic Gold stud posts have two notches.<\/p>",
+            "button_name": "Shop Earrings",
+            "button_link": "\/collections\/earrings\/stud",
+            "hide_on_mobile": true,
+            "show_always": false,
+            "btn_mt": 60,
+            "btn_mt_mobile": 38
+          }
+        },
+        "template--14483332005982__660553e4-5c27-48ec-a6e7-54afb1ad2116-block-2": {
+          "type": "block",
+          "settings": {
+            "heading": "",
+            "description": "",
+            "image": "shopify:\/\/shop_images\/comfy-backs-1.jpg",
+            "title": "1st notch",
+            "text": "<p>Aligned perfectly with the backing so nothing pokes your ear.<\/p>",
+            "button_name": "",
+            "button_link": "",
+            "hide_on_mobile": false,
+            "show_always": false,
+            "btn_mt": 0,
+            "btn_mt_mobile": 0
+          }
+        },
+        "template--14483332005982__660553e4-5c27-48ec-a6e7-54afb1ad2116-block-3": {
+          "type": "block",
+          "settings": {
+            "heading": "",
+            "description": "",
+            "image": "shopify:\/\/shop_images\/comfy-backs-2.jpg",
+            "title": "2nd notch",
+            "text": "<p>The backing sits deeper when closed here for a more secure fit.<\/p>",
+            "button_name": "Shop Earrings",
+            "button_link": "#",
+            "hide_on_mobile": false,
+            "show_always": false,
+            "btn_mt": 0,
+            "btn_mt_mobile": 38
+          }
+        }
+      },
+      "block_order": [
+        "template--14483332005982__660553e4-5c27-48ec-a6e7-54afb1ad2116-block-1",
+        "template--14483332005982__660553e4-5c27-48ec-a6e7-54afb1ad2116-block-2",
+        "template--14483332005982__660553e4-5c27-48ec-a6e7-54afb1ad2116-block-3"
+      ],
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 24,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "109429cb-b9ff-4088-a596-c42d8ae7d950": {
+      "type": "text-with-grid-media",
+      "blocks": {
+        "template--14480745726046__109429cb-b9ff-4088-a596-c42d8ae7d950-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/comfortable-jewelry-2.jpg",
+            "image_fit": "image-cover"
+          }
+        }
+      },
+      "block_order": [
+        "template--14480745726046__109429cb-b9ff-4088-a596-c42d8ae7d950-image-1"
+      ],
+      "custom_css": [
+        "@media screen and (min-width: 768px) {.text-media-grid__image-container img {max-height: 460px; } .text-media-grid__text-container h2:first-of-type {font-size: 32px; }}"
+      ],
+      "settings": {
+        "text": "<h2><strong>24\/7 Necklaces<\/strong><\/h2><h3>Wear Your Necklaces 24\/7 And Never Take Them Off.<\/h3><p>Showerproof, sleeproof, everything-proof! From weight distribution to the locking mechanism, each necklace design is perfected to maximize comfort.<\/p>",
+        "button_name": "Shop Necklaces",
+        "button_link": "shopify:\/\/collections\/necklaces",
+        "full_width_image_mobile": false,
+        "media_grid_max_width": 730,
+        "image_max_height": 590,
+        "image_min_height": 590,
+        "tag_names": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 24
+      }
+    },
+    "c41fef44-057a-4a1f-878b-d5e8fd2db7f8": {
+      "type": "text-with-double-img",
+      "blocks": {
+        "template--14483332005982__c41fef44-057a-4a1f-878b-d5e8fd2db7f8-block-2": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/comfortable-jewelry-4.jpg"
+          }
+        },
+        "template--14483332005982__c41fef44-057a-4a1f-878b-d5e8fd2db7f8-block-3": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/comfortable-jewelry-3.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "template--14483332005982__c41fef44-057a-4a1f-878b-d5e8fd2db7f8-block-2",
+        "template--14483332005982__c41fef44-057a-4a1f-878b-d5e8fd2db7f8-block-3"
+      ],
+      "settings": {
+        "heading": "Forever Rings",
+        "description": "",
+        "title": "",
+        "text": "<p>You don’t have to take these off to wash your face… or do anything else. Many design iterations and months of testing before production ensure our rings feel just right on your fingers.<\/p>",
+        "button_name": "Shop Rings",
+        "button_link": "shopify:\/\/collections\/rings",
+        "image_height": 415,
+        "image_height_mobile": 260,
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 40
+      }
+    }
+  },
+  "order": [
+    "richtext",
+    "4b753c2e-f475-484e-869f-7e2c9b40d11f",
+    "660553e4-5c27-48ec-a6e7-54afb1ad2116",
+    "109429cb-b9ff-4088-a596-c42d8ae7d950",
+    "c41fef44-057a-4a1f-878b-d5e8fd2db7f8"
+  ]
+}

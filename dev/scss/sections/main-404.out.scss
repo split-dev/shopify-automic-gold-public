@@ -1,0 +1,40 @@
+@import "../settings/variables";
+@import "../settings/bootstrap-media";
+
+.main-404 {
+    position: relative;
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        content: '';
+        z-index: 1;
+    }
+    img, svg {
+        display: block;
+        width: 100%;
+        @include media-breakpoint-up(md) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+    }
+    img {
+        object-fit: cover;
+    }
+    &__text {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        z-index: 2;
+        @include media-breakpoint-down(sm) {
+            margin-top: 44px;
+        }
+    }
+}

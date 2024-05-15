@@ -1,0 +1,402 @@
+ <style>
+    {% comment %} Image Header and Text {% endcomment %}
+    .holiday-header {
+        display: block;
+    }
+
+    .holiday-header-image-desktop {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .holiday-header-image-mobile, 
+    .winter-footer-mobile {
+    display: none;
+    }
+
+    .holiday-header-image-desktop .text__block .inner {
+        position: absolute;
+        padding-left: 17vw;
+        padding-top: 3vh;
+    }
+
+    .image__block img {
+        width: 100vw;
+    }
+
+    .text__block .inner {
+        z-index: 1;
+    }
+
+    .text__block__spacer {
+        height: calc(10vh + 10px);
+    }
+
+    .text__block__tablet {
+        display: none;
+    }
+
+    .inner h1 {
+        font-size: 9vw;
+    }
+
+    {% comment %} Top Scroll Nav {% endcomment %}
+    #scrollNav {
+        padding: 0 13vw 0 13vw;
+    }
+
+    #scrollNav ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        list-style: none;
+    }
+
+    #scrollNav ul {
+        padding: 0 0 0 0;
+    }
+
+    #scrollNav li:not(:last-child) {
+        padding-right: 10px;
+    }
+
+    #scrollNav ul li {
+        cursor: pointer;
+        text-transform: uppercase;
+        font-weight: 600;
+        transition: all ease 300ms;
+        text-align: center;
+    }
+
+    #scrollNav ul li.active {
+        color: #FFCC33;
+    }
+
+    #scrollNav ul li:hover {
+        color: #FFCC33;
+    }
+
+
+    {% comment %} Holiday Card Links {% endcomment %}  
+
+    .holiday-sets-container {
+        padding-top: 6vh; 
+    }
+
+    .holiday-sets-container div {
+        text-align:center;
+    }
+
+    .holiday-lineup {
+        display: flex;
+        justify-content: center;
+    }
+
+    .holiday-lineup ul {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+    }
+
+    .holiday-lineup img {
+        object-fit: cover;
+        width: 13rem;
+        height: 18rem;
+        min-width: 11rem;
+    }
+
+    .holiday-lineup a {
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .holiday-lineup h3 {
+        font-size: .8rem;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .holiday-lineup-card {
+        padding-left: 0 !important;
+    }
+
+    .holiday-lineup-card li {
+       margin: 1vh .5vw 1vh .5vw;
+    }
+
+    {% comment %} Products {% endcomment %}
+
+    section.holiday-section {
+        margin-top: 60px;
+    }
+
+    section.holiday-section .bundle-grid {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .bundle-grid .product-card-item {
+        flex: 0 0 calc(50% - 5px);
+        max-width: calc(50% - 5px);
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+
+    .holiday__giftfooter {
+        padding-top: 20vh;
+    }
+
+    .winter-footer-desktop {
+    display:block;
+    width: 100vw;
+    }
+
+
+    {% comment %} Media Quiries  {% endcomment %}
+    @media (max-width: 991.98px){
+
+        {% comment %} Image Header and Text {% endcomment %}
+
+        .image__block img {
+            min-height: 0;
+         }
+
+        {% comment %} Top Scroll Nav {% endcomment %}
+        #scrollNav ul li {
+            font-size: smaller;
+        }
+
+        {% comment %} Holiday Card Links {% endcomment %}
+        .holiday-lineup ul {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .holiday-header-image-desktop,
+        .winter-footer-desktop
+         {
+            display:none;
+        }
+
+        .holiday-header-image-mobile {
+            display:block; 
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .holiday-header-image-mobile .text__block {
+            position: absolute;
+            padding-top: 35vw;
+        }
+        .holiday-header-image-mobile .text__block .inner {
+        text-align: center; 
+        }
+
+        .holiday-breadcrumb-desktop {
+        display: none;
+        }
+        
+        .winter-footer-mobile {
+        display:block;
+        }
+
+        .winter-footer-mobile img {
+        width: 100vw;
+        }
+
+        section.holiday-section {
+            position: relative;
+            {% comment %} margin: 60px calc(90px - 10vw) 90px calc(90px - 10vw); {% endcomment %}
+        }
+    }
+
+
+    {% comment %} Header Switch {% endcomment %}
+
+    @media (max-width: 991.98px) 
+    {
+        {% comment %} .text__block {
+            display: none;
+            height: 0px;
+        } {% endcomment %}
+
+        .text__block__tablet {
+            text-align: center;
+            background: none;
+            display: block;
+            padding-top: 30px;
+        }
+
+        #scrollNav ul {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .scroll-item {
+        margin: 1vh 0 1vh 0;
+        }
+    }
+</style> 
+
+{% assign hide_month = true %}
+
+<div class="page-cover">
+   <div class="no--padding">
+        <header class="holiday-header">
+            <div class="image__block holiday-header-image-desktop">
+                <div class="text__block">
+                    <div class="inner">
+                        <h1>Gifts That'll Last</h1>
+                        <p>Gifts they'll wear year round!</p>
+                    </div><div class="text__block__spacer"></div>
+                </div>
+                <div class="text__block__tablet">
+                    <div class="inner">
+                        <h1>Gifts That'll Last</h1>
+                        <p>Gifts they'll wear year round!</p>
+                    </div>
+                </div>
+                <picture>
+
+                          <img
+                srcset="
+                    {{ 'Holiday_Page_Header_Desktop.jpg' | file_img_url: '2000x1179' }} 2000w,
+                    {{ 'Holiday_Page_Header_Desktop.jpg' | file_img_url: '1500x884' }} 1500w,
+                    {{ 'Holiday_Page_Header_Desktop.jpg' | file_img_url: '1200x707' }} 1200w,
+                    {{ 'Holiday_Page_Header_Desktop.jpg' | file_img_url: '900x530' }} 900w
+                "
+                sizes="100vw"
+                alt=""
+                        />
+                    {% comment %}iPad-like ratio, width to height ratio of 3/4 to 5/4 (square image){% endcomment %}
+                    <source
+                        srcset="
+                            {{ 'Holiday_Page_Header_Mobile.jpg' | file_img_url: '1000x1000' }} 1000w,
+                            {{ 'Holiday_Page_Header_Mobile.jpg' | file_img_url: '1500x1500' }} 1500w
+                        "
+                        sizes="100vw"
+                        media="(min-aspect-ratio: 3/4) and (max-aspect-ratio: 5/4)"
+                    />
+
+                    {% comment %}Narrow screens, up tp width to height ratio of 3/2 (tall image){% endcomment %}
+                    <source
+                        srcset="
+                            {{ 'Holiday_Page_Header_Mobile.jpg' | file_img_url: '750x960' }} 750w,
+                            {{ 'Holiday_Page_Header_Mobile.jpg' | file_img_url: '1125x1440' }} 1125w,
+                            {{ 'Holiday_Page_Header_Mobile.jpg' | file_img_url: '1200x2262' }} 1200w
+                        "
+                        sizes="100vw"
+                        media="(max-aspect-ratio: 3/4)" 
+                    />
+                </picture>
+            </div>
+            <div class="image__block holiday-header-image-mobile">
+                <div class="text__block">
+                    <div class="inner">
+                        <h1>Gifts That'll Last</h1>
+                        <p>Gifts they'll wear year round!</p>
+                    </div><div class="text__block__spacer"></div>
+                </div>
+                <picture>
+                    <img
+                    srcset="
+                    {{ 'Holiday_Page_Header_Mobile.jpg' | file_img_url: '2000x1179' }} 2000w,
+                    {{ 'Holiday_Page_Header_Mobile.jpg' | file_img_url: '1500x884' }} 1500w,
+                    {{ 'Holiday_Page_Header_Mobile.jpg' | file_img_url: '1200x707' }} 1200w,
+                    {{ 'Holiday_Page_Header_Mobile.jpg' | file_img_url: '900x530' }} 900w
+                "
+                sizes="100vw"
+                alt=""
+                        />
+                    {% comment %}iPad-like ratio, width to height ratio of 3/4 to 5/4 (square image){% endcomment %}
+                    <source
+                        srcset="
+                            {{ 'Holiday_Page_Header_Mobile.jpg' | file_img_url: '1000x1000' }} 1000w,
+                            {{ 'Holiday_Page_Header_Mobile.jpg' | file_img_url: '1500x1500' }} 1500w
+                        "
+                        sizes="100vw"
+                        media="(min-aspect-ratio: 3/4) and (max-aspect-ratio: 5/4)"
+                    />
+
+                    {% comment %}Narrow screens, up tp width to height ratio of 3/2 (tall image){% endcomment %}
+                    <source
+                        srcset="
+                            {{ 'Holiday_Page_Header_Mobile.jpg' | file_img_url: '750x960' }} 750w,
+                            {{ 'Holiday_Page_Header_Mobile.jpg' | file_img_url: '1125x1440' }} 1125w,
+                            {{ 'Holiday_Page_Header_Mobile.jpg' | file_img_url: '1200x2262' }} 1200w
+                        "
+                        sizes="100vw"
+                        media="(max-aspect-ratio: 3/4)" 
+                    />
+                </picture>
+            </div>
+        </header>
+    </div>
+</div>
+
+    <div class="page-width collection-utils holiday-breadcrumb-desktop">
+        {% include 'breadcrumb' %}
+    </div>
+
+    <section class="page-width holiday-section" data-anchor="holiday-sets">
+        
+        <div class="holiday-category">
+            <h2 class="">Holiday Sets</h2>
+            <p class="space-bottom-x1">Each year we bundle up timeless pieces to simplify your gift giving.</p>
+        </div>
+        <img class="holiday-set-graphic space-bottom-x1" src="{{ 'Holiday_Sets_Graphic.png' | file_url }}" alt="" />
+        <div class="pgrid roomy">
+            {% include 'product-card', product: all_products.Asymmetric-Aesthetic-Set, sizes: sizes %}
+            {% include 'product-card', product: all_products.Tempting-Textures-Set, sizes: sizes %}
+            {% include 'product-card', product: all_products.Celestial-Signs-Set, sizes: sizes %} 
+            {% include 'product-card', product: all_products.Style-Icons-Set, sizes: sizes %} 
+            {% include 'product-card', product: all_products.Haute-hoops-Set, sizes: sizes %}
+            {% include 'product-card', product: all_products.Stacked-Sparkle-Set, sizes: sizes %}
+        </div>
+    </section>
+
+    <section class="page-width holiday-section" data-anchor="Make-it-Special">
+        <div class="holiday-category">
+            <h2 class="">Make it Special</h2>
+            <p class="space-bottom-x1">Get them a subtle but chic way to send a message!</p>
+        </div>
+        
+        <img class="initial-graphic space-bottom-x1" src="{{ 'Initial_graphic.png' | file_url }}" alt="" />
+        
+        <div class="pgrid roomy">
+            {% include 'product-card', product: all_products.Initial, sizes: sizes %}
+            {% include 'product-card', product: all_products.Initial-Charm, sizes: sizes %}
+            {% include 'product-card', product: all_products.Initial-necklace, sizes: sizes %} 
+            {% include 'product-card', product: all_products.Initial-Ring, sizes: sizes %} 
+            {% include 'product-card', product: all_products.initial-flatback-piercing, sizes: sizes %}
+            {% include 'product-card', product: all_products.sideways-initial-bracelet, sizes: sizes %}
+        </div>
+    </section>
+
+    <section class="page-width holiday-section" data-anchor="For-Astrology-Lovers">
+        <div class="holiday-category">
+            <h2 class="">For Astrology Lovers</h2>
+            <p class="space-bottom-x1">Did they ask you what time you were born?</p>
+        </div>
+    
+        <img class="Horoscope-graphic space-bottom-x1" src="{{ 'Horoscope_Graphic.png' | file_url }}" alt="" />
+
+        <div class="pgrid roomy">
+            {% include 'product-card', product: all_products.Horoscope-Charm, sizes: sizes %}
+            {% include 'product-card', product: all_products.Horoscope-Ring, sizes: sizes %}
+            {% include 'product-card', product: all_products.Horoscope-flatback-piercing, sizes: sizes %} 
+            {% include 'product-card', product: all_products.Horoscope-Necklace, sizes: sizes %} 
+            {% include 'product-card', product: all_products.Horoscope-Earring, sizes: sizes %}
+            {% include 'product-card', product: all_products.Horoscope-Bracelet, sizes: sizes %}
+        </div>
+    </section>
+
+<div class="winter-footer-desktop no--padding">
+    <img src="{{ 'Holiday_Page_Snowflakes_Desktop.jpg' | file_url }}" alt="" />
+</div>
+<div class="winter-footer-mobile no--padding">
+    <img src="{{ 'Snowflakes_mobile.jpg' | file_url }}" alt="" />
+</div>

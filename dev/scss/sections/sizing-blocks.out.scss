@@ -1,0 +1,105 @@
+@import "../settings/variables";
+@import "../settings/bootstrap-media";
+
+.sizing-block-section {
+  overflow: hidden;
+}
+.sizing-blocks {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+  }
+
+  // .sizing-blocks__block
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    margin-right: 0;
+    margin-bottom: 24px;
+    @include media-breakpoint-up(md) {
+      margin-right: 32px;
+      margin-bottom: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+
+    &.full-mobile {
+      .sizing-blocks__image {
+        max-width: none !important;
+        width: calc(100% + (var(--page-width-x-paddings-mobile) * 2));
+        position: relative;
+        left: -16px;
+        @include media-breakpoint-up(sm) {
+          width: calc(100% + (var(--page-width-x-paddings-tablet) * 2));
+          left: -30px;
+        }
+        @include media-breakpoint-up(md) {
+          width: auto;
+          left: 0;
+          max-width: 100% !important;
+        }
+      }
+    }
+  }
+
+  // .sizing-blocks__head
+
+  &__head {
+    h2 {
+      font-weight: 400;
+      margin-bottom: 0 !important;
+    }
+  }
+
+  // .sizing-blocks__text
+
+  &__text {
+    max-width: 100%;
+    width: 100%;
+    margin-top: 16px;
+    @include media-breakpoint-up(md) {
+      max-width: 440px;
+      margin-top: 24px;
+    }
+    p {
+      font-weight: 400;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // .sizing-blocks__image
+
+  &__image {
+    margin-top: 15px;
+    position: relative;
+    border: 2px solid rgb(var(--color-highlighted-elements));
+    @include media-breakpoint-up(md) {
+      margin-top: 42px;
+    }
+    &::before {
+      content: "";
+      display: block;
+      padding-bottom: calc(100% / var(--aspect-ratio));
+    }
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      max-height: 100%;
+      max-width: 100%;
+    }
+  }
+}

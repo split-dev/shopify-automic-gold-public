@@ -1,0 +1,103 @@
+{{ 'faq-custom-text.out.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top_mb }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mb }}px;
+  }
+
+  @media screen and (min-width: 768px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="text-center section-{{ section.id }}-padding custom-faq-text">
+  <div class="custom-faq-text__desk test">
+    {{ section.settings.text_1 }}
+  </div>
+  <div class="custom-faq-text__mobile">
+    {{ section.settings.text_2 }}
+  </div>
+</div>
+
+{% if template contains 'faq-' and template != 'page.faq-global' %}
+  <a href="/pages/faq" class="link-faq__to-main-menu btn">Return to Main Menu</a>
+{% endif %}
+
+<style>
+  .link-faq__to-main-menu {
+    margin: 0 auto;
+    display: block;
+    width: fit-content;
+    line-height: 35px;
+    min-height: 35px;
+    margin-bottom: 172px;
+    border: none;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "t:sections.main-faq-custom-text.name",
+  "class": "section",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "text_1",
+      "label": "t:sections.main-faq-custom-text.settings.desk.content"
+    },
+    {
+      "type": "richtext",
+      "id": "text_2",
+      "label": "t:sections.main-faq-custom-text.settings.mobile.content"
+    },
+    {
+      "type": "header",
+      "content": "Section space"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 160,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding top desktop",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 160,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding bottom desktop",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mb",
+      "min": 0,
+      "max": 120,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding top mobile",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mb",
+      "min": 0,
+      "max": 120,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding bottom mobile",
+      "default": 80
+    }
+  ]
+}
+{% endschema %}

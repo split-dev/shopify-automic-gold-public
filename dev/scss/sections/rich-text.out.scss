@@ -1,0 +1,12 @@
+@import "../settings/variables";
+@import "../settings/bootstrap-media";
+
+.rich-text {
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        h1 {
+            line-height: normal;
+        }
+    }
+}

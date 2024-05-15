@@ -1,0 +1,194 @@
+<header class="marceline spaced--twice">
+    <div class="marceline__text">
+        {% include 'breadcrumb' %}
+
+        <h1 class="cover__text">
+            The ultimate<br/>Threader guide
+        </h1>
+    </div>
+
+    <div class="marceline__visual">
+        <img
+            srcset="
+                {{ 'threaders-header--square.jpg' | file_img_url: '500x500' }} 500w,
+                {{ 'threaders-header--square.jpg' | file_img_url: '690x690' }} 690w,
+                {{ 'threaders-header--square.jpg' | file_img_url: '800x800' }} 800w,
+                {{ 'threaders-header--square.jpg' | file_img_url: '1035x1035' }} 1035w,
+                {{ 'threaders-header--square.jpg' | file_img_url: '1152x1152' }} 1152w,
+                {{ 'threaders-header--square.jpg' | file_img_url: '1242x1242' }} 1242w,
+                {{ 'threaders-header--square.jpg' | file_img_url: '1500x1500' }} 1500w,
+                {{ 'threaders-header--square.jpg' | file_img_url: '1860x1860' }} 1860w
+            "
+            sizes="
+                (max-width: 767.98px) calc(100vw - 30px),
+                (min-width: 768px) and (max-width: 1152px) calc((100vw - 120px - 30px) * 0.5),
+                (min-width: 1200px) calc((100vw - 180px - 30px) * 0.5)"
+            alt="Automic Gold Threader Earrings"
+        />
+    </div>
+</header>
+
+<div class="threaders__howto typesystem--lp" data-aos="fade-up">
+    <div class="three-by-three gap-once">
+        <div class="one-one threaders__howto-heading">
+            <h2>How to put on Threaders</h2>
+            <p>
+                Before you style your new shinies, here’s how to put them on correctly.
+            </p>
+        </div>
+
+        <div class="two-two threaders__howto-block">
+            <svg role="presentation" width="35px" height="35px" viewBox="0 0 35 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <title>Cross Icon</title>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Artboard" fill="#CF243A" fill-rule="nonzero">
+                        <g id="Group" transform="translate(0.454174, 0.489487)">
+                            <polygon id="Path" points="0 4.76570391 29.5680589 34.5066718 34.3412866 29.7611948 4.77322771 0.0202269422"></polygon>
+                            <polygon id="Path" points="29.872029 1.0658141e-14 0.0202812336 29.5195091 4.75294648 34.3054399 34.6046942 4.78593085"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+
+            <figure>
+                <img
+                    class="lazyload"
+                    data-srcset="
+                        {{ 'threaders-howto--wrong.jpg' | file_img_url: '1600x2000' }} 1600w,
+                        {{ 'threaders-howto--wrong.jpg' | file_img_url: '1200x1500' }} 1200w,
+                        {{ 'threaders-howto--wrong.jpg' | file_img_url: '800x1000' }} 800w,
+                        {{ 'threaders-howto--wrong.jpg' | file_img_url: '400x500' }} 400w
+                    "
+                    sizes="
+                        (max-width: 767.98px) 100vw,
+                        (min-width: 768px) and (max-width: 1152px) calc((100vw - 120px) * 0.34),
+                        (min-width: 1200px) calc((100vw - 180px) * 0.34)
+                    "
+                    alt="Wrong way to put on Threader earrings"
+                />
+                <figcaption>
+                    <h3>
+                        Inserting Threader earrings this way might lead to <span>damage</span>.
+                    </h3>
+                </figcaption>
+            </figure>
+        </div>
+
+        <div class="three-two threaders__howto-block">
+            <svg role="presentation" width="43px" height="45px" viewBox="0 0 43 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <title>Checkmark</title>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Artboard" fill="#01BA60" fill-rule="nonzero">
+                        <polygon id="Path" points="5.32211991 23.3322883 0.205543471 29.5995506 18.9623964 44.9125961 42.2055435 5.42390924 36.0229317 -1.13686838e-13 16.7754227 32.0085174"></polygon>
+                    </g>
+                </g>
+            </svg>
+
+            <figure>
+                <img
+                    class="lazyload"
+                    data-srcset="
+                        {{ 'threaders-howto--right.jpg' | file_img_url: '1600x2000' }} 1600w,
+                        {{ 'threaders-howto--right.jpg' | file_img_url: '1200x1500' }} 1200w,
+                        {{ 'threaders-howto--right.jpg' | file_img_url: '800x1000' }} 800w,
+                        {{ 'threaders-howto--right.jpg' | file_img_url: '400x500' }} 400w
+                    "
+                    sizes="
+                        (max-width: 767.98px) 100vw,
+                        (min-width: 768px) and (max-width: 1152px) calc((100vw - 120px) * 0.34),
+                        (min-width: 1200px) calc((100vw - 180px) * 0.34)
+                    "
+                    alt="Correct way to put on Threader earrings"
+                />
+                <figcaption>
+                    <h3>
+                        Insert Threader by pushing from the point connected to the beads.
+                    </h3>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+</div>
+
+<section class="no--padding threaders__styling" data-aos="fade-up">
+    <div class="threaders__styling-content page-width typesystem--lp">
+        <h2>Style your Threaders</h2>
+
+        <h3>Threader earrings give you ultimate freedom of styling with many ways to wear the same earring.</h3>
+
+        <div class="three-by-three m-three-by-three">
+            <article class="one-one m-one-one">
+                <h3>Threader</h3>
+
+                <img
+                    class="lazyload"
+                    data-srcset="
+                        {{ 'threader-howto-threader.gif' | file_img_url: '400x900' }} 400w
+                    "
+                    sizes="200px"
+                    alt="Animation showing all the ways to wear Threader earring."
+                />
+            </article>
+
+            <article class="two-one m-two-one">
+                <h3>Circle Threader</h3>
+
+                <img
+                    class="lazyload"
+                    data-srcset="
+                        {{ 'threader-howto-circle-threader.gif' | file_img_url: '400x900' }} 400w
+                    "
+                    sizes="200px"
+                    alt="Animation showing all the ways to wear Circle Threader earring."
+                />
+            </article>
+
+            <article class="three-one m-three-one">
+                <h3>Mini Threader</h3>
+
+                <img
+                    class="lazyload"
+                    data-srcset="
+                        {{ 'threader-howto-mini-threader.gif' | file_img_url: '400x900' }} 400w
+                    "
+                    sizes="200px"
+                    alt="Animation showing all the ways to wear Mini Threader earring."
+                />
+            </article>
+        </div>
+
+        <div class="threaders__show">
+            <h2>Show us how you wear it!</h2>
+
+            <p>Tag us <a href="https://www.instagram.com/automicgold/" target="_blank">@automicgold</a> on Instagram and get featured on our feed!</p>
+        </div>
+    </div>
+</section>
+
+<section class="typesystem--lp spaced--twice" data-aos="fade-up">
+    <div class="three-by-three m-two-by-two gap-once m-gap-half">
+        <div class="one-one m-row-one">
+            <h2>Creativity, continued</h2>
+            <h3>Connector and Extender earrings bring even more powerful styling options.</h3>
+        </div>
+
+        <div class="two-two m-one-two space-bottom-x05">
+            {% include 'product-card', product: all_products.connector %}
+        </div>
+
+        <div class="three-two m-two-two">
+            {% include 'product-card', product: all_products.extender %}
+        </div>
+    </div>
+</section>
+
+
+<svg width="0" height="0" viewBox="0 0 1403 1290" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <clipPath id="threaders-clip-path-desktop" clipPathUnits="objectBoundingBox">
+            <path
+                transform="scale(0.000712758374911, 0.00077519379845)"
+                d="M0,42.3883432 C203.5,-17.1646748 440,-17.1646748 664.5,62.8596931 C889,142.884061 1254.5,101.243474 1403,56.3460818 C1401.66667,185.842879 1401.66667,597.060851 1403,1290 L0,1290 C0,579.225963 0,163.355411 0,42.3883432 Z"></path>
+        </clipPath>
+    </defs>
+</svg>

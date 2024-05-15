@@ -1,0 +1,222 @@
+{
+  "sections": {
+    "richtext": {
+      "type": "rich-text",
+      "settings": {
+        "rich_text": "<h1><strong>Real Gold. <br\/>Made By Real People.<\/strong><\/h1><h2>Forging Our Own Path<\/h2>",
+        "max_width": 1000,
+        "content_alignment": "center",
+        "content_alignment_mobile": "center",
+        "horizontal_alignment": "center",
+        "padding_top": 74,
+        "padding_bottom": 16,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 16
+      }
+    },
+    "38eb3b9b-8d06-40ea-94b2-7334e43226cd": {
+      "type": "rich-text",
+      "disabled": true,
+      "settings": {
+        "rich_text": "<h2>Representation Matters<\/h2><p>We hire size-inclusive, non-cis and non-white models all year round, not just for awareness months.<\/p>",
+        "max_width": 1000,
+        "content_alignment": "center",
+        "content_alignment_mobile": "left",
+        "horizontal_alignment": "center",
+        "padding_top": 40,
+        "padding_bottom": 0,
+        "padding_top_mobile": 16,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "47376a15-01ef-4b7f-8ccd-0e187dfaf86a": {
+      "type": "rich-text",
+      "disabled": true,
+      "settings": {
+        "rich_text": "<h2>Reclaimed & Recycled<\/h2><p>All pieces are made from reclaimed metal, and arrive in a packaging that is recyclable.<\/p>",
+        "max_width": 1000,
+        "content_alignment": "center",
+        "content_alignment_mobile": "left",
+        "horizontal_alignment": "center",
+        "padding_top": 16,
+        "padding_bottom": 0,
+        "padding_top_mobile": 16,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "1f5b53c3-ea0e-4558-960b-c714736277cd": {
+      "type": "rich-text",
+      "disabled": true,
+      "settings": {
+        "rich_text": "<h2>We Don’t Photoshop Models<\/h2><p>Hell yeah to positive, honest body images.<\/p>",
+        "max_width": 1000,
+        "content_alignment": "center",
+        "content_alignment_mobile": "left",
+        "horizontal_alignment": "center",
+        "padding_top": 16,
+        "padding_bottom": 0,
+        "padding_top_mobile": 16,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "f6ea374f-70de-4f73-aff3-7514e006401a": {
+      "type": "rich-text",
+      "disabled": true,
+      "settings": {
+        "rich_text": "<h2>Self-funded<\/h2><p>We have never taken money from investors, so we never have to compromise our values for numbers.<\/p>",
+        "max_width": 1000,
+        "content_alignment": "center",
+        "content_alignment_mobile": "left",
+        "horizontal_alignment": "center",
+        "padding_top": 16,
+        "padding_bottom": 44,
+        "padding_top_mobile": 16,
+        "padding_bottom_mobile": 34
+      }
+    },
+    "1af6a433-194f-4f48-9067-5ed944252c7c": {
+      "type": "info-tiles",
+      "blocks": {
+        "f41a8926-448e-4511-8d54-9ddf7c9c5e3b": {
+          "type": "tile",
+          "settings": {
+            "text": "<h2><strong>We Do What We Do…<\/strong><\/h2><ul><li>So people regardless of size or identity can enhance their style.<\/li><\/ul><p><\/p><ul><li>To reject fast fashion and encourage investing in recyclable, long-lasting pieces.<\/li><\/ul><p><\/p><ul><li>To prove businesses can thrive without submitting to greed-fueled exploitation.<\/li><\/ul>",
+            "image": "shopify:\/\/shop_images\/automic-gold-about-us-1.jpg",
+            "image_height": 620,
+            "image_height_mobile": 430
+          }
+        },
+        "f66f1184-4615-4b4d-a0ac-4f8f5e0fdd57": {
+          "type": "tile",
+          "settings": {
+            "text": "<h2><strong>We Do It By…<\/strong><\/h2><ul><li>Making all our jewelry in <a href=\"https:\/\/www.automicgold.com\/pages\/size-inclusive-jewelry\"><span style=\"text-decoration:underline\">broader size ranges<\/span><\/a> than any of our competitors.<\/li><\/ul><p><\/p><ul><li>Creating <a href=\"https:\/\/www.automicgold.com\/pages\/custom-orders\"><span style=\"text-decoration:underline\">custom pieces<\/span><\/a> to suit any taste.<\/li><\/ul><p><\/p><ul><li><a href=\"https:\/\/www.automicgold.com\/blogs\/automic-blog\/automic-gold-no-coupon-code-why-we-dont-do-discounts\"><span style=\"text-decoration:underline\">Offering fair prices instead of lying to you<\/span><\/a> with fake “discounts.”<\/li><\/ul><p><\/p><ul><li><a href=\"https:\/\/www.automicgold.com\/pages\/sustainable-fine-jewelry\"><span style=\"text-decoration:underline\">Sourcing our materials ethically and locally<\/span><\/a> and producing everything in our own studio.<\/li><\/ul><p><\/p><ul><li>Testing all our pieces for <a href=\"https:\/\/www.automicgold.com\/pages\/comfortable-jewelry\"><span style=\"text-decoration:underline\">comfort<\/span><\/a>.<\/li><\/ul><p><\/p><ul><li><a href=\"https:\/\/www.automicgold.com\/blogs\/automic-blog\"><span style=\"text-decoration:underline\">Educating our customers<\/span><\/a> on all things jewelry and <a href=\"https:\/\/www.automicgold.com\/pages\/sustainable-fine-jewelry\"><span style=\"text-decoration:underline\">how to care for it<\/span><\/a> while keeping your jewelry in shape with affordable repairs.<\/li><\/ul><p><\/p><ul><li>Refusing investor funding so we never compromise our values for numbers.<\/li><\/ul><p><\/p><ul><li>Capping <a href=\"https:\/\/www.automicgold.com\/pages\/about-our-founder\"><span style=\"text-decoration:underline\">our CEO<\/span><\/a>’s salary at 3 times the lowest employee salary and sharing annual profits with all employees.<\/li><\/ul>",
+            "image": "shopify:\/\/shop_images\/automic-gold-about-us-2.jpg",
+            "image_height": 620,
+            "image_height_mobile": 430
+          }
+        }
+      },
+      "block_order": [
+        "f41a8926-448e-4511-8d54-9ddf7c9c5e3b",
+        "f66f1184-4615-4b4d-a0ac-4f8f5e0fdd57"
+      ],
+      "settings": {
+        "first_starts_with": "text",
+        "gaps_desktop": 0,
+        "gaps_mobile": 50,
+        "vertical_alignment": "center",
+        "text_align": "left",
+        "text_max_width": 460,
+        "fit_images_to_full_screen": "all",
+        "padding_top": 100,
+        "padding_bottom": 30,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 24
+      }
+    },
+    "34ae2e79-2493-4f28-87bd-f864fea94070": {
+      "type": "info-cards",
+      "blocks": {
+        "d69cae83-c0a1-44e2-84c0-5fae97e29d2d": {
+          "type": "card",
+          "settings": {
+            "title": "<h2>AL Sandimirova<\/h2><p>Founder <\/p><p>They\/Them<\/p><p><a href=\"\/pages\/about-our-founder\" target=\"_blank\" title=\"About Our Founder\">Learn More About AL<\/a><\/p>",
+            "image": "shopify:\/\/shop_images\/founed-al-new-image.jpg"
+          }
+        },
+        "df3fc97d-a08d-43e7-94b0-838e03f21945": {
+          "type": "card",
+          "settings": {
+            "title": "<h2>Luna<\/h2><p>Big Boss & Security<\/p><p>That\/Bitch<\/p>",
+            "image": "shopify:\/\/shop_images\/Frame_7195.jpg"
+          }
+        },
+        "fae5959c-7d89-49d9-a665-3a35fc7f86d8": {
+          "type": "card",
+          "settings": {
+            "title": "<h2>Jany Iskra<\/h2><p>Production Manager<\/p><p>She\/Her<\/p>",
+            "image": "shopify:\/\/shop_images\/Jany_Employee_Photo.jpg"
+          }
+        },
+        "9085f9a3-a320-460b-af1e-92643b3f00bf": {
+          "type": "card",
+          "settings": {
+            "title": "<h2>Christopher Almanzar<\/h2><p>Customer Service Director<\/p><p>He\/Him<\/p>",
+            "image": "shopify:\/\/shop_images\/about-team--chris.png"
+          }
+        },
+        "d51ccdd2-f411-422f-9eb0-539d9de1e358": {
+          "type": "card",
+          "settings": {
+            "title": "<h2>Sharena Chindavong<\/h2><p>Fashion and Visuals Director<\/p><p>She\/Her<\/p>",
+            "image": "shopify:\/\/shop_images\/about-team--sharena.png"
+          }
+        },
+        "8a63cb8e-841f-4507-8711-994d01271a45": {
+          "type": "card",
+          "settings": {
+            "title": "<h2>April Wang<\/h2><p>CAD designer<\/p><p>She\/Her<\/p>",
+            "image": "shopify:\/\/shop_images\/about-team--april.png"
+          }
+        },
+        "3e1d1dd3-5ade-45d1-8cd0-4925c86add16": {
+          "type": "card",
+          "settings": {
+            "title": "<h2>Alexus Parker<\/h2><p>Creative Director<\/p><p>She\/Her<\/p>",
+            "image": "shopify:\/\/shop_images\/about-team--parker.png"
+          }
+        },
+        "8f54784d-9a22-4419-8030-d8b8937569c5": {
+          "type": "card",
+          "settings": {
+            "title": "<h2>Jamie Alberts<\/h2><p>Catalog Specialist<\/p><p>She\/Her<\/p>",
+            "image": "shopify:\/\/shop_images\/about-team--jamie.png"
+          }
+        },
+        "03454667-563f-4bed-9a4c-38d6bec7ec1e": {
+          "type": "card",
+          "settings": {
+            "title": "<h2>Autumn Speller<\/h2><p>Operations Director<\/p><p>She\/Her<\/p>",
+            "image": "shopify:\/\/shop_images\/about-team--autumn.png"
+          }
+        }
+      },
+      "block_order": [
+        "d69cae83-c0a1-44e2-84c0-5fae97e29d2d",
+        "df3fc97d-a08d-43e7-94b0-838e03f21945",
+        "fae5959c-7d89-49d9-a665-3a35fc7f86d8",
+        "9085f9a3-a320-460b-af1e-92643b3f00bf",
+        "d51ccdd2-f411-422f-9eb0-539d9de1e358",
+        "8a63cb8e-841f-4507-8711-994d01271a45",
+        "3e1d1dd3-5ade-45d1-8cd0-4925c86add16",
+        "8f54784d-9a22-4419-8030-d8b8937569c5",
+        "03454667-563f-4bed-9a4c-38d6bec7ec1e"
+      ],
+      "custom_css": [
+        ".info-cards__list-item:nth-child(2) p {margin-bottom: 0;}",
+        ".info-cards__list-item:nth-child(2) h2:first-of-type {margin-bottom: 7px;}",
+        ".info-cards__info p {display: none;}"
+      ],
+      "settings": {
+        "description": "<h2>Meet The Team<\/h2>",
+        "button_name": "",
+        "button_link": "",
+        "reversed_info": false,
+        "image_ratio": "1.33",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 24,
+        "padding_bottom_mobile": 24
+      }
+    }
+  },
+  "order": [
+    "richtext",
+    "38eb3b9b-8d06-40ea-94b2-7334e43226cd",
+    "47376a15-01ef-4b7f-8ccd-0e187dfaf86a",
+    "1f5b53c3-ea0e-4558-960b-c714736277cd",
+    "f6ea374f-70de-4f73-aff3-7514e006401a",
+    "1af6a433-194f-4f48-9067-5ed944252c7c",
+    "34ae2e79-2493-4f28-87bd-f864fea94070"
+  ]
+}

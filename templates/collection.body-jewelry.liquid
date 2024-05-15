@@ -1,0 +1,77 @@
+{% assign is_collection_sorted = false %}
+{% if collection.sort_by and collection.sort_by != '' and collection.sort_by != 'manual' %}
+    {% assign is_collection_sorted = true %}
+{% endif %}
+
+<div class="collection-hat">
+    <nav class="collection-navigation">
+        <ul>
+            <li><a href="{{ shop.url }}/collections/all">All</a></li>
+            <li><a href="{{ shop.url }}/collections/rings">Rings</a></li>
+            <li><a href="{{ shop.url }}/collections/earrings">Earrings</a></li>
+            <li><a href="{{ shop.url }}/collections/necklaces">Necklaces</a></li>
+            <li><a href="{{ shop.url }}/collections/bracelets">Bracelets</a></li>
+            <li><a href="{{ shop.url }}/collections/charms">Charms</a></li>
+            <li class="active"><a href="{{ shop.url }}/collections/body-jewelry">Body&nbsp;Jewelry</a></li>
+            <li><a href="{{ shop.url }}/collections/wedding">Wedding</a></li>
+        </ul>
+    </nav>
+</div>
+
+<div class="page-width no--mobile-padding">
+    <nav class="collection-lineup">
+        <ul>
+            {% include 'collection-lineup', type: 'bodyjewelry', tag: 'cuffs', name: 'Cuffs' %}
+            {% include 'collection-lineup', type: 'bodyjewelry', tag: 'flatback', name: 'Flatbacks' %}
+            {% include 'collection-lineup', type: 'bodyjewelry', tag: 'huggies', name: 'Huggies' %}
+            {% include 'collection-lineup', type: 'bodyjewelry', tag: 'septum', name: 'Septums' %}
+            {% include 'collection-lineup', type: 'bodyjewelry', tag: 'barbell', name: 'Barbell' %}
+            {% include 'collection-lineup', type: 'bodyjewelry', tag: 'nosepiercing', name: 'Nose Piercings' %}
+            
+        </ul>
+    </nav>
+</div>
+
+
+<div class="page-width collection-utils">
+    {% include 'breadcrumb' %}
+    {% include 'collection-sorting' %}
+</div>
+
+{% paginate collection.products by 50 %}
+
+    <div class="page-width pgrid collection-pgrid">
+        {% for product in collection.products %}
+            {% include 'product-card' %}
+        {% endfor %}
+
+        {% if collection.image %}
+            <div class="collection-inline-image">
+                <img
+                    class="lazyload"
+                    data-srcset="
+                        {{ collection.image | img_url: '1242x1490' }} 1242w,
+                        {{ collection.image | img_url: '1152x1382' }} 1152w,
+                        {{ collection.image | img_url: '1035x1241' }} 1035w,
+                        {{ collection.image | img_url: '768x921' }} 768w,
+                        {{ collection.image | img_url: '600x720' }} 600w
+                    "
+                    sizes="
+                        (max-width: 479.98px) calc(100vw - 30px),
+                        (min-width: 480px) and (max-width: 767.98px) calc(100vw - 60px),
+                        (min-width: 768px) and (max-width: 1199.98px) calc((100vw - 120px - 15px) * 0.666667),
+                        (min-width: 1200px) calc((100vw - 180px - 30px) * 0.5)
+                    "
+                    alt="Automic Gold Shop All Radically Wearable Necklaces"
+                />
+            </div>
+        {% endif %}
+    </div>
+
+    {% if paginate.pages > 1 %}
+        <div class="collection-pagination pagination">
+            {{ paginate | default_pagination }}
+        </div>
+    {% endif %}
+
+{% endpaginate %}

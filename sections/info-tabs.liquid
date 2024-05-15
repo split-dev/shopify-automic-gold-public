@@ -1,0 +1,492 @@
+{{ 'info-tabs.out.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section--{{ section.id }} {
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+  }
+
+  @media screen and (min-width: 768px) {
+      .section--{{ section.id }} {
+          padding-top: {{ section.settings.padding_top }}px;
+          padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+  }
+{%- endstyle -%}
+
+<div class="info-tabs__module section--{{ section.id }}" id="infoTabs">
+    <div class="info-tabs">
+        <ul>
+            {%- for block in section.blocks -%}
+                <li class="info-tabs__info-tab{% if forloop.first %} active{% endif %}" data-info-tab="info-tab-{{ forloop.index }}">{{ block.settings.title }}</li>
+            {%- endfor -%}
+        </ul>
+    </div>
+
+    <div class="page-width info-tabs-body">
+        {%- for block in section.blocks -%}
+            {% case block.type %}
+                {%- when 'video-list' -%}
+                    <div class="info-tabs-body__block{% if forloop.first %} active{% endif %}" aria-hidden="{% if forloop.first %} false{% else %} true{% endif %}" data-info-tab="info-tab-{{ forloop.index }}">
+                        <div class="info-tabs__heading">
+                            <div class="spaced info-tabs__description">
+                                {{ block.settings.description }}
+                            </div>
+                        </div>
+            
+                        <section class="info-tabs__grid">
+                            {%- liquid
+                                assign video_index = 0
+                                if block.settings.video_src_1 != blank
+                                    assign video_index = video_index | plus: 1
+                                    render 'info-tab-video', heading: block.settings.heading_1, video_src: block.settings.video_src_1, overlay_text: block.settings.overlay_text_1, video_index: video_index
+                                endif
+                                if block.settings.video_src_2 != blank
+                                    assign video_index = video_index | plus: 1
+                                    render 'info-tab-video', heading: block.settings.heading_2, video_src: block.settings.video_src_2, overlay_text: block.settings.overlay_text_2, video_index: video_index
+                                endif
+                                if block.settings.video_src_3 != blank
+                                    assign video_index = video_index | plus: 1
+                                    render 'info-tab-video', heading: block.settings.heading_3, video_src: block.settings.video_src_3, overlay_text: block.settings.overlay_text_3, video_index: video_index
+                                endif
+                                if block.settings.video_src_4 != blank
+                                    assign video_index = video_index | plus: 1
+                                    render 'info-tab-video', heading: block.settings.heading_4, video_src: block.settings.video_src_4, overlay_text: block.settings.overlay_text_4, video_index: video_index
+                                endif
+                                if block.settings.video_src_5 != blank
+                                    assign video_index = video_index | plus: 1
+                                    render 'info-tab-video', heading: block.settings.heading_5, video_src: block.settings.video_src_5, overlay_text: block.settings.overlay_text_5, video_index: video_index
+                                endif
+                                if block.settings.video_src_6 != blank
+                                    assign video_index = video_index | plus: 1
+                                    render 'info-tab-video', heading: block.settings.heading_6, video_src: block.settings.video_src_6, overlay_text: block.settings.overlay_text_6, video_index: video_index
+                                endif
+                                if block.settings.video_src_7 != blank
+                                    assign video_index = video_index | plus: 1
+                                    render 'info-tab-video', heading: block.settings.heading_7, video_src: block.settings.video_src_7, overlay_text: block.settings.overlay_text_7, video_index: video_index
+                                endif
+                                if block.settings.video_src_8 != blank
+                                    assign video_index = video_index | plus: 1
+                                    render 'info-tab-video', heading: block.settings.heading_8, video_src: block.settings.video_src_8, overlay_text: block.settings.overlay_text_8, video_index: video_index
+                                endif
+                            -%}
+                        </section>
+                    </div>
+                {%- when 'tiles' -%}
+                    <div class="info-tabs-body__block{% if forloop.first %} active{% endif %}" aria-hidden="{% if forloop.first %} false{% else %} true{% endif %}" data-info-tab="info-tab-{{ forloop.index }}">
+                        <div class="info-tabs__heading">
+                            <div class="spaced info-tabs__description">
+                                {{ block.settings.description }}
+                            </div>
+                        </div>
+            
+                        <section class="info-tabs-5050">
+                            {%- liquid
+                                if block.settings.description_1 != blank
+                                    render 'info-tab-row', description: block.settings.description_1, image: block.settings.image_1
+                                endif
+                                if block.settings.description_2 != blank
+                                    render 'info-tab-row', description: block.settings.description_2, image: block.settings.image_2
+                                endif
+                                if block.settings.description_3 != blank
+                                    render 'info-tab-row', description: block.settings.description_3, image: block.settings.image_3
+                                endif
+                                if block.settings.description_4 != blank
+                                    render 'info-tab-row', description: block.settings.description_4, image: block.settings.image_4
+                                endif
+                            -%}
+                        </section>
+                    </div>
+                {%- when 'description' -%}
+                    <div class="info-tabs-body__block{% if forloop.first %} active{% endif %}" aria-hidden="{% if forloop.first %} false{% else %} true{% endif %}" data-info-tab="info-tab-{{ forloop.index }}">
+                        <div class="info-tabs__heading">
+                            <div class="spaced info-tabs__description">
+                                {{ block.settings.heading }}
+                            </div>
+                        </div>
+            
+                        <section class="info-tabs-copy">
+                            {{ block.settings.description }}
+                        </section>
+            
+                        <section class="info-tabs-5050">
+                            <div class="flex-block">
+                                <div class="image-block">
+                                    {{ block.settings.image | image_url: width: 1160 | image_tag: widths: '375, 550, 750, 1100, 1500, 1160' }}
+                                </div>
+            
+                                <div class="text-block">
+                                    {{ block.settings.main_text }}
+                                </div>
+                            </div>
+                        </section>
+            
+                        <section class="info-tabs-copy">
+                            {{ block.settings.bottom_text }}
+                        </section>
+                    </div>
+            {%- endcase -%}
+        {%- endfor -%}
+    </div>
+</div>
+
+{%- for block in section.blocks -%}
+    {%- if block.type == 'video-list' -%}
+        {{ 'video-sequence.js' | asset_url | script_tag }}
+        {%- break -%}
+    {%- endif -%}
+{%- endfor -%}
+
+{% schema %}
+{
+    "name": "Info tabs",
+    "tag": "section",
+    "disabled_on": {
+        "groups": ["header", "footer"]
+    },
+    "settings": [         
+        {
+            "type": "header",
+            "content": "t:sections.all.padding.section_padding_heading"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 100,
+            "step": 2,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_top",
+            "default": 0
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 100,
+            "step": 2,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_bottom",
+            "default": 0
+        },
+        {
+            "type": "header",
+            "content": "t:sections.all.padding.section_padding_mobile_heading"
+        },
+        {
+            "type": "range",
+            "id": "padding_top_mobile",
+            "min": 0,
+            "max": 100,
+            "step": 2,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_top",
+            "default": 0
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom_mobile",
+            "min": 0,
+            "max": 100,
+            "step": 2,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_bottom",
+            "default": 0
+        }
+    ],
+    "blocks": [
+        {
+            "type": "video-list",
+            "name": "Video list",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Tab name",
+                    "default": "Tab name"
+                },
+                {
+                    "type": "richtext",
+                    "id": "description",
+                    "label": "Description"
+                },
+                {
+                    "type": "header",
+                    "content": "Video 1"
+                },
+                {
+                    "type": "text",
+                    "id": "heading_1",
+                    "label": "Heading",
+                    "default": "Heading"
+                },
+                {
+                    "type": "text",
+                    "id": "video_src_1",
+                    "label": "Video source"
+                },
+                {
+                    "type": "text",
+                    "id": "overlay_text_1",
+                    "label": "Overlay text"
+                },
+                {
+                    "type": "header",
+                    "content": "Video 2"
+                },
+                {
+                    "type": "text",
+                    "id": "heading_2",
+                    "label": "Heading",
+                    "default": "Heading"
+                },
+                {
+                    "type": "text",
+                    "id": "video_src_2",
+                    "label": "Video source"
+                },
+                {
+                    "type": "text",
+                    "id": "overlay_text_2",
+                    "label": "Overlay text"
+                },
+                {
+                    "type": "header",
+                    "content": "Video 3"
+                },
+                {
+                    "type": "text",
+                    "id": "heading_3",
+                    "label": "Heading",
+                    "default": "Heading"
+                },
+                {
+                    "type": "text",
+                    "id": "video_src_3",
+                    "label": "Video source"
+                },
+                {
+                    "type": "text",
+                    "id": "overlay_text_3",
+                    "label": "Overlay text"
+                },
+                {
+                    "type": "header",
+                    "content": "Video 4"
+                },
+                {
+                    "type": "text",
+                    "id": "heading_4",
+                    "label": "Heading",
+                    "default": "Heading"
+                },
+                {
+                    "type": "text",
+                    "id": "video_src_4",
+                    "label": "Video source"
+                },
+                {
+                    "type": "text",
+                    "id": "overlay_text_4",
+                    "label": "Overlay text"
+                },
+                {
+                    "type": "header",
+                    "content": "Video 5"
+                },
+                {
+                    "type": "text",
+                    "id": "heading_5",
+                    "label": "Heading",
+                    "default": "Heading"
+                },
+                {
+                    "type": "text",
+                    "id": "video_src_5",
+                    "label": "Video source"
+                },
+                {
+                    "type": "text",
+                    "id": "overlay_text_5",
+                    "label": "Overlay text"
+                },
+                {
+                    "type": "header",
+                    "content": "Video 6"
+                },
+                {
+                    "type": "text",
+                    "id": "heading_6",
+                    "label": "Heading",
+                    "default": "Heading"
+                },
+                {
+                    "type": "text",
+                    "id": "video_src_6",
+                    "label": "Video source"
+                },
+                {
+                    "type": "text",
+                    "id": "overlay_text_6",
+                    "label": "Overlay text"
+                },
+                {
+                    "type": "header",
+                    "content": "Video 7"
+                },
+                {
+                    "type": "text",
+                    "id": "heading_7",
+                    "label": "Heading",
+                    "default": "Heading"
+                },
+                {
+                    "type": "text",
+                    "id": "video_src_7",
+                    "label": "Video source"
+                },
+                {
+                    "type": "text",
+                    "id": "overlay_text_7",
+                    "label": "Overlay text"
+                },
+                {
+                    "type": "header",
+                    "content": "Video 8"
+                },
+                {
+                    "type": "text",
+                    "id": "heading_8",
+                    "label": "Heading",
+                    "default": "Heading"
+                },
+                {
+                    "type": "text",
+                    "id": "video_src_8",
+                    "label": "Video source"
+                },
+                {
+                    "type": "text",
+                    "id": "overlay_text_8",
+                    "label": "Overlay text"
+                }
+            ]
+        },
+        {
+            "type": "tiles",
+            "name": "Tiles",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Tab name",
+                    "default": "Tab name"
+                },
+                {
+                    "type": "richtext",
+                    "id": "description",
+                    "label": "Description"
+                },
+                {
+                    "type": "header",
+                    "content": "Row 1"
+                },
+                {
+                    "type": "richtext",
+                    "id": "description_1",
+                    "label": "Description"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image_1",
+                    "label": "Image"
+                },
+                {
+                    "type": "header",
+                    "content": "Row 2"
+                },
+                {
+                    "type": "richtext",
+                    "id": "description_2",
+                    "label": "Description"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image_2",
+                    "label": "Image"
+                },
+                {
+                    "type": "header",
+                    "content": "Row 3"
+                },
+                {
+                    "type": "richtext",
+                    "id": "description_3",
+                    "label": "Description"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image_3",
+                    "label": "Image"
+                },
+                {
+                    "type": "header",
+                    "content": "Row 4"
+                },
+                {
+                    "type": "richtext",
+                    "id": "description_4",
+                    "label": "Description"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image_4",
+                    "label": "Image"
+                }
+            ]
+        },
+        {
+            "type": "description",
+            "name": "Description",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Tab name",
+                    "default": "Tab name"
+                },
+                {
+                    "type": "richtext",
+                    "id": "heading",
+                    "label": "Heading"
+                },
+                {
+                    "type": "richtext",
+                    "id": "description",
+                    "label": "Description"
+                },
+                {
+                    "type": "richtext",
+                    "id": "main_text",
+                    "label": "Main text"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                },
+                {
+                    "type": "richtext",
+                    "id": "bottom_text",
+                    "label": "Bottom text"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Info tabs"
+        }
+    ]
+}
+{% endschema %}

@@ -1,0 +1,396 @@
+{
+  "sections": {
+    "5729d0ea-a261-4564-8c6f-e3a11bf2f45b": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<div class=\"page-cover\">\n    <div class=\"no--padding\">\n        <header class=\"cover--simple hp6-cover ring-header\">\n            <img\n                srcset=\"\n                            {{ 'travel-jewelry-box-automic-gold.jpg' | file_img_url: '2000x1179' }} 2000w,\n                            {{ 'travel-jewelry-box-automic-gold.jpg' | file_img_url: '1500x884' }} 1500w,\n                            {{ 'travel-jewelry-box-automic-gold.jpg' | file_img_url: '1200x707' }} 1200w,\n                            {{ 'travel-jewelry-box-automic-gold.jpg' | file_img_url: '900x530' }} 900w\n                        \"\n                alt=\"\"\n                class=\"ring-image\"\n            >\n            <div class='ring-header-text-container'>\n                <p class=\"pride--heading\">Travel With Style<\/p>\n                <p class=\"pride--sub-header\">Get a free jewelry travel case when you spend $199 or more on your order! Our travel case is sturdy and perfect for carrying your essentials on the go. Looking for new staple pieces?<br \/>\n                Check out our 2023 holiday sets!\n                <\/p>\n                <a href=\"https:\/\/www.automicgold.com\/pages\/holiday-guide\" class=\"btn\">Shop Now<\/a>\n            <\/div>\n            <img\n                srcset=\"\n                            {{ 'travel-jewelry-box-closed-automic-gold.jpg' | file_img_url: '2000x1179' }} 2000w,\n                            {{ 'travel-jewelry-box-closed-automic-gold.jpg' | file_img_url: '1500x884' }} 1500w,\n                            {{ 'travel-jewelry-box-closed-automic-gold.jpg' | file_img_url: '1200x707' }} 1200w,\n                            {{ 'travel-jewelry-box-closed-automic-gold.jpg' | file_img_url: '900x530' }} 900w\n                        \"\n                alt=\"\"\n                class=\"ring-image\"\n            >\n        <\/header>\n    <\/div>\n<\/div>",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "main": {
+      "type": "image-banner",
+      "custom_css": [
+        ".column-image__image {max-height: 100%;}"
+      ],
+      "settings": {
+        "richtext": "<h2>Golden Geometry<\/h2><p>New solid gold huggies and ear cuffs in stunning textures and shapes to frame your gorgeous face.<\/p>",
+        "text_alignment": "center",
+        "button_link": "https:\/\/www.automicgold.com\/collections\/all?sort_by=created-descending",
+        "button_text": "Shop Now",
+        "hide_button": false,
+        "image_first": "shopify:\/\/shop_images\/DSC04274.jpg",
+        "show_first_image": true,
+        "show_first_image_mob": true,
+        "show_first_image_mob_size": 0,
+        "first_image_url": "https:\/\/www.automicgold.com\/collections\/all?sort_by=manual",
+        "image_second": "shopify:\/\/shop_images\/gold-wide-stardust-huggie-earrings.jpg",
+        "show_second_image": true,
+        "show_second_image_mob": false,
+        "show_second_image_mob_size": 0,
+        "second_image_url": "https:\/\/www.automicgold.com\/collections\/all?sort_by=manual",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 30,
+        "background": "#08003D",
+        "border": true,
+        "extra_button": false,
+        "container": false
+      }
+    },
+    "d5a4d636-4fd8-406d-935e-efc0c1734e95": {
+      "type": "categories",
+      "blocks": {
+        "2a7c6bcc-1613-4311-b3c8-15cdaaa9e361": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/category-rings.jpg",
+            "title": "Rings",
+            "url": "shopify:\/\/collections\/rings"
+          }
+        },
+        "f1ca5524-a47a-409e-88bf-d0a09051b2d7": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Earrings.jpg",
+            "title": "Earrings",
+            "url": "shopify:\/\/collections\/earrings"
+          }
+        },
+        "756b9992-c0a0-41cb-b889-e1ad088fac94": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/category-necklaces.jpg",
+            "title": "Necklaces",
+            "url": "shopify:\/\/collections\/necklaces"
+          }
+        },
+        "f6dd41ec-e44b-43aa-b5dc-a634bd4d9fdc": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Bracelet_ade30c8c-cfa1-4443-8580-2d5b24634339.jpg",
+            "title": "Bracelets",
+            "url": "shopify:\/\/collections\/bracelets"
+          }
+        },
+        "67ec6635-7c05-4908-89e1-e01d689b9cce": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Necklace_for_homepage_b9f5849d-59f1-49d5-807a-c83ae79cb3ae.jpg",
+            "title": "Necklaces",
+            "url": "https:\/\/www.automicgold.com\/collections\/necklaces"
+          }
+        },
+        "ed32789e-f2de-4b06-9853-bc1d39a37b8c": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Charm_fb7e813e-9d79-41cc-97e0-ce7265c72a2b.jpg",
+            "title": "Charms",
+            "url": "shopify:\/\/collections\/charms"
+          }
+        },
+        "2a5d2907-73d0-4d55-8cb9-934dc18c7ba9": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Body_Jewelry_d50ed857-fdbf-49be-a6d5-3f8d9c0490bf.jpg",
+            "title": "Body Jewerly",
+            "url": "shopify:\/\/collections\/body-jewelry"
+          }
+        }
+      },
+      "block_order": [
+        "2a7c6bcc-1613-4311-b3c8-15cdaaa9e361",
+        "f1ca5524-a47a-409e-88bf-d0a09051b2d7",
+        "756b9992-c0a0-41cb-b889-e1ad088fac94",
+        "f6dd41ec-e44b-43aa-b5dc-a634bd4d9fdc",
+        "67ec6635-7c05-4908-89e1-e01d689b9cce",
+        "ed32789e-f2de-4b06-9853-bc1d39a37b8c",
+        "2a5d2907-73d0-4d55-8cb9-934dc18c7ba9"
+      ],
+      "settings": {
+        "title": "Shop by Category",
+        "padding_top": 32,
+        "padding_bottom": 64,
+        "padding_top_mobile": 32,
+        "padding_bottom_mobile": 32
+      }
+    },
+    "favorite_collections_h9X4fh": {
+      "type": "favorite-collections",
+      "blocks": {
+        "item_LykrjB": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/under-100.jpg",
+            "title": "Gifts Under $100",
+            "button_text": "Shop Under $100",
+            "button_link": "https:\/\/www.automicgold.com\/collections\/under-100?sort_by=price-descending"
+          }
+        },
+        "item_hF9b3j": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_7245.jpg",
+            "title": "Gifts under $250",
+            "button_text": "Shop Under $250",
+            "button_link": "https:\/\/www.automicgold.com\/collections\/under-250?sort_by=price-descending"
+          }
+        },
+        "item_RUaq7j": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_7244.jpg",
+            "title": "Gifts Under $500",
+            "button_text": "Shop $500",
+            "button_link": "https:\/\/www.automicgold.com\/collections\/under-500?sort_by=price-descending"
+          }
+        }
+      },
+      "block_order": [
+        "item_LykrjB",
+        "item_hF9b3j",
+        "item_RUaq7j"
+      ],
+      "settings": {
+        "title": "Shop Gifts",
+        "text": "",
+        "padding_top": 40,
+        "padding_bottom": 80,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
+      }
+    },
+    "c8e1c34d-2cd2-4b84-9334-9d249a8ece31": {
+      "type": "info-image-banner",
+      "blocks": {
+        "60558d55-0c96-414a-baa7-8cc5f7e376a1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_93.jpg",
+            "button_text": "About Us",
+            "button_link": "shopify:\/\/pages\/about-us"
+          }
+        },
+        "07722fff-5a53-4cb0-b154-839d1bcec246": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_97.jpg",
+            "button_text": "Our founder",
+            "button_link": "shopify:\/\/pages\/about-our-founder"
+          }
+        },
+        "48f33650-12c6-4dcb-b9d8-904e6581842e": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_7106.jpg",
+            "button_text": "Our Queerness",
+            "button_link": "shopify:\/\/pages\/queer-owned-business"
+          }
+        },
+        "item_frQeCU": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_7105.jpg",
+            "button_text": "Our Sustainability",
+            "button_link": "shopify:\/\/pages\/sustainable-fine-jewelry"
+          }
+        },
+        "d64866b5-aeca-403d-8689-ae83df28912a": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_7107_13f335fc-e5f4-479f-aa12-9752294b6285.jpg",
+            "button_text": "Inclusive",
+            "button_link": "shopify:\/\/pages\/size-inclusive-jewelry"
+          }
+        },
+        "3a42bfcb-cbf3-40c9-94e7-ee1b04d9e8bc": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_7107.jpg",
+            "button_text": "Comfort",
+            "button_link": "shopify:\/\/pages\/comfortable-jewelry"
+          }
+        }
+      },
+      "block_order": [
+        "60558d55-0c96-414a-baa7-8cc5f7e376a1",
+        "07722fff-5a53-4cb0-b154-839d1bcec246",
+        "48f33650-12c6-4dcb-b9d8-904e6581842e",
+        "item_frQeCU",
+        "d64866b5-aeca-403d-8689-ae83df28912a",
+        "3a42bfcb-cbf3-40c9-94e7-ee1b04d9e8bc"
+      ],
+      "settings": {
+        "title": "Jewelry for a  better future",
+        "subtitle": "Ethical, comfortable and for everyone.",
+        "text": "<p>Still the only fine jewelry brand in the world to carry plus sizes for each item in the collection. All our jewelry is handmade in our studio in NYC with each designed for comfort.<\/p>",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 40
+      }
+    },
+    "5db6dc36-146c-41bc-9bd8-29d99e4190c8": {
+      "type": "favorite-collections",
+      "blocks": {
+        "06c3e76d-31d9-4f6a-9fac-1edcb9498bbe": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Wedding_for_Homepage_9dd098f7-c478-4f91-97d3-0b36a805dec8.jpg",
+            "title": "",
+            "button_text": "Shop engagement",
+            "button_link": "shopify:\/\/collections\/engagement"
+          }
+        },
+        "7ad56e55-72b5-4664-bbd8-1b06158b78f9": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Wedding_photo_for_Homepage_b5d96696-adbb-4d88-bb6c-201207df4295.jpg",
+            "title": "",
+            "button_text": "Shop Wedding",
+            "button_link": "shopify:\/\/collections\/wedding"
+          }
+        },
+        "3a5ac4f8-e173-432f-a368-4cd8df325b04": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Emerald.jpg",
+            "title": "",
+            "button_text": "Create your Custom",
+            "button_link": "shopify:\/\/pages\/custom-orders"
+          }
+        }
+      },
+      "block_order": [
+        "06c3e76d-31d9-4f6a-9fac-1edcb9498bbe",
+        "7ad56e55-72b5-4664-bbd8-1b06158b78f9",
+        "3a5ac4f8-e173-432f-a368-4cd8df325b04"
+      ],
+      "settings": {
+        "title": "make it last forever",
+        "text": "See the pieces we have in our collection that will last a lifetime and make it a part of your big “I do” moment.",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
+      }
+    },
+    "f0443dc1-2a93-4980-96e5-d3be64ced74c": {
+      "type": "image-banner",
+      "settings": {
+        "richtext": "<h2>Best Sellers<\/h2><p>See what our customers are adding to their collection.<\/p>",
+        "text_alignment": "left",
+        "button_link": "https:\/\/www.automicgold.com\/collections\/all",
+        "button_text": "Shop Now",
+        "hide_button": false,
+        "show_first_image": false,
+        "show_first_image_mob": true,
+        "first_image_url": "",
+        "image_second": "shopify:\/\/shop_images\/Bestsellers_8feccc54-a9c2-4524-ab54-dd3aa088779c.jpg",
+        "show_second_image": true,
+        "show_second_image_mob": true,
+        "second_image_url": "",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "background": "#18084D",
+        "border": false,
+        "extra_button": true,
+        "container": true
+      }
+    },
+    "19936a53-362e-4d38-881e-20822632db34": {
+      "type": "featured-products",
+      "custom_css": [
+        ".okeReviews.okeReviews--theme .okeReviews-starRating.okeReviews-starRating--small {height: 25px; margin-bottom: -5px;}"
+      ],
+      "settings": {
+        "title": "New Arrivals!",
+        "collection_link": "\/collections\/all?sort_by=created-descending",
+        "button_text": "Browse our Newest Items",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
+      }
+    },
+    "61d1fa65-13e4-4dd4-b846-3d6661adba4b": {
+      "type": "secondary-image-banner",
+      "custom_css": [
+        ".column-text_secondary {justify-content: center;}"
+      ],
+      "settings": {
+        "title": "Solid 14k gold fine jewelry that’s more than a purchase, it’s an investment",
+        "text": "Sustainable pieces that are hand-crafted with high-quality materials that will never tarnish or lose its value.",
+        "image": "shopify:\/\/shop_images\/Banner_on_HP_716a5fc6-7d94-44fa-967c-9d120c77845a.jpg",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 50,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "24e72e4f-4c88-4fc3-a91d-875de19414c3": {
+      "type": "delivery-info",
+      "blocks": {
+        "01670150-79d2-4eff-90e0-e0202c963fd4": {
+          "type": "item",
+          "settings": {
+            "item_image": "shopify:\/\/shop_images\/delivery-info-1.png",
+            "item_text": "Free Shipping"
+          }
+        },
+        "752ed3fc-f948-4ca9-91c2-af04240e2975": {
+          "type": "item",
+          "settings": {
+            "item_image": "shopify:\/\/shop_images\/delivery-info-2.png",
+            "item_text": "Pay With Time"
+          }
+        },
+        "5c6ce718-0695-4df6-806f-0cd739e56ec6": {
+          "type": "item",
+          "settings": {
+            "item_image": "shopify:\/\/shop_images\/delivery-info-3.png",
+            "item_text": "Free Returns"
+          }
+        },
+        "item_8eRtij": {
+          "type": "item",
+          "settings": {
+            "item_image": "shopify:\/\/shop_images\/Rectangle_83.png",
+            "item_text": "Lifetime Guarantee"
+          }
+        }
+      },
+      "block_order": [
+        "01670150-79d2-4eff-90e0-e0202c963fd4",
+        "752ed3fc-f948-4ca9-91c2-af04240e2975",
+        "5c6ce718-0695-4df6-806f-0cd739e56ec6",
+        "item_8eRtij"
+      ],
+      "settings": {
+        "title": "Why we’re different",
+        "text": "No A.I. here. We offer real human customer service to get you exactly what you want",
+        "padding_top": 70,
+        "padding_bottom": 70,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
+      }
+    }
+  },
+  "order": [
+    "5729d0ea-a261-4564-8c6f-e3a11bf2f45b",
+    "main",
+    "d5a4d636-4fd8-406d-935e-efc0c1734e95",
+    "favorite_collections_h9X4fh",
+    "c8e1c34d-2cd2-4b84-9334-9d249a8ece31",
+    "5db6dc36-146c-41bc-9bd8-29d99e4190c8",
+    "f0443dc1-2a93-4980-96e5-d3be64ced74c",
+    "19936a53-362e-4d38-881e-20822632db34",
+    "61d1fa65-13e4-4dd4-b846-3d6661adba4b",
+    "24e72e4f-4c88-4fc3-a91d-875de19414c3"
+  ]
+}

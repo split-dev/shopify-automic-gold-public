@@ -1,0 +1,67 @@
+{% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
+{{ 'faq-grid.out.css' | asset_url | stylesheet_tag }}
+
+<div class="faq-grid faq-grid--{{ section.id }}">
+  {% if section.settings.title != blank %}
+    <div class="faq-grid__title">
+      {{ section.settings.title }}
+    </div>
+  {% endif %}
+  <div class="faq-grid__grid">
+    {% for block in section.blocks %}
+      <div class="faq-grid__item">
+        <h2 class="faq-grid__block-title">{{ block.settings.title }}</h2>
+        <div class="faq-grid__text">
+          {{ block.settings.text }}
+        </div>
+        {% if block.settings.url != blank %}
+          <a href="{{ block.settings.url }}" class="column-text__button btn">{{ block.settings.btn_text }}</a>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+  
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.main-faq-grid.name",
+  "class": "section",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "t:sections.main-faq-banner.settings.title.content"
+    }
+  ],
+  "max_blocks": 4,
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.main-faq-banner.settings.blocks.title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "t:sections.main-faq-banner.settings.blocks.text"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "t:sections.main-faq-banner.settings.blocks.url"
+        },
+        {
+          "type": "text",
+          "id": "btn_text",
+          "label": "t:sections.main-faq-banner.settings.blocks.button_title"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

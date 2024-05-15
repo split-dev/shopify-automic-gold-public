@@ -1,0 +1,13 @@
+<div class="info-tabs__grid-item medium-down--text-center large--one-half">
+    <div class="info-tabs__entry">
+        <h2 class="info-tabs__step h3">{{ heading }}</h2>
+        {%- if overlay_text != blank -%}
+            <div class="info-tabs__overlay">
+                {{ overlay_text }}
+            </div>
+        {%- endif -%}
+        <video data-js="sequence-video" data-video-index="{{ video_index }}" class="story__video" loop muted autoplay playsinline poster="{{ 'loading-image.png' | file_img_url: '360x640', crop: 'center' }}">
+            <source data-src="{{ video_src }}" type="video/mp4">
+        </video>
+    </div>
+</div>

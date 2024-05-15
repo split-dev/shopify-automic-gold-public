@@ -1,0 +1,114 @@
+@import "../settings/variables";
+@import "../settings/bootstrap-media";
+
+.info-video {
+  // .info-video__wrapper
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    @include media-breakpoint-up(md) {
+      align-items: flex-end;
+      flex-direction: row;
+    }
+  }
+
+  // .info-video__left
+
+  &__left {
+    max-width: 645px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    @include media-breakpoint-up(md) {
+      margin-right: 60px;
+    }
+  }
+
+  // .info-video__title
+
+  &__title {
+    order: 1;
+    h2 {
+      font-size: 32px !important;
+      font-weight: 400;
+      line-height: 48px !important;
+      margin-bottom: 0;
+    }
+  }
+
+  // .info-video__desc
+
+  &__desc {
+    max-width: 466px;
+    margin-top: 16px;
+    font-weight: 400;
+    order: 3;
+    @include media-breakpoint-up(md) {
+      margin-top: 24px;
+      order: 2;
+    }
+
+    p {
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // .info-video__video
+
+  &__video {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56%;
+    margin-top: 16px;
+    border: 2px solid rgb(var(--color-highlighted-elements));
+    order: 2;
+	 overflow: hidden;
+    @include media-breakpoint-up(md) {
+      min-height: 377px;
+      margin-top: 24px;
+      order: 3;
+    }
+    iframe, .video-placeholder-youtube {
+      position: absolute;
+      height: 100%;
+      width: 101% !important;
+		max-width: 101%;
+    }
+  }
+
+  // .info-video__right
+
+  &__right {
+    width: 100%;
+    margin-top: 32px;
+    @include media-breakpoint-up(md) {
+      margin-top: 0;
+      max-width: 347px;
+    }
+  }
+
+  // .info-video__image
+
+  &__image {
+    position: relative;
+    border: 2px solid rgb(var(--color-highlighted-elements));
+    &::before {
+      content: "";
+      display: block;
+      padding-bottom: calc(100% / var(--aspect-ratio));
+    }
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      max-height: 100%;
+      max-width: 100%;
+    }
+  }
+}

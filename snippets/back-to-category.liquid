@@ -1,0 +1,51 @@
+<div class="page-width">
+    {% if
+        product.handle == 'curvy-mirror-band' or
+        product.handle == 'curvy-matte-band' or
+        product.handle == 'curvy-hammered-band' or
+        product.handle == 'curvy-raw-band' or
+        product.handle == 'curvy-wood-band' or
+        product.handle == 'industrial-mirror-band' or
+        product.handle == 'industrial-matte-band' or
+        product.handle == 'industrial-hammered-band' or
+        product.handle == 'industrial-wood-band' or
+        product.handle == 'industrial-raw-band'
+    %}
+        <div class="back-to-category text-center spaced">
+            <a class="btn btn--wide" href="{{ shop.url }}/collections/wedding">See all wedding rings</a>
+        </div>
+    {% elsif
+        product.handle contains 'nose' or
+        product.handle contains 'septum' or
+        product.handle contains 'cuff' or
+        product.handle contains 'huggie'
+    %}
+        <div class="text-center spaced">
+            <a href="{{ shop.url }}/pages/body-jewelry" class="btn btn--wide">All body jewelry</a>
+        </div>
+    {% else %}
+        {% case product.type %}
+            {% when 'Earring' %}
+                <div class="text-center spaced">
+                    <a class="btn btn--wide" href="{{ collections['Earrings'].url }}">See all earrings</a>
+                </div>
+            {% when 'Necklaces' %}
+                <div class="text-center spaced">
+                    <a class="btn btn--wide" href="{{ collections['Necklaces'].url }}">See all necklaces</a>
+                </div>
+            {% when 'Rings' %}
+                <div class="text-center spaced">
+                    <a class="btn btn--wide" href="{{ collections['Rings'].url }}">See all rings</a>
+                </div>
+            {% when 'Bracelets' %}
+                <div class="text-center spaced">
+                    <a class="btn btn--wide" href="{{ collections['Bracelets'].url }}">See all bracelets</a>
+                </div>
+            {% when 'Parts' %}
+                <div class="text-center spaced">
+                    <a class="btn btn--wide" href="{{ collections['All'].url }}">See all jewelry</a>
+                </div>
+            {% else %}
+        {% endcase %}
+    {% endif %}
+</div>

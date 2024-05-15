@@ -1,0 +1,65 @@
+<style>
+    .wrapper--two {
+        max-width: 861px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+<div class="page-width">
+    <div class="img-text--vertical wrapper--two">
+        {% if section.settings.img-m != blank %}
+            {{ section.settings.img | image_url: width: 750 | image_tag: class: 'icon-img-d', widths: '375, 550, 750' }}
+        {% else %}
+            {{ section.settings.img | image_url: width: 1720 | image_tag: widths: '375, 550, 750, 1100, 1500, 1720' }}
+        {% endif %}
+        {% if section.settings.img-m != blank %}
+            {{ section.settings.img-m | image_url: width: 750 | image_tag: class: 'icon-img-m', widths: '375, 550, 750' }}
+        {% endif %}
+        <div class="img-text__text-wrapp">
+            <h2 class="img-text__title">{{ section.settings.title }}</h2>
+            <div class="img-text__text">{{ section.settings.text }}</div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Img-Text (Vertical)",
+    "tag": "section",
+    "class": "section__img-text",
+    "disabled_on": {
+        "groups": ["header", "footer"]
+    },
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "img",
+            "label": "Image"
+        },
+        {
+            "type": "image_picker",
+            "id": "img-m",
+            "label": "Image (Mobile)"
+        },
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Durable Materials"
+        },
+        {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text",
+            "default": "<p>When you buy Automic Gold, you support sustainable, eco-friendly, and ethical manufacturing practices from start to finish.</p>"
+        }
+    ],
+    "presets": [
+        {
+            "category": "img-text",
+            "name": "Img Text (Vertical)"
+        }
+    ]
+}
+{% endschema %}

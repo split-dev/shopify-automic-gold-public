@@ -1,0 +1,1 @@
+.double-image{display:flex;flex-direction:column;gap:12px}@media screen and (min-width: 768px){.double-image{flex-direction:row}}.double-image img,.double-image svg{width:100%;display:block;-o-object-fit:cover;object-fit:cover}

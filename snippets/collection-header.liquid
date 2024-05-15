@@ -1,0 +1,148 @@
+{% capture img_url_desktop %}{{ tag }}--collection-header-desktop.png{% endcapture %}
+{% capture img_url_mobile %}{{ tag }}--collection-header-mobile.png{% endcapture %}
+{% comment %} {% capture img_url_illustration %}illustration-{{ tag }}--collection.png{% endcapture %} {% endcomment %}
+
+{% if collection.handle == 'engagement' %}
+    {% comment %} Engagement Page {% endcomment %}
+    <div class="no--padding collection-header-container">
+        <div class="collection-header-left collection-header-left-engagement page-width">
+            <div class="collection-header-left-text-container">
+                <h1 class="">
+                    {{ name }}
+                </h1>
+                <p class="">
+                    {{ subheader }}
+                </p>
+            </div>
+            {% comment %} <img
+                class="lazyload content"
+                data-srcset="
+                        {{ img_url_illustration | file_img_url: '130x240' }} 130w,
+                        {{ img_url_illustration | file_img_url: '260x420' }} 260w,
+                        {{ img_url_illustration | file_img_url: '390x630' }} 390w,
+                        {{ img_url_illustration | file_img_url: '520x840' }} 520w,
+                        {{ img_url_illustration | file_img_url: '780x1260' }} 780w
+                    "
+                    sizes="{{ sizes }}"
+                    alt="{{ illustration_alt }}"
+                /> {% endcomment %}
+        </div>
+        <div class="collection-header-right">
+            <img
+                class="lazyload content collection-header-right-image-desktop"
+                data-srcset="
+                    {{ img_url_desktop | file_img_url: '130x240' }} 130w,
+                    {{ img_url_desktop | file_img_url: '260x420' }} 260w,
+                    {{ img_url_desktop | file_img_url: '390x630' }} 390w,
+                    {{ img_url_desktop | file_img_url: '520x840' }} 520w,
+                    {{ img_url_desktop | file_img_url: '780x1260' }} 780w
+                "
+                sizes="{{ sizes }}"
+                alt="{{ alt }}"
+            />
+            <img
+                class="lazyload content collection-header-right-image-mobile"
+                data-srcset="
+                    {{ img_url_mobile | file_img_url: '130x240' }} 130w,
+                    {{ img_url_mobile | file_img_url: '260x420' }} 260w,
+                    {{ img_url_mobile | file_img_url: '390x630' }} 390w,
+                    {{ img_url_mobile | file_img_url: '520x840' }} 520w,
+                    {{ img_url_mobile | file_img_url: '780x1260' }} 780w
+                "
+                sizes="{{ sizes }}"
+                alt="{{ alt }}"
+            />
+        </div>
+    </div>
+{% elsif collection.handle == 'valentines-day' %}
+    <div class="no--padding collection-header-container">
+        <div class="collection-header-left collection-header-left-valentines-day page-width">
+            <div class="collection-header-left-text-container">
+                <h1 class="">
+                    {{ name }}
+                </h1>
+                <p class="">
+                    {{ subheader }}
+                </p>
+            </div>
+            <img
+                class="lazyload content collection-header-left-illustration-valentines-day"
+                data-srcset="
+                        {{ img_url_illustration | file_img_url: '130x240' }} 130w,
+                        {{ img_url_illustration | file_img_url: '260x420' }} 260w,
+                        {{ img_url_illustration | file_img_url: '390x630' }} 390w,
+                        {{ img_url_illustration | file_img_url: '520x840' }} 520w,
+                        {{ img_url_illustration | file_img_url: '780x1260' }} 780w
+                    "
+                    sizes="{{ sizes }}"
+                    alt="{{ illustration_alt }}"
+                />
+        </div>
+        <div class="collection-header-right">
+            <img
+                class="lazyload content collection-header-right-image-desktop"
+                data-srcset="
+                    {{ img_url_desktop | file_img_url: '130x240' }} 130w,
+                    {{ img_url_desktop | file_img_url: '260x420' }} 260w,
+                    {{ img_url_desktop | file_img_url: '390x630' }} 390w,
+                    {{ img_url_desktop | file_img_url: '520x840' }} 520w,
+                    {{ img_url_desktop | file_img_url: '780x1260' }} 780w
+                "
+                sizes="{{ sizes }}"
+                alt="{{ alt }}"
+            />
+            <img
+                class="lazyload content collection-header-right-image-mobile"
+                data-srcset="
+                    {{ img_url_mobile | file_img_url: '130x240' }} 130w,
+                    {{ img_url_mobile | file_img_url: '260x420' }} 260w,
+                    {{ img_url_mobile | file_img_url: '390x630' }} 390w,
+                    {{ img_url_mobile | file_img_url: '520x840' }} 520w,
+                    {{ img_url_mobile | file_img_url: '780x1260' }} 780w
+                "
+                sizes="{{ sizes }}"
+                alt="{{ alt }}"
+            />
+        </div>
+    </div>
+{% else %}
+    <div class="no--padding collection-header-container">
+        {% comment %} Wedding and Promise Ring Page {% endcomment %}
+        <div class="collection-header-left-wedding-promise page-width">
+            <div class="">
+                <h1 class="">
+                    {{ name }}
+                </h1>
+                <p class="">
+                    {{ subheader }}
+                </p>
+            </div>
+        </div>
+        <div class="collection-header-right">
+            <img
+                class="lazyload content collection-header-right-image-desktop"
+                data-srcset="
+                    {{ img_url_desktop | file_img_url: '130x240' }} 130w,
+                    {{ img_url_desktop | file_img_url: '260x420' }} 260w,
+                    {{ img_url_desktop | file_img_url: '390x630' }} 390w,
+                    {{ img_url_desktop | file_img_url: '520x840' }} 520w,
+                    {{ img_url_desktop | file_img_url: '780x1260' }} 780w
+                "
+                sizes="{{ sizes }}"
+                alt="{{ alt }}"
+            />
+            <img
+                class="lazyload content collection-header-right-image-mobile"
+                data-srcset="
+                    {{ img_url_mobile | file_img_url: '130x240' }} 130w,
+                    {{ img_url_mobile | file_img_url: '260x420' }} 260w,
+                    {{ img_url_mobile | file_img_url: '390x630' }} 390w,
+                    {{ img_url_mobile | file_img_url: '520x840' }} 520w,
+                    {{ img_url_mobile | file_img_url: '780x1260' }} 780w
+                "
+                sizes="{{ sizes }}"
+                alt="{{ alt }}"
+            />
+        </div>
+    </div>
+{% endif %}

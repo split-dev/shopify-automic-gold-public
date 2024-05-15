@@ -1,0 +1,174 @@
+{% comment %}
+Comments will not appear right after they are submitted, either to be checked for spam
+or to await moderation. When a comment is submitted, the browser is redirected to a page
+that includes the new comment id in its URL.
+Example: http://shopname.myshopify.com/blogs/news/2022072-my-post?comment=3721372
+More information:
+- http://docs.shopify.com/themes/liquid-variables/comment
+{% endcomment %}
+
+{% assign number_of_comments = article.comments_count %}
+
+{% comment %}
+If a comment was just submitted and it has no blank fields, we have an extra comment to count.
+{% endcomment %}
+{% if comment and comment.created_at %}
+    {% assign number_of_comments = article.comments_count | plus: 1 %}
+{% endif %}
+
+
+{% if article.image %}
+    <div class="page-cover">
+        <div class="no--padding">
+            <img
+                srcset="
+                        {{ article.image.src | img_url: '800x471' }} 800w,
+                        {{ article.image.src | img_url: '1000x588' }} 1000w,
+                        {{ article.image.src | img_url: '1500x882' }} 1500w,
+                        {{ article.image.src | img_url: '2000x1176' }} 2000w
+                    "
+                sizes="100vw"
+                alt="{{ article.image.alt }}"
+            />
+        </div>
+    </div>
+{% endif %}
+
+<div class="article__breadcrumbs">
+    {% include 'breadcrumb' %}
+</div>
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+    <header class="article__header">
+        <h1 class="article__title">{{ article.title }}</h1>
+        {% comment %} {% if article.metafields.global.author %}
+            {% capture author %}<span>{{ article.metafields.global.author }}</span>{% endcapture %}
+        {% else %}
+            {% capture author %}<span>{{ article.author }}</span>{% endcapture %}
+        {% endif %}
+        <div class="article__byline">{{ 'blogs.article.author_on_date_html' | t: author: author }}</div> {% endcomment %}
+    </header>
+
+    <div class="article__content rte spaced" itemprop="articleBody">
+        {{ article.content }}
+    </div>
+
+    {% if blog.comments_enabled? %}
+        <h2 class="article__comment-header">{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h2>
+
+        <label class="article__comment-toggle" for="comments-toggle">Leave a comment</label>
+        <input class="article__comment-toggle-input visually-hidden" type="checkbox" id="comments-toggle">
+
+        {% paginate article.comments by 5 %}
+        {% comment %}#comments is required, it is used as an anchor link by Shopify.{% endcomment %}
+
+            <div id="comments">
+
+            {% if comment and comment.created_at %}
+                <p class="note form-success">
+                    {% if blog.moderated? %}
+                        {{ 'blogs.comments.success_moderated' | t }}
+                    {% else %}
+                        {{ 'blogs.comments.success' | t }}
+                    {% endif %}
+                </p>
+            {% endif %}
+
+            {% if number_of_comments > 0 %}
+                <ul class="no-bullets">
+                    {% comment %}
+                    If a comment was just submitted with no blank field, show it.
+                    {% endcomment %}
+                    {% if comment and comment.created_at %}
+                        <li id="{{ comment.id }}" class="comment first{% if article.comments_count == 0 %} last{% endif %}">
+                            {% include 'comment' %}
+                        </li>
+                    {% endif %}
+
+                    {% comment %}
+                    Showing the rest of the comments.
+                    {% endcomment %}
+                    {% for comment in article.comments %}
+                        <li id="{{ comment.id }}" class="comment{% unless number_of_comments > article.comments_count %}{% if forloop.first %} first{% endif %}{% endunless %}{% if forloop.last %} last {% endif %}">
+                            {% include 'comment' %}
+                        </li>
+
+                        {% unless forloop.last %}
+                        <li><hr></li>
+                        {% endunless %}
+                    {% endfor %}
+                </ul>
+
+                {% if paginate.pages > 1 %}
+                    <div class="pagination">
+                        {{ paginate | default_pagination | replace: '&laquo; Previous', '&larr;' | replace: 'Next &raquo;', '&rarr;' }}
+                    </div>
+                {% endif %}
+
+                <hr>
+
+            {% endif %}
+
+            <div class="form-vertical article__comment-form">
+                {% form 'new_comment', article %}
+                <h2 class="h4">{{ 'blogs.comments.title' | t }}</h2>
+
+                {{ form.errors | default_errors }}
+
+                <div class="grid">
+
+                    <div class="grid__item large--one-half">
+                        <label for="CommentAuthor" class="hidden-label">{{ 'blogs.comments.name' | t }}</label>
+                        <input type="text" name="comment[author]" id="CommentAuthor" class="input-full{% if form.errors contains 'author' %} error{% endif %}" placeholder="{{ 'blogs.comments.name' | t }}" value="{{ form.author }}" autocapitalize="words">
+
+                        <label for="CommentEmail" class="hidden-label">{{ 'blogs.comments.email' | t }}</label>
+                        <input type="email" name="comment[email]" id="CommentEmail" class="input-full{% if form.errors contains 'email' %} error{% endif %}" placeholder="{{ 'blogs.comments.email' | t }}" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
+                    </div>
+
+                    <div class="grid__item large--one-half">
+                        <label for="CommentBody" class="hidden-label">{{ 'blogs.comments.message' | t }}</label>
+                        <textarea name="comment[body]" id="CommentBody" class="input-full{% if form.errors contains 'body' %} error{% endif %}" placeholder="{{ 'blogs.comments.message' | t }}">{{ form.body }}</textarea>
+                    </div>
+
+                </div>
+
+                {% if blog.moderated? %}
+                    <p>{{ 'blogs.comments.moderated' | t }}</p>
+                {% endif %}
+
+                <input type="submit" class="btn" value="{{ 'blogs.comments.post' | t }}">
+                {% endform %}
+            </div>
+
+        </div>
+        {% endpaginate %}
+    {% endif %}
+</article>
+
+<div class="spaced space-bottom-x3">
+    <div class="blog-post">
+        <div class="sharethis-inline-share-buttons"></div>
+    </div>
+</div>
+<script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=594a8cc3bf0c3500119f6c69&product=sticky-share-buttons' async='async'></script>
+
+
+<div class="blog-post__featured-products spaced text-center">
+    <div class="spaced--twice">
+        <h4 class="spaced--half">Radically wearable fine jewelry, for everyone.</h4>
+        <a class="btn btn--swimming-pink-peach btn--wide" href="{{ shop.url }}/pages/about-us">Join us</a>
+    </div>
+
+    <div class="spaced--twice space-bottom-x1 pgrid" data-aos="fade-up">
+        {% for product in collections.all.products limit: 4 %}
+
+            {% include 'product-card' %}
+
+        {% endfor %}
+    </div>
+
+    <div class="text-center space-bottom-x1">
+        <a class="btn btn--wide btn--pink" href="{{ shop.url }}/collections/all" title="Shop Automic Gold Jewelry">Shop Automic Gold</a>
+    </div>
+</div>

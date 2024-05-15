@@ -1,0 +1,70 @@
+{
+  "sections": {
+    "main_contact_eGzUmR": {
+      "type": "main-contact",
+      "blocks": {
+        "item_Aj4Tfz": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/contact_icon_1.svg",
+            "title": "Customer care",
+            "description": "<p>Email us at <a href=\"mailto:care@automicgold.com \" title=\"mailto:care@automicgold.com \"><strong>care@automicgold.com<\/strong> <\/a>Customer service hours Monday - Tuesday & Thurs - Friday 10am to 5pm EST<\/p>"
+          }
+        },
+        "item_cyCAFp": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/contact_icon_2.svg",
+            "title": "Question too long for an email?",
+            "description": "<p><a href=\"tel:(1)888-992-8866\" title=\"tel:(1)888-992-8866\"><strong>(1)888-992-8866<\/strong><\/a><\/p>"
+          }
+        },
+        "item_k8NnRk": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/contact_icon_3.svg",
+            "title": "Custom designs",
+            "description": "<p>See <a href=\"\/pages\/custom-orders-1\" target=\"_blank\" title=\"Custom Orders\"><strong>here!<\/strong><\/a><\/p>"
+          }
+        },
+        "item_tChMpD": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_7260.svg",
+            "title": "Business inquiries",
+            "description": "<p>Email us at <a href=\"mailto:hello@automicgold.com\" title=\"mailto:hello@automicgold.com\"><strong>hello@automicgold.com<\/strong><\/a><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_Aj4Tfz",
+        "item_cyCAFp",
+        "item_k8NnRk",
+        "item_tChMpD"
+      ],
+      "settings": {
+        "background": "#08003c",
+        "padding_top": 40,
+        "padding_bottom": 76,
+        "padding_top_mb": 56,
+        "padding_bottom_mb": 56
+      }
+    },
+    "contact_faq_e9fBbE": {
+      "type": "contact-faq",
+      "settings": {
+        "background": "#ffcc33",
+        "contact_faq_title": "Have you checked our F.A.Q.?",
+        "contact_faq_subtitle": "Visit our F.A.Q page to learn more about questions you may have!",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "padding_top_mb": 44,
+        "padding_bottom_mb": 56
+      }
+    }
+  },
+  "order": [
+    "main_contact_eGzUmR",
+    "contact_faq_e9fBbE"
+  ]
+}

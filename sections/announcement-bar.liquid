@@ -1,0 +1,27 @@
+<div class="notice-bar is-moved-by-drawer js-announcement-bar-height">
+    <div class="notice-bar__message">
+        {{ section.settings.richtext }}
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "t:sections.announcement-bar.name",
+    "enabled_on": {
+        "groups": ["header"]
+    },
+    "settings": [
+        {
+            "type": "richtext",
+            "id": "richtext",
+            "default": "<p>Welcome to our store</p>",
+            "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label"
+        }
+    ],
+    "presets": [
+        {
+            "name": "t:sections.announcement-bar.presets.name"
+        }
+    ]
+}
+{% endschema %}

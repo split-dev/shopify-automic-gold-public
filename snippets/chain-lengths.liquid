@@ -1,0 +1,80 @@
+<section class="chain-lengths {{ template | handle }}">
+    <div class="chain-lengths-text-container">
+        <h2>
+            Chain Lengths
+        </h2>
+        <p>
+            This graphic shows how the same length chains could possibly hang on three different body types.
+        </p>
+        <p>
+            Make sure you choose the length that hangs where you want it.
+        </p>
+        <p>
+            This is not a precise depiction. This is an approximation of the fit on various body proportions.
+        </p>
+    </div>
+    <div class="chain-image-container">
+        <div class="chain-lengths-image-3xl">
+            <img
+                class="lazyload content"
+                src="{{ 'loading-image.png' | file_img_url: '414x517', crop: 'center' }}"
+                data-srcset="
+                    {{ 'chain-lengths-3xl.png' | file_img_url: '414x517' }} 414w,
+                    {{ 'chain-lengths-3xl.png' | file_img_url: '690x862' }} 690w,
+                    {{ 'chain-lengths-3xl.png' | file_img_url: '500x625' }} 500w,
+                    {{ 'chain-lengths-3xl.png' | file_img_url: '1000x1250' }} 1000w
+                "
+                sizes="
+                    (max-width: 479px) calc((100vw - 30px) * 0.5),
+                    (min-width: 480px) and (max-width: 767.98px) calc((100vw - 60px) * 0.5),
+                    (min-width: 768px) and (max-width: 1199.98px) calc((100vw - 120px) * 0.25),
+                    (min-width: 1200px) calc((100vw - 180px) * 0.25)
+                "
+                alt=""/>
+                <span>3XL</span>
+        </div>
+        <div class="chain-lengths-image-large"> 
+            <img
+                class="lazyload content"
+                src="{{ 'loading-image.png' | file_img_url: '414x517', crop: 'center' }}"
+                data-srcset="
+                    {{ 'chain-lengths-large.png' | file_img_url: '414x517' }} 414w,
+                    {{ 'chain-lengths-large.png' | file_img_url: '690x862' }} 690w,
+                    {{ 'chain-lengths-large.png' | file_img_url: '500x625' }} 500w,
+                    {{ 'chain-lengths-large.png' | file_img_url: '1000x1250' }} 1000w
+                "
+                sizes="
+                    (max-width: 479px) calc((100vw - 30px) * 0.5),
+                    (min-width: 480px) and (max-width: 767.98px) calc((100vw - 60px) * 0.5),
+                    (min-width: 768px) and (max-width: 1199.98px) calc((100vw - 120px) * 0.25),
+                    (min-width: 1200px) calc((100vw - 180px) * 0.25)
+                "
+                alt=""/>
+                <span>L</span>
+        </div>
+        <div class="chain-lengths-image-small">
+            <img
+                class="lazyload content"
+                src="{{ 'loading-image.png' | file_img_url: '414x517', crop: 'center' }}"
+                data-srcset="
+                    {{ 'chain-lengths-small.png' | file_img_url: '414x517' }} 414w,
+                    {{ 'chain-lengths-small.png' | file_img_url: '690x862' }} 690w,
+                    {{ 'chain-lengths-small.png' | file_img_url: '500x625' }} 500w,
+                    {{ 'chain-lengths-small.png' | file_img_url: '1000x1250' }} 1000w
+                "
+                sizes="
+                    (max-width: 479px) calc((100vw - 30px) * 0.5),
+                    (min-width: 480px) and (max-width: 767.98px) calc((100vw - 60px) * 0.5),
+                    (min-width: 768px) and (max-width: 1199.98px) calc((100vw - 120px) * 0.25),
+                    (min-width: 1200px) calc((100vw - 180px) * 0.25)
+                "
+                alt=""/>
+                <span>S</span>
+        </div>
+    </div>
+    <div>
+        <p>
+            *Sizes listed as unisex as t-shirt size.
+        </p>
+    </div>
+</section>

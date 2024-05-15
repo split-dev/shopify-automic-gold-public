@@ -1,0 +1,118 @@
+{
+  "sections": {
+    "banner": {
+      "type": "banner",
+      "settings": {
+        "image_desktop": "shopify:\/\/shop_images\/dsc01875_720.jpg",
+        "positioning": "image-second",
+        "image_mobile": "shopify:\/\/shop_images\/dsc01875_720.jpg",
+        "positioning_mobile": "image-first_mobile",
+        "title": "Find Your Perfect Fit",
+        "desc": "<p>An easy guide to finding your size for your future rings, bracelets, anklets, and piercings!<\/p>"
+      }
+    },
+    "info_video_section_8AFF8p": {
+      "type": "info-video-section",
+      "settings": {
+        "title": "Rings",
+        "desc": "<p>With our ring sizer and this quick how-to video, figure out your ring size with ease. Make sure to tighten the sizer after your knuckle for the more accurate fit!<\/p>",
+        "image": "shopify:\/\/shop_images\/image_1_c281c2d2-e5c0-4965-8483-58cb228dd24c.png",
+        "video": "<iframe width=\"560\" height=\"315\" src=\"https:\/\/www.youtube.com\/embed\/zb68zDl0Rp4?si=LN2lOF2CH_Et0iGO\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen><\/iframe>",
+        "padding_top": 100,
+        "padding_bottom": 116,
+        "padding_top_mb": 22,
+        "padding_bottom_mb": 38
+      }
+    },
+    "sizing_blocks_Mgep6d": {
+      "type": "sizing-blocks",
+      "blocks": {
+        "image_kJXa6b": {
+          "type": "image",
+          "settings": {
+            "title": "Nose Piercing",
+            "text": "<p>Measure from your hole piercing to the edge of your nose.<\/p>",
+            "image": "shopify:\/\/shop_images\/Group_18.png",
+            "image_mob": "shopify:\/\/shop_images\/mob_1.png",
+            "full_mobile": false
+          }
+        },
+        "image_NUHbJY": {
+          "type": "image",
+          "settings": {
+            "title": "Flatback",
+            "text": "<p>Measure the length between the two holes of your piercing using a ruler or caliper. Otherwise check with your piercer for which length suits your needs.<\/p>",
+            "image": "shopify:\/\/shop_images\/IMG_2569_10_1.png",
+            "image_mob": "shopify:\/\/shop_images\/mob_2.png",
+            "full_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "image_kJXa6b",
+        "image_NUHbJY"
+      ],
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 110,
+        "padding_top_mb": 0,
+        "padding_bottom_mb": 24
+      }
+    },
+    "sizing_blocks_UhFzjU": {
+      "type": "sizing-blocks",
+      "blocks": {
+        "image_wGG83t": {
+          "type": "image",
+          "settings": {
+            "title": "Necklaces and Chokers",
+            "text": "<p>Use a soft tape measure around your neck to where you want the chain to sit. You can also measure a necklace you already have!<\/p>",
+            "image": "shopify:\/\/shop_images\/IMG_2569_7.png",
+            "image_mob": "shopify:\/\/shop_images\/mob_3.png",
+            "full_mobile": false
+          }
+        },
+        "image_kAzWr6": {
+          "type": "image",
+          "settings": {
+            "title": "Bracelets",
+            "text": "<p>Wrap a soft tape measure around your wrist while leaving one finger between the tape and your wrist. The added width of the finger gap will ensure your bracelet won’t be too tight.<\/p>",
+            "image": "shopify:\/\/shop_images\/Group_21_1.jpg",
+            "image_mob": "shopify:\/\/shop_images\/mob_4.png",
+            "full_mobile": true
+          }
+        }
+      },
+      "block_order": [
+        "image_wGG83t",
+        "image_kAzWr6"
+      ],
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 70,
+        "padding_top_mb": 0,
+        "padding_bottom_mb": 24
+      }
+    },
+    "text_video_section_8QnzR9": {
+      "type": "text-video-section",
+      "settings": {
+        "title": "Anklets",
+        "desc": "<p>Wrap a soft tape measure around your ankle while leaving one finger between the tape and your ankle. The added width of the finger gap will ensure your anklet won’t be too tight.<\/p>",
+        "video": "<iframe width=\"560\" height=\"315\" src=\"https:\/\/www.youtube.com\/embed\/PVWVPboPbME?si=d8T5r6Oq_rIg-a-i\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen><\/iframe>",
+        "show_mob": false,
+        "padding_top": 0,
+        "padding_bottom": 250,
+        "padding_top_mb": 0,
+        "padding_bottom_mb": 24
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "info_video_section_8AFF8p",
+    "sizing_blocks_Mgep6d",
+    "sizing_blocks_UhFzjU",
+    "text_video_section_8QnzR9"
+  ]
+}

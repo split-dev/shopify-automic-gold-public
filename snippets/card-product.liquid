@@ -1,0 +1,27 @@
+<a href="{{ card_product.url }}" class="card-product">
+    <div class="card-product__wrapper">
+        {%- if card_product.featured_media -%}
+            <div class="card-product__media">
+                {{ card_product.featured_media | image_url: width: 340 | image_tag }}
+
+                {%- if card_product.media[1] != nil and show_secondary_image -%}
+                    {{ card_product.media[1] | image_url: width: 340 | image_tag: class: 'secondary-image' }}
+                {%- endif -%}
+            </div>
+            <div class="card-product__content">
+               <h5 class="card-product__heading">
+                   {{ card_product.title | escape }}
+               </h5>
+               {%- if card_product.variants.size > 1 -%}
+                <p class="card-product__variant-title">
+                    {{ card_product.selected_or_first_available_variant.title }}
+                </p>
+               {%- endif -%}
+                <p class="card-product__price">
+                    {{ card_product.price | money_without_trailing_zeros }}
+                </p>
+                <div class="card-product__colors"></div>
+            </div>
+        {%- endif -%}
+    </div>
+</a>

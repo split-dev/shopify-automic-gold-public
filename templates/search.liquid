@@ -1,0 +1,134 @@
+<!-- /templates/search.liquid -->
+{% comment %}
+
+    To return only products or pages in results:
+        - http://docs.shopify.com/manual/configuration/store-customization/return-only-product-in-storefront-search-results
+        - Or manually add type=product or type=page to the search URL as a parameter
+{% endcomment %}
+
+{% comment %}
+    Set grid_results to true and set search results as a grid instead of a list.
+    This works well when your search is only for products.
+{% endcomment %}
+{% assign grid_results = false %}
+
+{% comment %}
+    Check to enforce respond.js
+{% endcomment %}
+{% assign respond_js_secret_key = shop.domain | md5 %}
+{% unless search.terms == respond_js_secret_key %}
+
+{% comment %}
+    Avoid accessing search.results before the opening paginate tag.
+    If you do, the pagination of results will be broken.
+{% endcomment %}
+
+{% paginate search.results by 10 %}
+
+<div class="search-header page-cover no--padding">
+    {% if search.performed %}
+        {% if search.results_count == 0 %}
+            <h1 class="search-results__header">{{ 'general.search.no_results_html' | t: terms: search.terms }}</h1>
+        {% else %}
+            <h1 class="search-results__header">{{ 'general.search.results_for_html' | t: terms: search.terms }}</h1>
+        {% endif %}
+    {% else %}
+        <h1 class="search-results__header">{{ 'general.search.title' | t }}</h1>
+    {% endif %}
+
+    <form action="/search" method="get" class="search-header__form" role="search">
+        <input type="search" name="q" value="{{ search.terms | escape }}" placeholder="{{ 'general.search.placeholder' | t }}" class="search-header__input" aria-label="{{ 'general.search.placeholder' | t }}">
+        <button type="submit" class="search-header__button btn">Go</button>
+    </form>
+</div>
+
+
+    <div class="search-results page-width">
+        {% if search.performed %}
+            {% capture term %}{{ search.terms | downcase }}{% endcapture %}
+            {% if
+                term contains 'dachshund' or
+                term contains 'luna'
+            %}
+                <div class="no--padding">
+                    <img class="lazyload"
+                         data-srcset="
+                            {{ 'search-luna.jpg' | file_img_url: '1600x1600' }} 1600w,
+                            {{ 'search-luna.jpg' | file_img_url: '1384x1384' }} 1384w,
+                            {{ 'search-luna.jpg' | file_img_url: '1242x1242' }} 1242w,
+                            {{ 'search-luna.jpg' | file_img_url: '1152x1152' }} 1152w,
+                            {{ 'search-luna.jpg' | file_img_url: '1035x1035' }} 1035w,
+                            {{ 'search-luna.jpg' | file_img_url: '960x960' }} 960w,
+                            {{ 'search-luna.jpg' | file_img_url: '769x769' }} 769w,
+                            {{ 'search-luna.jpg' | file_img_url: '690x690' }} 690w
+                        "
+                         sizes="100vw"
+                         alt="Automic Gold Boss Luna"
+                />
+                </div>
+            {% else %}
+                <div class="search-results__container">
+                    {% for item in search.results %}
+
+                        {% assign on_sale = false %}
+                        {% if item.compare_at_price > item.price %}
+                            {% assign on_sale = true %}
+                        {% endif %}
+
+                        {% assign sold_out = true %}
+                        {% if item.available %}
+                            {% assign sold_out = false %}
+                        {% endif %}
+
+                        <div class="search-results__item">
+                            <a href="{{ item.url }}" title="{{ item.title | escape }}">
+                                {% if item.object_type == 'product' %}
+                                    <div class="grid">
+                                        {% if item.featured_image %}
+                                            <div class="grid__item">
+                                                {{ item.featured_image.src | img_url: 'large' | img_tag: item.featured_image.alt }}
+                                            </div>
+                                        {% endif %}
+
+                                        <div class="grid__item">
+                                            <div class="search-results__item-type">{{ item.type }}</div>
+                                            <h2 class="search-results__item-title">{{ item.title }}</h2>
+                                            <p class="search-results__item-description">{{ item.content | strip_html | truncatewords: 15 }}</p>
+                                        </div>
+                                    </div>
+                                {% else %}
+                                    <div>
+                                        <div class="search-results__item-type">{{ item.object_type }}</div>
+                                        <h2 class="search-results__item-title">{{ item.title }}</h2>
+                                        <p class="search-results__item-description">{{ item.content | strip_html | truncatewords: 15 }}</p>
+                                    </div>
+                                {% endif %}
+                            </a>
+                            {% unless forloop.last %}<hr>{% endunless %}
+                        </div>
+                    {% endfor %}
+                </div>
+
+                {% if paginate.pages > 1 %}
+                    <hr>
+                    <div class="pagination">
+                        {{ paginate | default_pagination | replace: '&laquo; Previous', '&larr;' | replace: 'Next &raquo;', '&rarr;' }}
+                    </div>
+                {% endif %}
+
+                <div class="spaced--twice search-notfound">
+                    <h2>Haven't found it?</h2>
+
+                    <p>Check out our <a href="{{ shop.url }}/collections/all">product categories</a>. Was it a <a href="{{ shop.url }}/pages/custom-orders">custom</a> order? If you think there is a piece of jewelry you will like us to make, <a href="{{ shop.url }}/pages/contact">let us know</a>.</p>
+                </div>
+            {% endif %}
+
+        {% endif %}
+    </div>
+
+{% endpaginate %}
+
+{% else %}
+    {% include 'respond' %}
+    {% layout none %}
+{% endunless %}

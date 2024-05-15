@@ -1,0 +1,146 @@
+<script id="CartTemplate" type="text/template">
+  {% raw %}
+  <form action="/cart" method="post" novalidate class="cart ajaxcart">
+      <div class="ajaxcart__inner">
+
+          <div class="ajaxcart__items">
+              <div class="ajaxcart__message">
+                  Delivers in 3-10 days with free shipping.
+              </div>
+
+              {{#items}}
+              <div class="ajaxcart__row" data-line="{{line}}" data-product-handle="{{name}}">
+                  <a href="{{url}}" class="ajaxcart__product-image">
+                      <img srcset="
+                              {{largeImg}} 348w,
+                              {{mediumImg}} 232w
+                          "
+                          sizes="116px"
+                          alt="Image of {{ name }}"
+                      />
+                  </a>
+
+                  <div class="ajaxcart__details">
+                      <a href="{{url}}" class="ajaxcart__product-name">{{name}}</a>
+                      <div class="ajaxcart__product-variation">
+                          {{#if variation}}
+                              <span class="ajaxcart__product-meta">{{variation}}</span>
+                          {{/if}}
+                          {{#unless (eq name "Gift Card")}}
+                              {{#properties}}
+                                  {{#each  this}}
+                                      {{#if this}}
+                                          <span class="ajaxcart__product-customization">{{@key}}: {{this}}</span>
+                                      {{/if}}
+                                  {{/each}}
+                              {{/properties}}
+                          {{/unless}}
+                              
+                      </div>
+
+                      <div class="ajaxcart__qty">
+                          <button type="button" class="ajaxcart__qty-adjust ajaxcart__qty--minus" data-id="{{key}}" data-qty="{{itemMinus}}" data-line="{{line}}">
+                              -
+                          </button>
+                          <input type="text" name="updates[]" class="ajaxcart__qty-num" value="{{itemQty}}" min="0" data-id="{{key}}" data-line="{{line}}" aria-label="quantity" pattern="[0-9]*"/>
+                          <button type="button" class="ajaxcart__qty-adjust ajaxcart__qty--plus" data-id="{{key}}" data-line="{{line}}" data-qty="{{itemAdd}}">
+                              +
+                          </button>
+                      </div>
+
+                      <div class="ajaxcart__price">
+                          {{{ linePrice }}}
+                      </div>
+                  </div>
+              </div>
+              {{/items}}
+
+              {{#if hasNoMinimalPackaging}}
+                  <a class="ajaxcart__giftwrap" href="/products/minimal-packaging">Minimal packaging available here.</a>
+              {{/if}}
+          </div>
+
+          <div class="ajaxcart__footer mb-auto text-center" data-free-product style="color: rgb(var(--color-highlighted-elements));">
+              {{#if isCartEmpty}}
+                  <p style="color: inherit;"><a href="/products/travel-case" style="color: inherit;">Add your free travel case valued at $45 with orders over {{freeProductThreshold }}</a></p>
+              {{else}}
+                  {{#if freeProductAdded}}
+                      <p style="color: inherit;">Travel case valued at $45 is added!</p>
+
+                      <div class="ajaxcart__footer__free-product-rejected"><a href="#" style="color: inherit;" onclick="window.addFreeProduct();">You are eligible for free travel case. Click here to add to your cart!</a></div>
+                  {{else}}
+                      <p style="color: inherit;"><a href="/products/travel-case" style="color: inherit;">{{ freeProductThresholdRemains }} more and you will receive free travel case</a>.</p>
+                  {{/if}}
+              {{/if}}
+          </div>
+
+          <div class="ajaxcart__footer">
+              <div>
+                  <label class="ajaxcart__note-header" for="CartSpecialInstructions">Add a written note with your order</label>
+                  <textarea rows="2" name="note" class="input-full ajaxcart__note-field" id="CartSpecialInstructions">{{ note }}</textarea>
+              </div>
+
+              <div class="ajaxcart__footer-row">
+                  <div class="ajaxcart__footer-row-name">Subtotal</div>
+                  <div class="ajaxcart__footer-row-filler bg-dot"></div>
+                  <div class="ajaxcart__footer-row-value">{{{totalPrice}}}</div>
+              </div>
+              <div class="ajaxcart__footer-row">
+                  <div class="ajaxcart__footer-row-name">Shipping</div>
+                  <div class="ajaxcart__footer-row-filler bg-dot"></div>
+                  <div class="ajaxcart__footer-row-value">Free</div>
+              </div>
+
+              {{#if totalCartDiscount}}
+                  <div class="ajaxcart__footer-row">
+                      <div class="ajaxcart__footer-row-name">Discount</div>
+                      <div class="ajaxcart__footer-row-value">{{{totalCartDiscount}}}</div>
+                  </div>
+              {{/if}}
+
+              <div class="ajaxcart__footer-notice">
+                Free returns included.<br/> <span class="yellow">Please note:</span> if you opt out of 1-click protect, Automic Gold is not responsible for missing packages.
+              </div>
+
+              <!-- Route Code Edited 11/02/2021 -->
+              <div class="route-div" disable-reorder dark-ui desktop-align="center"></div>
+              <!-- Route Code End -->
+
+              <button type="submit" class="btn btn--full btn--large cart__checkout btn--swimming-pink-peach btn--on-base-shade" name="checkout">
+                  Checkout
+              </button>
+
+              <div class="ajaxcart__affirm">
+                  <p class="affirm-as-low-as" data-page-type="cart" data-affirm-color="white" data-amount="{{{totalPriceRaw}}}"></p>
+              </div>
+          </div>
+  </form>
+  {% endraw %}
+</script>
+
+<script id="AjaxQty" type="text/template">
+  {% raw %}
+      <div class="ajaxcart__qty">
+          <button type="button" class="ajaxcart__qty-adjust ajaxcart__qty--minus" data-id="{{key}}" data-qty="{{itemMinus}}">
+              -
+          </button>
+          <input type="text" class="ajaxcart__qty-num" value="{{itemQty}}" min="0" data-id="{{key}}" aria-label="quantity" pattern="[0-9]*">
+          <button type="button" class="ajaxcart__qty-adjust ajaxcart__qty--plus" data-id="{{key}}" data-qty="{{itemAdd}}">
+              +
+          </button>
+      </div>
+  {% endraw %}
+</script>
+<script id="JsQty" type="text/template">
+  {% raw %}
+      <div class="js-qty">
+          <button type="button" class="js-qty__adjust js-qty__adjust--minus" data-id="{{key}}" data-qty="{{itemMinus}}">
+              -
+          </button>
+          <input type="text" class="js-qty__num" value="{{itemQty}}" min="1" data-id="{{key}}" aria-label="quantity" pattern="[0-9]*" name="{{inputName}}" id="{{inputId}}">
+          <button type="button" class="js-qty__adjust js-qty__adjust--plus" data-id="{{key}}" data-qty="{{itemAdd}}">
+              +
+          </button>
+      </div>
+  {% endraw %}
+</script>

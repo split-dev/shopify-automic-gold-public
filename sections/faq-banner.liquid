@@ -1,0 +1,52 @@
+{% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
+{{ 'faq-banner.out.css' | asset_url | stylesheet_tag }}
+
+<div class="faq-hero faq-hero--{{ section.id }} highlighted-borders">
+  <div class="faq-hero__inner">
+
+    <div class="faq-hero__absolute page-width">
+      <h1 class="faq-hero__title">
+        {{ section.settings.title }}
+      </h1>
+    </div>
+
+    <div class="faq-hero__text-wrapper">
+        <div class="faq-hero__title-mobile h1">
+          {{ section.settings.title }}
+        </div>
+    </div>
+
+    {%- if section.settings.image_desktop != blank -%}   
+      <div class="faq-hero__image-container">
+        <picture>
+          <source media="(min-width: 768px)" srcset="{{ section.settings.image_desktop | image_url: width: 1500 }}">
+          <img src="{{ section.settings.image_mobile | image_url: width: 750 }}" alt="{{ section.settings.image_desktop.alt }}">
+        </picture>
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.main-faq-banner.name",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image_desktop",
+      "label": "t:sections.main-faq-banner.settings.image-desktop.content"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "t:sections.main-faq-banner.settings.image-mobile.content"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "t:sections.main-faq-banner.settings.title.content"
+    }
+  ]
+}
+{% endschema %}

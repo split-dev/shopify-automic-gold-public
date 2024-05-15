@@ -1,0 +1,53 @@
+@import "../settings/variables";
+@import "../settings/bootstrap-media";
+
+.us-percent {
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(var(--color-highlighted-elements));
+    justify-content: center;
+}
+.us-percent-bg {
+    background-color: rgb(var(--color-base-background-2));
+}
+.percent-container strong {
+    font-size: 60px !important;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: rgb(var(--color-highlighted-elements));
+}
+.percent-container {
+    display: flex;
+    flex-direction: row;
+}
+.percent-container a {
+    color: rgb(var(--color-highlighted-elements));
+}
+.one-percent-container,
+.point-two-percent-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 1rem;
+    width: 20rem;
+}
+.lgbtq-owned-text-container {
+    text-align: center;
+    width: 40vw;
+}
+.lgbtq-owned-text-container > *:last-child {
+    color: rgb(var(--color-base-text));
+}
+@media screen and (max-width: 767.98px) {
+    .us-percent {
+        flex-direction: column;
+    }
+    .percent-container {
+        flex-direction: column;
+    }
+    .lgbtq-owned-text-container {
+        width: 70vw;
+    }
+}

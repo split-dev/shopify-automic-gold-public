@@ -1,0 +1,15 @@
+{
+  "sections": {
+    "banner": {
+      "type": "cover-image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/care--hero.png",
+        "image_mobile": "shopify:\/\/shop_images\/care--hero-mobile.png",
+        "text": "<h1>Jewelry Care<\/h1>"
+      }
+    }
+  },
+  "order": [
+    "banner"
+  ]
+}

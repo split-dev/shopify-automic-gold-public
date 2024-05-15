@@ -1,0 +1,34 @@
+<div class="custom-title wrapper--one">
+    <div class="title">{{ section.settings.title }}</div>
+    {% if section.settings.subtitle != blank %}    
+    <div class="subtitle">{{ section.settings.subtitle }}</div>
+    {% endif %}
+</div>
+
+{% schema %}
+{
+    "name": "Title",
+    "tag": "section",
+    "class": "section__custom-title",
+    "settings": [
+        {
+            "type": "richtext",
+            "id": "title",
+            "label": "Title",
+            "default": "<p>Sustainable Fine Jewelry Made in NYC</p>"
+        },
+        {
+            "type": "richtext",
+            "id": "subtitle",
+            "label": "Subtitle",
+            "default": "<p>When you buy Automic Gold, you support sustainable, eco-friendly, and ethical manufacturing practices from start to finish.</p>"
+        }
+    ],
+    "presets": [
+        {
+            "category": "title",
+            "name": "Title"
+        }
+    ]
+}
+{% endschema %}

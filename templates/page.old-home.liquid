@@ -1,0 +1,515 @@
+{{ 'global-old.out.css' | asset_url | stylesheet_tag }}
+
+<div class="page-cover">
+    <div class="no--padding">
+        <div class="cover--simple hp6-cover ring-header">
+            <div class='ring-header-text-container'>
+                <h1 class="pride--heading">All new rings you need now</h1>
+                <p class="pride--sub-header">Introducing new 14k solid gold engagement and wedding rings with unique vibes that are durable enough to last a lifetime.</p>
+                <a href="https://www.automicgold.com/collections/engagement?sort_by=created-descending" class="pride--link">Shop now</a>
+            </div>
+            <img
+                srcset="
+                            {{ 'rings-header-desktop-image.jpg' | file_img_url: '2000x1179' }} 2000w,
+                            {{ 'rings-header-desktop-image.jpg' | file_img_url: '1500x884' }} 1500w,
+                            {{ 'rings-header-desktop-image.jpg' | file_img_url: '1200x707' }} 1200w,
+                            {{ 'rings-header-desktop-image.jpg' | file_img_url: '900x530' }} 900w
+                        "
+                alt="A hand with three to four rings on each finger"
+                class="ring-image"
+            >
+        </div>
+    </div>
+</div>
+
+
+<section class="no--padding hp6-categories spaced">
+    <div class="page-width">
+        <h2 class="hp6-categories__header h1">Categories</h2>
+    </div>
+
+    <div class="hp6-grid">
+        <div class="hp6-grid-content page-width">
+            <a href="{{ shop.url }}/collections/body-jewelry" class="hp6-categories__category grid-item">
+                <img
+                    class="lazyload"
+                    data-srcset="
+                        {{ 'hp6-cat--body.png' | file_img_url: '825x825' }} 825w,
+                        {{ 'hp6-cat--body.png' | file_img_url: '550x550' }} 550w,
+                        {{ 'hp6-cat--body.png' | file_img_url: '400x400' }} 400w,
+                        {{ 'hp6-cat--body.png' | file_img_url: '275x275' }} 275w
+                    "
+                    sizes="
+                        (max-width: 767.98px) 275px,
+                        (min-width: 768px) 400px
+                    "
+                    alt="Automic Gold Solid 14k Gold Body Jewelry"
+                />
+                <h2>Body Jewelry</h2>
+            </a>
+
+            <a href="{{ shop.url }}/collections/earrings" class="hp6-categories__category">
+                <img
+                    class="lazyload content"
+                    data-srcset="
+                        {{ 'hp6-cat--earring.png' | file_img_url: '825x825' }} 825w,
+                        {{ 'hp6-cat--earring.png' | file_img_url: '550x550' }} 550w,
+                        {{ 'hp6-cat--earring.png' | file_img_url: '400x400' }} 400w,
+                        {{ 'hp6-cat--earring.png' | file_img_url: '275x275' }} 275w
+                    "
+                    sizes="
+                        (max-width: 767.98px) 275px,
+                        (min-width: 768px) 400px
+                    "
+                    alt="Automic Gold Solid 14k Gold Earrings"
+                />
+                <h2>Earrings</h2>
+            </a>
+
+            <a href="{{ shop.url }}/collections/rings" class="hp6-categories__category">
+                <img
+                    class="lazyload content"
+                    data-srcset="
+                        {{ 'hp6-cat--ring.png' | file_img_url: '825x825' }} 825w,
+                        {{ 'hp6-cat--ring.png' | file_img_url: '550x550' }} 550w,
+                        {{ 'hp6-cat--ring.png' | file_img_url: '400x400' }} 400w,
+                        {{ 'hp6-cat--ring.png' | file_img_url: '275x275' }} 275w
+                    "
+                    sizes="
+                        (max-width: 767.98px) 275px,
+                        (min-width: 768px) 400px
+                    "
+                    alt="Automic Gold Rings That Come in All Sizes"
+                />
+                <h2>Rings</h2>
+            </a>
+
+            <a href="{{ shop.url }}/collections/necklaces" class="hp6-categories__category">
+                <img
+                    class="lazyload content"
+                    data-srcset="
+                        {{ 'hp6-cat--necklace.png' | file_img_url: '825x825' }} 825w,
+                        {{ 'hp6-cat--necklace.png' | file_img_url: '550x550' }} 550w,
+                        {{ 'hp6-cat--necklace.png' | file_img_url: '400x400' }} 400w,
+                        {{ 'hp6-cat--necklace.png' | file_img_url: '275x275' }} 275w
+                    "
+                    sizes="
+                        (max-width: 767.98px) 275px,
+                        (min-width: 768px) 400px
+                    "
+                    alt="Automic Gold Necklaces for People of All Sizes"
+                />
+                <h2>Necklaces</h2>
+            </a>
+
+            <a href="{{ shop.url }}/collections/bracelets" class="hp6-categories__category">
+                <img
+                    class="lazyload content"
+                    data-srcset="
+                        {{ 'hp6-cat--bracelet.png' | file_img_url: '825x825' }} 825w,
+                        {{ 'hp6-cat--bracelet.png' | file_img_url: '550x550' }} 550w,
+                        {{ 'hp6-cat--bracelet.png' | file_img_url: '400x400' }} 400w,
+                        {{ 'hp6-cat--bracelet.png' | file_img_url: '275x275' }} 275w
+                    "
+                    sizes="
+                        (max-width: 767.98px) 275px,
+                        (min-width: 768px) 400px
+                    "
+                    alt="Automic Gold Bracelets For People of All Sizes"
+                />
+                <h2>Bracelets</h2>
+            </a>
+
+            <a href="{{ shop.url }}/collections/charms" class="hp6-categories__category">
+                <img
+                    class="lazyload content"
+                    data-srcset="
+                        {{ 'hp6-cat--charm.jpg' | file_img_url: '825x825' }} 825w,
+                        {{ 'hp6-cat--charm.jpg' | file_img_url: '550x550' }} 550w,
+                        {{ 'hp6-cat--charm.jpg' | file_img_url: '400x400' }} 400w,
+                        {{ 'hp6-cat--charm.jpg' | file_img_url: '275x275' }} 275w
+                    "
+                    sizes="
+                        (max-width: 767.98px) 275px,
+                        (min-width: 768px) 400px
+                    "
+                    alt="Automic Gold Solid 14k Gold Charms"
+                />
+                <h2>Charms</h2>
+            </a>
+        </div>
+    </div>
+</section>
+
+<div class="spaced--twice">
+    <div class="hp6-banners__header">
+        <div class="page-width">
+            <h2 class="h1">Collections</h2>
+            <p>See what we have to offer in our collections below!</p>
+        </div>
+    </div>
+
+    <section class="hp6-banners page-width no--mobile-padding">
+        <div class="hp6-banners__banner overlay">
+            <a class="block-link" href="{{ shop.url }}/collections/wedding"></a>
+                <picture>
+                    <source
+                        data-srcset="
+                            {{ 'hp6-wedding--mobile.png' | file_img_url: '1242x1440' }} 1242w,
+                            {{ 'hp6-wedding--mobile.png' | file_img_url: '828x960' }} 828w,
+                            {{ 'hp6-wedding--mobile.png' | file_img_url: '414x480' }} 414w
+                        "
+                        sizes="100vw"
+                        media="(max-width: 767.98px)"
+                    />
+                    <img class="lazyload overlay__image"
+                        data-srcset="
+                            {{ 'hp6-wedding--desktop.png' | file_img_url: '700x486' }} 700w
+                        " sizes="
+                            (min-width: 768px) calc((100vw - 120px) * 0.5)
+                        "
+                        alt="An Infinity Diamond Ring, Rope Ring, Sapphire Industrial, Line Ring, Rainbow Band, Hammered Ring, and Shimmer Ring stacked"
+                    />
+                </picture>
+
+                <h3 class="h1">Wedding</h3>
+                <a href="{{ shop.url }}/collections/wedding" class="btn btn--inverted">Shop Now</a>
+        </div>
+
+        <div class="hp6-banners__banner overlay">
+            <a class="block-link" href="{{ shop.url }}/collections/all?sort_by=created-descending"></a>
+                <picture>
+                    <source
+                        data-srcset="
+                            {{ 'hp6-new--mobile.png' | file_img_url: '1242x1440' }} 1242w,
+                            {{ 'hp6-new--mobile.png' | file_img_url: '828x960' }} 828w,
+                            {{ 'hp6-new--mobile.png' | file_img_url: '414x480' }} 414w
+                        "
+                        sizes="100vw"
+                        media="(max-width: 767.98px)"
+                    />
+                    <img class="lazyload overlay__image"
+                        data-srcset="
+                            {{ 'hp6-new--desktop.png' | file_img_url: '700x486' }} 700w
+                        "
+                        sizes="
+                            (min-width: 768px) calc((100vw - 120px) * 0.5)
+                        "
+                        alt="Close up view of a model's face while wearing a Tanlah Cable Necklace with the pendant resting between the model's lips"
+                    />
+                </picture>
+
+                <h3 class="h1">New Arrivals</h3>
+                <a href="{{ shop.url }}/collections/all?sort_by=created-descending" class="btn btn--inverted">Shop Now</a>
+        </div>
+
+        <div class="hp6-banners__banner hp6-banners__banner--fullwidth overlay overlay--centered">
+            <a class="block-link" href="{{ shop.url }}/collections/all"></a>
+                <picture>
+                    <source
+                        data-srcset="
+                            {{ 'hp6-bestsellers--mobile.png' | file_img_url: '1242x1440' }} 1242w,
+                            {{ 'hp6-bestsellers--mobile.png' | file_img_url: '828x960' }} 828w,
+                            {{ 'hp6-bestsellers--mobile.png' | file_img_url: '414x480' }} 414w
+                        "
+                        sizes="100vw"
+                        media="(max-width: 767.98px)"
+                    />
+                    <img class="lazyload overlay__image"
+                        data-srcset="
+                            {{ 'hp6-bestsellers--desktop-update.png' | file_img_url: '1173x592' }} 71173w
+                        "
+                        sizes="
+                            (min-width: 768px) calc(100vw - 120px)
+                        "
+                        alt="A model wearing multiple Thick Cuffs on one ear, a stack of Bead Chain Rings, a Line Ring, and a Curb Chain"
+                    />
+                </picture>
+
+                <h3 class="h1">Bestsellers</h3>
+                <a href="{{ shop.url }}/collections/all" class="btn btn--inverted">Shop Now</a>
+        </div>
+
+        <div class="hp6-banners__banner hp6-banners__banner--tall overlay">
+            <a class="block-link" href="{{ shop.url }}/collections/nameplates"></a>
+                <picture>
+                    <source
+                        data-srcset="
+                            {{ 'hp6-nameplate--mobile.png' | file_img_url: '1242x1440' }} 1242w,
+                            {{ 'hp6-nameplate--mobile.png' | file_img_url: '828x960' }} 828w,
+                            {{ 'hp6-nameplate--mobile.png' | file_img_url: '414x480' }} 414w
+                        "
+                        sizes="100vw"
+                        media="(max-width: 767.98px)"
+                    />
+                    <img class="lazyload overlay__image"
+                        data-srcset="
+                            {{ 'hp6-nameplate--desktop.png' | file_img_url: '583x814' }} 583w
+                        "
+                        sizes="
+                            (min-width: 768px) calc((100vw - 120px) * 0.5)
+                        "
+                        alt="Custom Automic Gold Nameplates on necklaces, rings, charms, and earrings in various words belonging to the LGBTQIA+ community"
+                    />
+                </picture>
+
+                <h3 class="h1">Nameplates</h3>
+                <a href="{{ shop.url }}/collections/nameplates" class="btn btn--inverted">Shop Now</a>
+        </div>
+
+        <div class="hp6-banners__banner overlay">
+            <a class="block-link" href="{{ shop.url }}/pages/custom-orders"></a>
+                <picture>
+                    <source
+                        data-srcset="
+                            {{ 'hp6-custom--mobile.png' | file_img_url: '1242x1440' }} 1242w,
+                            {{ 'hp6-custom--mobile.png' | file_img_url: '828x960' }} 828w,
+                            {{ 'hp6-custom--mobile.png' | file_img_url: '414x480' }} 414w
+                        "
+                        sizes="100vw"
+                        media="(max-width: 767.98px)"
+                    />
+                    <img class="lazyload overlay__image"
+                        data-srcset="
+                            {{ 'hp6-custom--desktop.png' | file_img_url: '583x814' }} 583w
+                        "
+                        sizes="
+                            (min-width: 768px) calc((100vw - 120px) * 0.5)
+                        "
+                        alt="A Custom grey sapphire engagement ring in 14k solid rose gold with floral rose detailing"
+                    />
+                </picture>
+
+                <h3 class="h1">Custom</h3>
+                <a href="{{ shop.url }}/pages/custom-orders" class="btn btn--inverted block-btn">See More</a>
+        </div>
+    </section>
+</div>
+
+<div class="text-center">
+    <div class="page-width">
+        <h2 class="h1">Radically<br/>Wearable <span class="highlighted">Gold</span></h2>
+    </div>
+</div>
+
+<div class="hp6-featurette-container">
+    <section class="hp6-inclusive hp6-featurette page-width no--mobile-padding">
+        <div class="hp6-featurette__image">
+            <img
+                class="lazyload content"
+                data-srcset="
+                    {{ 'hp6-inclusive.png' | file_img_url: '1200x1400' }} 1200w,
+                    {{ 'hp6-inclusive.png' | file_img_url: '900x1050' }} 900w,
+                    {{ 'hp6-inclusive.png' | file_img_url: '600x700' }} 600w
+                "
+                sizes="
+                    (max-width: 767.98px) 100vw,
+                    (min-width: 768px) and (max-width: 1152px) calc((100vw - 120px) * 0.5),
+                    (min-width: 1200px) calc((100vw - 180px) * 0.5)
+                "
+                alt="A model with long nails wearing various Automic Gold rings on both hands, a Tanlah Bracelet, and a One to One Chain"
+            />
+        </div>
+        <div class="hp6-featurette__text">
+            <div class="inner">
+                <h2 class="h1">Radically<br/>Inclusive</h2>
+                <h3>For all sizes, genders and styles.</h3>
+                <p>Still the only fine jewelry brand in the world to carry plus sizes for each item in the collection.</p>
+                <a class="btn btn--inverted" href="{{ shop.url }}/pages/size-inclusive-jewelry">Learn more</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="hp6-ethical hp6-featurette page-width no--mobile-padding">
+        <div class="hp6-featurette__image">
+            <img
+                class="lazyload content"
+                data-srcset="
+                    {{ 'hp6-ethical.png' | file_img_url: '1200x1400' }} 1200w,
+                    {{ 'hp6-ethical.png' | file_img_url: '900x1050' }} 900w,
+                    {{ 'hp6-ethical.png' | file_img_url: '600x700' }} 600w
+                "
+                sizes="
+                    (max-width: 767.98px) 100vw,
+                    (min-width: 768px) and (max-width: 1152px) calc((100vw - 120px) * 0.5),
+                    (min-width: 1200px) calc((100vw - 180px) * 0.5)
+                "
+                alt="A 14k solid recycled yellow gold Bound Together Necklace laying on a blue cloth background"
+            />
+        </div>
+        <div class="hp6-featurette__text">
+            <div class="inner">
+                <h2 class="h1">Radically<br/>Ethical</h2>
+                <h3>Only 100% reclaimed solid gold.</h3>
+                <p>All handmade in our studio in NYC.</p>
+                <a class="btn btn--inverted" href="{{ shop.url }}/pages/sustainable-fine-jewelry">Learn more</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="hp6-ethical hp6-featurette page-width no--mobile-padding">
+        <div class="hp6-featurette__image">
+            <img
+                class="lazyload content"
+                data-srcset="
+                    {{ 'hp6-wearable.png' | file_img_url: '1200x1400' }} 1200w,
+                    {{ 'hp6-wearable.png' | file_img_url: '900x1050' }} 900w,
+                    {{ 'hp6-wearable.png' | file_img_url: '600x700' }} 600w
+                "
+                sizes="
+                    (max-width: 767.98px) 100vw,
+                    (min-width: 768px) and (max-width: 1152px) calc((100vw - 120px) * 0.5),
+                    (min-width: 1200px) calc((100vw - 180px) * 0.5)
+                "
+                alt="A model's hand touching the back of their head while wearing a Smiley Face Ring, a Sapphire Industrial, and a 5 Diamond Ring"
+            />
+        </div>
+        <div class="hp6-featurette__text">
+            <div class="inner">
+                <h2 class="h1">Radically<br/>Wearable</h2>
+                <h3>Designed for real life, with real gold that won't tarnish or irritate.</h3>
+                <p>Each design tested for comfort.</p>
+                <a class="btn btn--inverted" href="{{ shop.url }}/pages/comfortable-jewelry">Learn more</a>
+            </div>
+        </div>
+    </section>
+</div>
+
+<div class="spaced--twice">
+    <div class="hp6-banners__header shop">
+        <div class="page-width">
+            <h2 class="h1">Shop Gifts</h2>
+        </div>
+    </div>
+
+    <section class="hp6-banners shop page-width no--mobile-padding">
+        <div class="hp6-banners__banner overlay">
+            <a class="block-link" href="{{ shop.url }}/collections/under-100">
+                <img
+                    class="lazyload content"
+                    data-srcset="
+                        {{ 'hp6-shop--u100.jpg' | file_img_url: '1200x1400' }} 1200w,
+                        {{ 'hp6-shop--u100.jpg' | file_img_url: '900x1050' }} 900w,
+                        {{ 'hp6-shop--u100.jpg' | file_img_url: '600x700' }} 600w
+                    "
+                    sizes="
+                        (max-width: 767.98px) 100vw,
+                        (min-width: 768px) and (max-width: 1152px) calc((100vw - 120px) * 0.5),
+                        (min-width: 1200px) calc((100vw - 180px) * 0.5)
+                    "
+                    alt="Two models in a back-to-front embrace wearing various Automic Gold jewelry"
+                />
+
+                <a href="{{ shop.url }}/collections/under-100" class="btn btn--inverted">Under $100</a>
+            </a>
+        </div>
+
+        <div class="hp6-banners__banner overlay">
+            <a class="block-link" href="{{ shop.url }}/collections/under-250">
+                <img
+                    class="lazyload content"
+                    data-srcset="
+                        {{ 'hp6-shop--u250.png' | file_img_url: '1200x1400' }} 1200w,
+                        {{ 'hp6-shop--u250.png' | file_img_url: '900x1050' }} 900w,
+                        {{ 'hp6-shop--u250.png' | file_img_url: '600x700' }} 600w
+                    "
+                    sizes="
+                        (max-width: 767.98px) 100vw,
+                        (min-width: 768px) and (max-width: 1152px) calc((100vw - 120px) * 0.5),
+                        (min-width: 1200px) calc((100vw - 180px) * 0.5)
+                    "
+                    alt="A model smiling while touching their face and wearing a gemstone septum in and various Automic Gold rings"
+                />
+
+                <a href="{{ shop.url }}/collections/under-250" class="btn btn--inverted">Under $250</a>
+            </a>
+        </div>
+
+        <div class="hp6-banners__banner overlay">
+            <a class="block-link" href="{{ shop.url }}/collections/under-500">
+                <img
+                    class="lazyload content"
+                    data-srcset="
+                        {{ 'hp6-shop--u500.png' | file_img_url: '1200x1400' }} 1200w,
+                        {{ 'hp6-shop--u500.png' | file_img_url: '900x1050' }} 900w,
+                        {{ 'hp6-shop--u500.png' | file_img_url: '600x700' }} 600w
+                    "
+                    sizes="
+                        (max-width: 767.98px) 100vw,
+                        (min-width: 768px) and (max-width: 1152px) calc((100vw - 120px) * 0.5),
+                        (min-width: 1200px) calc((100vw - 180px) * 0.5)
+                    "
+                    alt="A model holding a blue long-stemmed rose over one eye while wearing Automic Gold rings and hoop earrings"
+                />
+
+                <a href="{{ shop.url }}/collections/under-500" class="btn btn--inverted">Under $500</a>
+            </a>
+        </div>
+    </section>
+</div>
+
+<div class="spaced--twice page-width">
+    <section class="hp6-themstagram">
+        <div class="themstagram__header text-center">
+            <h2 class="h1">Follow us on<br/>instagram!</h2>
+            <h3 class="themstagram__handle">
+                <a href="https://www.instagram.com/automicgold/" target="_blank" title="Automic Gold on Instagram" class="no--underline">@automicgold</a>
+            </h3>
+        </div>
+
+        <div class="themstagram__photos-container">
+            <div class="themstagram__photo">
+                <div class="themstagram__image-container">
+                    <img class="themstagram__image lazyload content"
+                         alt="Automic Gold stacking rings"
+                         data-srcset="
+                            {{ 'hp6--themstagram-1.png' | file_img_url: '190x190' }} 190w,
+                            {{ 'hp6--themstagram-1.png' | file_img_url: '380x380' }} 380w,
+                            {{ 'hp6--themstagram-1.png' | file_img_url: '570x570' }} 570w
+                         "
+                         sizes="(max-width: 767.98px) 190px, (min-width: 768px) 300px"
+                    />
+                </div>
+            </div>
+            <div class="themstagram__photo">
+                <div class="themstagram__image-container">
+                    <img class="themstagram__image lazyload content"
+                         alt="Luna models Automic Gold necklace"
+                         data-srcset="
+                            {{ 'hp6--themstagram-2.png' | file_img_url: '190x190' }} 190w,
+                            {{ 'hp6--themstagram-2.png' | file_img_url: '380x380' }} 380w,
+                            {{ 'hp6--themstagram-2.png' | file_img_url: '570x570' }} 570w
+                         "
+                         sizes="(max-width: 767.98px) 190px, (min-width: 768px) 300px"
+                    />
+                </div>
+            </div>
+            <div class="themstagram__photo"> 
+                <div class="themstagram__image-container">
+                    <img class="themstagram__image lazyload content"
+                         alt="AL and the Automic Gold team take a selfie from their office"
+                         data-srcset="
+                            {{ 'hp6--themstagram-3.png' | file_img_url: '190x190' }} 190w,
+                            {{ 'hp6--themstagram-3.png' | file_img_url: '380x380' }} 380w,
+                            {{ 'hp6--themstagram-3.png' | file_img_url: '570x570' }} 570w
+                         "
+                         sizes="(max-width: 767.98px) 190px, (min-width: 768px) 300px"
+                    />
+                </div>
+            </div>
+            <div class="themstagram__photo">
+                <div class="themstagram__image-container">
+                    <img class="themstagram__image lazyload content"
+                         alt="Automic Gold solid gold earrings"
+                         data-srcset="
+                            {{ 'hp6--themstagram-4.png' | file_img_url: '190x190' }} 190w,
+                            {{ 'hp6--themstagram-4.png' | file_img_url: '380x380' }} 380w,
+                            {{ 'hp6--themstagram-4.png' | file_img_url: '570x570' }} 570w
+                         "
+                         sizes="(max-width: 767.98px) 190px, (min-width: 768px) 300px"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

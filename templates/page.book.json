@@ -1,0 +1,24 @@
+{
+  "sections": {
+    "21c75a5c-881b-46ae-8faa-f529c3ae9476": {
+      "type": "book",
+      "settings": {
+        "title": "Book An Appointment",
+        "description": "<p><strong>Please note: If you’re looking for a custom piece or design, reach out to our customs team instead of using this page! Custom designs require a specialized consultation with our designer.<\/strong><\/p><p>Schedule an appointment to visit our showroom! You can try on our selection of rings, bracelets, earrings, chains, and more. We can also measure your ring size and guide you toward the perfect stones and metal for your jewelry if you’re on the fence. Walk out with confidence and a cute new piece (or two, or three...) for your collection!<\/p><p>Please mind, choosing wedding bands for 2 people, please book 2 appointments, in order to have enough time for purchase of your perfect ring.<\/p><p><br\/>Our office is located on 5th Ave & 48th St in Manhattan NYC. To book an appointment, individuals must be of age 16 or older. All attendees are required to wear masks and bring ID. In the interest of safety, we ask that there be no more than 2 people per appointment.<br\/><\/p>",
+        "description_mobile": "<p><strong>Please note: If you’re looking for a custom piece or design, reach out to our customs team instead of using this page! Custom designs require a specialized consultation with our designer.<\/strong><\/p><p>Schedule an appointment to visit our showroom! You can try on our selection of rings, bracelets, earrings, chains, and more. We can also measure your ring size and guide you toward the perfect stones and metal for your jewelry if you’re on the fence. Walk out with confidence and a cute new piece (or two, or three...) for your collection!<\/p><p>Please mind, choosing wedding bands for 2 people, please book 2 appointments, in order to have enough time for purchase of your perfect ring.<\/p><p><br\/>Our office is located on 5th Ave & 48th St in Manhattan NYC. To book an appointment, individuals must be of age 16 or older. All attendees are required to wear masks and bring ID.  In the interest of safety, we ask that there be no more than 2 people per appointment.<\/p>",
+        "calendly": "careau\/30min",
+        "sub_title": "Looking for a Custom Piece?",
+        "sub_description": "<p>Please reach out to our <a href=\"mailto:custom@automicgold.com\" target=\"_blank\" title=\"mailto:custom@automicgold.com\">customs team<\/a> instead of using this page!<br\/>Custom designs require a specialized consultation with our designer.<\/p>",
+        "label": "Browse Customs",
+        "link": "shopify:\/\/pages\/custom-orders",
+        "padding_top": 80,
+        "padding_bottom": 150,
+        "padding_top_mobile": 50,
+        "padding_bottom_mobile": 80
+      }
+    }
+  },
+  "order": [
+    "21c75a5c-881b-46ae-8faa-f529c3ae9476"
+  ]
+}

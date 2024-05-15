@@ -1,0 +1,145 @@
+{% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
+{{ 'sizing-blocks.out.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+.section-{{ section.id }}-padding {
+  padding-top: {{ section.settings.padding_top_mb }}px;
+  padding-bottom: {{ section.settings.padding_bottom_mb }}px;
+}
+
+@media screen and (min-width: 768px) {
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+}
+{%- endstyle -%}
+
+<div class="sizing-blocks section-{{ section.id }}-padding page-width">
+    {% for block in section.blocks %}
+        <div class="sizing-blocks__block {% if block.settings.full_mobile %}full-mobile{% endif %}">
+            <div class="sizing-blocks__head">
+                {% if block.settings.title != blank %}
+                    <h2>{{ block.settings.title }}</h2>
+                {% endif %}
+                {% if block.settings.text != blank %}
+                    <div class="sizing-blocks__text">
+                        {{ block.settings.text }}
+                    </div>
+                {% endif %}
+            </div>
+            {% if block.settings.image != blank %}
+            {%- style -%}
+            .block--{{ block.id }} {
+              padding-bottom: calc(100% / {{block.settings.image_mob.aspect_ratio}});
+            }
+
+            @media screen and (min-width: 768px) { 
+              .block--{{ block.id }} {
+                padding-bottom: calc(100% / {{block.settings.image.aspect_ratio}});
+              }
+            }
+            {%- endstyle -%}
+                <div class="sizing-blocks__image block--{{ block.id }}" style="max-width: 100%;">
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="{{ block.settings.image | image_url: width: 750 }}">
+                        <img src="{{ block.settings.image_mob | image_url: width: 750 }}" alt="{{ block.settings.image.alt }}">
+                    </picture>
+                </div>
+            {% endif %}
+        </div>
+    {% endfor %}
+</div>
+
+{% schema %}
+{
+  "name": "Sizing blocks section",
+  "class": "section sizing-block-section",
+  "settings": [
+      {
+        "type": "header",
+        "content": "Section space"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 160,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding top desktop",
+        "default": 80
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 160,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding bottom desktop",
+        "default": 80
+      },
+      {
+        "type": "range",
+        "id": "padding_top_mb",
+        "min": 0,
+        "max": 120,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding top mobile",
+        "default": 80
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom_mb",
+        "min": 0,
+        "max": 120,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding bottom mobile",
+        "default": 80
+      }
+  ],
+  "max_blocks": 2,
+  "blocks": [
+        {
+        "type": "image",
+        "name": "Image",
+        "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title text"
+        },
+        {
+            "type": "richtext",
+            "id": "text",
+            "label": "Description text"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Select image"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_mob",
+            "label": "Select image mobile"
+        },
+        {
+          "type": "checkbox",
+          "id": "full_mobile",
+          "label": "Expand a picture on mobile to full width",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+    "name": "Sizing blocks section" 
+    }
+]
+}
+{% endschema %}

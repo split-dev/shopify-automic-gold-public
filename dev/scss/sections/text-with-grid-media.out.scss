@@ -1,0 +1,58 @@
+@import "../settings/variables";
+@import "../settings/bootstrap-media";
+
+.text-media-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 24px;
+    grid-column-gap: clamp(24px, 3.6vw, 50px);
+    @include media-breakpoint-up(md) {
+        grid-template-columns: 0.9fr 1.1fr;
+    }
+    &__text-container {
+        h2:not(:first-of-type) {
+            @include media-breakpoint-up(xl) {
+                margin-top: 32px;
+            }
+        }
+        *:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__image-container {
+        display: grid;
+        grid-gap: 10px;
+        align-items: stretch;
+        &--full-width-mobile {
+            margin: 0 calc(var(--page-width-x-paddings-mobile) * -1);
+            @include media-breakpoint-up(sm) {
+                margin: 0 calc(var(--page-width-x-paddings-tablet) * -1);
+            }
+            @include media-breakpoint-up(md) {
+                margin: 0;
+            }
+        }
+        @include media-breakpoint-up(md) {
+            grid-template-columns: 0.9fr 1.1fr;
+        }
+        img, svg {
+            width: 100%;
+            height: auto;
+        }
+        img {
+            &.image-cover {
+                object-fit: cover;
+            }
+            &.image-contain {
+                object-fit: contain;
+            }
+        }
+        video {
+            width: 100%;
+            max-height: 600px;
+            @include media-breakpoint-up(sm) {
+                object-position: left;
+            }
+        }
+    }
+}

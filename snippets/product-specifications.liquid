@@ -1,0 +1,159 @@
+<div class="product__specifications-table">
+    {% if product.metafields.global.dimensions %}
+        <div class="specifications__row">
+            <div class="specifications__name">Dimensions</div>
+            <div class="specifications__value">{{ product.metafields.global.dimensions }}</div>
+        </div>
+    {% endif %}
+
+    {% if product.metafields.global.width %}
+        <div class="specifications__row">
+            <div class="specifications__name">Width</div>
+            <div class="specifications__value">{{ product.metafields.global.width }}</div>
+        </div>
+    {% endif %}
+
+    {% if product.metafields.global.height %}
+        <div class="specifications__row">
+            <div class="specifications__name">Height</div>
+            <div class="specifications__value">{{ product.metafields.global.height }}</div>
+        </div>
+    {% endif %}
+
+    {% if product.metafields.global.length %}
+        <div class="specifications__row">
+            <div class="specifications__name">Length</div>
+            <div class="specifications__value">{{ product.metafields.global.length }}</div>
+        </div>
+    {% endif %}
+
+    {% if product.metafields.global.thickness %}
+        <div class="specifications__row">
+            <div class="specifications__name">Thickness</div>
+            <div class="specifications__value">{{ product.metafields.global.thickness }}</div>
+        </div>
+    {% endif %}
+
+    {% if product.metafields.global.item_weight %}
+        <div class="specifications__row">
+            <div class="specifications__name">Item Weight</div>
+            <div class="specifications__value">{{ product.metafields.global.item_weight }}</div>
+        </div>
+    {% endif %}
+
+    {% if product.metafields.global.posts %}
+        <div class="specifications__row">
+            <div class="specifications__name">Post</div>
+            <div class="specifications__value">{{ product.metafields.global.posts }}</div>
+        </div>
+    {% endif %}
+
+    {% if product.metafields.global.lock %}
+        <div class="specifications__row">
+            <div class="specifications__name">Lock</div>
+            <div class="specifications__value">{{ product.metafields.global.lock }}</div>
+        </div>
+    {% endif %}
+
+    {% if product.metafields.global.backs %}
+        <div class="specifications__row">
+            <div class="specifications__name">Backs</div>
+            <div class="specifications__value">{{ product.metafields.global.backs }}</div>
+        </div>
+    {% endif %}
+
+    {% if product.metafields.global.stone %}
+        <div class="specifications__row">
+            <div class="specifications__name">Stone</div>
+            <div class="specifications__value">{{ product.metafields.global.stone }}</div>
+        </div>
+    {% endif %}
+
+    {% if product.metafields.global.diamond_clarity %}
+        <div class="specifications__row">
+            <div class="specifications__name">Diamond clarity</div>
+            <div class="specifications__value">{{ product.metafields.global.diamond_clarity }}</div>
+        </div>
+    {% endif %}
+
+    {% if product.metafields.global.diamond_color %}
+        <div class="specifications__row">
+            <div class="specifications__name">Diamond color</div>
+            <div class="specifications__value">{{ product.metafields.global.diamond_color }}</div>
+        </div>
+    {% endif %}
+
+    {% if product.metafields.global.diamond_weight %}
+        <div class="specifications__row">
+            <div class="specifications__name">Diamond weight</div>
+            <div class="specifications__value">{{ product.metafields.global.diamond_weight }}</div>
+        </div>
+    {% endif %}
+
+    {% unless 
+        product.handle == 'ring-sizer' or 
+        product.tags contains 'loose gemstone' or 
+        product.title == "Journal" or 
+        product.title == "Platinum Sapphire Ring" or 
+        product.tags contains 'hollow-hoop' or 
+        product.title == 'Polishing Cloth' or 
+        product.title == "Travel Case" or
+        product.title == 'Platinum Curvy Hammered Band' or
+        product.title == 'Platinum Curvy Matte Band' or
+        product.title == 'Platinum Curvy Mirror Band' or
+        product.title == 'Platinum Industrial Hammered Band' or
+        product.title == 'Platinum Industrial Mirror Band' or
+        product.title == 'Platinum Industrial Matte Band' or
+        product.title == 'Platinum Industrial Wood Band'
+    %}
+        <div class="specifications__row">
+            <div class="specifications__name">Material</div>
+            <div class="specifications__value">Solid 14k gold (<a href="{{ shop.url }}/blogs/automic-blog/what-karat-means-in-gold-jewelry" target="_blank">what is karat?</a>)</div>
+        </div>
+
+        <div class="specifications__row">
+            <div class="specifications__name">Gold source</div>
+            <div class="specifications__value">100% Certified <a href="{{ shop.url }}/pages/sustainability" title="Automic Gold Sustainability Commitment" target="_blank">recycled gold</a></div>
+        </div>
+
+        <div class="specifications__row">
+            <div class="specifications__name">Manufacturing</div>
+            <div class="specifications__value">In house in New York</div>
+        </div>
+    {% endunless %}
+
+    {% if product.tags contains 'hollow-hoop' %}
+        <div class="specifications__row">
+            <div class="specifications__name">Material</div>
+            <div class="specifications__value">Hollow 14k gold (<a href="{{ shop.url }}/blogs/automic-blog/what-karat-means-in-gold-jewelry" target="_blank">what is karat?</a>)</div>
+        </div>
+        <div class="specifications__row">
+            <div class="specifications__name">Gold source</div>
+            <div class="specifications__value">100% Certified <a href="{{ shop.url }}/pages/sustainability" title="Automic Gold Sustainability Commitment" target="_blank">recycled gold</a></div>
+        </div>
+
+        <div class="specifications__row">
+            <div class="specifications__name">Manufacturing</div>
+            <div class="specifications__value">In house in New York</div>
+        </div>
+    {% endif %}
+    
+    {% if
+        product.title == 'Platinum Curvy Hammered Band' or
+        product.title == 'Platinum Curvy Matte Band' or
+        product.title == 'Platinum Curvy Mirror Band' or
+        product.title == 'Platinum Industrial Hammered Band' or
+        product.title == 'Platinum Industrial Mirror Band' or
+        product.title == 'Platinum Industrial Matte Band' or
+        product.title == 'Platinum Industrial Wood Band' %}
+
+        <div class="specifications__row">
+            <div class="specifications__name">Material</div>
+            <div class="specifications__value">950 platinum</div>
+        </div>
+        <div class="specifications__row">
+            <div class="specifications__name">Manufacturing</div>
+            <div class="specifications__value">In house in New York</div>
+        </div>
+        {% endif %}
+</div>

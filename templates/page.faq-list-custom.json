@@ -1,0 +1,412 @@
+{
+  "wrapper": "div#faq-wrapp",
+  "sections": {
+    "banner": {
+      "type": "faq-banner",
+      "settings": {
+        "image_desktop": "shopify://shop_images/banner-faq.png",
+        "image_mobile": "shopify://shop_images/banner-faq--mobile.png",
+        "title": "<p>Frequently Asked </p><p>Questions</p>"
+      }
+    },
+    "section_faq_list_mbXNzx": {
+      "type": "section-faq-list",
+      "settings": {
+        "url": "shopify://pages/faq"
+      }
+    },
+    "section_faq_list_NCFjKN": {
+      "type": "section-faq-hide-list",
+      "blocks": {
+        "item_UhwQfy": {
+          "type": "item",
+          "settings": {
+<<<<<<< HEAD
+            "title": "\"Can you make…\"",
+            "text": "<p>As long as the metal you want is gold, platinum, or silver, then (usually) yes! We can’t work with other metals or anything that’s simply gold-plated or gold-filled. We also don’t work with crystals—only precious and semi-precious gemstones.</p>"
+=======
+            "title": "Can you make…",
+            "text": "<p>As long as the metal you want is gold, platinum, or silver, then (usually) yes! We can’t work with other metals or anything that’s simply gold-plated or gold-filled. We also don’t work with crystals—only precious and semi-precious gemstones.<\/p>"
+>>>>>>> d8c1dd54ef4ee992d3eb92e21ff4be11e6e21f9d
+          }
+        },
+        "item_9jJJFV": {
+          "type": "item",
+          "settings": {
+<<<<<<< HEAD
+            "title": "\"Can you make it in 9-12k gold instead?\"",
+            "text": "<p>Yes, but these lower-purity alloys will eventually tarnish since the gold content is either equal to or less than the other metals mixed in.</p>"
+=======
+            "title": "Can you make it in 9-12k gold instead?",
+            "text": "<p>Yes, but these lower-purity alloys will eventually tarnish since the gold content is either equal to or less than the other metals mixed in.<\/p>"
+>>>>>>> d8c1dd54ef4ee992d3eb92e21ff4be11e6e21f9d
+          }
+        },
+        "item_9BYtbH": {
+          "type": "item",
+          "settings": {
+<<<<<<< HEAD
+            "title": "“Can you make it in 18-24k gold instead?”",
+            "text": "<p>Probably, but higher-purity gold alloys are more malleable than 14k gold, so they’re at much higher risk of deforming in wear.</p>"
+=======
+            "title": "Can you make it in 18-24k gold instead?",
+            "text": "<p>Probably, but higher-purity gold alloys are more malleable than 14k gold, so they’re at much higher risk of deforming in wear.<\/p>"
+>>>>>>> d8c1dd54ef4ee992d3eb92e21ff4be11e6e21f9d
+          }
+        },
+        "item_4VK8Kj": {
+          "type": "item",
+          "settings": {
+<<<<<<< HEAD
+            "title": "\"Can you design it for me?\"",
+            "text": "<p>We can! We’re a full-service workshop and can help you at any stage in the process.</p>"
+=======
+            "title": "Can you design it for me?",
+            "text": "<p>We can! We’re a full-service workshop and can help you at any stage in the process.<\/p>"
+>>>>>>> d8c1dd54ef4ee992d3eb92e21ff4be11e6e21f9d
+          }
+        },
+        "item_6mik4M": {
+          "type": "item",
+          "settings": {
+<<<<<<< HEAD
+            "title": "\"Can I engrave it?\"",
+            "text": "<p>Yes! We can do any font (including handwriting if you give us a photo of it), image, symbol, fingerprint, or drawing.</p>"
+=======
+            "title": "Can I engrave it?",
+            "text": "<p>Yes! We can do any font (including handwriting if you give us a photo of it), image, symbol, fingerprint, or drawing.<\/p>"
+>>>>>>> d8c1dd54ef4ee992d3eb92e21ff4be11e6e21f9d
+          }
+        },
+        "item_3qjzhR": {
+          "type": "item",
+          "settings": {
+<<<<<<< HEAD
+            "title": "\"I don’t know the ring size I need. Can I place an order anyway?\"",
+            "text": "<p>Please get sized before you place your order! That way, you or the person you’re gifting the ring to can enjoy your ring from day one instead of having to send it back before you even wear it. Since all custom rings are final sale, resizing will cost extra. You can either order <a href=\"https://www.automicgold.com/products/ring-sizer\" target=\"_blank\" title=\"Automic Gold Ring Sizer\"><span style=\"text-decoration:underline\">our ring sizer</span></a>, get sized in person by making an <a href=\"https://www.automicgold.com/pages/book-an-appointment\" target=\"_blank\" title=\"Visit our showroom\">appointment</a> with us, or visit a local jeweler to get sized. </p>"
+=======
+            "title": "I don’t know the ring size I need. Can I place an order anyway?",
+            "text": "<p>Please get sized before you place your order! That way, you or the person you’re gifting the ring to can enjoy your ring from day one instead of having to send it back before you even wear it. Since all custom rings are final sale, resizing will cost extra. You can either order <a href=\"https:\/\/www.automicgold.com\/products\/ring-sizer\" target=\"_blank\" title=\"Automic Gold Ring Sizer\"><span style=\"text-decoration:underline\">our ring sizer<\/span><\/a>, get sized in person by making an <a href=\"https:\/\/www.automicgold.com\/pages\/book-an-appointment\" target=\"_blank\" title=\"Visit our showroom\">appointment<\/a> with us, or visit a local jeweler to get sized. <\/p>"
+>>>>>>> d8c1dd54ef4ee992d3eb92e21ff4be11e6e21f9d
+          }
+        },
+        "item_96TyB9": {
+          "type": "item",
+          "settings": {
+<<<<<<< HEAD
+            "title": "\"How much will my custom order cost?\"",
+            "text": "<p><a href=\"mailto:custom@automicgold.com\" target=\"_blank\" title=\"Automic Gold Custom Email\"><span style=\"text-decoration:underline\">Email us</span></a> with the following details to get a quote:</p><ol><li>Would you like it in gold, silver, or platinum? If you want gold, which color (yellow, white, rose, or champagne)?</li><li>If there are gems, which gemstones—and what shape, size, and color—would you like? Lab or natural?</li><li>If you want an engraving, what text or image would you like engraved?</li><li>What is your timeline?</li><li>What is your budget?</li><li>What are your ring size, necklace length, or other jewelry dimension requirements?</li><li>Describe your idea. Include reference images or drawings if you have any (please try to send them as attachments rather than directly in the email body).</li><li>Do you need your piece to accommodate strenuous wear (frequent workouts, often swimming in pool water, wearing medical gloves, etc.)?</li></ol>"
+=======
+            "title": "How much will my custom order cost?",
+            "text": "<p><a href=\"mailto:custom@automicgold.com\" target=\"_blank\" title=\"Automic Gold Custom Email\"><span style=\"text-decoration:underline\">Email us<\/span><\/a> with the following details to get a quote:<\/p><ol><li>Would you like it in gold, silver, or platinum? If you want gold, which color (yellow, white, rose, or champagne)?<\/li><li>If there are gems, which gemstones—and what shape, size, and color—would you like? Lab or natural?<\/li><li>If you want an engraving, what text or image would you like engraved?<\/li><li>What is your timeline?<\/li><li>What is your budget?<\/li><li>What are your ring size, necklace length, or other jewelry dimension requirements?<\/li><li>Describe your idea. Include reference images or drawings if you have any (please try to send them as attachments rather than directly in the email body).<\/li><li>Do you need your piece to accommodate strenuous wear (frequent workouts, often swimming in pool water, wearing medical gloves, etc.)?<\/li><\/ol>"
+>>>>>>> d8c1dd54ef4ee992d3eb92e21ff4be11e6e21f9d
+          }
+        },
+        "item_iCTzhy": {
+          "type": "item",
+          "settings": {
+<<<<<<< HEAD
+            "title": "\"Do you charge extra for white, rose, or champagne gold over yellow gold?\"",
+            "text": "<p>Nope! They’re all the same cost.</p>"
+=======
+            "title": "Do you charge extra for white, rose, or champagne gold over yellow gold?",
+            "text": "<p>Nope! They’re all the same cost.<\/p>"
+>>>>>>> d8c1dd54ef4ee992d3eb92e21ff4be11e6e21f9d
+          }
+        },
+        "item_UimQQB": {
+          "type": "item",
+          "settings": {
+<<<<<<< HEAD
+            "title": "\"How long will my custom take to make?\"",
+            "text": "<p>Simple designs without stones, like nameplates or engraved bands: about 2-3 weeks. More complicated designs: about 4-8 weeks. These are just estimates, though—we can’t guarantee any timeframes as custom orders are unique and unpredictable. In a rush? Opt for expedited production and your order will be at the top of our to-do list!</p>"
+=======
+            "title": "How long will my custom take to make?",
+            "text": "<p>Simple designs without stones, like nameplates or engraved bands: about 2-3 weeks. More complicated designs: about 4-8 weeks. These are just estimates, though—we can’t guarantee any timeframes as custom orders are unique and unpredictable. In a rush? Opt for expedited production and your order will be at the top of our to-do list!<\/p>"
+>>>>>>> d8c1dd54ef4ee992d3eb92e21ff4be11e6e21f9d
+          }
+        },
+        "item_iHU8gP": {
+          "type": "item",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        },
+        "item_WjjmmR": {
+          "type": "item",
+          "settings": {
+<<<<<<< HEAD
+            "title": "\"What is the custom ordering process like?\"",
+            "text": "<p>We explain it in detail <a href=\"https://www.automicgold.com/blogs/automic-blog/how-we-make-your-dream-jewelry\" target=\"_blank\" title=\"Blog: How we make your custom jewelry\"><span style=\"text-decoration:underline\">here</span></a>! In short:</p><ol><li>You tell us what you want and can afford.</li><li>We tell you the cost and settle on the main design elements.</li><li>We send you an invoice. If reusing your own jewelry, you mail or drop it off to us.</li><li>For more specific designs, we send you a computer render of your design and work with you to perfect it. (<a href=\"https://sketchfab.com/automicgoldapril/models\" target=\"_blank\" title=\"Automic Gold 3d jewelry models\"><span style=\"text-decoration:underline\">Here</span></a> are previous examples of our models!)</li><li>We start making it! This takes a few weeks to a few months depending on design complexity.</li><li>When it’s ready, we ship it or schedule a time for you to pick it up at our New York City office.</li><li>You enjoy your one-of-a-kind jewelry!<br/><br/></li></ol><p>What are you waiting for? <a href=\"https://www.automicgold.com/pages/custom-orders\" target=\"_blank\" title=\"Automic Gold Custom Jewelry\"><span style=\"text-decoration:underline\">Let’s make your ideas a reality</span></a>.</p>"
+=======
+            "title": "What is the custom ordering process like?",
+            "text": "<p>We explain it in detail <a href=\"https:\/\/www.automicgold.com\/blogs\/automic-blog\/how-we-make-your-dream-jewelry\" target=\"_blank\" title=\"Blog: How we make your custom jewelry\"><span style=\"text-decoration:underline\">here<\/span><\/a>! In short:<\/p><ol><li>You tell us what you want and can afford.<\/li><li>We tell you the cost and settle on the main design elements.<\/li><li>We send you an invoice. If reusing your own jewelry, you mail or drop it off to us.<\/li><li>For more specific designs, we send you a computer render of your design and work with you to perfect it. (<a href=\"https:\/\/sketchfab.com\/automicgoldapril\/models\" target=\"_blank\" title=\"Automic Gold 3d jewelry models\"><span style=\"text-decoration:underline\">Here<\/span><\/a> are previous examples of our models!)<\/li><li>We start making it! This takes a few weeks to a few months depending on design complexity.<\/li><li>When it’s ready, we ship it or schedule a time for you to pick it up at our New York City office.<\/li><li>You enjoy your one-of-a-kind jewelry!<br\/><br\/><\/li><\/ol><p>What are you waiting for? <a href=\"https:\/\/www.automicgold.com\/pages\/custom-orders\" target=\"_blank\" title=\"Automic Gold Custom Jewelry\"><span style=\"text-decoration:underline\">Let’s make your ideas a reality<\/span><\/a>.<\/p>"
+>>>>>>> d8c1dd54ef4ee992d3eb92e21ff4be11e6e21f9d
+          }
+        },
+        "item_gW6erW": {
+          "type": "item",
+          "settings": {
+<<<<<<< HEAD
+            "title": "\"Where will my custom order be made?\"",
+            "text": "<p>Every step of the process happens in our New York City studio.</p>"
+=======
+            "title": "Where will my custom order be made?",
+            "text": "<p>Every step of the process happens in our New York City studio.<\/p>"
+>>>>>>> d8c1dd54ef4ee992d3eb92e21ff4be11e6e21f9d
+          }
+        },
+        "item_NREL3b": {
+          "type": "item",
+          "settings": {
+<<<<<<< HEAD
+            "title": "\"What is the warranty for custom pieces?\"",
+            "text": "<p>All of our pieces come with a <a href=\"https://www.automicgold.com/pages/lifetime-warranty\" target=\"_blank\" title=\"Automic Gold Limited Lifetime Warranty\">lifetime guarantee</a> that covers manufacturer defects for up to three years after receipt. We don't cover normal wear & tear, loss, or loss of parts, and all warranties are voided if your item has been modified by other jewelers. If you notice any loose stones or possible defects, let us know right away. We recommend getting insurance for all jewelry over $10,000.</p>"
+=======
+            "title": "What is the warranty for custom pieces?",
+            "text": "<p>All of our pieces come with a <a href=\"https:\/\/www.automicgold.com\/pages\/lifetime-warranty\" target=\"_blank\" title=\"Automic Gold Limited Lifetime Warranty\">lifetime guarantee<\/a> that covers manufacturer defects for up to three years after receipt. We don't cover normal wear & tear, loss, or loss of parts, and all warranties are voided if your item has been modified by other jewelers. If you notice any loose stones or possible defects, let us know right away. We recommend getting insurance for all jewelry over $10,000.<\/p>"
+>>>>>>> d8c1dd54ef4ee992d3eb92e21ff4be11e6e21f9d
+          }
+        }
+      },
+      "block_order": [
+        "item_UhwQfy",
+        "item_9jJJFV",
+        "item_9BYtbH",
+        "item_4VK8Kj",
+        "item_6mik4M",
+        "item_3qjzhR",
+        "item_96TyB9",
+        "item_iCTzhy",
+        "item_UimQQB",
+        "item_iHU8gP",
+        "item_WjjmmR",
+        "item_gW6erW",
+        "item_NREL3b"
+      ],
+      "settings": {
+        "tab_name": "General"
+      }
+    },
+    "section_faq_list_QcMHtV": {
+      "type": "section-faq-hide-list",
+      "blocks": {
+        "item_MkAALh": {
+          "type": "item",
+          "settings": {
+<<<<<<< HEAD
+            "title": "\"Can you use my gold?”",
+            "text": "<p>Maybe! Solid pieces like rings are ideal for reusing; with other items like necklaces, it depends on how thick they are and what you want to make. Let our <a href=\"mailto:custom@automicgold.com\" target=\"_blank\" title=\"Automic Gold Custom Email\"><span style=\"text-decoration:underline\">customs department</span></a> know what you want to reuse, what it looks like, how much it weighs, and what you want us to make. <br/><br/>To reuse your jewelry, the total metal weight needs to exceed the weight of the new piece you’re looking for. Different companies use different alloys, and mixing metals of different make-ups can lead to your new piece breaking during production or while you’re wearing it. If we can’t reuse your metal, we’ll happily give store credit for it!</p>"
+=======
+            "title": "Can you use my gold?",
+            "text": "<p>Maybe! Solid pieces like rings are ideal for reusing; with other items like necklaces, it depends on how thick they are and what you want to make. Let our <a href=\"mailto:custom@automicgold.com\" target=\"_blank\" title=\"Automic Gold Custom Email\"><span style=\"text-decoration:underline\">customs department<\/span><\/a> know what you want to reuse, what it looks like, how much it weighs, and what you want us to make. <br\/><br\/>To reuse your jewelry, the total metal weight needs to exceed the weight of the new piece you’re looking for. Different companies use different alloys, and mixing metals of different make-ups can lead to your new piece breaking during production or while you’re wearing it. If we can’t reuse your metal, you can still get store credit to use towards your order!<\/p>"
+>>>>>>> d8c1dd54ef4ee992d3eb92e21ff4be11e6e21f9d
+          }
+        },
+        "item_DAW4GQ": {
+          "type": "item",
+          "settings": {
+<<<<<<< HEAD
+            "title": "“Can you use my stones?”",
+            "text": "<p>We can, but we prefer to work with ours. We are not responsible for any damage to stones from other sources. We can get almost any stones you’re looking for and they’ll not only be cheaper than if you bought it yourself, but also protected under our <a href=\"https://www.automicgold.com/pages/lifetime-warranty\" target=\"_blank\" title=\"Automic Gold Limited Lifetime Warranty\">warranty</a>.  </p>"
+=======
+            "title": "Can you use my stones?",
+            "text": "<p>We can, but we prefer to work with ours. We are not responsible for any damage to stones from other sources. We can get almost any stones you’re looking for and they’ll not only be cheaper than if you bought it yourself, but also protected under our <a href=\"https:\/\/www.automicgold.com\/pages\/lifetime-warranty\" target=\"_blank\" title=\"Automic Gold Limited Lifetime Warranty\">warranty<\/a>.  <\/p>"
+>>>>>>> d8c1dd54ef4ee992d3eb92e21ff4be11e6e21f9d
+          }
+        },
+        "item_eAEkAH": {
+          "type": "item",
+          "settings": {
+<<<<<<< HEAD
+            "title": "\"Can I drop off my stones in-person?\"",
+            "text": "<p><a href=\"mailto:care@automicgold.com\" target=\"_blank\" title=\"Automic Gold Customer Service Email\"><span style=\"text-decoration:underline\">Reach out</span></a> to schedule a drop-off appointment at our New York City office.</p>"
+=======
+            "title": "Can I drop off my stones in-person?",
+            "text": "<p><a href=\"mailto:care@automicgold.com\" target=\"_blank\" title=\"Automic Gold Customer Service Email\"><span style=\"text-decoration:underline\">Reach out<\/span><\/a> to schedule a drop-off appointment at our New York City office.<\/p>"
+>>>>>>> d8c1dd54ef4ee992d3eb92e21ff4be11e6e21f9d
+          }
+        },
+        "item_7Lehf3": {
+          "type": "item",
+          "settings": {
+<<<<<<< HEAD
+            "title": "\"Can you recut the stones?\"",
+            "text": "<p>As long as it’s a precious or semi-precious gemstone (except diamonds), yes! We can re-polish them too. </p>"
+=======
+            "title": "Can you recut the stones?",
+            "text": "<p>As long as it’s a precious or semi-precious gemstone (except diamonds), yes! We can re-polish them too. <\/p>"
+>>>>>>> d8c1dd54ef4ee992d3eb92e21ff4be11e6e21f9d
+          }
+        }
+      },
+      "block_order": [
+        "item_MkAALh",
+        "item_DAW4GQ",
+        "item_eAEkAH",
+        "item_7Lehf3"
+      ],
+      "settings": {
+        "tab_name": "Recycling"
+      }
+    },
+    "section_faq_hide_list_eFFLWm": {
+      "type": "section-faq-hide-list",
+      "blocks": {
+        "item_PFktGT": {
+          "type": "item",
+          "settings": {
+<<<<<<< HEAD
+            "title": "“Is the quote negotiable?”",
+            "text": "<p><a href=\"https://www.automicgold.com/blogs/automic-blog/automic-gold-no-coupon-code-why-we-dont-do-discounts\" target=\"_blank\" title=\"Blog: Why we don't do discounts\"><span style=\"text-decoration:underline\">Nope</span></a>. We’re happy to suggest alternative design elements or gems to bring the cost down if you’d like, but no prices given for your project are up for debate.</p>"
+=======
+            "title": "Is the quote negotiable?",
+            "text": "<p><a href=\"https:\/\/www.automicgold.com\/blogs\/automic-blog\/automic-gold-no-coupon-code-why-we-dont-do-discounts\" target=\"_blank\" title=\"Blog: Why we don't do discounts\"><span style=\"text-decoration:underline\">Nope<\/span><\/a>. We’re happy to suggest alternative design elements or gems to bring the cost down if you’d like, but no prices given for your project are up for debate.<\/p>"
+>>>>>>> d8c1dd54ef4ee992d3eb92e21ff4be11e6e21f9d
+          }
+        },
+        "item_dXHGqU": {
+          "type": "item",
+          "settings": {
+<<<<<<< HEAD
+            "title": "\"Do you need a deposit?\"",
+            "text": "<p>We need full payment to start making your order, but we’ll give you a quote for free. </p>"
+=======
+            "title": "Do you need a deposit?",
+            "text": "<p>We need full payment to start making your order, but we’ll give you a quote for free. <\/p>"
+>>>>>>> d8c1dd54ef4ee992d3eb92e21ff4be11e6e21f9d
+          }
+        },
+        "item_TTfHaa": {
+          "type": "item",
+          "settings": {
+<<<<<<< HEAD
+            "title": "\"Can I pay in cash?\"",
+            "text": "<p>Yes, but only if it’s dropped off in-person. Sending cash through the mail is never a good idea. </p>"
+=======
+            "title": "Can I pay in cash?",
+            "text": "<p>Yes, but only if it’s dropped off in-person. Sending cash through the mail is never a good idea. <\/p>"
+>>>>>>> d8c1dd54ef4ee992d3eb92e21ff4be11e6e21f9d
+          }
+        },
+        "item_9NJH86": {
+          "type": "item",
+          "settings": {
+<<<<<<< HEAD
+            "title": "\"Can I pay in installments?\"",
+            "text": "<p>You sure can! We accept multiple installment services: PayPal Pay Later, Shop Pay, Affirm, and Afterpay. If you prefer to use your card directly, we can break down the invoices for you instead. </p>"
+=======
+            "title": "Can I pay in installments?",
+            "text": "<p>You sure can! We accept multiple installment services: PayPal Pay Later, Shop Pay, Affirm, and Afterpay. If you prefer to use your card directly, we can break down the invoices for you instead. <\/p>"
+>>>>>>> d8c1dd54ef4ee992d3eb92e21ff4be11e6e21f9d
+          }
+        }
+      },
+      "block_order": [
+        "item_PFktGT",
+        "item_dXHGqU",
+        "item_TTfHaa",
+        "item_9NJH86"
+      ],
+      "settings": {
+        "tab_name": "Payment"
+      }
+    },
+    "section_faq_hide_list_VUL4WN": {
+      "type": "section-faq-hide-list",
+      "blocks": {
+        "item_K4jzVF": {
+          "type": "item",
+          "settings": {
+<<<<<<< HEAD
+            "title": "\"Can I get a physical model of my order before you make the real thing?\"",
+            "text": "<p>Yes! For an extra $150, we can ship you a physical wax model of your exact ring or pendant to make sure you love how it looks in person.</p>"
+=======
+            "title": "Can I get a physical model of my order before you make the real thing?",
+            "text": "<p>Yes! For an extra $150, we can ship you a physical wax model of your exact ring or pendant to make sure you love how it looks in person.<\/p>"
+>>>>>>> d8c1dd54ef4ee992d3eb92e21ff4be11e6e21f9d
+          }
+        },
+        "item_UtaTxK": {
+          "type": "item",
+          "settings": {
+<<<<<<< HEAD
+            "title": "\"Is there a deadline if I want to change my custom order?\"",
+            "text": "<p>Once we start production, any modifications or changes will cost extra.</p>"
+=======
+            "title": "Is there a deadline if I want to change my custom order?",
+            "text": "<p>Once we start production, any modifications or changes will cost extra.<\/p>"
+>>>>>>> d8c1dd54ef4ee992d3eb92e21ff4be11e6e21f9d
+          }
+        },
+        "item_6zr93V": {
+          "type": "item",
+          "settings": {
+<<<<<<< HEAD
+            "title": "\"Why is my custom order taking longer than the timeframe you gave me?\"",
+            "text": "<p>We always strive to finish all custom projects in a reasonable amount of time, but the production process is truly unpredictable with one-of-a-kind pieces, especially with very complex pieces. Many things outside of our control can extend or interrupt the schedule, so all timelines we give for standard production are estimates, not promises. </p><p>The only way to guarantee when your jewelry will be complete is to upgrade your order to expedited production. With expedited production, your order is our top priority!</p>"
+=======
+            "title": "Why is my custom order taking longer than the timeframe you gave me?",
+            "text": "<p>We always strive to finish all custom projects in a reasonable amount of time, but the production process is truly unpredictable with one-of-a-kind pieces, especially with very complex pieces. Many things outside of our control can extend or interrupt the schedule, so all timelines we give for standard production are estimates, not promises. <\/p><p>The only way to guarantee when your jewelry will be complete is to upgrade your order to expedited production. With expedited production, your order is our top priority!<\/p>"
+>>>>>>> d8c1dd54ef4ee992d3eb92e21ff4be11e6e21f9d
+          }
+        },
+        "item_a4cNdg": {
+          "type": "item",
+          "settings": {
+<<<<<<< HEAD
+            "title": "\"What if I want to resize or change my custom order after I receive it?\"",
+            "text": "<p>We’re happy to modify custom orders for an additional fee. Reach out to our <a href=\"mailto:care@automicgold.com\" target=\"_blank\" title=\"Automic Gold Customer Service Email\"><span style=\"text-decoration:underline\">care team</span></a>, then ship it back to us (we don’t cover return shipping costs) or drop it off at our office.</p>"
+=======
+            "title": "What if I want to resize or change my custom order after I receive it?",
+            "text": "<p>We’re happy to modify custom orders for an additional fee. Reach out to our <a href=\"mailto:care@automicgold.com\" target=\"_blank\" title=\"Automic Gold Customer Service Email\"><span style=\"text-decoration:underline\">care team<\/span><\/a>, then ship it back to us (we don’t cover return shipping costs) or drop it off at our office.<\/p>"
+>>>>>>> d8c1dd54ef4ee992d3eb92e21ff4be11e6e21f9d
+          }
+        },
+        "item_z6jbMr": {
+          "type": "item",
+          "settings": {
+<<<<<<< HEAD
+            "title": "\"Can you repair it?\"",
+            "text": "<p>Yep! Reach out to our <a href=\"mailto:care@automicgold.com\" target=\"_blank\" title=\"Automic Gold Customer Service Email\"><span style=\"text-decoration:underline\">care team</span></a>. Fees may apply.</p>"
+=======
+            "title": "Can you repair it?",
+            "text": "<p>Yep! Reach out to our <a href=\"mailto:care@automicgold.com\" target=\"_blank\" title=\"Automic Gold Customer Service Email\"><span style=\"text-decoration:underline\">care team<\/span><\/a>. Fees may apply.<\/p>"
+>>>>>>> d8c1dd54ef4ee992d3eb92e21ff4be11e6e21f9d
+          }
+        }
+      },
+      "block_order": [
+        "item_K4jzVF",
+        "item_UtaTxK",
+        "item_6zr93V",
+        "item_a4cNdg",
+        "item_z6jbMr"
+      ],
+      "settings": {
+        "tab_name": "After Ordering"
+      }
+    },
+    "faq-custom": {
+      "type": "faq-custom-text",
+      "settings": {
+        "text_1": "<p>Have any more questions? Email us <a href=\"mailto:care@automicgold.com\" target=\"_blank\" title=\"Automic Gold customer service email\">care@automicgold.com</a></p>",
+        "text_2": "<p>Have any more questions? Email us.<br/><a href=\"mailto:care@automicgold.com\" target=\"_blank\" title=\"Automic Gold customer service email\">care@automicgold.com</a></p>",
+        "padding_top": 32,
+        "padding_bottom": 8,
+        "padding_top_mb": 24,
+        "padding_bottom_mb": 24
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "section_faq_list_mbXNzx",
+    "section_faq_list_NCFjKN",
+    "section_faq_list_QcMHtV",
+    "section_faq_hide_list_eFFLWm",
+    "section_faq_hide_list_VUL4WN",
+    "faq-custom"
+  ]
+}

@@ -1,0 +1,221 @@
+{{ 'columns-with-info.out.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+    .section--{{ section.id }} {
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+
+    @media screen and (min-width: 768px) {
+    .section--{{ section.id }} {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+    }
+{%- endstyle -%}
+
+<div class="columns-with-info section--{{ section.id }}">
+    <div class="columns-with-info__wrapper info-column al-culture page-width">
+      {%- for block in section.blocks -%}
+      {%- case block.type -%}
+      {%- when 'left_column' -%}
+        <div class="info-column__left left-column al-culture-left" {{ block.shopify_attributes }}>
+          <div class="left-column__text-container acl-text-container">
+            {{ block.settings.l_c_text }}
+          </div>
+          <div class="left-column__text-container left-column__text-container_mobile acl-text-container">
+            {{ block.settings.l_c_text_mob }}
+          </div>
+          <div class="left-column__image-container acl-image-container">
+            {%- if block.settings.l_c_image != blank -%}
+              <picture>
+                <source
+                    media="(min-aspect-ratio: 3/4) and (max-aspect-ratio: 5/4)"
+                    srcset="
+                              {{ block.settings.l_c_image | image_url: width: 1000 }} 1000w,
+                              {{ block.settings.l_c_image | image_url: width: 1500 }} 1500w"
+                    sizes="100vw"
+                />
+
+                <source
+                    media="(max-aspect-ratio: 3/4)"
+                    srcset="
+                              {{ block.settings.l_c_image | image_url: width: 750 }} 750w,
+                              {{ block.settings.l_c_image | image_url: width: 1125 }} 1125w,
+                              {{ block.settings.l_c_image | image_url: width: 1200 }} 1200w"
+                    sizes="100vw"
+                />
+
+                <img
+                    srcset="
+                              {{ block.settings.l_c_image | image_url: width: 2000 }} 2000w,
+                              {{ block.settings.l_c_image | image_url: width: 1500 }} 1500w,
+                              {{ block.settings.l_c_image | image_url: width: 1200 }} 1200w,
+                              {{ block.settings.l_c_image | image_url: width: 900 }} 900w"
+                    sizes="100vw"
+                    alt="{{ block.settings.l_c_image.alt | escape }}"
+                />
+              </picture>
+            {%- endif -%}
+          </div>
+        </div>
+      {%- when 'right_column' -%}
+        <div class="info-column__right right-column al-culture-right" {{ block.shopify_attributes }}>
+          <div class="right-column__image-container acr-image-container">
+            {%- if block.settings.r_c_image != blank -%}
+              <picture>
+                <source
+                        media="(min-aspect-ratio: 3/4) and (max-aspect-ratio: 5/4)"
+                        srcset="
+                              {{ block.settings.r_c_image | image_url: width: 1000 }} 1000w,
+                              {{ block.settings.r_c_image | image_url: width: 1500 }} 1500w"
+                        sizes="100vw"
+                />
+
+                <source
+                        media="(max-aspect-ratio: 3/4)"
+                        srcset="
+                              {{ block.settings.r_c_image | image_url: width: 750 }} 750w,
+                              {{ block.settings.r_c_image | image_url: width: 1125 }} 1125w,
+                              {{ block.settings.r_c_image | image_url: width: 1200 }} 1200w"
+                        sizes="100vw"
+                />
+
+                <img
+                        srcset="
+                              {{ block.settings.r_c_image | image_url: width: 2000 }} 2000w,
+                              {{ block.settings.r_c_image | image_url: width: 1500 }} 1500w,
+                              {{ block.settings.r_c_image | image_url: width: 1200 }} 1200w,
+                              {{ block.settings.r_c_image | image_url: width: 900 }} 900w"
+                        sizes="100vw"
+                        alt="{{ block.settings.r_c_image.alt | escape }}"
+                />
+              </picture>
+            {%- endif -%}
+          </div>
+          <div class="right-column__text-container acr-text-container">
+            {{ block.settings.r_c_text }}
+          </div>
+          <div class="right-column__text-container right-column__text-container_mobile acl-text-container">
+            {{ block.settings.r_c_text_mob }}
+          </div>
+        </div>
+      {%- endcase -%}
+      {%- endfor -%}
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Columns with info",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 32
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_mobile_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 24
+    }
+  ],
+  "max_blocks": 2,
+  "blocks": [
+    {
+      "type": "left_column",
+      "name": "Left column",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "l_c_text",
+          "default": "<p>Left column text.</p>",
+          "label": "Left column text"
+        },
+        {
+          "type": "richtext",
+          "id": "l_c_text_mob",
+          "default": "<p>Left column text mobile.</p>",
+          "label": "Left column text (mobile)",
+          "info": "Will be displayed on mobile devices"
+        },
+        {
+          "type": "image_picker",
+          "id": "l_c_image",
+          "label": "Left column image"
+        }
+      ]
+    },
+    {
+      "type": "right_column",
+      "name": "Right column",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "r_c_text",
+          "default": "<p>Right column text.</p>",
+          "label": "Right column text"
+        },
+        {
+          "type": "richtext",
+          "id": "r_c_text_mob",
+          "default": "<p>Right column text mobile.</p>",
+          "label": "Right column text (mobile)",
+          "info": "Will be displayed on mobile devices"
+        },
+        {
+          "type": "image_picker",
+          "id": "r_c_image",
+          "label": "Right column image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Columns with info"
+    }
+  ]
+}
+{% endschema %}

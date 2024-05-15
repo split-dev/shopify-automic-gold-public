@@ -1,0 +1,406 @@
+{% comment %}
+Rich snippets (itemscope, itemtype, etc.) for products are a theme requirement,
+and allow search engines to easily understand what the content is.
+
+For more information on these Scheme.org tags, visit:
+- http://schema.org/docs/gs.html
+{% endcomment %}
+
+{% comment %} Google Variant Price Fix {% endcomment %}
+
+<!-- Copyright FeedArmy 2022 Version 3.14 -->
+<!-- FeedArmy tutorial found at https://feedarmy.com/kb/shopify-microdata-for-google-shopping/ -->
+
+<!-- CODE SETTINGS START -->
+<!-- CODE SETTINGS START -->
+
+<!-- Please add your alpha2 code, you can find it here: https://help.shopify.com/en/api/custom-storefronts/storefront-api/reference/enum/countrycode -->
+{%- assign fa_product_id_alpha2_code = 'US' -%}
+
+<!-- set your product id values are default, product_id, parent_id, sku-->
+{%- assign parent_id = 'default' -%}
+
+<!-- CODE SETTINGS END -->
+<!-- CODE SETTINGS END -->
+
+<!-- ==================================== -->
+<!-- DO NOT EDIT ANYTHING BELOW THIS LINE -->
+
+{% if product.title contains 'Free Travel Case'%}
+<script>
+    window.location.href = '/products/travel-case'
+</script>
+{% endif %}
+
+{%- if template contains 'product' -%}
+
+{%- assign fa_current_variant = product.selected_or_first_available_variant -%}
+{%- assign fa_variant_count = product.variants | size -%}
+{%- assign fa_count = 0 -%}
+
+{%- if fa_product_id == 'default' -%}
+{%- capture fa_product_id_value -%}shopify_{{ fa_product_id_alpha2_code }}_{{ product.id }}_{{ fa_current_variant.id }}{%- endcapture -%}
+{%- elsif fa_product_id == 'product_id' -%}
+{%- capture fa_product_id_value -%}{{ fa_current_variant.id }}{%- endcapture -%}
+{%- elsif fa_product_id == 'parent_id' -%}
+{%- capture fa_product_id_value -%}{{product.id }}{%- endcapture -%}
+{%- elsif fa_product_id == 'sku' -%}
+{%- capture fa_product_id_value -%}{{ fa_current_variant.sku | escape }}{%- endcapture -%}
+{%- endif -%}
+
+{%- if cart.currency.iso_code == 'GBP' or cart.currency.iso_code == 'USD' or cart.currency.iso_code == 'AUD' or cart.currency.iso_code == 'AED' or cart.currency.iso_code == 'CAD' or cart.currency.iso_code == 'BWP' or cart.currency.iso_code == 'BND' or cart.currency.iso_code == 'DOP' or cart.currency.iso_code == 'GTQ' or cart.currency.iso_code == 'HKD' or cart.currency.iso_code == 'INR' or cart.currency.iso_code == 'ILS' or cart.currency.iso_code == 'YEN' or cart.currency.iso_code == 'KES' or cart.currency.iso_code == 'KOR' or cart.currency.iso_code == 'LBP' or cart.currency.iso_code == 'MYR' or cart.currency.iso_code == 'MXN' or cart.currency.iso_code == 'NPR' or cart.currency.iso_code == 'NZD' or cart.currency.iso_code == 'NIO' or cart.currency.iso_code == 'NGN' or cart.currency.iso_code == 'PKR' or cart.currency.iso_code == 'CNY' or cart.currency.iso_code == 'PHP' or cart.currency.iso_code == 'SGD' or cart.currency.iso_code == 'LKR' or cart.currency.iso_code == 'CHF' or cart.currency.iso_code == 'TWD' or cart.currency.iso_code == 'TSH' or cart.currency.iso_code == 'THB' or cart.currency.iso_code == 'UGX' or cart.currency.iso_code == 'KWD' or cart.currency.iso_code == 'CLP' or cart.currency.iso_code == 'BHD' -%}
+{%- assign fa_product_price = fa_current_variant.price | money_without_currency | remove:',' -%}
+{%- else -%}
+{%- assign fa_product_price = fa_current_variant.price | money_without_currency | remove:'.' | replace: ',', '.' -%}
+{%- endif -%}
+
+
+<script type="application/ld+json" data-creator_name="FeedArmy">
+{
+  "@context": "http://schema.org/",
+  "@type": "Product",
+  "@id": {{ canonical_url | json }},
+  "name": "{{ product.title | strip_html | escape }}",
+  "url": "{{ shop.url }}{{ product.url }}",
+  "sku": "{{fa_product_id_value}}",
+  {%- if product.variants.first.barcode.size == 12 -%}
+    "gtin12": {{ product.variants.first.barcode }},
+  {%- endif -%}
+  {%- if product.variants.first.barcode.size == 13 -%}
+    "gtin13": {{ product.variants.first.barcode }},
+  {%- endif -%}
+  {%- if product.variants.first.barcode.size == 14 -%}
+    "gtin14": {{ product.variants.first.barcode }},
+  {%- endif -%}
+    "productID": "{{ product.id }}",
+  "brand": {
+    "@type": "Brand",
+    "name": "{{ product.vendor | escape }}"
+  },
+  "description": {{ product.description | strip_html | json }},
+  "image": "https:{{ product.featured_image.src | img_url: '1500x1500' }}",
+  {%- if product.variants -%}
+  {%- assign fa_count = fa_count | plus: 1 -%}
+    "offers":
+      {
+        "@type" : "Offer",
+        "priceCurrency": "{{ cart.currency.iso_code }}",
+        "price": "{{ fa_product_price }}",
+        "itemCondition" : "http://schema.org/NewCondition",
+        "availability" : "http://schema.org/{% if fa_current_variant.available %}InStock{% else %}OutOfStock{% endif %}",
+        "url" : "{{ shop.url }}{{ fa_current_variant.url }}",
+            {%- if fa_current_variant.image -%}
+              {%- assign variant_image_size = fa_current_variant.image.width | append: 'x' -%}
+              "image": "https:{{ fa_current_variant.image.src | img_url: variant_image_size }}",
+            {%- else -%}
+              "image": "https:{{ product.featured_image.src | img_url: '1500x1500' }}",
+            {%- endif -%}
+            {%- if fa_current_variant.title != 'Default Title' -%}
+              "name" : "{{ product.title | strip_html | escape }} - {{ fa_current_variant.title | escape }}",
+            {%- else -%}
+              "name" : "{{ product.title | strip_html | escape }}",
+            {%- endif -%}
+            {%- if fa_current_variant.barcode.size == 12 -%}
+              "gtin12": {{ fa_current_variant.barcode }},
+            {%- endif -%}
+            {%- if fa_current_variant.barcode.size == 13 -%}
+              "gtin13": {{ fa_current_variant.barcode }},
+            {%- endif -%}
+            {%- if fa_current_variant.barcode.size == 14 -%}
+              "gtin14": {{ fa_current_variant.barcode }},
+            {%- endif -%}
+			         "sku": "{{fa_product_id_value}}",
+            {%- if product.description != blank -%}
+            "description" : {{ product.description | strip_html | json }},
+            {%- endif -%}
+          "priceValidUntil": "{{ 'now' | date: '%s' | plus: 31536000 | date: '%Y-%m-%d' | uri_encode | replace:'+','%20' }}"
+      }
+    {%- if product.variants.size > 1 -%},
+      "additionalProperty": [{
+        "@type": "PropertyValue",
+        "propertyID": "item_group_id",
+        "value": "{{ product.id }}"
+      }]
+      {%- endif -%}
+    {%- if product.metafields.spr.reviews -%}
+    {%- assign fa_rating = product.metafields.spr.reviews | split: '"reviewCount": "' | last | split: '"' | first | plus: 0 -%}
+    {%- if fa_rating > 0 -%}
+    ,"aggregateRating": {
+     "@type": "AggregateRating",
+     "ratingValue": {{ product.metafields.spr.reviews | split: '"ratingValue": "' | last | split: '"' | first | plus: 0 }},
+     "ratingCount": {{ product.metafields.spr.reviews | split: '"reviewCount": "' | last | split: '"' | first | plus: 0 }}
+    }
+    {%- endif -%}
+    {%- endif -%}
+  {%- endif -%}
+}
+</script>
+{%- endif -%}
+<!-- Copyright FeedArmy 2022 Version 3.14 -->
+
+
+{% comment %} Get first variant, or deep linked one {% endcomment %}
+{% assign current_variant = product.selected_or_first_available_variant %}
+
+<div itemscope itemtype="http://schema.org/Product" id="ProductWrapper" class="{{ product.handle }}">
+
+    <meta itemprop="url" content="{{ shop.url }}{{ product.url }}">
+    <meta itemprop="image" content="{{ product.featured_image.src | img_url: 'grande' }}">
+    <meta itemprop="brand" content="Automic Gold">
+    <meta itemprop="material" content="Solid 14k Gold">
+    <span class="visually-hidden" itemprop="name">{{ product.title }}</span>
+
+    <div class="product">
+        <div class="page-width">
+            {% include 'breadcrumb' %}
+        </div>
+
+        <div class="page-width product-heroine no--mobile-padding no--tablet-padding">
+
+            <div class="product-images">
+                {% include "product-images" %}
+            </div>
+
+            <div class="product-plate">
+
+                <div itemprop="offers" itemscope itemtype="http://schema.org/Offer" style="width: 100%;">
+                    <meta itemprop="priceCurrency" content="USD">
+                    <meta itemprop="url" content="{{ product.url }}">
+                    <link itemprop="availability" href="http://schema.org/InStock">
+
+                    <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm" class="product-plate__section">
+                        <div class="product-header">
+                            <div class="product-header__column">
+                                {% if
+                                    product.handle == 'disk-earrings' or
+                                    product.handle == 'disk-charm' or
+                                    product.handle == 'disk-necklace' or
+                                    product.handle == 'disk-ring'
+                                %}
+                                    <div class="online-exclusive-container">
+                                        <div class="online-exclusive">automicgold.com exclusive</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if
+                                    product.handle == 'times-up-studs' or
+                                    product.handle == 'times-up-earring'
+                                %}
+                                    <div class="online-exclusive-container">
+                                        <div class="online-exclusive">30% of sales goes to TIME'S UP</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if
+                                    product.handle == 'one-of-a-kind-diamond-necklace'
+                                %}
+                                    <div class="one-of-a-kind-container">
+                                        <div class="one-of-a-kind-text">One of a kind item</div>
+                                        <div class="one-of-a-kind-small">
+                                            This design is the only one in the world
+                                        </div>
+                                    </div>
+                                {% endif %}
+
+                                <h1 class="product-header__title">
+                                    {{ product.title }}
+                                </h1>
+
+                                {% if product.handle == 'chain-ring-set' %}
+                                    <p class="product__option-ring-set">A set of four rings of the same size</p>
+                                {% endif %}
+                                
+                                {% comment %} {% if product.type == 'loose gem' %}
+                                    <div class="product-header__material">Loose Gem</div>
+                                {% endif %}{% endcomment %}
+
+                                {% if product.handle != 'ring-sizer' and product.type != 'Loose Gem' and product.title != 'Journal' and product.title != 'Platinum Sapphire Ring' and product.title != "Wide Hoop" and product.title != "Small Tube Hoop" and product.title != "Small Endless Hoop" and product.title != "Large Tube Hoop" and product.title != "Large Endless Hoop" and product.title != "Polishing Cloth" and product.title != "Travel Case" %}
+                                    <div class="product-header__material">Solid 14k Gold</div>
+                                {% endif %} 
+
+                                {% if product.tags contains 'hollow-hoop' %}
+                                    <div class="product-header__material">Hollow 14k Gold</div>
+                                {% endif %}
+
+                                {% if product.type == 'Loose Gem' %}
+                                    <div class="product-header__material">Loose Gem</div>
+                                {% endif %}
+                                
+                            </div>
+                            <span id="ProductPrice" class="product-header__price" itemprop="price" content="{{ current_variant.price | money_without_currency }}">
+                                <span class="product-header__price-sign">$</span>{{ current_variant.price | money_without_trailing_zeros | remove: "$"  }}
+                            </span>
+                        </div>
+                      
+                     {% comment %} NO RETURNS ON BODY JEWELRY {% endcomment %}
+                            {% if
+                                product.handle == 'circle-nose-stud' or
+                                product.handle == 'diamond-nose-stud' or
+                                product.handle == 'nose-ring-hoop' or
+                                product.handle == 'line-septum' or
+                                product.handle == 'triangle-septum' or
+                                product.handle == 'gemstone-septum' or
+                                product.handle == 'double-circle-septum' or 
+                                product.tags contains 'flatback' or
+                                product.tags contains 'piercing'
+                            %}
+                              
+                                <div class="product__return-notice highlighted">
+                                    Please note: All pierced jewelry is final sale for hygienic reasons.
+                                </div>
+                            {% endif %}
+                      
+
+                        {% render 'okendo-reviews-product-rating-summary', product: product %}
+
+                        {% include 'product-options' %}
+
+                        <select name="id" data-js="master-select" id="productSelect" class="visually-hidden">
+                            {% for variant in product.variants %}
+                                {% if variant.available %}
+                                    <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} data-sku="{{ variant.sku }}" value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money_with_currency }}</option>
+                                {% else %}
+                                    <option disabled="disabled">
+                                        {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+                                    </option>
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+
+                        <div class="buy-box">
+                            <button type="submit" name="add" id="AddToCart" data-js="add-to-cart" class="btn btn--wide buy-box__buy btn--swimming-pink-peach">
+                                <span id="AddToCartText">{{ 'products.product.add_to_cart' | t }}</span>
+                            </button>
+                        </div>
+
+                        <!-- <p class="affirm-as-low-as" data-page-type="product" data-affirm-color="white" data-amount="{{ current_variant.price }}"></p> -->
+
+                        {%- include 'afterpay' -%}
+
+                        {% if product.handle == 'ring-sizer' %}
+                            <div class="product__shipping-notice">
+                                Ships from New York City &bull; Processing time is 1 to 5 business days
+                            </div>
+                        {% elsif product.tags contains 'processing time' %}
+                            <div class="product__shipping-notice">
+                                Ships from New York City &bull; processing time is 4-8 business days &bull; Free returns (US only)
+                            </div>
+                        {% elsif product.tags contains 'made_to_order' %}
+                        <div class="product__shipping-notice">
+                            Ships from New York City &bull; processing time is 4-8 business days &bull; Free returns (US only)
+                        </div>
+                        {% else %}
+                            <div class="product__shipping-notice">
+                                Ships from New York City &bull; Processing time is 1 to 5 business days &bull; Free returns (US only)
+                            </div>
+                        {% endif %}
+                    </form>
+
+                    {% if product.handle == 'keeping-it-as-backup' %}
+                        <form id="BackorderForm" class="backorder">
+                            <p>
+                                <label for="backorder-email" class="backorder__text">We will notify you when this item becomes available</label>
+                            </p>
+                            <input type="hidden" id="backorder-title" value="{{ product.title }}">
+                            <input type="hidden" id="backorder-url" value="{{ shop.url }}{{ product.url }}">
+
+                            <p class="input-group backorder__group">
+                                <input id="backorder-email" class="backorder__input input-group-field" type="email" placeholder="Email address" value="{{ customer.email }}">
+                            </p>
+
+                            <input id="backorder-submit" class="backorder__button btn" type="submit" value="Notify me">
+
+                            <div class="backorder__message" id="backorder-message"></div>
+                        </form>
+                    {% endif %}
+
+                    <form id="BackorderForm" class="backorder" style="display: none">
+                        <label for="backorder-email" class="backorder__text">We will notify you when this item becomes available</label>
+                        <input type="hidden" id="backorder-title" value="{{ product.title }}">
+                        <input type="hidden" id="backorder-url" value="{{ shop.url }}{{ product.url }}">
+                        <div class="input-group backorder__group">
+                            <input id="backorder-email" class="backorder__input input-group-field" type="email" placeholder="Email address" value="{{ customer.email }}">
+                            <span class="input-group-btn">
+                                <input id="backorder-submit" class="backorder__button btn btn--small btn--peach-inverted" type="submit" value="Notify me">
+                            </span>
+                        </div>
+                        <div class="backorder__message" id="backorder-message"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <section class="product__description page-width">
+            {% if
+                product.handle == 'one-of-a-kind-diamond-necklace'
+            %}
+                <div class="one-of-a-kind-video">
+                    <video loop muted autoplay playsinline>
+                        <source src="//dfaankvzyirrl.cloudfront.net/website/shared/one-of-a-kind--diamond.mp4" type="video/mp4">
+                    </video>
+                </div>
+            {% endif %}
+
+            <h2 class="product__section-heading">The Deets</h2>
+
+            <div class="product__description-text rte" itemprop="description">
+                {{ product.description }}
+            </div>
+
+            <div class="product__specifications">
+                {% include 'product-specifications' %}
+            </div>
+            
+        </section>
+
+        <section class="wedding-sizes-size-preview">
+            {% if product.tags contains 'band_width' %}
+                {% include 'wedding-sizes' %}
+            {% endif %}
+        </section>
+
+        <section class="chain-lengths-size-preview">
+            {% if product.tags contains 'necklace' %}
+                {% include 'chain-lengths' %}
+            {% endif %}
+        </section>
+
+        <section class="charm-size-preview">
+            {% if product.tags contains 'charm' %}
+                {% include 'charm-size' %}
+            {% endif %}
+        </section>
+
+    {% if product.tags contains 'flatback' %}
+        <section class="flatback-module flatback-how-to-put-on spaced--twice">
+            <div class="molecule no--mobile-overlay">
+                <div class="text-block">
+                    <h2>How to Put On</h2>
+                    <p>
+                        Watch the video below to see how to wear your flatbacks!
+                    </p>
+
+                    <p>
+                        To put on: The tube goes into the piercing from behind, then you insert the stud into the tube. Hold flat back, twist and push stud into the tube
+                    </p>
+
+                    <p>
+                        To remove: Hold flat back, twist and pull stud from the tube
+                    </p>
+                </div>
+                
+                <div class="molecule__uhaul video-block">
+                    <span class="visually-hidden">Automic Gold flatback jewelry being put in a model's ear</span>
+                    <video loop muted autoplay playsinline class="flatback-example__video">
+                        <source src="https://cdn.shopify.com/videos/c/o/v/14de345f0cb34e44ac69c95af7802320.mov" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+    {% endif %}
+
+    {% render 'okendo-reviews-widget', product: product %}
+
+    {% include 'back-to-category' %}
+</div>
+

@@ -1,0 +1,59 @@
+{% comment %}
+    Square image: 1:1
+    Mobile image: 1500:1920
+    Desktop image: 2000x1180
+{% endcomment %}
+
+{% capture square_image %}{{ image }}--square.jpg{% endcapture %}
+{% capture mobile_image %}{{ image }}--mobile.jpg{% endcapture %}
+{% capture desktop_image %}{{ image }}--desktop.jpg{% endcapture %}
+
+<div class="page-cover">
+    <div class="no--padding">
+        <div class="cover">
+            <div class="cover__image">
+                <picture>
+                    {% comment %}iPad-like ratio, width to height ratio of 3/4 to 3/2 (square image){% endcomment %}
+                    <source
+                        srcset="
+                            {{ square_image | file_img_url: '1000x1000' }} 1000w,
+                            {{ square_image | file_img_url: '1500x1500' }} 1500w
+                        "
+                        sizes="100vw"
+                        media="(min-aspect-ratio: 3/4) and (max-aspect-ratio: 5/4)"
+                    />
+
+                    {% comment %}Narrow screens, up to width to height ratio of 3/2 (tall image){% endcomment %}
+                    <source
+                        srcset="
+                            {{ mobile_image | file_img_url: '750x960' }} 750w,
+                            {{ mobile_image | file_img_url: '1125x1440' }} 1125w,
+                            {{ mobile_image | file_img_url: '1200x1536' }} 1200w,
+                            {{ mobile_image | file_img_url: '1500x1920' }} 1500w
+                        "
+                        sizes="100vw"
+                        media="(max-aspect-ratio: 3/4)"
+                    />
+
+                    {% comment %}Ratios wider than width to height 3/2 (wide image){% endcomment %}
+                    <img
+                        srcset="
+                            {{ desktop_image | file_img_url: '2000x1179' }} 2000w,
+                            {{ desktop_image | file_img_url: '1500x884' }} 1500w,
+                            {{ desktop_image | file_img_url: '1200x707' }} 1200w,
+                            {{ desktop_image | file_img_url: '900x530' }} 900w
+                        "
+                        sizes="100vw"
+                        alt="{{ alt }}"
+                    />
+                </picture>
+            </div>
+
+            <div class="page-width cover__text cover__text-center">
+                <h1>{{ title }}</h1>
+
+                <p>{{ subtitle }}</p>
+            </div>
+        </div>
+    </div>
+</div>

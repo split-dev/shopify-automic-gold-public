@@ -1,0 +1,95 @@
+@import "../settings/variables";
+@import "../settings/bootstrap-media";
+
+.info-cards {
+    &__list {
+        display: flex;
+        width: auto;
+        margin: 0 calc(var(--page-width-x-paddings-mobile) * -1);
+        padding-left: var(--page-width-x-paddings-mobile);
+        @include media-breakpoint-down(sm) {
+            overflow-x: scroll;
+        }
+        @include media-breakpoint-up(sm) {
+            margin: 0 calc(var(--page-width-x-paddings-tablet) * -1);
+            padding-left: var(--page-width-x-paddings-tablet);
+        }
+        @include media-breakpoint-up(md) {
+            padding-left: 0;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0 calc(var(--page-width-x-paddings-mobile) / 2 * -1);
+        }
+        &-item {
+            flex: 0 0 314px;
+            margin: 0 calc(var(--page-width-x-paddings-mobile)) 0 0;
+            &:last-child {
+                @include media-breakpoint-up(sm) {
+                    margin: 0 var(--page-width-x-paddings-tablet) var(--page-width-x-paddings-mobile) 0;
+                }
+                @include media-breakpoint-up(md) {
+                    margin: 0 calc(var(--page-width-x-paddings-mobile) / 2) var(--page-width-x-paddings-mobile);
+                }
+            }
+            @include media-breakpoint-up(md) {
+                margin: 0 calc(var(--page-width-x-paddings-mobile) / 2) var(--page-width-x-paddings-mobile);
+                flex: 0 0 calc(33.33% - var(--page-width-x-paddings-mobile));
+            }
+            @include media-breakpoint-up(lg) {
+                flex: 0 0 calc(25% - var(--page-width-x-paddings-mobile));
+            }
+            &:not(.info-cards__list-item--info) {
+                text-align: center;
+            }
+            a {
+                color: rgb(var(--color-highlighted-elements));
+            }
+            &--info {
+                display: none;
+                @include media-breakpoint-up(lg) {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+                &.info-reversed {
+                    order: 2;
+                    text-align: right;
+                    a {
+                        margin-right: unset;
+                        margin-left: auto;
+                    }
+                }
+                .info-wrapper {
+                    max-width: 520px;
+                }
+                a {
+                    margin-right: auto;
+                }
+            }
+            img, svg {
+                display: block;
+                width: 100%;
+            }
+            img {
+                object-fit: cover;
+            }
+            .text-wrapper {
+                margin-top: 16px;
+            }
+        }
+    }
+    &__info {
+        margin-bottom: 16px;
+        @include media-breakpoint-up(lg) {
+            display: none;
+        }
+        &-btn {
+            display: flex;
+            justify-content: center;
+            margin-top: 24px;
+            @include media-breakpoint-up(lg) {
+                display: none;
+            }
+        }
+    }
+}

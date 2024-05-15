@@ -1,0 +1,219 @@
+{% assign hide_month = true %}
+{% assign is_collection_sorted = false %}
+{% if collection.sort_by and collection.sort_by != '' and collection.sort_by != 'manual' %}
+    {% assign is_collection_sorted = true %}
+{% endif %}
+
+{% comment %} <header class="page-cover no--padding engagement-header-mobile">
+    <div class="cover-wedding engagement-header-image-mobile">
+        <div class="cover__image engagement-cover-image">
+            <picture>
+                {% comment %}iPad-like ratio, width to height ratio of 3/4 to 5/4 (tall image){% endcomment %}
+                <source
+                    srcset="
+                        {{ 'Wedding-Banner-Aug2023.jpg' | file_img_url: '1000x1000' }} 1000w,
+                        {{ 'Wedding-Banner-Aug2023.jpg' | file_img_url: '1500x1500' }} 1500w,
+                        {{ 'Wedding-Banner-Aug2023.jpg' | file_img_url: '2000x2000' }} 2000w
+                    "
+                    sizes="100vw"
+                    media="(min-aspect-ratio: 3/4) and (max-aspect-ratio: 5/4)"
+                />
+                {% comment %}Narrow screens, up tp width to height ratio of 3/2 (square image){% endcomment %}
+                <source
+                    srcset="
+                        {{ 'Wedding-Banner-Aug2023.jpg' | file_img_url: '580x812' }} 580w,
+                        {{ 'Wedding-Banner-Aug2023.jpg' | file_img_url: '690x966' }} 690w,
+                        {{ 'Wedding-Banner-Aug2023.jpg' | file_img_url: '1035x1449' }} 1035w,
+                        {{ 'Wedding-Banner-Aug2023.jpg' | file_img_url: '1152x1613' }} 1152w,
+                        {{ 'Wedding-Banner-Aug2023.jpg' | file_img_url: '1416x1982' }} 1416w
+                    "
+                    sizes="100vw"
+                    media="(max-aspect-ratio: 3/4)"
+                />
+                {% comment %}Ratios wider than width to height 3/2 (wide image){% endcomment %}
+                <img
+                    srcset="
+                        {{ 'Wedding-Banner-Aug2023.jpg' | file_img_url: '2000x1280' }} 2000w,
+                        {{ 'Wedding-Banner-Aug2023.jpg' | file_img_url: '1538x984' }} 1538w,
+                        {{ 'Wedding-Banner-Aug2023.jpg' | file_img_url: '1384x886' }} 1384w,
+                        {{ 'Wedding-Banner-Aug2023.jpg' | file_img_url: '769x492' }} 769w
+                    "
+                    sizes="100vw"
+                    alt=""
+                />
+            </picture>
+        </div>
+    </div>
+    <div class="engagement-header-left">
+        <div class="engagement-header-text-container-mobile">
+            <div class="engagement-header-text page-width">
+                <h1 class="engagement-header-collection">Collection</h1>
+                <h1 class="engagement-header-engagement">Wedding</h1>
+                <p class="engagement-subheader">
+                    Automic Gold's own line of wedding rings that are ethically made, size inclusive and customizable.
+                </p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<header class="page-cover no--padding engagement-header-desktop wedding-header-desktop">
+    <div class="engagement-header-desktop-left">
+        <div class="engagement-header-text-container-desktop">
+            <div class="engagement-header-text wedding-header-text page-width">
+                <h1 class="engagement-header-collection">Collection</h1>
+                <h1 class="engagement-header-engagement">Wedding</h1>
+                <p class="engagement-subheader">
+                    Automic Gold's own line of wedding rings that are ethically made, size inclusive and customizable.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="wedding-header-desktop-right">
+        <div class="cover__image">
+            <picture>
+                {% comment %}iPad-like ratio, width to height ratio of 3/4 to 5/4 (tall image){% endcomment %}
+                <source
+                    srcset="
+                        {{ 'Wedding-Banner-Aug2023.jpg' | file_img_url: '1000x1000' }} 1000w,
+                        {{ 'Wedding-Banner-Aug2023.jpg' | file_img_url: '1500x1500' }} 1500w,
+                        {{ 'Wedding-Banner-Aug2023.jpg' | file_img_url: '2000x2000' }} 2000w
+                    "
+                    sizes="100vw"
+                    media="(min-aspect-ratio: 3/4) and (max-aspect-ratio: 5/4)"
+                />
+                {% comment %}Narrow screens, up tp width to height ratio of 3/2 (square image){% endcomment %}
+                <source
+                    srcset="
+                        {{ 'Wedding-Banner-Aug2023.jpg' | file_img_url: '580x812' }} 580w,
+                        {{ 'Wedding-Banner-Aug2023.jpg' | file_img_url: '690x966' }} 690w,
+                        {{ 'Wedding-Banner-Aug2023.jpg' | file_img_url: '1035x1449' }} 1035w,
+                        {{ 'Wedding-Banner-Aug2023.jpg' | file_img_url: '1152x1613' }} 1152w,
+                        {{ 'Wedding-Banner-Aug2023.jpg' | file_img_url: '1416x1982' }} 1416w
+                    "
+                    sizes="100vw"
+                    media="(max-aspect-ratio: 3/4)"
+                />
+                {% comment %}Ratios wider than width to height 3/2 (wide image){% endcomment %}
+                <img
+                    srcset="
+                        {{ 'Wedding-Banner-Aug2023.jpg' | file_img_url: '2000x1280' }} 2000w,
+                        {{ 'Wedding-Banner-Aug2023.jpg' | file_img_url: '1538x984' }} 1538w,
+                        {{ 'Wedding-Banner-Aug2023.jpg' | file_img_url: '1384x886' }} 1384w,
+                        {{ 'Wedding-Banner-Aug2023.jpg' | file_img_url: '769x492' }} 769w
+                    "
+                    sizes="100vw"
+                    alt=""
+                />
+            </picture>
+        </div>
+    </div>
+</header>
+
+<div class="collection-hat collection-hat-wedding">
+    <nav class="collection-navigation" style="margin-top: 24px;">
+        <ul>
+            <li><a href="{{ shop.url }}/collections/all">All</a></li>
+            <li><a href="{{ shop.url }}/collections/rings">Rings</a></li>
+            <li><a href="{{ shop.url }}/collections/earrings">Earrings</a></li>
+            <li><a href="{{ shop.url }}/collections/necklaces">Necklaces</a></li>
+            <li><a href="{{ shop.url }}/collections/bracelets">Bracelets</a></li>
+            <li><a href="{{ shop.url }}/collections/charms">Charms</a></li>
+            <li><a href="{{ shop.url }}/collections/body-jewelry">Body&nbsp;Jewelry</a></li>
+            <li class="active"><a href="{{ shop.url }}/collections/wedding">Wedding</a></li>
+        </ul>
+    </nav>
+</div> {% endcomment %}
+
+<div class="collection-header">
+    {% render 'collection-header', tag: 'wedding', name: 'Wedding', subheader: 'Automic Gold&#39;s own line of wedding rings that are ethically made, size inclusive and customizable.', alt: 'Close up view of a model&#39;s hand wearing several Automic Gold Wedding Rings stacked on each finger' %}
+</div>
+
+{% assign sizes = '
+    (max-width: 479px) calc((100vw - 30px) * 0.5),
+    (min-width: 480px) and (max-width: 767.98px) calc((100vw - 60px) * 0.5),
+    (min-width: 768px) and (max-width: 1199.98px) calc((100vw - 120px) * 0.5),
+    (min-width: 1200px) calc((100vw - 180px) * 0.5)'
+%}
+
+{% comment %} <div class="no--mobile-padding">
+    <nav class="collection-lineup">
+        <ul>
+            {% include 'collection-lineup', type: 'bracelets', tag: 'chain', name: 'Chains' %}
+            {% include 'collection-lineup', type: 'bracelets', tag: 'letter', name: 'Letters' %}
+            {% include 'collection-lineup', type: 'bracelets', tag: 'unique', name: 'Uniques' %}
+            {% include 'collection-lineup', type: 'bracelets', tag: 'stone', name: 'Stones' %}
+            {% include 'collection-lineup', type: 'bracelets', tag: 'anklet', name: 'Anklets' %}
+        </ul>
+    </nav>
+</div> {% endcomment %}
+
+<div class="collection-utils page-width">
+    {% include 'breadcrumb' %}
+    {% include 'collection-sorting' %}
+</div>
+
+{% paginate collection.products by 50 %}
+
+    <div class="pgrid collection-pgrid page-width">
+        {% for product in collection.products %}
+            {% include 'product-card' %}
+        {% endfor %}
+
+        {% if collection.image %}
+            <div class="collection-inline-image">
+                <img
+                    class="lazyload"
+                    data-srcset="
+                        {{ collection.image | img_url: '1242x1490' }} 1242w,
+                        {{ collection.image | img_url: '1152x1382' }} 1152w,
+                        {{ collection.image | img_url: '1035x1241' }} 1035w,
+                        {{ collection.image | img_url: '768x921' }} 768w,
+                        {{ collection.image | img_url: '600x720' }} 600w
+                    "
+                    sizes="
+                        (max-width: 479px) calc(100vw - 30px),
+                        (min-width: 480px) and (max-width: 767.98px) calc(100vw - 60px),
+                        (min-width: 768px) and (max-width: 1199.98px) calc((100vw - 120px - 15px) * 0.666667),
+                        (min-width: 1200px) calc((100vw - 180px - 30px) * 0.5)
+                    "
+                    alt="Various Automic Gold wedding bands of solid 14k yellow, white, rose, and champagne gold stacked in an almost-pyramid"
+                />
+            </div>
+        {% endif %}
+    </div>
+
+    {% if paginate.pages > 1 %}
+        <div class="collection-pagination pagination">
+            {{ paginate | default_pagination}}
+        </div>
+    {% endif %}
+
+{% endpaginate %}
+
+<section class="wedding-engraving page-width">
+    <div class="molecule no--mobile-overlay">
+        <div class="molecule__uhaul">
+            <span class="visually-hidden">Video showing engraving on Automic Gold wedding band</span>
+            <div>
+                <video class="content" loop muted autoplay playsinline>
+                    <source src="https://cdn.shopify.com/videos/c/o/v/960a8fbe11f143b79e647fa9be26e608.mov" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div class="molecule__text molecule__text--center">
+            <h3>Engraved & personal</h3>
+            <p>
+                Up to thirty characters can be engraved<br/>on the inside of the band.
+            </p>
+
+            <p>
+                Want to engrave something special<br/>inside or outside the ring?<br/>
+                <a href="{{ shop.url }}/pages/custom-orders">We can make it happen</a>.
+            </p>
+        </div>
+    </div>
+</section>
+
+{% include 'wedding-sizes' %}
+{% include 'book-appointment' %}

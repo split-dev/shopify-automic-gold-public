@@ -1,0 +1,74 @@
+{% assign is_collection_sorted = false %}
+{% if collection.sort_by and collection.sort_by != '' and collection.sort_by != 'manual' %}
+    {% assign is_collection_sorted = true %}
+{% endif %}
+
+<div class="collection-hat">
+    <nav class="collection-navigation">
+        <ul>
+            <li><a href="{{ shop.url }}/collections/all">All</a></li>
+            <li><a href="{{ shop.url }}/collections/rings">Rings</a></li>
+            <li><a href="{{ shop.url }}/collections/earrings">Earrings</a></li>
+            <li><a href="{{ shop.url }}/collections/necklaces">Necklaces</a></li>
+            <li><a href="{{ shop.url }}/collections/bracelets">Bracelets</a></li>
+            <li class="active"><a href="{{ shop.url }}/collections/charms">Charms</a></li>
+            <li><a href="{{ shop.url }}/collections/body-jewelry">Body&nbsp;Jewelry</a></li>
+            <li><a href="{{ shop.url }}/collections/wedding">Wedding</a></li>
+        </ul>
+    </nav>
+</div>
+
+<div class="page-width no--mobile-padding">
+    <nav class="collection-lineup collection-lineup--charms">
+        <ul>
+            {% include 'collection-lineup', type: 'charms', tag: 'stone', name: 'Stones' %}
+            {% include 'collection-lineup', type: 'charms', tag: 'unique', name: 'Uniques' %}
+            {% include 'collection-lineup', type: 'charms', tag: 'symbol', name: 'Symbols' %}
+            {% include 'collection-lineup', type: 'charms', tag: 'nature', name: 'Nature' %}
+            {% include 'collection-lineup', type: 'charms', tag: 'celestial', name: 'Celestial ' %}
+        </ul>
+    </nav>
+</div>
+
+<div class="collection-utils page-width">
+    {% include 'breadcrumb' %}
+    {% include 'collection-sorting' %}
+</div>
+
+{% paginate collection.products by 50 %}
+
+    <div class="pgrid collection-pgrid page-width">
+        {% for product in collection.products %}
+            {% include 'product-card' %}
+        {% endfor %}
+
+        {% if collection.image %}
+            <div class="collection-inline-image">
+                <img
+                    class="lazyload"
+                    data-srcset="
+                        {{ collection.image | img_url: '1242x1490' }} 1242w,
+                        {{ collection.image | img_url: '1152x1382' }} 1152w,
+                        {{ collection.image | img_url: '1035x1241' }} 1035w,
+                        {{ collection.image | img_url: '768x921' }} 768w,
+                        {{ collection.image | img_url: '600x720' }} 600w
+                    "
+                    sizes="
+                        (max-width: 479px) calc(100vw - 30px),
+                        (min-width: 480px) and (max-width: 767.98px) calc(100vw - 60px),
+                        (min-width: 768px) and (max-width: 1199.98px) calc((100vw - 120px - 15px) * 0.666667),
+                        (min-width: 1200px) calc((100vw - 180px - 30px) * 0.5)
+                    "
+                    alt="Close-up view of a model's ear wearing various Automic Gold hoops and ear cuff each with a unique 14k yellow gold charm"
+                />
+            </div>
+        {% endif %}
+    </div>
+
+    {% if paginate.pages > 1 %}
+        <div class="collection-pagination pagination">
+            {{ paginate | default_pagination}}
+        </div>
+    {% endif %}
+
+{% endpaginate %}

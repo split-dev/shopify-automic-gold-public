@@ -1,0 +1,183 @@
+{
+  "wrapper": "div#faq-wrapp",
+  "sections": {
+    "banner": {
+      "type": "faq-banner",
+      "settings": {
+        "image_desktop": "shopify:\/\/shop_images\/banner-faq.png",
+        "image_mobile": "shopify:\/\/shop_images\/banner-faq--mobile.png",
+        "title": "<p>Frequently Asked <\/p><p>Questions<\/p>"
+      }
+    },
+    "section_faq_list_mbXNzx": {
+      "type": "section-faq-list",
+      "custom_css": [
+
+      ],
+      "settings": {
+        "url": "shopify:\/\/pages\/faq"
+      }
+    },
+    "section_faq_list_NCFjKN": {
+      "type": "section-faq-hide-list",
+      "blocks": {
+        "item_UhwQfy": {
+          "type": "item",
+          "settings": {
+            "title": "Do you ship internationally?",
+            "text": "<p>Yes! We ship worldwide to many countries, including all of Canada and Mexico. We may collect duties and taxes at checkout depending on where we’re shipping to. <\/p>"
+          }
+        },
+        "item_9BYtbH": {
+          "type": "item",
+          "settings": {
+            "title": "Do you offer in person pick-ups?",
+            "text": "<p>Yep! <a href=\"mailto:care@automicgold.com\" target=\"_blank\" title=\"Automic Gold Customer Service Email\"><span style=\"text-decoration:underline\">Reach out<\/span><\/a> to arrange a pick-up.<\/p>"
+          }
+        },
+        "item_jjUd7h": {
+          "type": "item",
+          "settings": {
+            "title": "When will my order ship?",
+            "text": "<p>Usually 2-5 business days. Shipping may take longer than expected when we experience higher than normal order volumes (like during the holiday season). If you need your order sooner, please contact us to upgrade your shipping method (subject to extra fees).<\/p>"
+          }
+        },
+        "item_XT3R6x": {
+          "type": "item",
+          "settings": {
+            "title": "When will my custom order ship?",
+            "text": "<p>Please contact our <a href=\"mailto:custom@automicgold.com\" target=\"_blank\" title=\"Automic Gold Custom Email\"><span style=\"text-decoration:underline\">custom department<\/span> <\/a>for all custom-related questions.<\/p>"
+          }
+        },
+        "item_JfBWK6": {
+          "type": "item",
+          "settings": {
+            "title": "Can I check the status of my order?",
+            "text": "<p>If we shipped it already, check the shipping company for updates. If we haven’t, reach out to us with your order number.<\/p>"
+          }
+        },
+        "item_MTfWwM": {
+          "type": "item",
+          "settings": {
+            "title": "How do I track my ring size order?",
+            "text": "<p>Ring sizers don’t have a tracking number! We ship them as letter mail with a digital stamp. Let us know if you haven’t gotten your ring sizer after 2 weeks.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_UhwQfy",
+        "item_9BYtbH",
+        "item_jjUd7h",
+        "item_XT3R6x",
+        "item_JfBWK6",
+        "item_MTfWwM"
+      ],
+      "settings": {
+        "tab_name": "General"
+      }
+    },
+    "section_faq_list_QcMHtV": {
+      "type": "section-faq-hide-list",
+      "blocks": {
+        "item_MkAALh": {
+          "type": "item",
+          "settings": {
+            "title": "Do I need to sign for the delivery?",
+            "text": "<p>To protect your new jewelry, we automatically apply a signature delivery requirement for orders totaling $800+. For orders under $800, you can choose whether you want to sign for your package or not at checkout.<\/p>"
+          }
+        },
+        "item_DAW4GQ": {
+          "type": "item",
+          "settings": {
+            "title": "Do you offer shipping insurance?",
+            "text": "<p>We do! We automatically include <a href=\"https:\/\/route.com\/\" target=\"_blank\" title=\"Route Package Protection\"><span style=\"text-decoration:underline\">Route<\/span><\/a> package protection in your cart before you place your order. You can easily remove it, but we’re not responsible for lost, stolen, or damaged packages without Route protection. Check out their <a href=\"https:\/\/help.route.com\/hc\/en-us\/articles\/360041131194-Route-Package-Protection-Policies\" target=\"_blank\" title=\"Route FAQ\"><span style=\"text-decoration:underline\">FAQ<\/span><\/a> for more info.<\/p>"
+          }
+        },
+        "item_eAEkAH": {
+          "type": "item",
+          "settings": {
+            "title": "I think my package was stolen.",
+            "text": "<p>Please double-check with your neighbors, mail room, or front desk staff to see if anyone mistakenly received your package. If you placed your order using Route, please contact them for help. We’re not responsible for lost or stolen packages without Route.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_MkAALh",
+        "item_DAW4GQ",
+        "item_eAEkAH"
+      ],
+      "settings": {
+        "tab_name": "Security"
+      }
+    },
+    "section_faq_hide_list_eFFLWm": {
+      "type": "section-faq-hide-list",
+      "blocks": {
+        "item_kjDJ8t": {
+          "type": "item",
+          "settings": {
+            "title": "I accidentally shipped my order to the wrong\/old address! Can you send me another?",
+            "text": "<p>We’re not responsible for missing orders due to this mistake. Please make sure you give us the right address when you order, or reach out to us to cancel your order before we ship it out so that you can place a new order with the right address. <\/p>"
+          }
+        },
+        "item_cRy4Hk": {
+          "type": "item",
+          "settings": {
+            "title": "My package has been in transit for a long time.",
+            "text": "<p>Delays happen sometimes, especially during busy seasons! We have the same tracking information as you, so contact the shipping company for more direct updates. <\/p>"
+          }
+        },
+        "item_PFktGT": {
+          "type": "item",
+          "settings": {
+            "title": "My package says it was delivered but I didn’t receive it.",
+            "text": "<p>Shipping carriers often mark packages as “delivered” early; if it’s not there, it’ll most likely arrive within a business day. Reach out to the shipping company if your package still isn’t there after 4 business days.<\/p>"
+          }
+        },
+        "item_dXHGqU": {
+          "type": "item",
+          "settings": {
+            "title": "There was an attempted delivery. Can you reschedule a new delivery\/pick-up time for me?",
+            "text": "<p>You’ll have to contact the shipping company. <\/p>"
+          }
+        },
+        "item_4D8aQt": {
+          "type": "item",
+          "settings": {
+            "title": "I paid for priority\/express shipping and my order hasn’t shipped yet.",
+            "text": "<p>Our business hours are Monday, Tuesday, Thursday, and Friday from 9AM-5PM EST, excluding holidays. Orders placed after business hours will be processed the next business day.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_kjDJ8t",
+        "item_cRy4Hk",
+        "item_PFktGT",
+        "item_dXHGqU",
+        "item_4D8aQt"
+      ],
+      "settings": {
+        "tab_name": "Delivery Issues"
+      }
+    },
+    "faq-custom": {
+      "type": "faq-custom-text",
+      "settings": {
+        "text_1": "<p>Have any more questions? Email us <a href=\"mailto:care@automicgold.com\" target=\"_blank\" title=\"Automic Gold customer service email\">care@automicgold.com<\/a><\/p>",
+        "text_2": "<p>Have any more questions? Email us.<br\/><a href=\"mailto:care@automicgold.com\" target=\"_blank\" title=\"Automic Gold customer service email\">care@automicgold.com<\/a><\/p>",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "padding_top_mb": 24,
+        "padding_bottom_mb": 24
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "section_faq_list_mbXNzx",
+    "section_faq_list_NCFjKN",
+    "section_faq_list_QcMHtV",
+    "section_faq_hide_list_eFFLWm",
+    "faq-custom"
+  ]
+}

@@ -1,0 +1,60 @@
+<section class="charm-size {{ template | handle }}">
+    <div class="charm-size-text-container">
+        <h2>
+            Charm Size
+        </h2>
+        <p>
+            Our charm sizes come in various lengths and width. <br/> See our side by side comparison to see our most popular charm and how they compare to everyday items. 
+        </p>
+    </div>
+    <div class="charm-size-image-container">
+            <img
+                class="lazyload content"
+                src="{{ 'loading-image.png' | file_img_url: '414x517', crop: 'center' }}"
+                data-srcset="
+                    {{ 'charm-size-2mm.png' | file_img_url: '414x517' }} 414w,
+                    {{ 'charm-size-2mm.png' | file_img_url: '690x862' }} 690w,
+                    {{ 'charm-size-2mm.png' | file_img_url: '500x625' }} 500w,
+                    {{ 'charm-size-2mm.png' | file_img_url: '1000x1250' }} 1000w
+                "
+                sizes="
+                    (max-width: 479px) calc((100vw - 30px) * 0.5),
+                    (min-width: 480px) and (max-width: 767.98px) calc((100vw - 60px) * 0.5),
+                    (min-width: 768px) and (max-width: 1199.98px) calc((100vw - 120px) * 0.25),
+                    (min-width: 1200px) calc((100vw - 180px) * 0.25)
+                "
+                alt=""/>
+            <img
+                class="lazyload content"
+                src="{{ 'loading-image.png' | file_img_url: '414x517', crop: 'center' }}"
+                data-srcset="
+                    {{ 'charm-size-3mm.png' | file_img_url: '414x517' }} 414w,
+                    {{ 'charm-size-3mm.png' | file_img_url: '690x862' }} 690w,
+                    {{ 'charm-size-3mm.png' | file_img_url: '500x625' }} 500w,
+                    {{ 'charm-size-3mm.png' | file_img_url: '1000x1250' }} 1000w
+                "
+                sizes="
+                    (max-width: 479px) calc((100vw - 30px) * 0.5),
+                    (min-width: 480px) and (max-width: 767.98px) calc((100vw - 60px) * 0.5),
+                    (min-width: 768px) and (max-width: 1199.98px) calc((100vw - 120px) * 0.25),
+                    (min-width: 1200px) calc((100vw - 180px) * 0.25)
+                "
+                alt=""/>
+            <img
+                class="lazyload content"
+                src="{{ 'loading-image.png' | file_img_url: '414x517', crop: 'center' }}"
+                data-srcset="
+                    {{ 'charm-size-13mm.png' | file_img_url: '414x517' }} 414w,
+                    {{ 'charm-size-13mm.png' | file_img_url: '690x862' }} 690w,
+                    {{ 'charm-size-13mm.png' | file_img_url: '500x625' }} 500w,
+                    {{ 'charm-size-13mm.png' | file_img_url: '1000x1250' }} 1000w
+                "
+                sizes="
+                    (max-width: 479px) calc((100vw - 30px) * 0.5),
+                    (min-width: 480px) and (max-width: 767.98px) calc((100vw - 60px) * 0.5),
+                    (min-width: 768px) and (max-width: 1199.98px) calc((100vw - 120px) * 0.25),
+                    (min-width: 1200px) calc((100vw - 180px) * 0.25)
+                "
+                alt=""/>
+    </div> 
+</section>

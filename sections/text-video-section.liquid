@@ -1,0 +1,129 @@
+{% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
+{{ 'text-video.out.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+.section-{{ section.id }}-padding {
+  padding-top: {{ section.settings.padding_top_mb }}px;
+  padding-bottom: {{ section.settings.padding_bottom_mb }}px;
+}
+
+@media screen and (min-width: 768px) {
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+}
+{%- endstyle -%}
+
+
+<div class="text-video section-{{ section.id }}-padding page-width {% if section.settings.show_mob != true %}hide-mobile{% endif %}">
+    <div class="text-video__wrapper">
+        <div class="text-video__left">
+            {% if section.settings.title != blank %}
+                <div class="text-video__title">
+                    <h2>{{ section.settings.title }}</h2>
+                </div>
+            {% endif %}
+            {% if section.settings.video != blank %}
+              <div class="text-video__video text-video__video--mobile">
+                  {{ section.settings.video }}
+              </div>
+          {% endif %}
+            {% if section.settings.desc != blank %}
+                <div class="text-video__desc">
+                    {{ section.settings.desc }}
+                </div>
+            {% endif %}
+        </div>
+        <div class="text-video__right">
+          {% if section.settings.video != blank %}
+              <div class="text-video__video">
+                  {{ section.settings.video }}
+              </div>
+          {% endif %}
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Text and video section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title text"
+    },
+    {
+      "type": "richtext",
+      "id": "desc",
+      "label": "Description text"
+    },
+    {
+        "type": "liquid",
+        "id": "video",
+        "label": "Add youtube video iframe"
+    },
+    {
+      "type": "header",
+      "content": "Mobile settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_mob",
+      "label": "Display mobile",
+      "default": true
+    },
+    {
+        "type": "header",
+        "content": "Section space"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 260,
+        "step": 5,
+        "unit": "px",
+        "label": "Padding top desktop",
+        "default": 80
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 260,
+        "step": 5,
+        "unit": "px",
+        "label": "Padding bottom desktop",
+        "default": 80
+      },
+      {
+        "type": "range",
+        "id": "padding_top_mb",
+        "min": 0,
+        "max": 120,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding top mobile",
+        "default": 80
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom_mb",
+        "min": 0,
+        "max": 120,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding bottom mobile",
+        "default": 80
+      }
+  ],
+  "presets": [
+    {
+    "name": "Text and video section"
+    }
+]
+}
+{% endschema %}

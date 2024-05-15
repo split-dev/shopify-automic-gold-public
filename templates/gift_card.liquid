@@ -1,0 +1,233 @@
+<!-- /templates/gift_card.liquid -->
+{% layout none %}
+
+{% assign formatted_initial_value = gift_card.initial_value | money_without_trailing_zeros: gift_card.currency %}
+{% assign formatted_initial_value_stripped = formatted_initial_value | strip_html %}
+
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}" class="template-giftcard no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="google-site-verification" content="cdLjluOFa3B2tHwYzj34bNuvJw_aYIZ6CdVOMNlVduA" />
+        <meta name="google-site-verification" content="OR1MvbBxBHybGRh2Ul0Qvf11GcenSt_OtrPi5qzrcfA" />
+        <meta name="p:domain_verify" content="e3dfcd76dac99bb4a4abd6d50a8407a2"/>
+        <meta name="msvalidate.01" content="85AD6CEFB85D128B6F60BBF1DD8B0ADF" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,shrink-to-fit=no,user-scalable=no">
+        <meta name="theme-color" content="{{ settings.color_background }}">
+        <link rel="canonical" href="{{ canonical_url }}">
+
+        {%- if settings.favicon != blank -%}
+            <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+        {%- endif -%}
+
+        {%- unless settings.type_header_font.system? -%}
+            <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+        {%- endunless -%}
+
+        {%- assign formatted_balance = gift_card.balance | money_without_trailing_zeros | strip_html -%}
+
+        <title>{{ 'gift_cards.issued.title' | t: value: formatted_balance, shop: shop.name }}</title>
+
+        <meta name="description" content="{{ 'gift_cards.issued.subtext' | t }}">
+
+        {{ content_for_header }}
+
+        {% style %}
+            :root {
+                --page-width: {{ settings.page_width }}px;
+                --page-width-x-paddings-mobile: 16px;
+                --page-width-x-paddings-tablet: 30px;
+                --page-width-x-paddings-desktop: 50px;
+
+                --color-base-text: {{ settings.colors_text.red }}, {{ settings.colors_text.green }}, {{ settings.colors_text.blue }};
+                --color-base-background-1: {{ settings.colors_background_1.red }}, {{ settings.colors_background_1.green }}, {{ settings.colors_background_1.blue }};
+                --color-base-background-2: {{ settings.colors_background_2.red }}, {{ settings.colors_background_2.green }}, {{ settings.colors_background_2.blue }};
+                --color-highlighted-elements: {{ settings.highlighted_elements.red }}, {{ settings.highlighted_elements.green }}, {{ settings.highlighted_elements.blue }};
+            }
+        {% endstyle %}
+        
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" href="https://use.typekit.net/rra3jqy.css">
+
+        {{ 'timber.scss.css' | asset_url | stylesheet_tag }}
+        {{ 'automic.css' | asset_url | stylesheet_tag }}
+        {{ 'modernizr.gift-card.js' | shopify_asset_url | script_tag }}
+        {{ 'vendor/qrcode.js' | shopify_asset_url | script_tag }}
+    </head>
+
+    <body>
+        <div class="gift-card-wrapper">
+
+            <header class="logo" role="banner">
+                <a class="no--underline" title="{{ shop.name }} Homepage" href={{ shop.url }}>
+                    <div class="logo" itemscope itemtype="http://schema.org/Organization">
+                        <div class="logo__svg">
+                            {% include 'svg_logo' %}
+                        </div>
+                        <div class="logo__text">
+                            <div class="logo__line-one">Automic<br/>Gold</div>
+                        </div>
+                        <span class="visually-hidden" role="name">Automic Gold</span>
+                        <span class="visually-hidden" role="alternateName">Automic</span>
+                        <meta itemprop="name" content="Automic Gold">
+                        <meta itemprop="url" content="{{ shop.url }}">
+                        <meta itemprop="logo" content="https:{{ 'Logo.png' | file_img_url: 'master' }}">
+                        <meta itemprop="sameAs" content="https://www.instagram.com/automicgold/">
+                        <meta itemprop="sameAs" content="https://www.facebook.com/automicgold/">
+                        <meta itemprop="sameAs" content="https://twitter.com/automicgold/">
+                        <meta itemprop="sameAs" content="https://snapchat.com/automicgold/">
+                        <meta itemprop="sameAs" content="https://www.pinterest.com/weareautomicgold/">
+                        <meta itemprop="sameAs" content="https://www.linkedin.com/company/automicgold/">
+                        <meta itemprop="sameAs" content="https://www.youtube.com/channel/UCOMGpLYg3hBOR2eeMhrWS_A">
+                        <meta itemprop="sameAs" content="https://plus.google.com/109169377875773006327">
+                        <meta itemprop="email" content="care@automicgold.com">
+                    </div>
+                </a>
+            </header>
+
+            <main class="giftcard" role="main">
+
+                <div class="giftcard__header">
+                    <h2 class="giftcard__title">
+                        <div class="giftcard__title-top">HERE'S YOUR</div>
+                        <div class="giftcard__title-bottom">Gift Card!</div>
+                    </h2>
+
+                    {% unless gift_card.enabled %}
+                        <span class="giftcard__tag">{{ 'gift_cards.issued.disabled' | t }}</span>
+                    {% endunless %}
+
+                    {% assign gift_card_expiry_date = gift_card.expires_on | date: "%d/%m/%y" %}
+                    {% if gift_card.expired and gift_card.enabled %}
+                        <span class="giftcard__tag">{{ 'gift_cards.issued.expired' | t: expiry: gift_card_expiry_date }}</span>
+                    {% endif %}
+
+                    {% if gift_card.expired != true and gift_card.expires_on and gift_card.enabled %}
+                        <span class="giftcard__tag giftcard__tag--active">{{ 'gift_cards.issued.active' | t: expiry: gift_card_expiry_date }}</span>
+                    {% endif %}
+                </div>
+
+                <div class="giftcard__wrap">
+                    <div class="planets">
+                        <div class="planets__orbit">
+                            <div class="planets__body"></div>
+                        </div>
+                        <div class="planets__orbit">
+                            <div class="planets__body"></div>
+                        </div>
+                        <div class="planets__orbit">
+                            <div class="planets__body">
+                                <div class="planets__moon-orbit">
+                                    <div class="planets__moon-body"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="planets__orbit">
+                            <div class="planets__body"></div>
+                        </div>
+                        <div class="planets__orbit">
+                            <div class="planets__body">
+                                <div class="planets__moon-orbit">
+                                    <div class="planets__moon-body"></div>
+                                </div>
+                                <div class="planets__moon-orbit">
+                                    <div class="planets__moon-body"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="giftcard__ribbon">
+                        <img
+                            srcset="
+                                    {{ 'gift-card-ribbon.png' | file_img_url: '202x734' }} 202w,
+                                    {{ 'gift-card-ribbon.png' | file_img_url: '303x1101' }} 303w
+                                "
+                            sizes="101px"
+                            alt="Gift card ribbon"
+                        />
+                    </div>
+
+                    <div class="giftcard__text">
+                        <div class="giftcard__name">Automic Gold</div>
+
+
+                        {% assign initial_value_size = formatted_initial_value | size %}
+                        <div class="giftcard__amount{% if initial_value_size > 6 %} giftcard__amount--medium{% endif %}">
+                            {% if gift_card.balance != gift_card.initial_value %}
+                                <span class="tooltip">
+                                    <span class="tooltip__label">{{ gift_card.balance | money }} <small>left</small></span>
+                                </span>
+                            {% endif %}
+                            <strong>{{ formatted_initial_value }}</strong>
+                        </div>
+
+                        <p class="giftcard__instructions">
+                            {{ 'gift_cards.issued.redeem' | t }}
+                        </p>
+
+                        {% assign code_size = gift_card.code | format_code | size %}
+                        <div class="giftcard__code{% if code_size <= 25 %} giftcard__code--large{% elsif code_size > 25 and code_size <= 30 %} giftcard__code--medium{% else %} giftcard__code--small{% endif %}" onclick="selectText('GiftCardDigits');">
+                            <div class="giftcard__code__inner">
+                                <strong class="giftcard__code__text" id="GiftCardDigits">{{ gift_card.code | format_code }}</strong>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="giftcard__actions">
+                    <a href="{{ shop.url }}" class="btn btn--swimming-pink-peach btn--large btn--wide" target="_blank">{{ 'gift_cards.issued.shop_link' | t }}</a>
+                </div>
+
+                <div class="giftcard__qr">
+                    <div class="giftcard__qr-text">
+                        Or, use this QR code to redeem card in-person at one of our stores.
+                    </div>
+
+                    <div id="QrCode"></div>
+                </div>
+            </main>
+
+            <footer class="giftcard__footer" role="contentinfo">
+                {% if gift_card.pass_url %}
+                    <a class="add-to-apple-wallet" href="{{ gift_card.pass_url }}">
+                        <img src="{{ 'gift-card/add-to-apple-wallet.svg' | shopify_asset_url }}" width="120" height="40" alt="{{ 'gift_cards.issued.add_to_apple_wallet' | t }}">
+                    </a>
+                {% endif %}
+            </footer>
+
+            <script>
+                new QRCode(document.getElementById('QrCode'), {
+                    text: "{{ gift_card.qr_identifier }}",
+                    width: 120,
+                    height: 120
+                });
+            </script>
+        </div>
+
+        <script type="text/javascript">
+            /*============================================================================
+                Auto-select gift card code on click, based on ID passed to the function
+                    - Use a different method depending on IE or others
+            ==============================================================================*/
+            function selectText(element) {
+                var doc = document,
+                        text = doc.getElementById(element);
+
+                if (doc.body.createTextRange) { // ms
+                    var range = doc.body.createTextRange();
+                    range.moveToElementText(text);
+                    range.select();
+                } else if (window.getSelection) { // moz, opera, webkit
+                    var selection = window.getSelection(),
+                            range = doc.createRange();
+                    range.selectNodeContents(text);
+                    selection.removeAllRanges();
+                    selection.addRange(range);
+                }
+            }
+        </script>
+    </body>
+</html>

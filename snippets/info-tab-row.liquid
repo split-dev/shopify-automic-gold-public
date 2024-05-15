@@ -1,0 +1,8 @@
+<div class="flex-block">
+    <div class="image-block">
+        {{ image | image_url: width: 1160 | image_tag: widths: '375, 550, 750, 1100, 1500, 1160' }}
+    </div>
+    <div class="text-block">
+        {{ description }}
+    </div>
+</div>

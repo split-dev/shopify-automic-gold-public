@@ -1,0 +1,75 @@
+@import "../settings/variables";
+@import "../settings/bootstrap-media";
+
+.favorite-collections {
+  // .favorite-collections__header
+  &__header {
+    margin-bottom: 36px;
+  }
+
+  // .favorite-collections__title
+  &__title {
+    font-size: 25px;
+    line-height: 41px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+  }
+
+  // .favorite-collections__text
+  &__text {
+  }
+
+  // .favorite-collections__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    //display: flex;
+    //justify-content: center;
+    //align-items: center;
+    gap: 8px;
+
+    @include media-breakpoint-down(md) {
+      gap: 24px;
+    }
+  }
+}
+
+.collection-card {
+
+  // .collection-card__image
+  &__image {
+    position: relative;
+    line-height: 0;
+    margin-bottom: 24px;
+    img, svg {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+    img {
+      object-fit: cover;
+      aspect-ratio: 1 / 1;
+    }
+    svg {
+      fill: rgb(var(--color-highlighted-elements));
+    }
+  }
+
+  // .collection-card__image-text
+  &__image-text {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    font-size: 25px;
+    line-height: 41px;
+    text-transform: capitalize;
+    font-weight: 600;
+  }
+
+  // .collection-card__button
+  &__button {
+    text-transform: capitalize;
+  }
+}

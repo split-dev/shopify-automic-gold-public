@@ -1,0 +1,76 @@
+@import "../settings/variables";
+@import "../settings/bootstrap-media";
+
+.page-comfortable {
+    background: rgb(var(--color-base-background-2));
+}
+
+.text-with-img-btn {
+    &__inner  {
+        justify-content: space-between;
+
+        @include media-breakpoint-down(sm) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &__block {
+        flex: 1;
+        max-width: 368px;
+        margin-right: 20px;
+        &:last-child {
+            margin-right: 0;
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 0px;
+            }
+        }
+        @include media-breakpoint-down(sm) {
+            margin-right: 0;
+            margin-bottom: 20px;
+            max-width: unset;
+        }
+    }
+    &__first-text-group {
+        div:last-child {
+            *:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__first-text-group,
+    &__image {
+        margin-bottom: 24px !important;
+        @include media-breakpoint-up(md) {
+            height: clamp(142px, 18.5vw, 234px);
+        }
+    }
+    &__image {
+        position: relative;
+        line-height: 0;
+        img {
+            display: flex;
+            height: 100%;
+            object-fit: contain;
+            @include media-breakpoint-down(sm) {
+                max-width: 368px;
+                margin: 0 auto;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    &__title {
+        font-size: 32px;
+        font-weight: 600;
+        margin-bottom: 4px;
+        @include media-breakpoint-down(md) {
+            font-size: 25px;
+            margin-bottom: 16px;
+        }
+    }
+    &__text {
+        font-size: 16px;
+        font-weight: 350;
+        line-height: 32px;
+    }
+}

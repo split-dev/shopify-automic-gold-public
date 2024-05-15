@@ -1,0 +1,82 @@
+@import "../settings/variables";
+@import "../settings/bootstrap-media";
+
+.faq-grid {
+  max-width: 924px;
+  margin: auto;
+  padding: 0 var(--page-width-x-paddings-mobile);
+
+  @include media-breakpoint-up(sm) {
+    padding: 0 var(--page-width-x-paddings-tablet);
+  }
+  @include media-breakpoint-up(lg) {
+    padding: 0 var(--page-width-x-paddings-desktop);
+  }
+
+  @media (max-width: 374px) {
+    padding: 0 10px;
+  }
+  // .faq-grid__title
+
+  &__title {
+    text-align: center;
+    margin: 24px 0 9px;
+    p {
+      font-size: 25px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 32px;
+    }
+  }
+
+  &__block-title {
+    text-align: center;
+    line-height: 100% !important;
+  }
+
+  // .faq-grid__grid
+
+  &__grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: stretch;
+    grid-gap: 8px;
+    gap: 8px;
+    flex-wrap: wrap;
+    @include media-breakpoint-up(md) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  // .faq-grid__item
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #fce1e6;
+    padding: 23.5px 15px 10px 15px;
+    flex-basis: calc(50% - 8px);
+    @include media-breakpoint-up(md) {
+      flex: 1 1 0;
+    }
+
+    .btn {
+      min-height: 35px;
+      margin-top: auto;
+    }
+  }
+
+  // .faq-grid__text
+
+  &__text {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25.6px;
+    margin-bottom: 18px;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 55px;
+    }
+  }
+}

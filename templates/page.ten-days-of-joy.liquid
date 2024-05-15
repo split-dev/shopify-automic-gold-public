@@ -1,0 +1,188 @@
+<div class="page-cover no--mobile-padding">
+    <header class="tdj-heroine">
+        <div class="tdj-heroine__image">
+            <picture>
+                <source
+                    srcset="
+                        {{ 'tdj-heroine--mobile.jpg' | file_img_url: '412x560' }} 412w,
+                        {{ 'tdj-heroine--mobile.jpg' | file_img_url: '414x562' }} 414w,
+                        {{ 'tdj-heroine--mobile.jpg' | file_img_url: '690x937' }} 690w,
+                        {{ 'tdj-heroine--mobile.jpg' | file_img_url: '828x1125' }} 828w,
+                        {{ 'tdj-heroine--mobile.jpg' | file_img_url: '1035x1406' }} 1035w
+                    "
+                    sizes="100vw"
+                    media="(max-width: 767.98px)"
+                />
+                <img
+                    class="lazyload content"
+                    data-srcset="
+                        {{ 'tdj-heroine--desktop.jpg' | file_img_url: '412x677' }} 412w,
+                        {{ 'tdj-heroine--desktop.jpg' | file_img_url: '414x670' }} 414w,
+                        {{ 'tdj-heroine--desktop.jpg' | file_img_url: '828x1340' }} 828w,
+                        {{ 'tdj-heroine--desktop.jpg' | file_img_url: '1035x1675' }} 1035w
+                    "
+                    sizes="
+                        (min-width: 768px) and (max-width: 1152px) calc((100vw - 120px) * 0.33),
+                        (min-width: 1200px) calc((100vw - 180px) * 0.33)
+                    "
+                    alt="Automic Gold Ten Days of Joy"
+                />
+            </picture>
+        </div>
+        <div class="tdj-heroine__title">
+            <h1>
+                10<br/>
+                Days<br/>
+                of <span>Joy</span>
+            </h1>
+        </div>
+        <div class="tdj-heroine__descripton">
+            <h2>This holiday season, we are dropping a new item every&nbsp;day.</h2>
+            <p>Stay tuned and check back daily for&nbsp;new&nbsp;drops.</p>
+        </div>
+    </header>
+</div>
+
+{% assign sizes = '
+    (max-width: 479px) calc((100vw - 30px) * 0.5),
+    (min-width: 480px) and (max-width: 767.98px) calc((100vw - 60px) * 0.5),
+    (min-width: 768px) and (max-width: 1199.98px) calc((100vw - 120px) * 0.5),
+    (min-width: 1200px) calc((100vw - 180px) * 0.5)'
+%}
+
+{% assign hide_size = true %}
+{% assign hide_month = true %}
+
+<div class="tdj-calendar-container">
+    <div class="tdj-calendar">
+        <section class="tdj-calendar__day-container">
+            <div class="tdj-calendar__day tdj-calendar__day--opened tdj-snowflake">
+                <div class="tdj-calendar__counter">1</div>
+
+                <div class="tdj-calendar__product">
+                    {% include 'product-card', product: all_products.suspender-earring, sizes: sizes %}
+                </div>
+            </div>
+            <div class="tdj-calendar__date">December 2nd</div>
+        </section>
+
+        <section class="tdj-calendar__day-container">
+            <div class="tdj-calendar__day tdj-calendar__day--opened tdj-snowflake">
+                <div class="tdj-calendar__counter">2</div>
+
+                <div class="tdj-calendar__product small">
+                    {% include 'product-card', product: all_products.line-jacket, sizes: sizes %}
+                    {% include 'product-card', product: all_products.journey-jacket, sizes: sizes %}
+                    {% include 'product-card', product: all_products.open-circle-jacket, sizes: sizes %}
+                </div>
+            </div>
+            <div class="tdj-calendar__date">December 3rd</div>
+        </section>
+
+        <section class="tdj-calendar__day-container">
+            <div class="tdj-calendar__day tdj-calendar__day--opened tdj-snowflake">
+                <div class="tdj-calendar__counter">3</div>
+
+                <div class="tdj-calendar__product">
+                    {% include 'product-card', product: all_products.fuck-collar, sizes: sizes %}
+                </div>
+            </div>
+            <div class="tdj-calendar__date">December 4th</div>
+        </section>
+
+        <section class="tdj-calendar__day-container">
+            <div class="tdj-calendar__day tdj-calendar__day--opened tdj-snowflake">
+                <div class="tdj-calendar__counter">4</div>
+
+                <div class="tdj-calendar__product">
+                    {% include 'product-card', product: all_products.rainbow-earring, sizes: sizes %}
+                </div>
+            </div>
+            <div class="tdj-calendar__date">December 5th</div>
+        </section>
+
+        <section class="tdj-calendar__day-container">
+            <div class="tdj-calendar__day tdj-calendar__day--opened tdj-snowflake">
+                <div class="tdj-calendar__counter">5</div>
+
+                <div class="tdj-calendar__product small">
+                    {% include 'product-card', product: all_products.diamond-bar-earring, sizes: sizes %}
+                    {% include 'product-card', product: all_products.diamond-bar-necklace, sizes: sizes %}
+                </div>
+            </div>
+            <div class="tdj-calendar__date">December 6th</div>
+        </section>
+
+        <section class="tdj-calendar__day-container">
+            <div class="tdj-calendar__day tdj-calendar__day--opened tdj-snowflake">
+                <div class="tdj-calendar__counter">6</div>
+
+                <div class="tdj-calendar__product">
+                    {% include 'product-card', product: all_products.beaded-huggie, sizes: sizes %}
+                </div>
+            </div>
+            <div class="tdj-calendar__date">December 9th</div>
+        </section>
+
+        <section class="tdj-calendar__day-container">
+            <div class="tdj-calendar__day tdj-calendar__day--opened tdj-snowflake">
+                <div class="tdj-calendar__counter">7</div>
+
+                <div class="tdj-calendar__product">
+                    {% include 'product-card', product: all_products.pearl-dangle-earring, sizes: sizes %}
+                </div>
+            </div>
+            <div class="tdj-calendar__date">December 10th</div>
+        </section>
+
+        <section class="tdj-calendar__day-container">
+            <div class="tdj-calendar__day tdj-calendar__day--opened tdj-snowflake">
+                <div class="tdj-calendar__counter">8</div>
+
+                <div class="tdj-calendar__product small">
+                    {% include 'product-card', product: all_products.open-circle-ring, sizes: sizes %}
+                    {% include 'product-card', product: all_products.diamond-bar-ring, sizes: sizes %}
+                </div>
+            </div>
+            <div class="tdj-calendar__date">December 11th</div>
+        </section>
+
+        <section class="tdj-calendar__day-container">
+            <div class="tdj-calendar__day tdj-calendar__day--opened tdj-snowflake">
+                <div class="tdj-calendar__counter">9</div>
+
+                <div class="tdj-calendar__product small">
+                    {% include 'product-card', product: all_products.bar-necklace, sizes: sizes %}
+                    {% include 'product-card', product: all_products.sideways-initial-necklace, sizes: sizes %}
+                </div>
+            </div>
+            <div class="tdj-calendar__date">December 12th</div>
+        </section>
+
+        <section class="tdj-calendar__day-container">
+            <div class="tdj-calendar__day tdj-calendar__day--opened tdj-snowflake">
+                <div class="tdj-calendar__counter">10</div>
+
+                <div class="tdj-calendar__product">
+                    {% include 'product-card', product: all_products.mom-bracelet, sizes: sizes %}
+                </div>
+            </div>
+            <div class="tdj-calendar__date">December 13th</div>
+        </section>
+
+        <section class="tdj-calendar__day-container">
+            <div class="tdj-calendar__day tdj-landscape">
+            </div>
+            <div class="tdj-calendar__date">&nbsp;</div>
+        </section>
+
+        <div class="tdj-calendar__cta v-center">
+            <h3>Want to be up to date?</h3>
+            <p><a href="{{ shop.url }}/pages/subscribe">Subscribe</a> or follow us on ig: <a href="https://www.instagram.com/automicgold/">@automicgold</a></p>
+        </div>
+    </div>
+
+    <section class="tdj-callout text-center space-top-x3">
+        <a href="{{ shop.url }}/collections/all" class="btn btn--pink btn--wide">Shop all jewelry</a>
+    </section>
+</div>

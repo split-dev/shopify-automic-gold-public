@@ -1,0 +1,12 @@
+{%- if enable -%}
+    <a class="big-menu__promo" href="{{ link }}">
+        <span class="big-menu__promo-title">{{ title }}</span>
+        {%- if image != blank -%}
+            <div class="big-menu__promo-image">
+                {{ image | image_url: width: 400 | image_tag: widths: '200, 300, 400' }}
+            </div>
+        {%- endif -%}
+        <p class="big-menu__promo-content">{{ text }}</p>
+        {% comment %} <span class="big-menu__promo-cta">{{ sub_text }}</span> {% endcomment %}
+    </a>
+{%- endif -%}

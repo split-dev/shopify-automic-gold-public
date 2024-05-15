@@ -1,0 +1,72 @@
+{% style %}
+{%- if section.settings.image_mobile != blank -%}
+    @media (max-width: 749.98px) {
+        .section--{{ section.id }} .cover__image img {
+            object-position: {{ section.settings.image_mobile.presentation.focal_point }};
+        }
+    }
+{%- endif -%}
+{% endstyle %}
+
+<div class="page-cover section--{{ section.id }}">
+    <div class="cover wedding-header" style="position: absolute; width: 100%;">
+        <div class="cover__image">
+            <picture>
+                {%- if section.settings.image_mobile != blank -%}
+                  <source
+                    media="(max-width: 767.98px)"
+                    srcset="
+                      {%- if section.settings.image_mobile.width >= 375 -%}{{ section.settings.image_mobile | image_url: width: 375 }} 375w,{%- endif -%}
+                      {%- if section.settings.image_mobile.width >= 550 -%}{{ section.settings.image_mobile | image_url: width: 550 }} 550w,{%- endif -%}
+                      {%- if section.settings.image_mobile.width >= 750 -%}{{ section.settings.image_mobile | image_url: width: 750 }} 750w,{%- endif -%}
+                    ">
+                {%- endif -%}
+                {{ section.settings.image | image_url: width: 3840 | image_tag:
+                    width: imageWidth,
+                    height: imageHeight,
+                    sizes: '100vw',
+                    widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840' }}
+            </picture>
+        </div>
+
+        {%- if section.settings.text != blank -%}
+            <div class="page-width">
+                <div class="cover__text cover__text-center wedding-header__text">
+                    {{ section.settings.text }}
+                </div>
+            </div>
+        {%- endif -%}
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Cover image",
+    "tag": "section",
+    "disabled_on": {
+        "groups": ["header", "footer"]
+    },
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_mobile",
+            "label": "Mobile image"
+        },
+        {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text"
+        }         
+    ],
+    "presets": [
+        {
+            "name": "Cover image"
+        }
+    ]
+}
+{% endschema %}

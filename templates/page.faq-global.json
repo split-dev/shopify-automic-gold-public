@@ -1,0 +1,78 @@
+{
+  "sections": {
+    "banner": {
+      "type": "faq-banner",
+      "settings": {
+        "image_desktop": "shopify://shop_images/banner-faq.png",
+        "image_mobile": "shopify://shop_images/banner-faq--mobile.png",
+        "title": "<p>Frequently Asked </p><p>Questions</p>"
+      }
+    },
+    "grid": {
+      "type": "faq-global-grid",
+      "blocks": {
+        "item_mXerfH": {
+          "type": "item",
+          "settings": {
+            "title": "General",
+            "text": "<p>Everything to know about ordering, caring for and repairing your jewelry, as well as reaching out to us.</p>",
+            "url": "shopify://pages/faq-general",
+            "btn_text": "Learn More"
+          }
+        },
+        "item_GWAdkx": {
+          "type": "item",
+          "settings": {
+            "title": "Shipping & Delivery",
+            "text": "<p>Get peace of mind from your cart to your door.</p>",
+            "url": "shopify://pages/faq-shipping",
+            "btn_text": "Learn More"
+          }
+        },
+        "item_b3V6TW": {
+          "type": "item",
+          "settings": {
+            "title": "Returns",
+            "text": "<p>Not in love with your order? We can help.</p>",
+            "url": "shopify://pages/faq-returns",
+            "btn_text": "Learn More"
+          }
+        },
+        "item_bmbjK4": {
+          "type": "item",
+          "settings": {
+            "title": "Customs",
+            "text": "<p>Considering getting personalized jewelry? Place your order with confidence!</p>",
+            "url": "shopify://pages/faq-customs",
+            "btn_text": "Learn More"
+          }
+        }
+      },
+      "block_order": [
+        "item_mXerfH",
+        "item_GWAdkx",
+        "item_b3V6TW",
+        "item_bmbjK4"
+      ],
+      "settings": {
+        "title": "<p>How Can We Help You?</p>"
+      }
+    },
+    "faq-custom": {
+      "type": "faq-custom-text",
+      "settings": {
+        "text_1": "<p>Have any more questions? Email us <a href=\"mailto:care@automicgold.com\" title=\"mailto:care@automicgold.com\">care@automicgold.com</a></p>",
+        "text_2": "<p>Have any more questions? Email us.<br/><a href=\"mailto:care@automicgold.com\" title=\"mailto:care@automicgold.com\">care@automicgold.com</a></p>",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "padding_top_mb": 24,
+        "padding_bottom_mb": 24
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "grid",
+    "faq-custom"
+  ]
+}

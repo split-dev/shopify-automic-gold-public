@@ -1,0 +1,130 @@
+{{ 'featured-products.out.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+    .section--{{ section.id }} {
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+
+    @media screen and (min-width: 992px) {
+    .section--{{ section.id }} {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+{%- endstyle -%}
+
+<div class="featured-products">
+    <div class="page-width section--{{ section.id }}">
+      <div class="featured-products__container">
+        <h2 class="featured-products__title">{{ section.settings.title }}</h2>
+
+        <ul class="featured-products__list">
+          <div class="featured-products__wrapper swiper-wrapper">
+            {% comment %} {%- for product in collections['all'].products -%}
+              <li class="featured-products__item swiper-slide">
+                {% render 'card-product', card_product: product, show_secondary_image: true %}
+              </li>
+            {%- endfor -%} {% endcomment %}
+          </div>
+        </ul>
+
+        <a href="{{ section.settings.collection_link }}" class="featured-products__button btn">{{ section.settings.button_text }}</a>
+      </div>
+    </div>
+</div>
+
+<script>
+  (() => {
+    const target = document.querySelector('.section--{{ section.id }} .featured-products__wrapper'),
+    URL = '{{ section.settings.collection_link }}{% if section.settings.collection_link contains '?' %}&{% else %}?{% endif %}view=do-not-use-no-layout';
+    fetch(`${URL}`)
+      .then((res) => res.text())
+      .then((text) => {
+        const content = new DOMParser().parseFromString(text, 'text/html');
+        target.innerHTML = content.querySelector('#content').innerHTML;
+      });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Featured products",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "default": "New Arrivals!",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "collection_link",
+      "default": "/collections/all?sort_by=created-descending",
+      "label": "Collection link"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button title",
+      "default": "Browse our Newest Items"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 32
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_mobile_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 24
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured products"
+    }
+  ]
+}
+{% endschema %}

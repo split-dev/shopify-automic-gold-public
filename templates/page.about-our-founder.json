@@ -1,0 +1,295 @@
+{
+  "sections": {
+    "main": {
+      "type": "image-with-text",
+      "blocks": {
+        "d7d9e336-127d-4cff-91ec-e39fbc5ef7c1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/founed-al-new-image.jpg",
+            "full_screen_mob": false,
+            "title_1_mobile": "Meet The Founder",
+            "hide_title_1_mobile": false,
+            "title_2_mobile": "AL Sandimirova",
+            "hide_title_2_mobile": true,
+            "title_3_mobile": "they\/them",
+            "hide_title_3_mobile": true
+          }
+        },
+        "4a16f24e-25a9-422b-b5c2-3be30e90502d": {
+          "type": "text",
+          "settings": {
+            "title_1": "Meet The Founder",
+            "hide_title_1": true,
+            "title_2": "AL Sandimirova",
+            "hide_title_2": false,
+            "title_3": "they\/them",
+            "hide_title_3": false,
+            "text": "<p>AL Sandimirova is an indigenous, queer, non-binary refugee and Automic Gold’s founder, CEO, and jewelry designer. They’ve been working in the fine jewelry industry since 2009. They’re obsessed with small details, sustainable quality, and planning better systems for a post-capitalist future.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "d7d9e336-127d-4cff-91ec-e39fbc5ef7c1",
+        "4a16f24e-25a9-422b-b5c2-3be30e90502d"
+      ],
+      "settings": {
+        "first_starts_with": "image",
+        "text_alignment": "center",
+        "vertical_alignment": "center",
+        "padding_top": 0,
+        "padding_bottom": 20,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "50b2169a-365b-4651-9bf6-830b02a5524f": {
+      "type": "image-with-text",
+      "blocks": {
+        "3fb2d7fc-33ca-4baa-b211-5ff309db36d8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/AL_S_Photo.jpg",
+            "full_screen_mob": true,
+            "title_1_mobile": "",
+            "hide_title_1_mobile": false,
+            "title_2_mobile": "",
+            "hide_title_2_mobile": false,
+            "title_3_mobile": "Early Life And The Beginning Of Automic Gold",
+            "hide_title_3_mobile": false
+          }
+        },
+        "43420431-8c06-408a-b785-9eab414099c2": {
+          "type": "text",
+          "settings": {
+            "title_1": "",
+            "hide_title_1": false,
+            "title_2": "",
+            "hide_title_2": false,
+            "title_3": "Early Life And The Beginning Of Automic Gold",
+            "hide_title_3": true,
+            "text": "<p>AL is originally from Tatarstan, an independent republic of Russia. They came to the U.S. in 2009 as an LGBT refugee. They began their own business buying and repairing used gold and diamond jewelry and reselling them on eBay in 2011. In 2013, AL became certified in diamond grading through the GIA. They graduated from the Jewelry Arts Institute for jewelry making in 2015, and in 2016 completed the jewelry-making and stone-setting courses from Studio Jewelers LTD.<\/p><p>After 8 years in the industry, AL still couldn’t find jewelry for themself. Everything on the market was excessively feminine or obnoxiously masculine, so in 2015 they started making their own jewelry to fit their own genderqueer style. One of their first pieces was the <a href=\"https:\/\/www.automicgold.com\/search?q=threader\" target=\"_blank\" title=\"Automic Gold Threader\"><span style=\"text-decoration:underline\">threader<\/span><\/a>, driven by their desire to make something stylish and elevated, with good quality, sustainable materials, and without a high price tag. After their friends kept asking to buy AL’s self-designed jewelry, AL knew it was time to expand their shop. They launched the Automic Gold website in 2017.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "3fb2d7fc-33ca-4baa-b211-5ff309db36d8",
+        "43420431-8c06-408a-b785-9eab414099c2"
+      ],
+      "settings": {
+        "first_starts_with": "text",
+        "text_alignment": "left",
+        "vertical_alignment": "start",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "padding_top_mobile": 24,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "88a6d767-d5fa-4e8f-a270-2ab879637ae3": {
+      "type": "cards-with-info",
+      "blocks": {
+        "8a0a127a-a8cd-4085-86c5-6807306b3f69": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_7096.jpg"
+          }
+        },
+        "f2dc1994-03be-4fc7-905b-f04e4085b68f": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_7097_7e98f6fb-e7a1-4e41-9f41-06b07cdbb5b8.jpg"
+          }
+        },
+        "c66d4066-fe3e-4a3a-bf83-d385b1ec78ca": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_7098.jpg"
+          }
+        },
+        "0eaa9c58-9b1c-48b4-b64a-7659e081c47d": {
+          "type": "text",
+          "settings": {
+            "secondary_title": "The <a href=\"https:\/\/www.automicgold.com\/search?q=Tanlah\" target=\"_blank\" title=\"Automic Gold Tanlah Collection\"><strong>Tanlah Collection<\/strong><\/a> inspired by the Chavash culture.",
+            "description": "<p>AL is indigenous of Chavash descent (sometimes spelled as Chӑvash and the colonized spelling Chuvash). Chavash is one of almost 200 indigenous cultures colonized by Eastern Europeans in modern-day Russia. Growing up, they were taught to be ashamed of their heritage. “It was considered degrading to be Chavash,” AL says. <\/p><p>Being Chavash meant you were naive, stupid, and primitive. But historically, the Chavash people were kind, trusting, and trustworthy. Even the name ‘Chavash’ means ‘friendly’ or ‘peaceful’. As I grew up, I realized that these are all the qualities that make me special and I hope the world can see that being kind and caring is not a weakness. It is the future I hope we all can have. I hope I express this in not just the way I position myself, but also in the way I do business, the way I treat my employees, and the way I treat the environment, I think we can all benefit from kindness and community rather than from greed. Even though I grew up being ashamed, I am now proud to be Chavash. I embrace it and I try to celebrate it any chance I get.”<\/p>",
+            "description_mob": "<p>AL is indigenous of Chavash descent (sometimes spelled as Chӑvash and the colonized spelling Chuvash). Chavash is one of almost 200 indigenous cultures colonized by Eastern Europeans in modern-day Russia. Growing up, they were taught to be ashamed of their heritage. “It was considered degrading to be Chavash,” AL says. <\/p><p>Being Chavash meant you were naive, stupid, and primitive. But historically, the Chavash people were kind, trusting, and trustworthy. Even the name ‘Chavash’ means ‘friendly’ or ‘peaceful’. As I grew up, I realized that these are all the qualities that make me special and I hope the world can see that being kind and caring is not a weakness. It is the future I hope we all can have. I hope I express this in not just the way I position myself, but also in the way I do business, the way I treat my employees, and the way I treat the environment, I think we can all benefit from kindness and community rather than from greed. Even though I grew up being ashamed, I am now proud to be Chavash. I embrace it and I try to celebrate it any chance I get.”<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "8a0a127a-a8cd-4085-86c5-6807306b3f69",
+        "f2dc1994-03be-4fc7-905b-f04e4085b68f",
+        "c66d4066-fe3e-4a3a-bf83-d385b1ec78ca",
+        "0eaa9c58-9b1c-48b4-b64a-7659e081c47d"
+      ],
+      "settings": {
+        "title": "Heritage & Inspiration in Identity",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 26,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "65762600-300d-410c-8229-b4ae40bdbea0": {
+      "type": "columns-with-info",
+      "blocks": {
+        "fa980d75-3343-4a32-8c0c-f8f2c732b498": {
+          "type": "left_column",
+          "settings": {
+            "l_c_text": "<p>One of the ways AL celebrates their culture is through creating hand-crafted jewelry. The Chavash have understood metalsmithing and metal value for countless generations. They’re well-known for their crafts, most famously for their elaborate coin-covered garments passed down the matriarchal family line. These traditional outfits were used as wedding costumes, ceremonial and celebration attire, status symbols, and decoration. The coins were usually silver; only very wealthy families used gold.<\/p>",
+            "l_c_text_mob": "<p>One of the ways AL celebrates their culture is through creating hand-crafted jewelry. The Chavash have understood metalsmithing and metal value for countless generations. They’re well-known for their crafts, most famously for their elaborate coin-covered garments passed down the matriarchal family line. These traditional outfits were used as wedding costumes, ceremonial and celebration attire, status symbols, and decoration. The coins were usually silver; only very wealthy families used gold.<\/p>",
+            "l_c_image": "shopify:\/\/shop_images\/acl-image-1.jpg"
+          }
+        },
+        "b6ad0b1b-9b7a-4519-a247-8eb1dd8da406": {
+          "type": "right_column",
+          "settings": {
+            "r_c_text": "<p>Over time, the Chavash people suffered colonization, war, famine, and depression, forcing many Chavash to sell their prized traditional outfits and metalworks. Existing pieces are extremely rare and highly coveted. “I remember distinctly when I was a child when the ‘97 crisis hit, my family was discussing if they should sell our costume. In the end, they decided that it doesn’t matter how little we have—we were not gonna sell it. This was very rare. But now I can't get mine. I can’t get it through the Russian border and ship it here because it’s like a museum piece with how rare it is.”<\/p><p>The Chavash culture is also famous for intricate filigree carvings on their houses and incredibly detailed hand-stitched embroidery. AL designed their own symbol inspired by their heritage and the meaningful designs they grew up seeing. <\/p><p>“I wanted to bring those elements into my jewelry design. I created the <a href=\"https:\/\/www.automicgold.com\/search?q=tanlah\" target=\"_blank\" title=\"Automic Gold Tanlah Jewelry Collection\"><span style=\"text-decoration:underline\">Tanlah collection<\/span><\/a> to honor my culture but also to create a design anyone can wear. The symbol represents good and bad, that everything should be balanced in the world. This is a symbol I like to wear daily to remind me that if anything bad happens, there is always good around the corner. I hope it may inspire you too.”<\/p>",
+            "r_c_text_mob": "<p>Over time, the Chavash people suffered colonization, war, famine, and depression, forcing many Chavash to sell their prized traditional outfits and metalworks. Existing pieces are extremely rare and highly coveted. “I remember distinctly when I was a child when the ‘97 crisis hit, my family was discussing if they should sell our costume. In the end, they decided that it doesn’t matter how little we have—we were not gonna sell it. This was very rare. But now I can't get mine. I can’t get it through the Russian border and ship it here because it’s like a museum piece with how rare it is.”<\/p><p>The Chavash culture is also famous for intricate filigree carvings on their houses and incredibly detailed hand-stitched embroidery. AL designed their own symbol inspired by their heritage and the meaningful designs they grew up seeing. <\/p><p>“I wanted to bring those elements into my jewelry design. I created the <a href=\"https:\/\/www.automicgold.com\/search?q=tanlah\" target=\"_blank\" title=\"Automic Gold Tanlah Jewelry Collection\"><span style=\"text-decoration:underline\">Tanlah collection<\/span><\/a> to honor my culture but also to create a design anyone can wear. The symbol represents good and bad, that everything should be balanced in the world. This is a symbol I like to wear daily to remind me that if anything bad happens, there is always good around the corner. I hope it may inspire you too.”<\/p>",
+            "r_c_image": "shopify:\/\/shop_images\/acl-image-2.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "fa980d75-3343-4a32-8c0c-f8f2c732b498",
+        "b6ad0b1b-9b7a-4519-a247-8eb1dd8da406"
+      ],
+      "settings": {
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "padding_top_mobile": 24,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "rich_text_gQN4tU": {
+      "type": "rich-text",
+      "settings": {
+        "rich_text": "<p>Most information about the Chavash people has been destroyed or suppressed, with most surviving historical accounts traveling orally among a dwindling population. Luckily, not all was lost. While researching their indigenous roots, AL discovered the Chavash people once welcomed and revered gender variance.<\/p><p>AL tells us that <a href=\"https:\/\/www.instagram.com\/reel\/C12jyUmPqTq\/?igsh=MzRlODBiNWFlZA==\" target=\"_blank\" title=\"A retelling of a traditional Chavash gender-affirming story posted by Chavash Diaspora on Instagram\">traditionally<\/a>, if a Chavash child wanted to change their gender, their parents would take them by the hands and ride with them on a horse under a rainbow. Once they crossed the rainbow, the child’s gender would switch over. They also recall that people who blended masculine and feminine energies “were believed to be shamans, and the courage to do it was considered proof that God had blessed them with powers.”<\/p>",
+        "max_width": 1500,
+        "content_alignment": "left",
+        "content_alignment_mobile": "left",
+        "horizontal_alignment": "start",
+        "padding_top": 32,
+        "padding_bottom": 0,
+        "padding_top_mobile": 24,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "image_with_text_FYr9Eh": {
+      "type": "image-with-text",
+      "blocks": {
+        "image_kT96cy": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/our-founder.jpg",
+            "full_screen_mob": true,
+            "title_1_mobile": "",
+            "hide_title_1_mobile": false,
+            "title_2_mobile": "",
+            "hide_title_2_mobile": false,
+            "title_3_mobile": "Embracing Autism",
+            "hide_title_3_mobile": false
+          }
+        },
+        "text_TUrXFx": {
+          "type": "text",
+          "settings": {
+            "title_1": "",
+            "hide_title_1": false,
+            "title_2": "",
+            "hide_title_2": false,
+            "title_3": "Embracing Autism",
+            "hide_title_3": true,
+            "text": "<p>AL was diagnosed as autistic, which they’ve embraced as something that boosts their creativity and focus. “I think I need to thank autism for being a big part of my success. I’m obsessed with jewelry and design in the best ways, and it brings me joy to work on every small detail. I cannot imagine seeing the world in any other way.” They recently created the <a href=\"https:\/\/www.automicgold.com\/search?q=infinity\" target=\"_blank\" title=\"Automic Gold Infinity Jewelry Collection\"><span style=\"text-decoration:underline\">Infinity collection<\/span><\/a> as a tribute to the Autistic community.<\/p><p>Autism has influenced not just the Infinity collection but all of AL’s designs. Since they’ve always had sensory issues, a major part of Al’s creative process is making jewelry that won’t bother them. They make sure each product is thoroughly comfort-tested to provide the same sensory-safe experience to others.<\/p><p>For more about our company and our high-quality standards, check out <a href=\"https:\/\/www.automicgold.com\/pages\/about-us\" target=\"_blank\" title=\"About Automic Gold\"><span style=\"text-decoration:underline\">our about page<\/span>!<\/a><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "image_kT96cy",
+        "text_TUrXFx"
+      ],
+      "custom_css": [
+        ".image-with-text__text strong {font-size: 20px; display: block; line-height: 1.25;}"
+      ],
+      "settings": {
+        "first_starts_with": "image",
+        "text_alignment": "left",
+        "vertical_alignment": "start",
+        "padding_top": 16,
+        "padding_bottom": 32,
+        "padding_top_mobile": 8,
+        "padding_bottom_mobile": 24
+      }
+    },
+    "d0bf3a2d-abc5-418e-9130-d8171c075fef": {
+      "type": "pre-footer-links",
+      "blocks": {
+        "5ea95b4d-5773-4dd3-8e70-f7e4f4ae8d9c": {
+          "type": "left_column",
+          "settings": {
+            "l_c_title": "Press Links",
+            "l_c_text": "Check out the articles written about our Founder, AL Sandimirova."
+          }
+        },
+        "fe2598f6-b054-4ee9-91e8-a04d020d5ab2": {
+          "type": "right_column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/press-nonbinary.png",
+            "image_link": "https:\/\/nonbinary.wiki\/wiki\/Al_Sandimirova"
+          }
+        },
+        "52d364dd-1250-4a73-b13e-a746609cd588": {
+          "type": "right_column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/press-forbes.png",
+            "image_link": "https:\/\/www.forbes.com\/sites\/forbestheculture\/2021\/11\/20\/these-trans-entrepreneurs-of-color-are-closing-out-trans-awareness-week-with-messages-of-hope\/?sh=4f9ad9807260"
+          }
+        },
+        "ae78dc52-35fa-4163-ac06-f11aeb7fdb7e": {
+          "type": "right_column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/press-marshall.png",
+            "image_link": "https:\/\/www.themarshallproject.org\/we-are-witnesses\/immigration\/alena"
+          }
+        },
+        "91493b33-23d9-478d-b21a-1343e29a4c7a": {
+          "type": "right_column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/press-queer-asian-social-club.png",
+            "image_link": "https:\/\/www.queerasiansocialclub.com\/dis-orient-vol1-issue-4"
+          }
+        },
+        "36e9a5b1-022b-4f7f-b5b3-9da9385a7220": {
+          "type": "right_column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/press-ravishly.png",
+            "image_link": "https:\/\/www.ravishly.com\/yes-brands-can-be-radically-ethical-and-profitable"
+          }
+        }
+      },
+      "block_order": [
+        "5ea95b4d-5773-4dd3-8e70-f7e4f4ae8d9c",
+        "fe2598f6-b054-4ee9-91e8-a04d020d5ab2",
+        "52d364dd-1250-4a73-b13e-a746609cd588",
+        "ae78dc52-35fa-4163-ac06-f11aeb7fdb7e",
+        "91493b33-23d9-478d-b21a-1343e29a4c7a",
+        "36e9a5b1-022b-4f7f-b5b3-9da9385a7220"
+      ],
+      "settings": {
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 16
+      }
+    }
+  },
+  "order": [
+    "main",
+    "50b2169a-365b-4651-9bf6-830b02a5524f",
+    "88a6d767-d5fa-4e8f-a270-2ab879637ae3",
+    "65762600-300d-410c-8229-b4ae40bdbea0",
+    "rich_text_gQN4tU",
+    "image_with_text_FYr9Eh",
+    "d0bf3a2d-abc5-418e-9130-d8171c075fef"
+  ]
+}

@@ -1,0 +1,208 @@
+<section class="page-cover">
+    <div class="no--padding">
+        <header class="cover body-jewelry-header">
+            <div class="cover__image">
+                <picture>
+                    {% comment %}iPad-like ratio, width to height ratio of 3/4 to 5/4 (square image){% endcomment %}
+                    <source
+                        srcset="
+                            {{ 'body-jewelry-heroine--square.jpg' | file_img_url: '1000x1000' }} 1000w,
+                            {{ 'body-jewelry-heroine--square.jpg' | file_img_url: '1500x1500' }} 1500w
+                        "
+                        sizes="100vw"
+                        media="(min-aspect-ratio: 3/4) and (max-aspect-ratio: 5/4)"
+                    />
+
+                    {% comment %}Narrow screens, up tp width to height ratio of 3/2 (tall image){% endcomment %}
+                    <source
+                        srcset="
+                            {{ 'body-jewelry-heroine--mobile.jpg' | file_img_url: '750x960' }} 750w,
+                            {{ 'body-jewelry-heroine--mobile.jpg' | file_img_url: '1125x1440' }} 1125w,
+                            {{ 'body-jewelry-heroine--mobile.jpg' | file_img_url: '1200x2262' }} 1200w
+                        "
+                        sizes="100vw"
+                        media="(max-aspect-ratio: 3/4)"
+                    />
+
+                    {% comment %}Ratios wider than width to height 3/2 (wide image){% endcomment %}
+                    <img
+                        srcset="
+                            {{ 'body-jewelry-heroine--desktop.jpg' | file_img_url: '2000x1179' }} 2000w,
+                            {{ 'body-jewelry-heroine--desktop.jpg' | file_img_url: '1500x884' }} 1500w,
+                            {{ 'body-jewelry-heroine--desktop.jpg' | file_img_url: '1200x707' }} 1200w,
+                            {{ 'body-jewelry-heroine--desktop.jpg' | file_img_url: '900x530' }} 900w
+                        "
+                        sizes="100vw"
+                        alt="Automic Gold Sustainable Solid Gold Body Jewelry"
+                    />
+                </picture>
+            </div>
+
+            <div class="page-width">
+                <div class="cover__text body-jewelry-header__text">
+                    <h1 class="highlighted">Body<br/>jewelry</h1>
+                </div>
+            </div>
+        </header>
+    </div>
+</section>
+
+<nav id="scrollNav" class="spaced--twice  spaced--twice--body-jewelry scroll-navigation">
+    <ul>
+        <li class="scroll-item active" data-scroll="flatback">Flatbacks</li>
+        <li class="scroll-item" data-scroll="nose-piercings">Nose Piercings</li>
+        <li class="scroll-item" data-scroll="septum">Septum</li>
+        <li class="scroll-item" data-scroll="huggies">Huggies</li>
+        <li class="scroll-item" data-scroll="cuffs">Cuffs</li>
+    </ul>
+</nav>
+
+{% assign sizes = '
+    (max-width: 479px) calc((100vw - 30px) * 0.5),
+    (min-width: 480px) and (max-width: 767.98px) calc((100vw - 60px) * 0.5),
+    (min-width: 768px) and (max-width: 1199.98px) calc((100vw - 120px) * 0.5),
+    (min-width: 1200px) calc((100vw - 180px) * 0.5)'
+%}
+
+<section class="spaced--twice" data-anchor="flatback">
+    <div class="body-jewelry-category">
+        <h2 class="highlighted">Flatbacks</h2>
+        <p class="space-bottom-x1">Use the flatback to wear our new and old classic styles in various places.</p>
+    </div>
+
+    <div class="pgrid roomy">
+        {% include 'product-card', product: all_products.initial-flatback-piercing, sizes: sizes %}
+        {% include 'product-card', product: all_products.screw-flatback-piercing, sizes: sizes %}
+        {% include 'product-card', product: all_products.opal-flatback-piercing, sizes: sizes %} 
+        {% include 'product-card', product: all_products.snake-flatback-piercing, sizes: sizes %} 
+        
+        <div class='button-container desktop'>
+            <a href="{{ shop.url }}/collections/flatback" title="View All Flatbacks" class="btn">View Full Collection</a>
+        </div>
+    </div>
+    <a href="{{ shop.url }}/collections/flatback" title="View All Flatbacks" class="btn btn-mobile spaced">View Full Collection</a>
+</section>
+
+<section class="spaced--twice" data-anchor="nose-piercings">
+    <div class="body-jewelry-category">
+        <h2 class="highlighted">Nose piercings</h2>
+        <p class="space-bottom-x1">Decorate that lovely nose of yours.</p>
+    </div>
+
+    <div class="pgrid roomy">
+        {% include 'product-card', product: all_products.circle-nose-stud, sizes: sizes %}
+        {% include 'product-card', product: all_products.gemstone-nose-stud, sizes: sizes %}
+        {% include 'product-card', product: all_products.nose-ring-hoop, sizes: sizes %}
+    </div>
+</section>
+
+<section class="spaced--twice" data-anchor="septum">
+    <div class="body-jewelry-category">
+        <h2 class="highlighted">Septums</h2>
+        <p class="space-bottom-x1">Septums are available in both faux and pierced options.</p>
+    </div>
+
+    <div class="pgrid roomy">
+        {% include 'product-card', product: all_products.line-septum, sizes: sizes %}
+        {% include 'product-card', product: all_products.triangle-septum, sizes: sizes %}
+        {% include 'product-card', product: all_products.gemstone-septum, sizes: sizes %}
+        {% include 'product-card', product: all_products.double-circle-septum, sizes: sizes %}
+    </div>
+</section>
+
+<section class="spaced--twice" data-anchor="huggies">
+    <div class="body-jewelry-category">
+        <h2 class="highlighted">Huggies</h2>
+        <p class="space-bottom-x1">Fits any piercings on your body.</p>
+    </div>
+
+    <div class="pgrid roomy">
+        {% include 'product-card', product: all_products.mini-seamless-huggie-hoops, sizes: sizes %}
+        {% include 'product-card', product: all_products.small-seamless-huggie-hoops, sizes: sizes %}
+        {% include 'product-card', product: all_products.medium-seamless-huggie-hoops, sizes: sizes %}
+        {% include 'product-card', product: all_products.beaded-huggie, sizes: sizes %}
+    </div>
+</section>
+
+<div class="body-jewelry-break spaced--twice no--padding">
+    <hr class="body-jewelry-break__divider">
+
+    <div class="body-jewelry-break__text">
+        <div class="body-jewelry-break__header">Non piercing jewelry</div>
+        <p class="body-jewelry-break__description">Everyone can rock these cuties.</p>
+    </div>
+
+    <hr class="body-jewelry-break__divider">
+</div>
+
+<section class="spaced--twice" data-anchor="cuffs">
+    <div class="body-jewelry-category">
+        <h2 class="highlighted">Cuffs</h2>
+        <p class="space-bottom-x1">Cuffs hug your ear and are a brilliant way to add accents to any part of your ear from helix to earlobe.</p>
+    </div>
+
+    <div class="pgrid roomy">
+        {% include 'product-card', product: all_products.thick-cuff, sizes: sizes %}
+        {% include 'product-card', product: all_products.thick-cuff-with-chain, sizes: sizes %}
+        {% include 'product-card', product: all_products.line-cuff, sizes: sizes %}
+        {% include 'product-card', product: all_products.double-cuff, sizes: sizes %}
+        {% include 'product-card', product: all_products.line-cuff-with-chain, sizes: sizes %}
+    </div>
+</section>
+
+<section class="spaced--thrice body-jewelry-show">
+    <div class="body-jewelry-show__text">
+        <h3 class="highlighted">Show & Tell us</h3>
+        <p>Try out different ways to style your Cuff or Septum!</p>
+        <p>Tag us <a href="https://www.instagram.com/automicgold/" class="highlighted" target="_blank">@automicgold</a> on instagram to show how you style your jewelry!</p>
+    </div>
+
+    <img
+        class="lazyload"
+        data-srcset="
+            {{ 'body-jewelry-show-one.jpg' | file_img_url: '270x340' }} 270w,
+            {{ 'body-jewelry-show-one.jpg' | file_img_url: '540x680' }} 540w,
+            {{ 'body-jewelry-show-one.jpg' | file_img_url: '810x1020' }} 810w
+        "
+        sizes="
+            (max-width: 479px) calc((100vw - 30px) * 0.33),
+            (min-width: 480px) and (max-width: 767.98px) calc((100vw - 60px) * 0.33),
+            (min-width: 768px) and (max-width: 1199.98px) calc((100vw - 120px) * 0.25),
+            (min-width: 1200px) calc((100vw - 180px) * 0.25)'
+        "
+        alt="Example of Automic Gold Body Jewelry"/>
+
+    <img
+        class="lazyload"
+        data-srcset="
+            {{ 'body-jewelry-show-two.jpg' | file_img_url: '260x306' }} 260w,
+            {{ 'body-jewelry-show-two.jpg' | file_img_url: '520x612' }} 520w,
+            {{ 'body-jewelry-show-two.jpg' | file_img_url: '780x918' }} 780w
+        "
+        sizes="
+            (max-width: 479px) calc((100vw - 30px) * 0.33),
+            (min-width: 480px) and (max-width: 767.98px) calc((100vw - 60px) * 0.33),
+            (min-width: 768px) and (max-width: 1199.98px) calc((100vw - 120px) * 0.25),
+            (min-width: 1200px) calc((100vw - 180px) * 0.25)'
+        "
+        alt="Automic Gold Cuff"/>
+
+    <img
+        class="lazyload"
+        data-srcset="
+            {{ 'body-jewelry-show-three.jpg' | file_img_url: '260x260' }} 260w,
+            {{ 'body-jewelry-show-three.jpg' | file_img_url: '520x520' }} 520w,
+            {{ 'body-jewelry-show-three.jpg' | file_img_url: '780x780' }} 780w
+        "
+        sizes="
+            (max-width: 479px) calc((100vw - 30px) * 0.33),
+            (min-width: 480px) and (max-width: 767.98px) calc((100vw - 60px) * 0.33),
+            (min-width: 768px) and (max-width: 1199.98px) calc((100vw - 120px) * 0.25),
+            (min-width: 1200px) calc((100vw - 180px) * 0.25)'
+        "
+        alt="Automic Gold Septum"/>
+</section>
+
+<div class="spaced--twice text-center">
+    <a href="{{ shop.url }}/collections/earrings" class="btn btn--wide">Shop Earrings</a>
+</div>

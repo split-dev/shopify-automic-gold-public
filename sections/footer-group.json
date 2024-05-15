@@ -1,0 +1,73 @@
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "af0d2656-75df-481e-b40e-4074714b8d6e": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Support",
+            "menu": "footer-support-menu"
+          }
+        },
+        "7a34eb9f-0c10-4c58-9a00-a86686dcac3f": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Company",
+            "menu": "footer-company-menu"
+          }
+        },
+        "deae0004-fac9-4bc0-a1b6-458fd519d41b": {
+          "type": "text",
+          "settings": {
+            "heading": "Need Help?",
+            "subtext": "<p><a href=\"mailto:care@automicgold.com\" title=\"mailto:care@automicgold.com\">care@automicgold.com<\/a><\/p><p><a href=\"tel:888-992-8866\" title=\"tel:888-992-8866\">(1)888-992-8866<\/a><\/p>"
+          }
+        },
+        "0f537751-95db-43d3-83b1-e9664b975f83": {
+          "type": "brand_information",
+          "settings": {
+            "heading": "Subscribe",
+            "subtext": "<p>Never miss the latest from your favorite goldsmiths!<\/p>",
+            "show_social": true
+          }
+        }
+      },
+      "block_order": [
+        "af0d2656-75df-481e-b40e-4074714b8d6e",
+        "7a34eb9f-0c10-4c58-9a00-a86686dcac3f",
+        "deae0004-fac9-4bc0-a1b6-458fd519d41b",
+        "0f537751-95db-43d3-83b1-e9664b975f83"
+      ],
+      "settings": {
+        "margin_top": 0,
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "2618c081-f593-4c8b-b430-5aab0813766c": {
+      "type": "rich-text",
+      "custom_css": [
+        "a {color: rgb(var(--color-highlighted-elements));}",
+        ".section-rich-text {background-color: rgb(var(--color-base-background-2));}"
+      ],
+      "settings": {
+        "rich_text": "<p>Automic Gold is a <a href=\"\/pages\/queer-owned-business\" target=\"_blank\" title=\"Queer Owned & Operated Business\">queer,<\/a> trans-owned fine jewelry company that creates timeless, genderless pieces. Working only with <a href=\"\/pages\/sustainable-fine-jewelry\" target=\"_blank\" title=\"Ethical and environmental commitment\">sustainable<\/a> and durable materials, we handcraft our jewelry in recycled solid 14k gold and platinum with reclaimed and\/or ethically sourced diamonds and gemstones. Each piece is handmade in NYC by our expert jewelers and designed with <a href=\"\/pages\/comfortable-jewelry\" target=\"_blank\" title=\"Comfortable Jewelry\">comfort<\/a> and <a href=\"\/pages\/size-inclusive-jewelry\" target=\"_blank\" title=\"The Only Size Inclusive Fine Jewelry Brand\">inclusivity<\/a> in mind. From <a href=\"\/collections\/rings\" target=\"_blank\" title=\"Rings\">everyday rings<\/a> to <a href=\"\/collections\/engagement\" target=\"_blank\" title=\"Engagement\">engagement rings<\/a> we are still the only fine jewelry brand to carry inclusive sizes from 2-16. We create a wide range of high-quality jewelry from chic <a href=\"https:\/\/www.automicgold.com\/collections\/earrings\/stud\" target=\"_blank\" title=\"Automic Gold Stud Earrings\">stud earrings<\/a>, versatile <a href=\"\/collections\/charms\" target=\"_blank\" title=\"Charms\">charms<\/a>, and <a href=\"https:\/\/www.automicgold.com\/collections\/necklaces\/chain\" target=\"_blank\" title=\"Automic Gold Chains\">classic chains<\/a>, to our signature pieces like our <a href=\"https:\/\/www.automicgold.com\/collections\/earrings\/threader\" target=\"_blank\" title=\"Automic Gold Threader Earrings\">threaders<\/a> and <a href=\"https:\/\/www.automicgold.com\/search?q=Tanlah\" target=\"_blank\" title=\"Automic Gold Tanlah Jewelry Collection\">Tanlah collection<\/a>. We can also help you create <a href=\"\/collections\/nameplates\" target=\"_blank\" title=\"Custom Letter Collection\">nameplates<\/a> and <a href=\"\/pages\/custom-orders\" target=\"_blank\" title=\"Custom Jewelry Orders\">custom<\/a> jewelry to fit your unique and personal style.<\/p>",
+        "max_width": 1500,
+        "content_alignment": "left",
+        "content_alignment_mobile": "left",
+        "horizontal_alignment": "start",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "padding_top_mobile": 24,
+        "padding_bottom_mobile": 24
+      }
+    }
+  },
+  "order": [
+    "footer",
+    "2618c081-f593-4c8b-b430-5aab0813766c"
+  ]
+}

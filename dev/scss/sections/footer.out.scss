@@ -1,0 +1,141 @@
+@import "../settings/variables";
+@import "../settings/bootstrap-media";
+
+.footer {
+    background: rgb(var(--color-base-background-2));
+    overflow: hidden;
+    &__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-row: auto;
+      grid-gap: 24px;
+      margin: 0 auto;
+      @include media-breakpoint-up(lg) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    h3 {
+      margin-bottom: 10px;
+    }
+    a {
+      text-decoration: none;
+    }
+    p, a {
+      margin-bottom: 0;
+    }
+    &__linklist {
+      list-style: none;
+      margin: 0;
+      a {
+        display: block;
+        padding: 6px 0;
+        margin-bottom: 0 !important;
+        text-decoration: none;
+      }
+    }
+    &__block {
+      &--text,
+      &--subscribe {
+        @include media-breakpoint-down(sm) {
+          grid-column-start: span 2;
+        }
+        a {
+          text-decoration: underline;
+          color: rgb(var(--color-highlighted-elements));
+        }
+      }
+      &--subscribe {
+        @include media-breakpoint-up(md) {
+          text-align: left;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: nowrap;
+        }
+        form {
+          max-width: 400px;
+          margin-top: 15px;
+          position: relative;
+          @include media-breakpoint-up(md) {
+            margin-top: 30px;
+          }
+          &:after {
+            content: "";
+            display: block;
+            height: 2px;
+            background-color: rgb(var(--color-base-text));
+            margin-top: 2px;
+          }
+          div {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: auto;
+            grid-gap: 15px;
+            input, .btn {
+              height: 100%;
+              border: none;
+              text-transform: none;
+              background-color: transparent;
+            }
+            input {
+              padding-left: 0;
+              cursor: text;
+              outline: none;
+              color: rgb(var(--color-base-text));
+              &::placeholder {
+                color: rgb(var(--color-base-text));
+              }
+            }
+            .btn {
+              padding-right: 0;
+              box-shadow: none;
+              color: rgb(var(--color-base-text));
+              &:hover {
+                color: rgb(var(--color-highlighted-elements));
+              }
+            }
+          }
+          .form-success {
+            width: 100%;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+          }
+        }
+        .list-social {
+          display: flex;
+          flex-wrap: wrap;
+          margin-top: 18px;
+          li {
+            &:not(:last-child) {
+              margin-right: 30px;
+            }
+            a {
+              display: block;
+              width: 44px;
+              height: 44px;
+              margin: 0;
+              text-decoration: none;
+              svg {
+                width: 100%;
+                height: 100%;
+                color: rgb(var(--color-base-text));
+                margin: 0;
+                transition: all 0.3s ease;
+                @media (hover: hover) {
+                  &:hover {
+                    color: rgb(var(--color-highlighted-elements));
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &__copyright {
+      font-size: 12px;
+      text-align: center;
+      opacity: 0.5;
+      padding-top: 24px;
+  }
+}

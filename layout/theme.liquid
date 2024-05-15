@@ -1,0 +1,869 @@
+<!doctype html>
+<html class="no-js" lang="{{ request.locale.iso_code }}">
+  <head>
+    <!-- Start VWO Async SmartCode -->
+    <link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com">
+    <script type="text/javascript" id="vwoCode">
+      window._vwo_code ||
+        (function () {
+          var account_id = 836000,
+            version = 2.0,
+            settings_tolerance = 2000,
+            hide_element = 'body',
+            hide_element_style = 'opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important',
+            /* DO NOT EDIT BELOW THIS LINE */
+            f = false,
+            w = window,
+            d = document,
+            v = d.querySelector('#vwoCode'),
+            cK = '_vwo_' + account_id + '_settings',
+            cc = {};
+          try {
+            var c = JSON.parse(localStorage.getItem('_vwo_' + account_id + '_config'));
+            cc = c && typeof c === 'object' ? c : {};
+          } catch (e) {}
+          var stT = cc.stT === 'session' ? w.sessionStorage : w.localStorage;
+          code = {
+            use_existing_jquery: function () {
+              return typeof use_existing_jquery !== 'undefined' ? use_existing_jquery : undefined;
+            },
+            library_tolerance: function () {
+              return typeof library_tolerance !== 'undefined' ? library_tolerance : undefined;
+            },
+            settings_tolerance: function () {
+              return cc.sT || settings_tolerance;
+            },
+            hide_element_style: function () {
+              return '{' + (cc.hES || hide_element_style) + '}';
+            },
+            hide_element: function () {
+              return typeof cc.hE === 'string' ? cc.hE : hide_element;
+            },
+            getVersion: function () {
+              return version;
+            },
+            finish: function () {
+              if (!f) {
+                f = true;
+                var e = d.getElementById('_vis_opt_path_hides');
+                if (e) e.parentNode.removeChild(e);
+              }
+            },
+            finished: function () {
+              return f;
+            },
+            load: function (e) {
+              var t = this.getSettings(),
+                n = d.createElement('script'),
+                i = this;
+              if (t) {
+                n.textContent = t;
+                d.getElementsByTagName('head')[0].appendChild(n);
+                if (!w.VWO || VWO.caE) {
+                  stT.removeItem(cK);
+                  i.load(e);
+                }
+              } else {
+                n.fetchPriority = 'high';
+                n.src = e;
+                n.type = 'text/javascript';
+                n.onerror = function () {
+                  _vwo_code.finish();
+                };
+                d.getElementsByTagName('head')[0].appendChild(n);
+              }
+            },
+            getSettings: function () {
+              try {
+                var e = stT.getItem(cK);
+                if (!e) {
+                  return;
+                }
+                e = JSON.parse(e);
+                if (Date.now() > e.e) {
+                  stT.removeItem(cK);
+                  return;
+                }
+                return e.s;
+              } catch (e) {
+                return;
+              }
+            },
+            init: function () {
+              if (d.URL.indexOf('__vwo_disable__') > -1) return;
+              var e = this.settings_tolerance();
+              w._vwo_settings_timer = setTimeout(function () {
+                _vwo_code.finish();
+                stT.removeItem(cK);
+              }, e);
+              var t = d.currentScript,
+                n = d.createElement('style'),
+                i = this.hide_element(),
+                r = t && !t.async && i ? i + this.hide_element_style() : '',
+                c = d.getElementsByTagName('head')[0];
+              n.setAttribute('id', '_vis_opt_path_hides');
+              v && n.setAttribute('nonce', v.nonce);
+              n.setAttribute('type', 'text/css');
+              if (n.styleSheet) n.styleSheet.cssText = r;
+              else n.appendChild(d.createTextNode(r));
+              c.appendChild(n);
+              this.load(
+                'https://dev.visualwebsiteoptimizer.com/j.php?a=' +
+                  account_id +
+                  '&u=' +
+                  encodeURIComponent(d.URL) +
+                  '&vn=' +
+                  version
+              );
+            },
+          };
+          w._vwo_code = code;
+          code.init();
+        })();
+    </script>
+    <!-- End VWO Async SmartCode -->
+    <!-- Hotjar Tracking Code for https://www.automicgold.com -->
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 3138656, hjsv: 6 };
+        a = o.getElementsByTagName('head')[0];
+        r = o.createElement('script');
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
+    <!-- Start cookieyes banner -->
+    <script
+      id="cookieyes"
+      type="text/javascript"
+      src="https://cdn-cookieyes.com/client_data/358e3d5a6c35a1a1ea983843/script.js"
+    ></script>
+    <!-- End cookieyes banner -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="google-site-verification" content="OR1MvbBxBHybGRh2Ul0Qvf11GcenSt_OtrPi5qzrcfA">
+    <meta name="p:domain_verify" content="e3dfcd76dac99bb4a4abd6d50a8407a2">
+    <meta name="msvalidate.01" content="85AD6CEFB85D128B6F60BBF1DD8B0ADF">
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,maximum-scale=1.0,shrink-to-fit=no,user-scalable=no"
+    >
+    <meta name="theme-color" content="">
+
+    <!-- Pinterest HTML Tag -->
+
+    <meta name="p:domain_verify" content="0d5740ecad9b44fdd22ff7336fd3e5d1">
+
+    {%- if request.path == '/collections/vendors' and collection.all_products_count == 0 -%}
+      <meta name="robots" content="noindex">
+    {%- endif -%}
+
+    <link rel="canonical" href="{{ canonical_url }}">
+
+    {%- if settings.favicon != blank -%}
+      <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+    {%- endif -%}
+
+    {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
+      <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+    {%- endunless -%}
+
+    <title>
+      {{ page_title }}
+      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+    </title>
+
+    {% if page_description %}
+      <meta name="description" content="{{ page_description | escape }}">
+    {% endif %}
+
+    {% render 'meta-tags' %}
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-332252706"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'AW-332252706');
+    </script>
+    <!-- End Google tag (gtag.js) -->
+
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '383809115349191');
+      fbq('track', 'PageView');
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display:none"
+        src="https://www.facebook.com/tr?id=383809115349191&ev=PageView&noscript=1"
+    ></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <link rel="stylesheet" href="https://use.typekit.net/rra3jqy.css">
+
+    {% style %}
+      :root {
+          --page-width: {{ settings.page_width }}px;
+          --page-width-x-paddings-mobile: 16px;
+          --page-width-x-paddings-tablet: 30px;
+          --page-width-x-paddings-desktop: 50px;
+
+          --color-base-text: {{ settings.colors_text.red }}, {{ settings.colors_text.green }}, {{ settings.colors_text.blue }};
+          --color-base-background-1: {{ settings.colors_background_1.red }}, {{ settings.colors_background_1.green }}, {{ settings.colors_background_1.blue }};
+          --color-base-background-2: {{ settings.colors_background_2.red }}, {{ settings.colors_background_2.green }}, {{ settings.colors_background_2.blue }};
+          --color-highlighted-elements: {{ settings.highlighted_elements.red }}, {{ settings.highlighted_elements.green }}, {{ settings.highlighted_elements.blue }};
+      }
+
+      {% unless settings.free_product_enable and all_products['free-travel-case'].available %}
+      div[data-free-product] {
+          display: none;
+      }
+      {% endunless %}
+    {% endstyle %}
+
+    {{ 'global.out.css' | asset_url | stylesheet_tag }}
+    {{ 'global.css' | asset_url | stylesheet_tag }}
+    {{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
+    {{ 'swiper-custom.css' | asset_url | stylesheet_tag }}
+    {{ 'swiper-bundle.min.js' | asset_url | script_tag }}
+
+    {% include 'css-bridge' %}
+
+    {% if shop.domain != 'au-testing.myshopify.com' %}
+      <script>
+        var _rollbarConfig = {
+          accessToken: '326a827f48fe47dc85b59bd796b5366d',
+          captureUncaught: true,
+          captureUnhandledRejections: true,
+          payload: {
+            environment: 'production',
+          },
+        };
+        !(function (r) {
+          var e = {};
+          function o(n) {
+            if (e[n]) return e[n].exports;
+            var t = (e[n] = { i: n, l: !1, exports: {} });
+            return r[n].call(t.exports, t, t.exports, o), (t.l = !0), t.exports;
+          }
+          (o.m = r),
+            (o.c = e),
+            (o.d = function (r, e, n) {
+              o.o(r, e) || Object.defineProperty(r, e, { enumerable: !0, get: n });
+            }),
+            (o.r = function (r) {
+              'undefined' != typeof Symbol &&
+                Symbol.toStringTag &&
+                Object.defineProperty(r, Symbol.toStringTag, { value: 'Module' }),
+                Object.defineProperty(r, '__esModule', { value: !0 });
+            }),
+            (o.t = function (r, e) {
+              if ((1 & e && (r = o(r)), 8 & e)) return r;
+              if (4 & e && 'object' == typeof r && r && r.__esModule) return r;
+              var n = Object.create(null);
+              if (
+                (o.r(n),
+                Object.defineProperty(n, 'default', { enumerable: !0, value: r }),
+                2 & e && 'string' != typeof r)
+              )
+                for (var t in r)
+                  o.d(
+                    n,
+                    t,
+                    function (e) {
+                      return r[e];
+                    }.bind(null, t)
+                  );
+              return n;
+            }),
+            (o.n = function (r) {
+              var e =
+                r && r.__esModule
+                  ? function () {
+                      return r.default;
+                    }
+                  : function () {
+                      return r;
+                    };
+              return o.d(e, 'a', e), e;
+            }),
+            (o.o = function (r, e) {
+              return Object.prototype.hasOwnProperty.call(r, e);
+            }),
+            (o.p = ''),
+            o((o.s = 0));
+        })([
+          function (r, e, o) {
+            var n = o(1),
+              t = o(4);
+            (_rollbarConfig = _rollbarConfig || {}),
+              (_rollbarConfig.rollbarJsUrl =
+                _rollbarConfig.rollbarJsUrl ||
+                'https://cdnjs.cloudflare.com/ajax/libs/rollbar.js/2.13.0/rollbar.min.js'),
+              (_rollbarConfig.async = void 0 === _rollbarConfig.async || _rollbarConfig.async);
+            var a = n.setupShim(window, _rollbarConfig),
+              l = t(_rollbarConfig);
+            (window.rollbar = n.Rollbar), a.loadFull(window, document, !_rollbarConfig.async, _rollbarConfig, l);
+          },
+          function (r, e, o) {
+            var n = o(2);
+            function t(r) {
+              return function () {
+                try {
+                  return r.apply(this, arguments);
+                } catch (r) {
+                  try {
+                    console.error('[Rollbar]: Internal error', r);
+                  } catch (r) {}
+                }
+              };
+            }
+            var a = 0;
+            function l(r, e) {
+              (this.options = r), (this._rollbarOldOnError = null);
+              var o = a++;
+              (this.shimId = function () {
+                return o;
+              }),
+                'undefined' != typeof window &&
+                  window._rollbarShims &&
+                  (window._rollbarShims[o] = { handler: e, messages: [] });
+            }
+            var i = o(3),
+              s = function (r, e) {
+                return new l(r, e);
+              },
+              d = function (r) {
+                return new i(s, r);
+              };
+            function c(r) {
+              return t(function () {
+                var e = Array.prototype.slice.call(arguments, 0),
+                  o = { shim: this, method: r, args: e, ts: new Date() };
+                window._rollbarShims[this.shimId()].messages.push(o);
+              });
+            }
+            (l.prototype.loadFull = function (r, e, o, n, a) {
+              var l = !1,
+                i = e.createElement('script'),
+                s = e.getElementsByTagName('script')[0],
+                d = s.parentNode;
+              (i.crossOrigin = ''),
+                (i.src = n.rollbarJsUrl),
+                o || (i.async = !0),
+                (i.onload = i.onreadystatechange =
+                  t(function () {
+                    if (!(l || (this.readyState && 'loaded' !== this.readyState && 'complete' !== this.readyState))) {
+                      i.onload = i.onreadystatechange = null;
+                      try {
+                        d.removeChild(i);
+                      } catch (r) {}
+                      (l = !0),
+                        (function () {
+                          var e;
+                          if (void 0 === r._rollbarDidLoad) {
+                            e = new Error('rollbar.js did not load');
+                            for (var o, n, t, l, i = 0; (o = r._rollbarShims[i++]); )
+                              for (o = o.messages || []; (n = o.shift()); )
+                                for (t = n.args || [], i = 0; i < t.length; ++i)
+                                  if ('function' == typeof (l = t[i])) {
+                                    l(e);
+                                    break;
+                                  }
+                          }
+                          'function' == typeof a && a(e);
+                        })();
+                    }
+                  })),
+                d.insertBefore(i, s);
+            }),
+              (l.prototype.wrap = function (r, e, o) {
+                try {
+                  var n;
+                  if (
+                    ((n =
+                      'function' == typeof e
+                        ? e
+                        : function () {
+                            return e || {};
+                          }),
+                    'function' != typeof r)
+                  )
+                    return r;
+                  if (r._isWrap) return r;
+                  if (
+                    !r._rollbar_wrapped &&
+                    ((r._rollbar_wrapped = function () {
+                      o && 'function' == typeof o && o.apply(this, arguments);
+                      try {
+                        return r.apply(this, arguments);
+                      } catch (o) {
+                        var e = o;
+                        throw (
+                          (e &&
+                            ('string' == typeof e && (e = new String(e)),
+                            (e._rollbarContext = n() || {}),
+                            (e._rollbarContext._wrappedSource = r.toString()),
+                            (window._rollbarWrappedError = e)),
+                          e)
+                        );
+                      }
+                    }),
+                    (r._rollbar_wrapped._isWrap = !0),
+                    r.hasOwnProperty)
+                  )
+                    for (var t in r) r.hasOwnProperty(t) && (r._rollbar_wrapped[t] = r[t]);
+                  return r._rollbar_wrapped;
+                } catch (e) {
+                  return r;
+                }
+              });
+            for (
+              var p =
+                  'log,debug,info,warn,warning,error,critical,global,configure,handleUncaughtException,handleAnonymousErrors,handleUnhandledRejection,captureEvent,captureDomContentLoaded,captureLoad'.split(
+                    ','
+                  ),
+                u = 0;
+              u < p.length;
+              ++u
+            )
+              l.prototype[p[u]] = c(p[u]);
+            r.exports = {
+              setupShim: function (r, e) {
+                if (r) {
+                  var o = e.globalAlias || 'Rollbar';
+                  if ('object' == typeof r[o]) return r[o];
+                  (r._rollbarShims = {}), (r._rollbarWrappedError = null);
+                  var a = new d(e);
+                  return t(function () {
+                    e.captureUncaught &&
+                      ((a._rollbarOldOnError = r.onerror),
+                      n.captureUncaughtExceptions(r, a, !0),
+                      e.wrapGlobalEventHandlers && n.wrapGlobals(r, a, !0)),
+                      e.captureUnhandledRejections && n.captureUnhandledRejections(r, a, !0);
+                    var t = e.autoInstrument;
+                    return (
+                      !1 !== e.enabled &&
+                        (void 0 === t || !0 === t || ('object' == typeof t && t.network)) &&
+                        r.addEventListener &&
+                        (r.addEventListener('load', a.captureLoad.bind(a)),
+                        r.addEventListener('DOMContentLoaded', a.captureDomContentLoaded.bind(a))),
+                      (r[o] = a),
+                      a
+                    );
+                  })();
+                }
+              },
+              Rollbar: d,
+            };
+          },
+          function (r, e) {
+            function o(r, e, o) {
+              if (e.hasOwnProperty && e.hasOwnProperty('addEventListener')) {
+                for (var n = e.addEventListener; n._rollbarOldAdd && n.belongsToShim; ) n = n._rollbarOldAdd;
+                var t = function (e, o, t) {
+                  n.call(this, e, r.wrap(o), t);
+                };
+                (t._rollbarOldAdd = n), (t.belongsToShim = o), (e.addEventListener = t);
+                for (var a = e.removeEventListener; a._rollbarOldRemove && a.belongsToShim; ) a = a._rollbarOldRemove;
+                var l = function (r, e, o) {
+                  a.call(this, r, (e && e._rollbar_wrapped) || e, o);
+                };
+                (l._rollbarOldRemove = a), (l.belongsToShim = o), (e.removeEventListener = l);
+              }
+            }
+            r.exports = {
+              captureUncaughtExceptions: function (r, e, o) {
+                if (r) {
+                  var n;
+                  if ('function' == typeof e._rollbarOldOnError) n = e._rollbarOldOnError;
+                  else if (r.onerror) {
+                    for (n = r.onerror; n._rollbarOldOnError; ) n = n._rollbarOldOnError;
+                    e._rollbarOldOnError = n;
+                  }
+                  e.handleAnonymousErrors();
+                  var t = function () {
+                    var o = Array.prototype.slice.call(arguments, 0);
+                    !(function (r, e, o, n) {
+                      r._rollbarWrappedError &&
+                        (n[4] || (n[4] = r._rollbarWrappedError),
+                        n[5] || (n[5] = r._rollbarWrappedError._rollbarContext),
+                        (r._rollbarWrappedError = null));
+                      var t = e.handleUncaughtException.apply(e, n);
+                      o && o.apply(r, n), 'anonymous' === t && (e.anonymousErrorsPending += 1);
+                    })(r, e, n, o);
+                  };
+                  o && (t._rollbarOldOnError = n), (r.onerror = t);
+                }
+              },
+              captureUnhandledRejections: function (r, e, o) {
+                if (r) {
+                  'function' == typeof r._rollbarURH &&
+                    r._rollbarURH.belongsToShim &&
+                    r.removeEventListener('unhandledrejection', r._rollbarURH);
+                  var n = function (r) {
+                    var o, n, t;
+                    try {
+                      o = r.reason;
+                    } catch (r) {
+                      o = void 0;
+                    }
+                    try {
+                      n = r.promise;
+                    } catch (r) {
+                      n = '[unhandledrejection] error getting `promise` from event';
+                    }
+                    try {
+                      (t = r.detail), !o && t && ((o = t.reason), (n = t.promise));
+                    } catch (r) {}
+                    o || (o = '[unhandledrejection] error getting `reason` from event'),
+                      e && e.handleUnhandledRejection && e.handleUnhandledRejection(o, n);
+                  };
+                  (n.belongsToShim = o), (r._rollbarURH = n), r.addEventListener('unhandledrejection', n);
+                }
+              },
+              wrapGlobals: function (r, e, n) {
+                if (r) {
+                  var t,
+                    a,
+                    l =
+                      'EventTarget,Window,Node,ApplicationCache,AudioTrackList,ChannelMergerNode,CryptoOperation,EventSource,FileReader,HTMLUnknownElement,IDBDatabase,IDBRequest,IDBTransaction,KeyOperation,MediaController,MessagePort,ModalWindow,Notification,SVGElementInstance,Screen,TextTrack,TextTrackCue,TextTrackList,WebSocket,WebSocketWorker,Worker,XMLHttpRequest,XMLHttpRequestEventTarget,XMLHttpRequestUpload'.split(
+                        ','
+                      );
+                  for (t = 0; t < l.length; ++t) r[(a = l[t])] && r[a].prototype && o(e, r[a].prototype, n);
+                }
+              },
+            };
+          },
+          function (r, e) {
+            function o(r, e) {
+              (this.impl = r(e, this)),
+                (this.options = e),
+                (function (r) {
+                  for (
+                    var e = function (r) {
+                        return function () {
+                          var e = Array.prototype.slice.call(arguments, 0);
+                          if (this.impl[r]) return this.impl[r].apply(this.impl, e);
+                        };
+                      },
+                      o =
+                        'log,debug,info,warn,warning,error,critical,global,configure,handleUncaughtException,handleAnonymousErrors,handleUnhandledRejection,_createItem,wrap,loadFull,shimId,captureEvent,captureDomContentLoaded,captureLoad'.split(
+                          ','
+                        ),
+                      n = 0;
+                    n < o.length;
+                    n++
+                  )
+                    r[o[n]] = e(o[n]);
+                })(o.prototype);
+            }
+            (o.prototype._swapAndProcessMessages = function (r, e) {
+              var o, n, t;
+              for (this.impl = r(this.options); (o = e.shift()); )
+                (n = o.method),
+                  (t = o.args),
+                  this[n] &&
+                    'function' == typeof this[n] &&
+                    ('captureDomContentLoaded' === n || 'captureLoad' === n
+                      ? this[n].apply(this, [t[0], o.ts])
+                      : this[n].apply(this, t));
+              return this;
+            }),
+              (r.exports = o);
+          },
+          function (r, e) {
+            r.exports = function (r) {
+              return function (e) {
+                if (!e && !window._rollbarInitialized) {
+                  for (
+                    var o,
+                      n,
+                      t = (r = r || {}).globalAlias || 'Rollbar',
+                      a = window.rollbar,
+                      l = function (r) {
+                        return new a(r);
+                      },
+                      i = 0;
+                    (o = window._rollbarShims[i++]);
+
+                  )
+                    n || (n = o.handler), o.handler._swapAndProcessMessages(l, o.messages);
+                  (window[t] = n), (window._rollbarInitialized = !0);
+                }
+              };
+            };
+          },
+        ]);
+      </script>
+    {% endif %}
+
+    {{ content_for_header }}
+
+    <!-- OKENDO -->
+    {{ shop.metafields.okendo.ReviewsWidgetStyleTag }}
+    {{ shop.metafields.okendo.StyleCustomizations }}
+    {% render 'okendo-reviews-json-ld' %}
+    <!-- Begin: Northbeam Pixel -->
+    <script async type="text/javascript" src="//j.northbeam.io/ota-sp/7bd1f331-d22b-44db-b071-111d50e0b46f.js"></script>
+    <!-- End: Northbeam Pixel -->
+
+    {% render 'gift-card-pro' %}
+
+    <script>
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+      if (Shopify.designMode) {
+        document.documentElement.classList.add('shopify-design-mode');
+      }
+    </script>
+    <script>
+      let fullUrlLink = window.location.href;
+      if (fullUrlLink.search('{{ routes.cart_url }}') > 0) {
+        window.location.replace('{{ routes.root_url }}');
+      }
+    </script>
+  </head>
+
+  <body
+    id="{{ page_title | handle }}"
+    class="{% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }} {{ template | handle }} {{ template.suffix | handle }}"
+    data-template-name="{{ template.name }}"
+  >
+    <a class="skip-to-content-link button visually-hidden" href="#MainContent">
+      {{ 'accessibility.skip_to_text' | t }}
+    </a>
+
+    {% include 'site-loader' %}
+
+    <div id="CartDrawer" class="drawer drawer--right">
+      <div class="drawer__header">
+        <div class="drawer__title">Cart</div>
+
+        <div class="drawer__close js-drawer-close">
+          <button type="button">
+            <svg
+              width="20px"
+              height="21px"
+              viewBox="0 0 20 21"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <g id="Cart" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g id="Cart-drawer-Copy-3" transform="translate(-367.000000, -30.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                      <g id="cross" transform="translate(367.000000, 30.000000)">
+                          <polygon id="Rectangle" transform="translate(9.666667, 9.833333) rotate(45.000000) translate(-9.666667, -9.833333) " points="-3.33333333 9.33333333 22.6666667 9.33333333 22.6666667 10.3333333 -3.33333333 10.3333333"></polygon>
+                          <polygon id="Rectangle" transform="translate(10.079146, 10.662479) rotate(-45.000000) translate(-10.079146, -10.662479) " points="-2.92085438 10.162479 23.0791456 10.162479 23.0791456 11.162479 -2.92085438 11.162479"></polygon>
+                      </g>
+                  </g>
+              </g>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div id="CartContainer"></div>
+    </div>
+
+    {% sections 'header-group' %}
+
+    <div id="PageContainer" class="page-container is-moved-by-drawer">
+      <main id="MainContent" class="main-content content-for-layout focus-none" role="main" tabindex="-1">
+        {{ content_for_layout }}
+      </main>
+    </div>
+
+    {% sections 'footer-group' %}
+
+    {% include 'ajax-cart-template' %}
+    {% include 'oldIE-js' %}
+
+    <script>
+      (() => {
+          const FREE_PRODUCT_ID = '';
+          window.freeProduct = window.freeProduct || {};
+          window.freeProduct.available = {% if settings.free_product_enable and all_products['free-travel-case'].available %}true{% else %}false{% endif %};
+      })();
+    </script>
+
+    {{ 'vendor-libraries.js' | asset_url | script_tag }}
+    {{ 'shopify_common.js' | shopify_asset_url | script_tag }}
+    {{ 'automic.js' | asset_url | script_tag }}
+    {{ 'common.js' | asset_url | script_tag }}
+    {{ 'main.min.js' | asset_url | script_tag }}
+
+    {% if template.name == 'product' %}
+      {{ 'product.css' | asset_url | stylesheet_tag }}
+      {{ 'swipe.min.js' | asset_url | script_tag }}
+      {{ 'product.js' | asset_url | script_tag }}
+
+      <!-- Affirm -->
+      <script>
+        _affirm_config = {
+          public_api_key: '124CTK7LK916NCWB',
+          script: 'https://cdn1.affirm.com/js/v2/affirm.js',
+        };
+        (function (l, g, m, e, a, f, b) {
+          var d,
+            c = l[m] || {},
+            h = document.createElement(f),
+            n = document.getElementsByTagName(f)[0],
+            k = function (a, b, c) {
+              return function () {
+                a[b]._.push([c, arguments]);
+              };
+            };
+          c[e] = k(c, e, 'set');
+          d = c[e];
+          c[a] = {};
+          c[a]._ = [];
+          d._ = [];
+          c[a][b] = k(c, a, b);
+          a = 0;
+          for (b = 'set add save post open empty reset on off trigger ready setProduct'.split(' '); a < b.length; a++)
+            d[b[a]] = k(c, e, b[a]);
+          a = 0;
+          for (b = ['get', 'token', 'url', 'items']; a < b.length; a++) d[b[a]] = function () {};
+          h.async = !0;
+          h.src = g[f];
+          n.parentNode.insertBefore(h, n);
+          delete g[f];
+          d(g);
+          l[m] = c;
+        })(window, _affirm_config, 'affirm', 'checkout', 'ui', 'script', 'ready');
+        // Use your live public API Key and https://cdn1.affirm.com/js/v2/affirm.js script to point to Affirm production environment.
+      </script>
+      <!-- End Affirm -->
+    {% endif %}
+
+    {% if template == 'product.letter-customization' or template == 'collection.custom' %}
+      {{ 'automic-app-customizer.js' | asset_url | script_tag }}
+      {{ 'customizer.css' | asset_url | stylesheet_tag }}
+    {% endif %}
+
+    {% if template == 'collection.birthstone' %}
+      {{ 'automic-app.js' | asset_url | script_tag }}
+    {% endif %}
+
+    {% if template == 'collection.birthstone'
+      or template == 'collection.foreveron'
+      or template == 'collection.custom'
+      or template == 'page.lookbook'
+      or template == 'page.comfortable'
+      or template == 'page.contact'
+      or template == 'page.custom-orders'
+      or template == 'page.event'
+      or template == 'page.faq'
+      or template == 'page.size-inclusive'
+      or template == 'page.press'
+      or template == 'page.size-guide'
+      or template == 'page.size-necklace-guide'
+      or template == 'page.soho'
+      or template == 'page.sustainability'
+      or template == 'page.ten-days-of-joy'
+      or template == 'page.threaders'
+      or template == 'page.times-up'
+      or template == 'page.body-jewelry'
+      or template == 'page.wedding'
+      or template == 'page.about-us'
+      or template.name == 'blog'
+      or template.name == 'article'
+    %}
+      {{ 'pages.css' | asset_url | stylesheet_tag }}
+    {% endif %}
+
+    {% if template == 'page.custom-orders' or template == 'collection.custom' %}
+      {{ 'featherlight.min.js' | asset_url | script_tag }}
+    {% endif %}
+
+    {% if template == 'collection.foreveron' %}
+      {{ 'rellax.min.js' | asset_url | script_tag }}
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          new Rellax('.rellax', {
+            center: true,
+          });
+        });
+      </script>
+    {% endif %}
+
+    {% comment %}
+      Template-specific js
+    {% endcomment %}
+    <script>
+      {% if resetPassword %}
+      $(function() {
+          timber.resetPasswordSuccess();
+      });
+      {% endif %}
+    </script>
+
+    <script>
+      if (AOS) {
+        AOS.init();
+      }
+    </script>
+
+    <script>
+      jQuery(function($) {
+          ajaxCart.init({
+              formSelector: '#AddToCartForm',
+              cartContainer: '#CartContainer',
+              addToCartSelector: '#AddToCart',
+              cartCountSelector: '#CartCount',
+              cartCostSelector: '#CartCost',
+              moneyFormat: {{ shop.money_format | json }}
+          });
+      });
+
+      jQuery(document.body).on('afterCartLoad.ajaxCart', function(evt, cart) {
+          // Bind to 'afterCartLoad.ajaxCart' to run any javascript after the cart has loaded in the DOM
+          timber.RightDrawer.open();
+      });
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "name": "Automic Gold",
+        "url": "https://www.automicgold.com/"
+      }
+    </script>
+
+    <ul hidden>
+      <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
+      <li id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}</li>
+    </ul>
+  </body>
+</html>

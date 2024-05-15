@@ -1,0 +1,46 @@
+<style>
+    @font-face {
+        font-family: "Boldline";
+        src: url({{ 'boldine-regular.woff2' | asset_url }}) format("woff2"),url("{{ 'boldine-regular.woff' | asset_url }}") format("woff"),url("{{ 'boldine-regular.eot' | asset_url }}") format("opentype");
+        font-display: auto;
+        font-style: normal;
+        font-weight: 700;
+    }
+
+    .select-dropdown-icon {
+        background-image: url({{ 'ico-select.svg' | asset_url }})
+    }
+
+    .range-background {
+        background-image: url({{ 'range-background.png' | file_img_url: '1500x72' }});
+    }
+
+    .range-months {
+        background-image: url({{ 'range-months.png' | file_img_url: '1400x28' }});
+    }
+
+    .bg-birthstone,
+    .birthstone-slider__input::-webkit-slider-thumb {
+        background-image: url({{ 'birthstone.png' | file_img_url: '60x60' }});
+    }
+
+    .bg-dot {
+        background-image: url({{ 'dot.jpg' | file_img_url: '5x4' }});
+        background-repeat: repeat-x;
+        background-position: bottom;
+    }
+
+    .bg-dot-field {
+        background-image: url({{ 'dot-field.png' | file_img_url: '787x847' }});
+        background-repeat: repeat-y;
+    }
+
+    .tdj-snowflake {
+        background-image: url({{ 'tdj-snowflake.png' | file_img_url: '570x444' }});
+    }
+    .tdj-landscape {
+        background-size: cover;
+        background-position: center center;
+        background-image: url({{ 'tdj-landscape.jpg' | file_img_url: '759x1032' }});
+    }
+</style>

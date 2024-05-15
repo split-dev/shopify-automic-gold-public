@@ -1,0 +1,56 @@
+<div class="faq-hide-list">
+  <div class="faq-hide-list__head">
+      <button class="tablinks" data-target="tab-{{ section.id }}">{{ section.settings.tab_name }}</button>
+  </div>
+  <div class="faq-hide-list__quests">
+    <div id="tab-{{ section.id }}" class="tabcontent">
+      {% for block in section.blocks %}
+          <div class="faq-list__title collapsible">
+            <h4>{{ block.settings.title }}</h4>
+          </div>
+          <div class="faq-list__text content">
+            <div class="content-inner">
+              <div>{{ block.settings.text }}</div>
+            </div>
+          </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.main-faq-hide-list.name",
+  "class": "section-faq-hide-list",
+  "settings": [
+    {
+        "type": "text",
+        "id": "tab_name",
+        "label": "Tab name"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.main-faq-hide-list.settings.blocks.title.content"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "t:sections.main-faq-hide-list.settings.blocks.text.content"
+        }
+      ]
+    }
+  ],
+  "presets": [
+      {
+        "name": "t:sections.main-faq-hide-list.name"
+      }
+    ]
+}
+{% endschema %}

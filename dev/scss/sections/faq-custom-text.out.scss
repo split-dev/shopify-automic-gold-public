@@ -1,0 +1,31 @@
+@import "../settings/variables";
+@import "../settings/bootstrap-media";
+
+.custom-faq-text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+  }
+
+  &__desk {
+    display: none;
+    @include media-breakpoint-up(md) {
+      display: block;
+    }
+  }
+
+  &__mobile {
+    display: block;
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+  }
+
+  a {
+    color: rgb(var(--color-highlighted-elements));
+    text-decoration: none;
+  }
+}

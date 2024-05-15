@@ -1,0 +1,60 @@
+{% paginate blog.articles by 10 %}
+
+{% comment %}
+This template is also used for listing out articles of a specific tag.
+You can change layouts or styles by checking if current_tags is true.
+{% endcomment %}
+
+<header class="blog-header no--padding page-cover">
+    {% include 'breadcrumb' %}
+    <h1 class="blog-header__title">Automic Gold Blog</h1>
+    <p class="blog-header__description">We love educating and sharing experiences on&nbsp;this&nbsp;blog.</p>
+</header>
+
+<div class="space-bottom-x3">
+    {% if current_tags %}
+        <h3>{{ blog.title | link_to: blog.url }} &mdash; {{ current_tags.first }}</h3>
+    {% endif %}
+
+    {% for article in blog.articles %}
+
+        <article class="blog-post" itemscope itemtype="http://schema.org/Article">
+
+            <header class="blog-post__header">
+                <h2 class="blog-post__title"><a href="{{ article.url }}">{{ article.title }}</a></h2>
+                {% comment %} {% if article.metafields.global.author %}
+                    {% capture author %}<span>{{ article.metafields.global.author }}</span>{% endcapture %}
+                {% else %}
+                    {% capture author %}<span>{{ article.author }}</span>{% endcapture %}
+                {% endif %}
+                <div class="blog-post__byline">{{ 'blogs.article.author_on_date_html' | t: author: author }}</div> {% endcomment %}
+            </header>
+
+            <div class="blog-post__content rte" itemprop="articleBody">
+                {{ article.content | truncatewords: 150 }}
+            </div>
+
+            <div class="blog-post__footer">
+                <a href="{{ article.url }}">Continue reading ></a>
+            </div>
+
+        </article>
+
+    {% endfor %}
+
+    {% if paginate.pages > 1 %}
+        <hr>
+        <div class="pagination">
+            {{ paginate | default_pagination }}
+        </div>
+    {% endif %}
+
+    {% comment %}
+    <div class="grid__item large--one-quarter">
+        {% include 'blog-sidebar' %}
+    </div>
+    {% endcomment %}
+
+</div>
+
+{% endpaginate %}

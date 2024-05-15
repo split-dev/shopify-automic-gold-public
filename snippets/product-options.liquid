@@ -1,0 +1,1051 @@
+{% if product.variants.size > 1 and product.handle != 'custom-letter-necklace' %}
+
+    <div class="product__options" data-ga="options-click">
+
+        {% if product.tags contains 'zodiac-dropdown' %}
+            <h4 class="product__option-name">Zodiac</h4>
+            <div class="product__dropdown-container">
+                <div class="form-table">
+                    <div class="form-row">
+                        <label class="visually-hidden" for="jewelry-zodiac">Zodiac</label>
+                        <select id='jewelry-zodiac' required name="properties[Zodiac]" style="background-image: url({{ 'ico-select.svg' | asset_url }})">
+                            <option value="Aries">Aries</option>
+                            <option value="Taurus">Taurus</option>
+                            <option value="Gemini">Gemini</option>
+                            <option value="Cancer">Cancer</option>
+                            <option value="Leo">Leo</option>
+                            <option value="Virgo">Virgo</option>
+                            <option value="Libra">Libra</option>
+                            <option value="Scorpio">Scorpio</option>
+                            <option value="Sagittarius">Sagittarius</option>
+                            <option value="Capricorn">Capricorn</option>
+                            <option value="Aquarius">Aquarius</option>
+                            <option value="Pisces">Pisces</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+
+        {% if
+            product.handle == 'initial' or
+            product.handle == 'initial-charm' or
+            product.handle == 'initial-flatback-piercing' or
+            product.tags contains 'letter_selector'
+        %}
+            <div class="form-table">
+                <div class="form-row">
+                    <label for="initial-letter">Letter</label>
+                    <select id='initial-letter' required name="properties[Letter]" style="background-image: url({{ 'ico-select.svg' | asset_url }})">
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="E">E</option>
+                        <option value="F">F</option>
+                        <option value="G">G</option>
+                        <option value="H">H</option>
+                        <option value="I">I</option>
+                        <option value="J">J</option>
+                        <option value="K">K</option>
+                        <option value="L">L</option>
+                        <option value="M">M</option>
+                        <option value="N">N</option>
+                        <option value="O">O</option>
+                        <option value="P">P</option>
+                        <option value="Q">Q</option>
+                        <option value="R">R</option>
+                        <option value="S">S</option>
+                        <option value="T">T</option>
+                        <option value="U">U</option>
+                        <option value="V">V</option>
+                        <option value="W">W</option>
+                        <option value="X">X</option>
+                        <option value="Y">Y</option>
+                        <option value="Z">Z</option>
+                    </select>
+                </div>
+            </div>
+        {% endif %}
+
+        {% if
+            product.handle == 'initial-necklace' or
+            product.handle == 'mirror-initial-necklace' or
+            product.handle == 'initial-ring' or
+            product.handle == 'sideways-initial-bracelet' or
+            product.handle == 'sideways-initial-necklace' or
+            product.handle == 'sideways-initial-anklet' or
+            product.handle == 'initial-bracelet' or
+            product.handle == 'initial-extender' or
+            product.tags contains 'letter_number_selector'
+        %}
+            <div class="form-table">
+                <div class="form-row">
+                    <label for="initial-letter">Letter</label>
+                    <select id='initial-letter' required name="properties[Letter/Number]" style="background-image: url({{ 'ico-select.svg' | asset_url }})">
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="E">E</option>
+                        <option value="F">F</option>
+                        <option value="G">G</option>
+                        <option value="H">H</option>
+                        <option value="I">I</option>
+                        <option value="J">J</option>
+                        <option value="K">K</option>
+                        <option value="L">L</option>
+                        <option value="M">M</option>
+                        <option value="N">N</option>
+                        <option value="O">O</option>
+                        <option value="P">P</option>
+                        <option value="Q">Q</option>
+                        <option value="R">R</option>
+                        <option value="S">S</option>
+                        <option value="T">T</option>
+                        <option value="U">U</option>
+                        <option value="V">V</option>
+                        <option value="W">W</option>
+                        <option value="X">X</option>
+                        <option value="Y">Y</option>
+                        <option value="Z">Z</option>
+                    </select>
+                </div>
+            </div>
+        {% endif %}
+
+        {% if
+            product.handle == 'numbers' or
+            product.handle == 'number-charm' or
+            product.handle == 'number-flatback-piercing' or
+            product.tags contains 'number_selector'
+        %}
+            <div class="form-table">
+                <div class="form-row">
+                    <label for="earring-number">Number</label>
+                    <select id='earring-number' required name="properties[Number]" style="background-image: url({{ 'ico-select.svg' | asset_url }})">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                </div>
+            </div>
+        {% endif %}
+
+        {% comment %}{% if product.tags contains 'gold_colors_selector_three' %}
+            <div class="form-table">
+                <div class="form-row">
+                    <label for="gold-colors-selector">Gold Color</label>
+                    <select id='gold-colors-selector' required name="properties[Gold Color]" style="background-image: url({{ 'ico-select.svg' | asset_url }})">
+                        <option value="Yellow">14k Yellow</option>
+                        <option value="White">14k White</option>
+                        <option value="Rose">14k Rose</option>
+                    </select>
+                </div>
+            </div>
+        {% endif %}
+
+         {% if product.tags contains 'gold_colors_selector_four' and product.title != 'Industrial Organic Band' and product.title != 'Industrial Organic Band' %}
+            <div class="form-table">
+                <div class="form-row">
+                    <label for="gold-colors-selector">Gold Color</label>
+                    <select id='gold-colors-selector' required name="properties[Gold Color]" style="background-image: url({{ 'ico-select.svg' | asset_url }})">
+                        <option value="Yellow">Yellow</option>
+                        <option value="White">White</option>
+                        <option value="Rose">Rose</option>
+                        <option value="Champagne">Champagne</option>
+                    </select>
+                </div>
+            </div>
+        {% endif %} {% endcomment %}
+
+        {% if product.tags contains 'ring_size_selector' %}
+        <div class="product__dropdown-container swatch-ring-size-container">
+                <h4 class="product__option-name product__option-title">Size</h4>
+                <select
+                    id="select-size"
+                    title="Ring Size"
+                    name="properties[Ring Size]"
+                    data-js="dropdown-selector"
+                    style="background-image: url({{ 'ico-select.svg' | asset_url }})"
+                >
+                    <option id="select-size" title="select-size" value="select-size" selected="selected">Select Size</option>
+                    {% for i in (8..64) %}
+                        {% capture size %}{{ i | times: 0.25 | replace: '.0', '' }}{% endcapture %}
+                        <option value="{{ size }}">{{ size }}</option>
+                    {% endfor %}
+                </select>
+
+                <div class="product__dropdown-note">
+                    Not sure about your exact size?<br />Order <a href="{{ shop.url }}/products/ring-sizer" target="_blank">Ring&nbsp;Sizer</a> first.
+                </div>
+            </div>
+        {% endif %}
+
+
+        {% if product.tags contains 'gold_colors_selector_three' %}
+            <input type="hidden" name="shape" id="shape" value="{{ product.handle | split: "-" | first }}"/>
+            <input type="hidden" name="finish" id="finish" value="{{ product.handle | split: "-" | slice: 1 }}"/>
+
+            <div class="product__swatch-container swatch-metal-container">
+                <input checked="" id="radio-metal-yellow-gold" type="radio" name="properties[Gold color]" value="Yellow Gold">
+                <label for="radio-metal-yellow-gold" class="product__swatch swatch-metal swatch-metal-yellow-gold">
+                    14k Yellow Gold
+                </label>
+                <input id="radio-metal-rose-gold" type="radio" name="properties[Gold color]" value="Rose Gold">
+                <label for="radio-metal-rose-gold" class="product__swatch swatch-metal swatch-metal-rose-gold">
+                    14k Rose Gold
+                </label>
+                <input id="radio-metal-white-gold" type="radio" name="properties[Gold color]" value="White Gold">
+                <label for="radio-metal-white-gold" class="product__swatch swatch-metal swatch-metal-white-gold">
+                    14k White Gold
+                </label>
+            </div>
+        {% endif %}
+
+        {% if
+            product.handle == 'curvy-mirror-band' or
+            product.handle == 'curvy-matte-band' or
+            product.handle == 'raw-band' or
+            product.handle == 'curvy-hammered-band' or
+            product.handle == 'curvy-wood-band' or
+            product.handle == 'industrial-mirror-band' or
+            product.handle == 'industrial-matte-band' or
+            product.handle == 'industrial-raw-band' or
+            product.handle == 'industrial-hammered-band' or
+            product.handle == 'industrial-wood-band' or
+            product.handle == 'organic-band' or
+            product.handle == 'industrial-organic-band' or
+            product.tags contains 'gold_colors_selector_four'
+        %}
+            <input type="hidden" name="shape" id="shape" value="{{ product.handle | split: "-" | first }}"/>
+            <input type="hidden" name="finish" id="finish" value="{{ product.handle | split: "-" | slice: 1 }}"/>
+
+            <div class="product__swatch-container swatch-metal-container">
+                <input checked="" id="radio-metal-yellow-gold" type="radio" name="properties[Gold color]" value="Yellow Gold">
+                <label for="radio-metal-yellow-gold" class="product__swatch swatch-metal swatch-metal-yellow-gold">
+                    14k Yellow Gold
+                </label>
+                <input id="radio-metal-rose-gold" type="radio" name="properties[Gold color]" value="Rose Gold">
+                <label for="radio-metal-rose-gold" class="product__swatch swatch-metal swatch-metal-rose-gold">
+                    14k Rose Gold
+                </label>
+                <input id="radio-metal-champagne-gold" type="radio" name="properties[Gold color]" value="Champagne Gold">
+                <label for="radio-metal-champagne-gold" class="product__swatch swatch-metal swatch-metal-champagne-gold">
+                    14k Champagne Gold
+                </label>
+                <input id="radio-metal-white-gold" type="radio" name="properties[Gold color]" value="White Gold">
+                <label for="radio-metal-white-gold" class="product__swatch swatch-metal swatch-metal-white-gold">
+                    14k White Gold
+                </label>
+            </div>
+        {% endif %}
+
+        {% for option in product.options %}
+            {% assign index = forloop.index0 %}
+
+            {% if option %}
+     {% assign used = '' %}
+
+                {% comment %}RING SIZE{% endcomment %}
+                {% if option == 'gemstone' %}
+                    <h4 class="product__option-name">Gemstone</h4>
+
+                    <div class="product__dropdown-container swatch-{{ option | handleize }}-container">
+                        <select
+                            title="Gemstone"
+                            name="{{ index }}"
+                            data-js="dropdown-selector"
+                            data-option-index="{{ index }}"
+                            onchange="onSelectionChange()"
+                            style="background-image: url({{ 'ico-select.svg' | asset_url }})"
+                        >
+                            {% for variant in product.variants %}
+
+                                {% assign value = variant.options[index] %}
+
+                                {% unless used contains value %}
+                                    {% capture identifier %}{{ option | handleize}}-{{ value | handleize }}{% endcapture %}
+                                    <option value="{{ value }}">{{ value }}</option>
+                                    {% capture used %}{{ used }} {{ value }}{% endcapture %}
+                                {% endunless %}
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                {% comment %}RING SIZE{% endcomment %}
+                {% elsif option == 'ring size' %}
+                    <h4 class="product__option-name">Ring Size</h4>
+
+                    <div class="product__dropdown-container swatch-{{ option | handleize }}-container">
+                        <select
+                            title="Ring Size"
+                            name="{{ index }}"
+                            data-js="dropdown-selector"
+                            data-option-index="{{ index }}"
+                            onchange="onSelectionChange()"
+                            style="background-image: url({{ 'ico-select.svg' | asset_url }})"
+                        >
+                            {% for variant in product.variants %}
+
+                                {% comment %}value is the size of the ring in this case{% endcomment %}
+                                {% assign value = variant.options[index] %}
+
+                                {% comment %}
+                                    We compose "normalized_value" in memory (i.e. "size_5") and save it in memory to
+                                    later compare with values that were already used. That is needed because comparison
+                                    is done using contains filter, which is not smart to differ substring from value
+                                {% endcomment %}
+                                {% capture normalized_value %}size_{{ value }}{% endcapture %}
+
+                                {% unless used contains normalized_value %}
+                                    {% capture identifier %}{{ option | handleize}}-{{ value | handleize }}{% endcapture %}
+                                        <option
+                                            {% if variant == product.selected or value == '7' %}selected="selected"{% endif %}
+                                            value="{{ value }}">{{ value }}
+                                        </option>
+                                    {% capture used %}{{ used }} {{ normalized_value }}{% endcapture %}
+                                {% endunless %}
+                            {% endfor %}
+                        </select>
+
+                        <div class="product__dropdown-note">
+                            Not sure about your exact size? Order <a href="{{ shop.url }}/products/ring-sizer" target="_blank">Ring&nbsp;Sizer</a> first.
+                        </div>
+                    </div>
+                {% comment %}DIAMOND{% endcomment %}
+                {% elsif option == 'diamond' %}
+
+                    {% for variant in product.variants %}
+                        {% assign value = variant.options[index] %}
+                        {% unless used contains variant.options[index] %}
+                            {% capture identifier %}{{ option | handleize}}-{{ value | handleize }}{% endcapture %}
+                            <input
+                                {% if forloop.index0 == 0 %}checked{% endif %}
+                                id="radio-{{ identifier }}"
+                                type="radio"
+                                name="{{ index }}"
+                                value="{{ value }}"
+                                data-option-index="{{ index }}"
+                                data-option-name="{{ product.options[index] }}"
+                                data-js-diamond="radio"
+                                data-js="swatch-selector"
+                                onchange="onSelectionChange()"
+                                class="visually-hidden"
+                            >
+                            {% capture used %}{{ used }} {{ value }}{% endcapture %}
+                        {% endunless %}
+                    {% endfor %}
+
+                    <div class="diamond-selector diamond-selector--center" data-js-diamond="diamond-selector">
+
+                        <div class="diamond-selector__header">
+                            <h4 class="diamond-selector__title">
+                                Diamond
+                            </h4>
+                            <label for="radio-diamond-center-diamond" class="diamond-selector__button diamond-selector__button--add" data-js-diamond="add">
+                                Add diamond
+                            </label>
+                            <label for="radio-diamond-no-diamond" class="diamond-selector__button diamond-selector__button--remove" data-js-diamond="remove">
+                                Remove diamond
+                            </label>
+                        </div>
+
+                        <div class="diamond-selector__container center" data-js-diamond="container" data-diamond="center">
+                            <div class="diamond-selector__quantity">
+                                <label for="radio-diamond-center-diamond" class="diamond-selector__button diamond-selector__button--center" data-js-diamond="center">
+                                    Center diamond
+                                </label>
+
+                                <label for="radio-diamond-three-diamonds" class="diamond-selector__button diamond-selector__button--three" data-js-diamond="three">
+                                    Three diamonds
+                                </label>
+                            </div>
+
+                            <div class="diamond-selector__description">
+                                <span class="center">
+                                    An accent 1.5mm, .015ct natural diamond<br/>set in the center of&nbsp;the&nbsp;band.
+                                </span>
+                                <span class="three">
+                                    A trio of 1.5mm, .045ctw natural diamonds<br/>set in a line on&nbsp;the&nbsp;band.
+                                </span>
+                            </div>
+
+                            <div class="diamond-selector__image">
+                                <div class="diamond-selector__image-container">
+                                    {% case product.handle %}
+                                        {% when 'curvy-mirror-band' %} {% assign diamondPreviewImage = 'wedding-c-mirror-diamond-' %}
+                                        {% when 'curvy-matte-band' %} {% assign diamondPreviewImage = 'wedding-c-matte-diamond-' %}
+                                        {% when 'curvy-hammered-band' %} {% assign diamondPreviewImage = 'wedding-c-hammered-diamond-' %}
+                                        {% when 'raw-band' %} {% assign diamondPreviewImage = 'wedding-c-raw-diamond-' %}
+                                        {% when 'curvy-wood-band' %} {% assign diamondPreviewImage = 'wedding-c-mirror-diamond-' %}
+                                        {% when 'industrial-mirror-band' %} {% assign diamondPreviewImage = 'wedding-i-mirror-diamond-' %}
+                                        {% when 'industrial-matte-band' %} {% assign diamondPreviewImage = 'wedding-i-matte-diamond-' %}
+                                        {% when 'industrial-hammered-band' %} {% assign diamondPreviewImage = 'wedding-i-hammered-diamond-' %}
+                                        {% when 'industrial-raw-band' %} {% assign diamondPreviewImage = 'wedding-i-raw-diamond-' %}
+                                        {% when 'industrial-wood-band' %} {% assign diamondPreviewImage = 'wedding-i-mirror-diamond-' %}
+                                        {% when 'organic-band' %} {% assign diamondPreviewImage = 'wedding-c-organic-diamond-' %}
+                                        {% when 'industrial-organic-band' %} {% assign diamondPreviewImage = 'wedding-i-organic-diamond-' %}
+                                      {% endcase %}
+                                        {% capture center_diamond %}{{ diamondPreviewImage }}one.jpg{% endcapture %}
+                                        <img
+                                            class="lazyload content center"
+                                            data-srcset="
+                                                {{ center_diamond | asset_img_url: '360x170' }} 360w,
+                                                {{ center_diamond | asset_img_url: '540x255' }} 540w,
+                                                {{ center_diamond | asset_img_url: '720x340' }} 720w,
+                                                {{ center_diamond | asset_img_url: '1080x510' }} 1080w
+                                            "
+                                            sizes="
+                                                (max-width: 479px) calc((100vw - 30px)),
+                                                (min-width: 480px) and (max-width: 767.98px) calc((100vw - 60px)),
+                                                (min-width: 768px) and (max-width: 1199.98px) calc((40vw - 40px - 30px)),
+                                                (min-width: 1200px) calc((40vw - 40px - 30px))
+                                            "
+                                            alt="Preview image of a wedding band with one center diamond"/>
+                                        {% capture three_diamond %}{{ diamondPreviewImage }}three.jpg{% endcapture %}
+                                        <img
+                                            class="lazyload content three"
+                                            data-srcset="
+                                                    {{ three_diamond | asset_img_url: '360x170' }} 360w,
+                                                    {{ three_diamond | asset_img_url: '540x255' }} 540w,
+                                                    {{ three_diamond | asset_img_url: '720x340' }} 720w,
+                                                    {{ three_diamond | asset_img_url: '1080x510' }} 1080w
+                                                "
+                                            sizes="
+                                                    (max-width: 479px) calc((100vw - 30px)),
+                                                    (min-width: 480px) and (max-width: 767.98px) calc((100vw - 60px)),
+                                                    (min-width: 768px) and (max-width: 1199.98px) calc((40vw - 40px - 30px)),
+                                                    (min-width: 1200px) calc((40vw - 40px - 30px))
+                                                "
+                                            alt="Preview image of a wedding band with three diamond"/>
+                                </div>
+                                <div class="diamond-selector__image-text">
+                                    Preview on a 3mm band.
+                                </div>
+                            </div>
+
+                            <div class="diamond-selector__notice">
+                                Bands with added diamonds are final sale.
+                            </div>
+                        </div>
+                    </div>
+                
+                {% comment %}ENGRAVING{% endcomment %}
+                {% elsif option == 'engraving' %}
+
+                    {% for variant in product.variants %}
+                        {% assign value = variant.options[index] %}
+                        {% unless used contains variant.options[index] %}
+                            {% capture identifier %}{{ option | handleize }}-{{ value | handleize }}{% endcapture %}
+                            <input
+                                {% if forloop.index0 == 0 %}checked{% endif %}
+                                id="radio-{{ identifier }}"
+                                type="radio"
+                                name="{{ index }}"
+                                value="{{ value }}"
+                                data-option-index="{{ index }}"
+                                data-option-name="{{ product.options[index] }}"
+                                data-js-engraving="radio"
+                                data-js="swatch-selector"
+                                onchange="onSelectionChange()"
+                                class="visually-hidden"
+                            >
+                            {% capture used %}{{ used }} {{ value }}{% endcapture %}
+                        {% endunless %}
+                    {% endfor %}
+
+                    {% if
+                        product.handle == 'curvy-mirror-band' or
+                        product.handle == 'curvy-matte-band' or
+                        product.handle == 'curvy-hammered-band' or
+                        product.handle == 'curvy-wood-band' or
+                        product.handle == 'raw-band' or
+                        product.handle == 'industrial-mirror-band' or
+                        product.handle == 'industrial-matte-band' or
+                        product.handle == 'industrial-hammered-band' or
+                        product.handle == 'industrial-wood-band' or
+                        product.handle == 'industrial-raw-band' or
+                        product.handle == 'diamond-cluster-ring' or
+                        product.handle == 'diamond-industrial' or
+                        product.handle == 'gemstone-industrial' or
+                        product.handle == 'coffin-ring' or 
+                        product.handle == 'curvy-bee-ring' or
+                        product.handle == 'organic-band' or
+                        product.handle == 'industrial-organic-band'or 
+                        product.title == 'Filigree Band' or
+                        product.title == 'Inlay Band' or
+                        product.title == 'Beveled Edge Band' or
+                        product.title == 'Open Curvy Band' or
+                        product.title == 'Open Industrial Band' or
+                        product.title == 'Mountains Band' or
+                        product.title == 'Diamond Leaves Ring' or
+                        product.title == 'Sapphire Cluster Ring' or
+                        product.title == 'Hexagon Diamond Band' or
+                        product.title == 'Platinum Sapphire Ring' or
+                        product.title == 'Diamond Petal Ring' or
+                        product.title == 'Pear Lab Diamond Ring' or
+                        product.title == 'Moissanite Branches Ring' or
+                        product.title == 'Cloud Diamond Band' or
+                        product.title == 'Green Diamond Leaves Ring' or
+                        product.title == 'Asscher Moissanite Signet Ring' or
+                        product.title == 'Stars and Diamonds Band' or
+                        product.title == 'Oval Moissanite Halo Ring' or
+                        product.title == 'Diamond Kite Ring' or
+                        product.title == 'Pear Salt and Pepper Diamond Leaves Ring' or
+                        product.title == 'Green Sapphire Leaves and Vines Ring' or
+                        product.title == 'Square Carre Cut Diamond Band' or
+                        product.title == 'Round Lab Diamond Ring'  or
+                        product.title == 'Cushion Salt and Pepper Diamond Signet Ring' or
+                        product.title == 'Emerald Cut Pink Sapphire Ring' or
+                        product.title == 'Dark Green Sapphire Pine Ring' or
+                        product.title == 'Pear Salt and Pepper Diamond Clusters Ring' or 
+                        product.title == 'Green Sapphires Ring'  or 
+                        product.title == 'Moon and Sun Band' or 
+                        product.title == 'Royalty Ring' or 
+                        product.title == 'Mix Matte Band' or
+                        product.title == 'Mix Mirror Band' or
+                        product.title == 'Mix Stardust Band' or 
+                        product.title == 'Engraved Star Diamond Band' or 
+                        product.title == 'Salt and Pepper Baguette Diamond Band' or
+                        product.title == 'Double Baguette Diamond Band' or 
+                        product.title == 'Edge Band' or 
+                        product.title == 'Industrial Stardust Band' or
+                        product.title == 'Curvy Stardust Band' or
+                        product.title == 'Platinum Curvy Hammered Band' or
+                        product.title == 'Platinum Curvy Matte Band' or
+                        product.title == 'Platinum Curvy Mirror Band' or
+                        product.title == 'Platinum Industrial Hammered Band' or
+                        product.title == 'Platinum Industrial Mirror Band' or
+                        product.title == 'Platinum Industrial Matte Band' or
+                        product.title == 'Platinum Industrial Wood Band'
+                    %}
+                        <div class="engraving-selector engraving-selector--band" data-js-engraving="engraving-selector" data-js-engraving-type="band" id="bump">
+                    {% elsif product.handle == 'bar-ring' or product.handle == 'bar-bracelet' or product.handle == 'bar-necklace' %}
+                        <div class="engraving-selector engraving-selector--bar" data-js-engraving="engraving-selector" data-js-engraving-type="bar">
+                    {% elsif product.handle == 'miami-cuban-anklet' or product.handle == 'miami-cuban-chain' or product.handle == 'miami-cuban-bracelet' %}
+                        <div class="engraving-selector engraving-selector--bar" data-js-engraving="engraving-selector" data-js-engraving-type="fourteen">
+                    {% elsif product.handle == 'diamond-bar-ring' or product.handle == 'diamond-bar-bracelet' or product.handle == 'diamond-bar-necklace' %}
+                        <div class="engraving-selector engraving-selector--bar" data-js-engraving="engraving-selector" data-js-engraving-type="diamond-bar">
+                    {% elsif product.handle == 'square-ring' %}
+                        <div class="engraving-selector engraving-selector--square" data-js-engraving="engraving-selector" data-js-engraving-type="square">
+                    {% elsif product.handle == 'signet-ring' %}
+                        <div class="engraving-selector engraving-selector--signet" data-js-engraving="engraving-selector" data-js-engraving-type="signet">
+                    {% elsif product.handle == 'three-stone-sapphire-ring' %}
+                        <div class="engraving-selector engraving-selector--six" data-js-engraving="engraving-selector" data-js-engraving-type="six">
+                    {% elsif product.handle == 'gemstone-bar-ring' or product.handle == 'gemstone-bar-bracelet' or product.handle == 'gemstone-bar-necklace' %}
+                        <div class="engraving-selector engraving-selector--seven" data-js-engraving="engraving-selector" data-js-engraving-type="seven">
+                    {% else %}
+                        <div class="engraving-selector engraving-selector--disk" data-js-engraving="engraving-selector" data-js-engraving-type="disk">
+                    {% endif %}
+
+                        <div class="engraving-selector__header">
+                            <h4 class="engraving-selector__title">
+                                Engraving
+                            </h4>
+                            <label for="radio-engraving-engraved" class="engraving-selector__button engraving-selector__button--add" data-js-engraving="add" onclick="addRequired()">
+                                Add engraving
+                            </label>
+                            <label for="radio-engraving-no-engraving" class="engraving-selector__button engraving-selector__button--remove" data-js-engraving="remove" onclick="removeRequired()">
+                                Remove
+                            </label>
+                        </div>
+
+                        <div class="engraving-selector__container" data-js-engraving="container">
+                            <div class="engraving-selector__description">
+                                {% if
+                                    product.handle == '2-mm-wedding-band' or
+                                    product.handle == '3-mm-wedding-band' or
+                                    product.handle == '4-mm-wedding-band' or
+                                    product.handle == 'curvy-mirror-band' or
+                                    product.handle == 'curvy-matte-band' or
+                                    product.handle == 'curvy-hammered-band' or
+                                    product.handle == 'raw-band' or
+                                    product.handle == 'curvy-wood-band' or
+                                    product.handle == 'industrial-mirror-band' or
+                                    product.handle == 'industrial-matte-band' or
+                                    product.handle == 'industrial-hammered-band' or
+                                    product.handle == 'industrial-wood-band' or
+                                    product.handle == 'industrial-raw-band' or
+                                    product.handle == 'diamond-industrial' or
+                                    product.handle == 'gemstone-industrial' or
+                                    product.handle == 'diamond-cluster-ring' or
+                                    product.handle == 'coffin-ring' or 
+                                    product.handle == 'curvy-bee-ring' or
+                                    product.handle == 'organic-band' or
+                                    product.handle == 'industrial-organic-band' or 
+                                    product.title == 'Filigree Band' or
+                                    product.title == 'Filigree Band' or
+                                    product.title == 'Inlay Band' or
+                                    product.title == 'Beveled Edge Band' or
+                                    product.title == 'Open Curvy Band' or
+                                    product.title == 'Open Industrial Band' or
+                                    product.title == 'Mountains Band' or
+                                    product.title == 'Sapphire Cluster Ring' or
+                                    product.title == 'Hexagon Diamond Band' or
+                                    product.title == 'Platinum Sapphire Ring' or
+                                    product.title == 'Diamond Petal Ring' or 
+                                    product.title == 'Pear Lab Diamond Ring' or
+                                    product.title == 'Moissanite Branches Ring' or
+                                    product.title == 'Cloud Diamond Band' or
+                                    product.title == 'Green Diamond Leaves Ring' or
+                                    product.title == 'Asscher Moissanite Signet Ring' or
+                                    product.title == 'Stars and Diamonds Band' or
+                                    product.title == 'Oval Moissanite Halo Ring' or
+                                    product.title == 'Diamond Kite Ring' or
+                                    product.title == 'Pear Salt and Pepper Diamond Leaves Ring' or
+                                    product.title == 'Green Sapphire Leaves and Vines Ring' or
+                                    product.title == 'Square Carre Cut Diamond Band' or
+                                    product.title == 'Round Lab Diamond Ring'  or
+                                    product.title == 'Cushion Salt and Pepper Diamond Signet Ring' or
+                                    product.title == 'Emerald Cut Pink Sapphire Ring' or
+                                    product.title == 'Dark Green Sapphire Pine Ring' or
+                                    product.title == 'Pear Salt and Pepper Diamond Clusters Ring' or 
+                                    product.title == 'Green Sapphires Ring' or 
+                                    product.title == 'Moon and Sun Band' or 
+                                    product.title == 'Royalty Ring' or 
+                                    product.title == 'Mix Matte Band' or
+                                    product.title == 'Mix Mirror Band' or
+                                    product.title == 'Mix Stardust Band' or 
+                                    product.title == 'Engraved Star Diamond Band' or 
+                                    product.title == 'Salt and Pepper Baguette Diamond Band' or
+                                    product.title == 'Double Baguette Diamond Band' or 
+                                    product.title == 'Edge Band' or 
+                                    product.title == 'Industrial Stardust Band' or
+                                    product.title == 'Curvy Stardust Band' or 
+                                    product.title == 'Platinum Curvy Hammered Band' or
+                                    product.title == 'Platinum Curvy Matte Band' or
+                                    product.title == 'Platinum Curvy Mirror Band' or
+                                    product.title == 'Platinum Industrial Hammered Band' or
+                                    product.title == 'Platinum Industrial Mirror Band' or
+                                    product.title == 'Platinum Industrial Matte Band' or
+                                    product.title == 'Platinum Industrial Wood Band'
+
+                                %}
+                                    Engrave up to thirty characters on <br/>the inside of the band.
+                                {% elsif product.handle == 'gemstone-bar-ring' or product.handle == 'gemstone-bar-bracelet' or product.handle == 'gemstone-bar-necklace' %}
+                                    Engrave up to seven characters on <br/>the bar of the piece.
+                                {% elsif product.handle == 'bar-ring' or product.handle == 'bar-bracelet' or product.handle == 'bar-necklace' %}
+                                    Engrave up to nine characters on <br/>the bar of the piece.
+                                {% elsif product.handle == 'miami-cuban-anklet' or product.handle == 'miami-cuban-chain' or product.handle == 'miami-cuban-bracelet' %}
+                                    Engrave up to fourteen characters on <br/>the box clasp.
+                                {% elsif product.handle == 'diamond-bar-ring' or product.handle == 'diamond-bar-bracelet' or product.handle == 'diamond-bar-necklace' %}
+                                    Engrave up to five characters on <br/>the bar of the piece.
+                                {% elsif product.handle == 'square-ring' %}
+                                    Engrave a character on <br/>the square of the ring.
+                                {% elsif product.title == 'Three Stone Sapphire Ring' %}
+                                    Engrave up to six characters on the inside of the band.
+                                {% elsif product.handle == 'diamond-leaves-ring' %}
+                                    Engrave up to thirteen characters on <br/>the inside of the band.
+                                {% elsif product.handle == 'signet-ring' %}
+                                    Engrave up to three characters on <br/>the front of the ring.
+                                {% else %}
+                                    Engrave up to three characters on the <br/>plain side of the charm.
+                                {% endif %}
+                            </div>
+                            <div class="engraving-selector__preview">
+                                {% if product.handle == 'square-ring' %}
+                                    <div class="engraving-selector__preview-text" data-js-engraving="preview">A</div>
+                                {% elsif product.handle == 'three-stone-sapphire-ring' %}
+                                    <div class="engraving-selector__preview-text" data-js-engraving="preview">ABCDEF</div>
+                                {% elsif product.handle == 'gemstone-bar-ring' or product.handle == 'gemstone-bar-bracelet' or product.handle == 'gemstone-bar-necklace' %}
+                                    <div class="engraving-selector__preview-text" data-js-engraving="preview">ABCDEFG</div>
+                                {% else %}
+                                    <div class="engraving-selector__preview-text" data-js-engraving="preview">ABC</div>
+                                {% endif %}
+                            </div>
+                            <div class="engraving-selector__input-container">
+                                {% if product.handle == 'square-ring' %}
+                                    <input
+                                        type="text"
+                                        name="properties[Engraving]"
+                                        inputmode="text"
+                                        class="engraving-selector__input"
+                                        data-js-engraving="engraving-input"
+                                        placeholder="A"
+                                        autocomplete="off"
+                                        autocorrect="off"
+                                    />
+                                {% elsif product.handle == 'curvy-mirror-band' %}
+                                    <input
+                                        type="text"
+                                        id="boop"
+                                        name="properties[Engraving]"
+                                        inputmode="text"
+                                        class="engraving-selector__input"
+                                        data-js-engraving="engraving-input"
+                                        placeholder="A"
+                                        autocomplete="off"
+                                        autocorrect="off"
+                                    />
+                                {% else %}
+                                    <input
+                                        type="text"
+                                        name="properties[Engraving]"
+                                        inputmode="text"
+                                        class="engraving-selector__input"
+                                        data-js-engraving="engraving-input"
+                                        placeholder="ABC"
+                                        autocomplete="off"
+                                        autocorrect="off"
+                                    />
+                                {% endif %}
+                            </div>
+                            <div class="engraving-selector__error" data-js-engraving="error"></div>
+                            <div class="engraving-selector__notice">
+                                Engraving adds two business days to your order to ship out.
+                            </div>
+                            <div class="engraving-selector__notice">
+                                All engraved items are final sale.
+                            </div>
+                        </div>
+                    </div>
+                
+                {% comment %}NAMEPLATE{% endcomment %}
+                {% elsif option == 'name' %}
+                
+                {% for variant in product.variants %}
+                    {% assign value = variant.options[index] %}
+                    {% unless used contains variant.options[index] %}
+                        {% capture identifier %}{{ option | handleize}}-{{ value | handleize }}{% endcapture %}
+                            <label for="name"><h4>Name (up to 10 characters):</h4></label>
+                            <input
+                                {% if forloop.index0 == 0 %}checked{% endif %}
+                                id="nameplate-{{ identifier }}"
+                                type="text"
+                                {% comment %} name="{{ index }}" {% endcomment %}
+                                value="{{ value }}"
+                                {% comment %} type="text"
+                                id="name" 
+                                name="name"  {% endcomment %}
+                                required maxlength="10" 
+                                size="100" />
+                    {% capture used %}{{ used }} {{ value }}{% endcapture %}
+                    {% endunless %}
+                {% endfor %}
+
+
+                {% comment %}BACKING{% endcomment %}
+                {% elsif option == 'backing' %}
+
+                    <div class="backing-selector" data-js="backing-selector">
+
+                        <div class="backing-selector__header">
+                            <h4 class="backing-selector__title">
+                                Backings:&nbsp;<span class="backing-selector__name" id="backing-selector-name"></span>
+                            </h4>
+                            <div class="backing-selector__open" data-js="backing-selector-open">
+                                change
+                            </div>
+
+                            <div class="backing-selector__close" data-js="backing-selector-close">
+                                <svg role="presentation" width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <title>Close Button</title>
+                                    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <rect id="Rectangle-25" fill="#ffffff" transform="translate(5.000000, 5.000000) rotate(45.000000) translate(-5.000000, -5.000000) " x="-1" y="4" width="12" height="2" rx="0.200000003"></rect>
+                                        <rect id="Rectangle-25" fill="#ffffff" transform="translate(5.000000, 5.000000) rotate(-45.000000) translate(-5.000000, -5.000000) " x="-1" y="4" width="12" height="2" rx="0.200000003"></rect>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="backing-selector__container">
+                            {% for variant in product.variants %}
+                                {% assign value = variant.options[index] %}
+                                {% unless used contains variant.options[index] %}
+                                    {% capture identifier %}{{ option | handleize}}-{{ value | handleize }}{% endcapture %}
+
+                                    {% assign screwback_standard = false %}
+                                    {% if product.handle == 'opal-stud' or product.handle == 'diamond-stud' %}
+                                        {% assign screwback_standard = true %}
+                                    {% endif %}
+
+                                    {% assign large_standard = false %}
+                                    {% if product.handle == 'they-them-studs' or product.handle == 'love-hope-studs' %}
+                                        {% assign large_standard = true %}
+                                    {% endif %}
+
+                                    <input
+                                        {% if value == 'Standard Pushback' and screwback_standard == false and large_standard == false%}checked{% endif %}
+                                        {% if value == 'Large Pushback' and large_standard == true %}checked{% endif %}
+                                        {% if value == 'Screw Backing' and screwback_standard == true %}checked{% endif %}
+                                        id="radio-{{ identifier }}"
+                                        type="radio"
+                                        name="{{ index }}"
+                                        value="{{ value }}"
+                                        data-option-index="{{ index }}"
+                                        data-option-name="{{ product.options[index] }}"
+                                        data-js="swatch-selector"
+                                        onchange="onSelectionChange()"
+                                    >
+                                    <label for="radio-{{ identifier }}" class="backing-selector__swatch">
+                                        <div class="backing-selector__illustration">
+                                            {% case value %}
+                                                {% when 'Standard Pushback' %}
+                                                    <svg width="23px" height="33px" viewBox="0 0 23 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <g id="Product" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                            <g id="Product-Color-Copy-11" transform="translate(-68.000000, -834.000000)" stroke="#FFFFFF">
+                                                                <g id="Group-2-Copy-3" transform="translate(69.000000, 835.000000)">
+                                                                    <g id="Group">
+                                                                        <path d="M10.1944628,1.79275034 C9.00320607,3.39704748 9.95255068,6.17403502 10.5962029,7.43224524 C11.2398552,8.69045546 12.2499608,12.326933 11.6653714,13.7688379 C12.2353367,14.0465337 13.3240355,14.1845822 14.8231546,13.3938123 C16.3222737,12.6030424 17.4612608,10.0571048 17.2193487,7.43224524 C16.9774366,4.80738564 16.2241502,2.85670215 14.8231546,1.79275034 C13.422159,0.728798527 11.3857195,0.188453193 10.1944628,1.79275034 Z" id="Path-2"></path>
+                                                                        <path d="M11.8430315,15.1303119 C13.1076921,15.4458169 14.5894509,15.4458169 16.2883079,15.1303119 C18.8365933,14.6570545 21.364688,11.6225968 21.364688,7.70363553 C21.364688,3.78467426 17.8133731,1.52742725 16.6066431,1.1247275 C15.399913,0.722027754 14.3713149,0.446352287 13.7880463,0.446352287 C13.2047777,0.446352287 11.6146114,0 10.6029961,0 C9.59138082,0 7.34567417,0.0273611945 5.36980708,1.1247275 C3.39393998,2.22209381 2.05644156,4.16036083 2.05644156,5.69714793 C1.13898709,7.03219181 -0.488352979,9.39191243 0.727623294,14.5737579 C0.796605944,14.8677253 0.815085275,15.1922003 0.815085275,15.5" id="Path-7"></path>
+                                                                        <path d="M11.6730272,13.7493249 C11.2394778,14.6924843 11.8240672,14.4849413 11.7487763,15.529239" id="Path-8"></path>
+                                                                    </g>
+                                                                    <g id="Group" transform="translate(11.000000, 23.000000) scale(1, -1) translate(-11.000000, -23.000000) translate(0.000000, 15.000000)">
+                                                                        <path d="M10.1944628,1.79275034 C9.00320607,3.39704748 9.95255068,6.17403502 10.5962029,7.43224524 C11.2398552,8.69045546 12.2499608,12.326933 11.6653714,13.7688379 C12.2353367,14.0465337 13.3240355,14.1845822 14.8231546,13.3938123 C16.3222737,12.6030424 17.4612608,10.0571048 17.2193487,7.43224524 C16.9774366,4.80738564 16.2241502,2.85670215 14.8231546,1.79275034 C13.422159,0.728798527 11.3857195,0.188453193 10.1944628,1.79275034 Z" id="Path-2"></path>
+                                                                        <path d="M11.8430315,15.1303119 C13.1076921,15.4458169 14.5894509,15.4458169 16.2883079,15.1303119 C18.8365933,14.6570545 21.364688,11.6225968 21.364688,7.70363553 C21.364688,3.78467426 17.8133731,1.52742725 16.6066431,1.1247275 C15.399913,0.722027754 14.3713149,0.446352287 13.7880463,0.446352287 C13.2047777,0.446352287 11.6146114,0 10.6029961,0 C9.59138082,0 7.34567417,0.0273611945 5.36980708,1.1247275 C3.39393998,2.22209381 2.05644156,4.16036083 2.05644156,5.69714793 C1.13898709,7.03219181 -0.488352979,9.39191243 0.727623294,14.5737579 C0.796605944,14.8677253 0.815085275,15.1922003 0.815085275,15.5" id="Path-7"></path>
+                                                                        <path d="M11.6730272,13.7493249 C11.2394778,14.6924843 11.8240672,14.4849413 11.7487763,15.529239" id="Path-8"></path>
+                                                                    </g>
+                                                                    <ellipse id="Oval-3" stroke-width="0.5" cx="6.14150943" cy="15.7924528" rx="1.12735849" ry="2.58962264"></ellipse>
+                                                                    <path d="M6.62752452,13.8057275 C6.369548,14.1213288 6.18261456,14.9058181 6.18261456,15.7924528 C6.18261456,16.6790876 6.369548,17.4635769 6.62752452,17.7791782 L6.7568558,17.9373984 L6.62752452,18.0956187 C6.47957564,18.2766152 6.30099681,18.3820755 6.09973046,18.3820755 C5.43013195,18.3820755 5.01415094,17.2173287 5.01415094,15.7924528 C5.01415094,14.367577 5.43013195,13.2028302 6.09973046,13.2028302 C6.30099681,13.2028302 6.47957564,13.3082904 6.62752452,13.489287 L6.7568558,13.6475072 L6.62752452,13.8057275 Z" id="Combined-Shape" stroke-width="0.5"></path>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                {% when 'Large Pushback' %}
+                                                    <svg width="36px" height="52px" viewBox="0 0 36 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <g id="Product" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                            <g id="Product-Color-Copy-11" transform="translate(-188.000000, -825.000000)" stroke="#FFFFFF">
+                                                                <g id="Group-2-Copy-4" transform="translate(189.000000, 826.000000)">
+                                                                    <g id="Group">
+                                                                        <path d="M16.4426819,2.8915328 C14.5213001,5.47910884 16.0525011,9.958121 17.0906499,11.9874923 C18.1287987,14.0168637 19.7580014,19.8821499 18.8151151,22.2078031 C19.734414,22.6556995 21.4903798,22.8783584 23.9083138,21.6029231 C26.3262479,20.3274877 28.1633238,16.2211368 27.773143,11.9874923 C27.3829622,7.75384781 26.1679842,4.60758411 23.9083138,2.8915328 C21.6486435,1.1754815 18.3640637,0.303956763 16.4426819,2.8915328 Z" id="Path-2"></path>
+                                                                        <path d="M19.1016637,24.4037289 C21.1414389,24.9126079 23.5313724,24.9126079 26.2714643,24.4037289 C30.3816022,23.6404104 34.4591742,18.7461239 34.4591742,12.4252186 C34.4591742,6.10431332 28.7312469,2.46359234 26.7849082,1.81407662 C24.8385694,1.16456089 23.1795401,0.719923043 22.2387843,0.719923043 C21.2980286,0.719923043 18.7332441,0 17.1016066,0 C15.4699691,0 11.8478616,0.0441309589 8.66097916,1.81407662 C5.47409675,3.58402228 3.31684123,6.71025941 3.31684123,9.18894827 C1.83707595,11.3422449 -0.787666095,15.1482459 1.17358596,23.5060611 C1.2848483,23.9802021 1.31465367,24.5035488 1.31465367,25" id="Path-7"></path>
+                                                                        <path d="M18.8274632,22.1763305 C18.12819,23.6975553 19.0710762,23.3628085 18.9496393,25.0471597" id="Path-8"></path>
+                                                                    </g>
+                                                                    <g id="Group" transform="translate(17.741935, 37.096774) scale(1, -1) translate(-17.741935, -37.096774) translate(0.000000, 24.193548)">
+                                                                        <path d="M16.4426819,2.8915328 C14.5213001,5.47910884 16.0525011,9.958121 17.0906499,11.9874923 C18.1287987,14.0168637 19.7580014,19.8821499 18.8151151,22.2078031 C19.734414,22.6556995 21.4903798,22.8783584 23.9083138,21.6029231 C26.3262479,20.3274877 28.1633238,16.2211368 27.773143,11.9874923 C27.3829622,7.75384781 26.1679842,4.60758411 23.9083138,2.8915328 C21.6486435,1.1754815 18.3640637,0.303956763 16.4426819,2.8915328 Z" id="Path-2"></path>
+                                                                        <path d="M19.1016637,24.4037289 C21.1414389,24.9126079 23.5313724,24.9126079 26.2714643,24.4037289 C30.3816022,23.6404104 34.4591742,18.7461239 34.4591742,12.4252186 C34.4591742,6.10431332 28.7312469,2.46359234 26.7849082,1.81407662 C24.8385694,1.16456089 23.1795401,0.719923043 22.2387843,0.719923043 C21.2980286,0.719923043 18.7332441,0 17.1016066,0 C15.4699691,0 11.8478616,0.0441309589 8.66097916,1.81407662 C5.47409675,3.58402228 3.31684123,6.71025941 3.31684123,9.18894827 C1.83707595,11.3422449 -0.787666095,15.1482459 1.17358596,23.5060611 C1.2848483,23.9802021 1.31465367,24.5035488 1.31465367,25" id="Path-7"></path>
+                                                                        <path d="M18.8274632,22.1763305 C18.12819,23.6975553 19.0710762,23.3628085 18.9496393,25.0471597" id="Path-8"></path>
+                                                                    </g>
+                                                                    <ellipse id="Oval-3" stroke-width="0.5" cx="9.90566038" cy="25.4716981" rx="1.66509434" ry="4.02358491"></ellipse>
+                                                                    <path d="M10.5709207,22.1703287 C10.1278463,22.7123736 9.81873315,24.0096051 9.81873315,25.4716981 C9.81873315,26.9337911 10.1278463,28.2310226 10.5709207,28.7730675 L10.700252,28.9312878 L10.5709207,29.0895081 C10.3589302,29.3488514 10.1109734,29.495283 9.83827493,29.495283 C8.88583518,29.495283 8.24056604,27.6885294 8.24056604,25.4716981 C8.24056604,23.2548668 8.88583518,21.4481132 9.83827493,21.4481132 C10.1109734,21.4481132 10.3589302,21.5945448 10.5709207,21.8538882 L10.700252,22.0121084 L10.5709207,22.1703287 Z" id="Combined-Shape" stroke-width="0.5"></path>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                {% else %}
+                                                    <svg width="36px" height="41px" viewBox="0 0 36 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <g id="Product" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                            <g id="Product-Color-Copy-11" transform="translate(-316.000000, -830.000000)">
+                                                                <g id="Group-4-Copy-2" transform="translate(317.000000, 831.000000)">
+                                                                    <ellipse id="Oval-4" stroke="#FFFFFF" stroke-width="0.5" cx="4.875" cy="19.5" rx="1.57954545" ry="3.35227273"></ellipse>
+                                                                    <path d="M5.43358836,16.805789 C4.99559465,17.2205375 4.68181818,18.2876977 4.68181818,19.5 C4.68181818,20.7123023 4.99559465,21.7794625 5.43358836,22.194211 L5.60373074,22.3553236 L5.45396111,22.5355311 C5.28500305,22.7388267 5.09135005,22.8522727 4.875,22.8522727 C3.94472313,22.8522727 3.29545455,21.3373127 3.29545455,19.5 C3.29545455,17.6626873 3.94472313,16.1477273 4.875,16.1477273 C5.09135005,16.1477273 5.28500305,16.2611733 5.45396111,16.4644689 L5.60373074,16.6446764 L5.43358836,16.805789 Z" id="Combined-Shape" stroke="#FFFFFF" stroke-width="0.5"></path>
+                                                                    <ellipse id="Oval-4-Copy" stroke="#FFFFFF" stroke-width="0.5" cx="28.5852273" cy="19.5" rx="1.35795455" ry="2.90909091"></ellipse>
+                                                                    <path d="M29.1939321,17.2512865 C28.8530747,17.6281564 28.6136364,18.5078653 28.6136364,19.5 C28.6136364,20.4921347 28.8530747,21.3718436 29.1939321,21.7487135 L29.3324257,21.9018393 L29.2082395,22.066781 C29.0436838,22.2853408 28.8319188,22.4090909 28.5852273,22.4090909 C27.7754042,22.4090909 27.2272727,21.0935754 27.2272727,19.5 C27.2272727,17.9064246 27.7754042,16.5909091 28.5852273,16.5909091 C28.8319188,16.5909091 29.0436838,16.7146592 29.2082395,16.933219 L29.3324257,17.0981607 L29.1939321,17.2512865 Z" id="Combined-Shape" stroke="#FFFFFF" stroke-width="0.5"></path>
+                                                                    <g id="Group" stroke="#FFFFFF">
+                                                                        <path d="M33.6318304,19.5 C33.6318304,16.3557462 32.9354636,13.0991821 30.7230169,11.3340288 C30.7230169,9.19212757 29.018022,5.22729492 25.4818726,2.45935613 C21.9457231,-0.308582653 15.8637668,0.407909047 13.9095903,1.03437944 C12.942294,0.421542081 12.0661011,0.394276012 11.5714167,0.407909047 C11.0767323,0.421542081 5.83320756,2.30351897 3.18580211,6.12815718 C0.538396662,9.95279539 0.241715865,14.972967 0.241715865,19.5" id="Path-9"></path>
+                                                                        <path d="M23.531483,19.5 C23.531483,16.5585105 23.959517,13.5932173 26.4028598,11.6768022 C26.4028598,8.34276789 24.6563166,6.05620506 23.0813765,4.78530329 C21.5064364,3.51440152 19.2935569,2.80515914 16.9923873,3.43920344 C17.9679066,4.31431441 18.396157,4.90702681 18.7317893,5.54323509 C19.0674217,6.17944336 18.6192627,7.4191839 18.954895,7.91170432 C19.2905273,8.40422474 20.3681863,9.47463434 20.6280795,10.8957159 C20.8879727,12.3167974 20.6280795,13.3846103 20.6280795,13.9727783 C20.6280795,14.5609464 21.6976235,15.6380643 21.6976235,17.2589888 C21.6976235,18.8799133 21.1495972,19.0373424 21.1495972,19.5" id="Path-10"></path>
+                                                                    </g>
+                                                                    <g id="Group" transform="translate(16.840909, 29.250000) scale(1, -1) translate(-16.840909, -29.250000) translate(0.000000, 19.500000)" stroke="#FFFFFF">
+                                                                        <path d="M33.6318304,19.5 C33.6318304,16.3557462 32.9354636,13.0991821 30.7230169,11.3340288 C30.7230169,9.19212757 29.018022,5.22729492 25.4818726,2.45935613 C21.9457231,-0.308582653 15.8637668,0.407909047 13.9095903,1.03437944 C12.942294,0.421542081 12.0661011,0.394276012 11.5714167,0.407909047 C11.0767323,0.421542081 5.83320756,2.30351897 3.18580211,6.12815718 C0.538396662,9.95279539 0.241715865,14.972967 0.241715865,19.5" id="Path-9"></path>
+                                                                        <path d="M23.531483,19.5 C23.531483,16.5585105 23.959517,13.5932173 26.4028598,11.6768022 C26.4028598,8.34276789 24.6563166,6.05620506 23.0813765,4.78530329 C21.5064364,3.51440152 19.2935569,2.80515914 16.9923873,3.43920344 C17.9679066,4.31431441 18.396157,4.90702681 18.7317893,5.54323509 C19.0674217,6.17944336 18.6192627,7.4191839 18.954895,7.91170432 C19.2905273,8.40422474 20.3681863,9.47463434 20.6280795,10.8957159 C20.8879727,12.3167974 20.6280795,13.3846103 20.6280795,13.9727783 C20.6280795,14.5609464 21.6976235,15.6380643 21.6976235,17.2589888 C21.6976235,18.8799133 21.1495972,19.0373424 21.1495972,19.5" id="Path-10"></path>
+                                                                    </g>
+                                                                    <path d="M4.38853871,28.9171808 C4.96102366,30.0745761 6.42200498,30.6301889 7.32270444,30.6301889 C11.5404868,30.6301889 13.7386364,24.645374 13.7386364,20.0613348 C13.7386364,14.8786177 11.9920932,10.4885642 8.31296104,10.2037853 C8.50644863,10.2691331 7.96620473,10.8499101 8.14770508,10.8818359 C11.7756592,11.5199918 12.4975586,15.6903835 12.4975586,20.0613348 C12.4975586,24.6885598 10.2056247,30.0771484 7.32270444,30.0771484 C6.50133445,30.0771484 6.28125832,30.2132929 4.38853871,28.9171808 Z" id="Path-12" fill="#FFFFFF"></path>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                            {% endcase %}
+                                        </div>
+
+                                        <div class="backing-selector__option-name">
+                                            {{ value }}
+                                        </div>
+
+                                        <div class="backing-selector__option-description">
+                                            {% case value %}
+                                                {% when 'Standard Pushback' %}
+                                                    Small & comfy
+                                                {% when 'Large Pushback' %}
+                                                    Easiest to open
+                                                {% else %}
+                                                    Extra secure
+                                            {% endcase %}
+                                        </div>
+                                    </label>
+                                    {% capture used %}{{ used }} {{ value }}{% endcapture %}
+                                {% endunless %}
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                {% comment %} ZODIAC VARIATION {% endcomment %}
+                {% comment %} {% elsif product.tags contains 'zodiac' %}
+                    {% for option in product.options_with_values %}
+                        <label for="ProductSelect-option-{{ forloop.index0 }}">
+                            {{ option.name | escape }}
+                        </label>
+                        <select id="ProductSelect-{{ forloop.index0 }}" data-index="option{{ forloop.index }}">
+                            {%- for value in option.values -%}
+                            <option value="{{ value | escape }}"{% if option.selected_value == value %} selected="selected"{% endif %}>
+                                {{ value | escape }}
+                            </option>
+                            {%- endfor -%}
+                        </select>
+                    {% endfor %} {% endcomment %}
+
+                {% comment %}GENERIC VARIATION{% endcomment %}
+                {% else %}
+
+                    {% if product.options[index] == 'length' %}
+                        <div class="product__length-option-name-container">
+                            <h4 class="product__option-name">{{ product.options[index] }}</h4>
+                            <a href="{{ shop.url }}/pages/sizing" target="_blank">Size Guide</a>
+                        </div>
+                    {% elsif product.options[index] == 'pearl' %}
+                        <h4 class="product__option-name">Pearl size</h4>
+                    {% elsif product.options[index] == 'flat back'%}
+                        <h4 class="product__option-name">Flat Back Length</h4> 
+                    {% else %}
+                        <h4 class="product__option-name visually-hidden">{{ product.options[index] }}</h4>
+                    {% endif %}
+
+                    <div class="product__swatch-container swatch-{{ option | handleize }}-container">
+                        {% for variant in product.variants %}
+                            {% assign value = variant.options[index] %}
+                            {% unless used contains variant.options[index] %}
+                                {% capture identifier %}{{ option | handleize}}-{{ value | handleize }}{% endcapture %}
+                                <input
+                                    {% if forloop.index0 == 0 %}checked{% endif %}
+                                    id="radio-{{ identifier }}"
+                                    type="radio"
+                                    name="{{ index }}"
+                                    value="{{ value }}"
+                                    data-option-index="{{ index }}"
+                                    data-option-name="{{ product.options[index] }}"
+                                    data-js="swatch-selector"
+                                    onchange="onSelectionChange()"
+                                >
+                                <label
+                                    for="radio-{{ identifier }}"
+                                    class="product__swatch swatch-{{ option | handleize }} swatch-{{ identifier }}"
+                                >
+                                    {{ value }}
+                                </label>
+                                {% capture used %}{{ used }} {{ value }}{% endcapture %}
+                            {% endunless %}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endif %}
+
+
+<script>
+    window.productVariants = {{ product.variants | json }};
+    window.moneyFormat = {{ shop.money_format | json }};
+    window.selectedVariant = null;
+
+    function onSelectionChange() {
+        var option1;
+        var option2;
+        var option3;
+
+        {% if product.options[0] and product.options[0] == 'ring size' %}option1 = document.querySelector("[data-js='dropdown-selector'][data-option-index='0']").value;{% endif %}
+        {% if product.options[0] and product.options[0] == 'gemstone' %}option1 = document.querySelector("[data-js='dropdown-selector'][data-option-index='0']").value;{% endif %}
+        {% if product.options[0] and product.options[0] != 'ring size' and product.options[0] != 'gemstone' %}option1 = document.querySelector("[data-js='swatch-selector'][data-option-index='0']:checked").value;{% endif %}
+        {% if product.options[1] %}option2 = document.querySelector("[data-js='swatch-selector'][data-option-index='1']:checked").value;{% endif %}
+        {% if product.options[2] %}option3 = document.querySelector("[data-js='swatch-selector'][data-option-index='2']:checked").value;{% endif %}
+
+        var selectedVariant;
+        var variants={{ product.variants | json }};
+
+        var backingSelectorName = document.getElementById('backing-selector-name');
+
+        for (var i = 0; i < variants.length; i++) {
+            var variant = variants[i];
+            var match = true;
+
+            if (option1 && variant.option1 !== option1) match = false;
+            if (option2 && variant.option2 !== option2) match = false;
+            if (option3 && variant.option3 !== option3) match = false;
+
+            if (match) {
+                selectedVariant = variant;
+                break;
+            }
+        }
+
+        timber.productPage({
+            money_format: "{{ shop.money_format }}",
+            variant: selectedVariant
+        });
+
+        document.querySelector("[data-js='master-select']").value = selectedVariant ? selectedVariant.id : null;
+        if (option3) {
+            if (backingSelectorName) {
+                backingSelectorName.innerText = option3;
+            }
+        }
+
+        affirm.ui.ready(function(){
+            if (document.querySelector('.affirm-as-low-as')) {
+                document.querySelector('.affirm-as-low-as').setAttribute('data-amount', selectedVariant.price);
+                affirm.ui.refresh();
+            }
+        });
+
+        window.selectedVariant = selectedVariant ? selectedVariant.title : null;
+    }
+
+    document.addEventListener('DOMContentLoaded', function setDefaultOptionsOnRadios() {
+        if (window.productVariants.length > 1 && !/\/custom-letter-necklace/ig.test(location.pathname)) {
+            onSelectionChange()
+        } else if (window.productVariants.length === 1) {
+            timber.productPage({
+                money_format: "{{ shop.money_format }}",
+                variant: window.productVariants[0]
+            });
+        }
+    });
+
+    var optionsContainer = document.querySelector('[data-ga="options-click"]');
+
+    if (optionsContainer) {
+        optionsContainer.addEventListener('click', function onOptionsContainerClick(event) {
+            var target = event.target;
+
+            if (target) {
+                if (target.type === 'radio') {
+                    var value = target.value;
+                    var option = target.dataset.optionName;
+
+                    if (typeof ga === 'function') {
+                        ga('send', 'event', 'Product option change', option + ': ' + value);
+                    }
+                }
+            }
+        });
+    }
+
+    function addRequired() {
+        var esi = document.getElementsByClassName('engraving-selector__input')[0].hasAttribute('required');
+
+        if (esi === false) {
+            document.getElementsByClassName('engraving-selector__input')[0].setAttribute('required','');
+			return true;
+        } else {
+            return false;
+        }
+    }
+
+    function removeRequired() {
+        var es = document.getElementsByClassName('engraving-selector__input')[0].hasAttribute('required');
+
+        if (es === true) {
+            document.getElementsByClassName('engraving-selector__input')[0].removeAttribute('required');
+			return true;
+        } else {
+            return false;
+        }
+    }
+</script>

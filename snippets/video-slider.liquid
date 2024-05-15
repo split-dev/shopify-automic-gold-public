@@ -1,0 +1,12 @@
+<div class="swipe" data-js="slider">
+    <div class="swipe-wrap">
+        {% assign videos = videostring | split: ',' %}
+        {% for video in videos %}
+            <video class="swipe__element" loop muted autoplay playsinline poster="//s3.amazonaws.com/automic-gold/product-videos/{{ video }}.jpg">
+                <source data-src="//s3.amazonaws.com/automic-gold/product-videos/{{ video }}" type="video/mp4">
+            </video>
+        {% endfor %}
+    </div>
+    <button class="swipe-controls__prev" data-js="slider-prev"><span>‹</span></button>
+    <button class="swipe-controls__next" data-js="slider-next"><span>›</span></button>
+</div>

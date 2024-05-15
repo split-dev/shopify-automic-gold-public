@@ -1,0 +1,21 @@
+@import "../settings/variables";
+@import "../settings/bootstrap-media";
+
+.double-image {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    @include media-breakpoint-up(md) {
+        flex-direction: row;
+    }
+    img, svg {
+        width: 100%;
+        display: block;
+        object-fit: cover;
+        @include media-breakpoint-down(sm) {
+            &:not(:first-child) {
+                //margin-top: 8px;
+            }
+        }
+    }
+}

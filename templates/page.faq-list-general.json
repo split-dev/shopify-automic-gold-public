@@ -1,0 +1,336 @@
+{
+  "wrapper": "div#faq-wrapp",
+  "sections": {
+    "banner": {
+      "type": "faq-banner",
+      "settings": {
+        "image_desktop": "shopify:\/\/shop_images\/banner-faq.png",
+        "image_mobile": "shopify:\/\/shop_images\/banner-faq--mobile.png",
+        "title": "<p>Frequently Asked <\/p><p>Questions<\/p>"
+      }
+    },
+    "section_faq_list_mbXNzx": {
+      "type": "section-faq-list",
+      "settings": {
+        "url": "shopify:\/\/pages\/faq"
+      }
+    },
+    "section_faq_list_NCFjKN": {
+      "type": "section-faq-hide-list",
+      "blocks": {
+        "item_UhwQfy": {
+          "type": "item",
+          "settings": {
+            "title": "How do I find my size?",
+            "text": "<p><a href=\"https:\/\/www.automicgold.com\/pages\/sizing\" target=\"_blank\" title=\"How to find your size\"><span style=\"text-decoration:underline\">Here<\/span><\/a> are useful tips for each kind of jewelry, including piercings! For rings, we suggest our <a href=\"https:\/\/www.automicgold.com\/products\/ring-sizer\" target=\"_blank\" title=\"Automic Gold Ring Sizer\"><span style=\"text-decoration:underline\">ring sizer<\/span><\/a>. For bracelets, anklets, and chokers, add about a finger’s width to your wrist\/ankle\/neck measurement so your new piece won’t be too tight.<\/p>"
+          }
+        },
+        "item_9BYtbH": {
+          "type": "item",
+          "settings": {
+            "title": "Do I need to order the ring sizer if I don’t know my size?",
+            "text": "<p>We recommend it! Our <a href=\"https:\/\/www.automicgold.com\/products\/ring-sizer\" target=\"_blank\" title=\"Automic Gold Ring Sizer\"><span style=\"text-decoration:underline\">ring sizers<\/span><\/a> are easy to use and also come with a sizing card for other jewelry measurements. That said, if you can’t wait for shipping times, you can go to a local jewelry store to get measured instead. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_UhwQfy",
+        "item_9BYtbH"
+      ],
+      "settings": {
+        "tab_name": "Sizing"
+      }
+    },
+    "section_faq_list_QcMHtV": {
+      "type": "section-faq-hide-list",
+      "blocks": {
+        "item_MkAALh": {
+          "type": "item",
+          "settings": {
+            "title": "Can I wear your jewelry if I have a metal allergy?",
+            "text": "<p>It depends on your allergy. If you’re sensitive to nickel, stick to yellow or rose gold since our white and champagne gold colors contain some nickel. <a href=\"https:\/\/www.automicgold.com\/blogs\/automic-blog\/why-does-gold-have-different-colors\" target=\"_blank\" title=\"Blog: Why does gold have different colors?\"><span style=\"text-decoration:underline\">Here<\/span><\/a>’s a breakdown of our metal percentages for each color alloy. <\/p><p>We can also produce nickel-free white and champagne gold at an extra cost—reach out to our <a href=\"https:\/\/www.automicgold.com\/pages\/custom-orders\" target=\"_blank\" title=\"Automic Gold Custom Orders\"><span style=\"text-decoration:underline\">customs department<\/span><\/a>! If our gold still bothers your skin, platinum is hypoallergenic!<\/p>"
+          }
+        },
+        "item_DAW4GQ": {
+          "type": "item",
+          "settings": {
+            "title": "Can I shower\/swim\/sleep in it?",
+            "text": "<p>Gold and platinum? Yes. Diamonds? Absolutely. Sapphires, rubies, lab emeralds, and moissanites? Just be a bit careful—they can still scratch or chip with enough impact. <\/p><p>Most other gems are more likely to break, and we recommend removing them if you work with your hands or exercise. Natural emeralds and other porous gems (onyx, opals, moonstones, turquoise) should also avoid water, chemicals, and prolonged direct sunlight. <\/p><p>For more tips on keeping your jewelry looking its best, <a href=\"https:\/\/www.automicgold.com\/pages\/gold-care\" target=\"_blank\" title=\"Jewelry Care\"><span style=\"text-decoration:underline\">visit our jewelry care page<\/span><\/a>!<\/p>"
+          }
+        },
+        "item_eAEkAH": {
+          "type": "item",
+          "settings": {
+            "title": "Why is my jewelry changing color\/tarnishing? Isn’t it solid gold\/platinum?",
+            "text": "<p>This discoloration is most common with earring posts and completely normal. It’s just the buildup of natural bodily oils and bacteria, sometimes chemicals from facial products. You can rub this off with a cloth. <a href=\"https:\/\/www.automicgold.com\/pages\/gold-care\" target=\"_blank\" title=\"Jewelry Care\"><span style=\"text-decoration:underline\">Visit our jewelry care page<\/span><\/a> for more jewelry care tips.<\/p>"
+          }
+        },
+        "item_7Lehf3": {
+          "type": "item",
+          "settings": {
+            "title": "Why is my gold\/platinum scratching? Isn’t it supposed to be durable?",
+            "text": "<p>Platinum and gold are actually relatively soft metals! Durability isn’t the same as scratch resistance—no metal is scratch-proof, not even tungsten, the world’s strongest. Scratching is completely normal, and it will happen to any ring (made from any metal) worn often enough. The durability of platinum and 14k gold is in their resistance to breaking, tarnishing, and deforming with regular wear (higher gold purities are much easier to deform, which is why we advise 14k gold for daily wear).<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_MkAALh",
+        "item_DAW4GQ",
+        "item_eAEkAH",
+        "item_7Lehf3"
+      ],
+      "settings": {
+        "tab_name": "Jewelry Wear & Care"
+      }
+    },
+    "section_faq_hide_list_eFFLWm": {
+      "type": "section-faq-hide-list",
+      "blocks": {
+        "item_PFktGT": {
+          "type": "item",
+          "settings": {
+            "title": "Can I modify an item in your collection?",
+            "text": "<p>Yes! <a href=\"mailto:custom@automicgold.com\" target=\"_blank\" title=\"Automic Gold Custom Email\"><span style=\"text-decoration:underline\">Reach out to us<\/span><\/a> and we’ll make it happen—we can customize almost any of our products. Just keep in mind that modified jewelry can’t be returned or exchanged. <\/p>"
+          }
+        },
+        "item_dXHGqU": {
+          "type": "item",
+          "settings": {
+            "title": "What fonts do you offer for engraving?",
+            "text": "<p>We do a block font by default, but we can do any font that’s free for commercial use. We can also engrave in other languages!<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_PFktGT",
+        "item_dXHGqU"
+      ],
+      "settings": {
+        "tab_name": "Personalization"
+      }
+    },
+    "section_faq_hide_list_VUL4WN": {
+      "type": "section-faq-hide-list",
+      "blocks": {
+        "item_K4jzVF": {
+          "type": "item",
+          "settings": {
+            "title": "What forms of payment do you take?",
+            "text": "<p>All major credit & debit cards, PayPal, Shop Pay, Affirm, AfterPay, Google Pay, and Apple Pay.<\/p>"
+          }
+        },
+        "item_UtaTxK": {
+          "type": "item",
+          "settings": {
+            "title": "Do you have any discounts, sales, or coupons?",
+            "text": "<p><a href=\"https:\/\/www.automicgold.com\/blogs\/automic-blog\/automic-gold-no-coupon-code-why-we-dont-do-discounts\" target=\"_blank\" title=\"Blog: Why we don't do discounts\"><span style=\"text-decoration:underline\">Never<\/span><\/a>. Instead, we just offer fair prices from the get-go.<\/p>"
+          }
+        },
+        "item_6zr93V": {
+          "type": "item",
+          "settings": {
+            "title": "What items are final sale?",
+            "text": "<p>Pierced body jewelry and anything custom, engraved, or modified.<\/p>"
+          }
+        },
+        "item_a4cNdg": {
+          "type": "item",
+          "settings": {
+            "title": "What is Route?",
+            "text": "<p><a href=\"https:\/\/route.com\/\" target=\"_blank\" title=\"Route's website\"><span style=\"text-decoration:underline\">Route<\/span><\/a> offers protection against lost, stolen, or damaged packages. It also gives up-to-date tracking information for your order once it ships!  This is an optional service you can remove from your cart, but we are not responsible for package mishaps if you do.<\/p>"
+          }
+        },
+        "item_z6jbMr": {
+          "type": "item",
+          "settings": {
+            "title": "My card was charged but I didn’t get an order confirmation!",
+            "text": "<p>Check your spam folder! If it’s not in there, double-check which email address you placed the order with, because it might’ve gone to an address you don’t use often. If you still can’t find the order confirmation, the order probably didn’t go through and the pending charge on your card will drop in around 2-3 business days. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_K4jzVF",
+        "item_UtaTxK",
+        "item_6zr93V",
+        "item_a4cNdg",
+        "item_z6jbMr"
+      ],
+      "settings": {
+        "tab_name": "Checking Out"
+      }
+    },
+    "section_faq_hide_list_PahYT8": {
+      "type": "section-faq-hide-list",
+      "blocks": {
+        "item_tYAzDY": {
+          "type": "item",
+          "settings": {
+            "title": "Can you cancel my order?",
+            "text": "<p>If it’s custom or engraved, no. If it’s a regular non-engraved order and we haven’t shipped it yet, yes! If we already sent it out, please refuse the package when it arrives and we’ll refund you once we get it back.<\/p>"
+          }
+        },
+        "item_jW3jLB": {
+          "type": "item",
+          "settings": {
+            "title": "Can you change the billing address?",
+            "text": "<p>Sadly, that’s out of our control. If you got an order confirmation email, then don’t worry—the order went through and we’re working on it! <\/p>"
+          }
+        },
+        "item_tAGW3c": {
+          "type": "item",
+          "settings": {
+            "title": "Can you change the shipping address?",
+            "text": "<p>We can’t, but we can cancel your order (as long as it’s not custom or engraved) so that you can place a new one with the right address.<\/p>"
+          }
+        },
+        "item_Q3dhGW": {
+          "type": "item",
+          "settings": {
+            "title": "Can you change the metal\/color\/initial if I chose the wrong one?",
+            "text": "<p>We can update your order as long as it’s not engraved or final sale, and you reach out to us before we ship it.<\/p>"
+          }
+        },
+        "item_Aci4z7": {
+          "type": "item",
+          "settings": {
+            "title": "Can I cancel\/make changes to my customized or engraved order?",
+            "text": "<p>Unfortunately, no. We start production on these orders as soon as you place them.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_tYAzDY",
+        "item_jW3jLB",
+        "item_tAGW3c",
+        "item_Q3dhGW",
+        "item_Aci4z7"
+      ],
+      "settings": {
+        "tab_name": "After Ordering"
+      }
+    },
+    "section_faq_hide_list_MmyFBq": {
+      "type": "section-faq-hide-list",
+      "blocks": {
+        "item_BhBCpe": {
+          "type": "item",
+          "settings": {
+            "title": "Do you have a warranty?",
+            "text": "<p>Yep! All of our pieces come with a <a href=\"https:\/\/www.automicgold.com\/pages\/lifetime-guarantee\" target=\"_blank\" title=\"Limited Lifetime Warranty\"><span style=\"text-decoration:underline\">lifetime <\/span>guarantee<\/a> that covers manufacturer defects for up to three years after receipt. We don’t cover normal wear & tear, loss of parts, or loss of item, and all warranties are voided if your item has been modified by other jewelers. If you notice any loose stones or suspicious defects, <a href=\"mailto:care@automicgold.com\" target=\"_blank\" title=\"Automic Gold customer service email\"><span style=\"text-decoration:underline\">let us know<\/span><\/a> right away. We recommend getting insurance for all jewelry over $10,000.<\/p>"
+          }
+        },
+        "item_fH7eEU": {
+          "type": "item",
+          "settings": {
+            "title": "My item broke! Can you fix it?",
+            "text": "<p>Yes! Just note that all repairs outside of manufacturing defects come with a repair fee, a fee for replacing parts (a clasp, a charm, a piece of gold cut off, etc.) if they’re missing, and a $5 return shipping fee (shipping fees for international orders vary on location). <a href=\"mailto:care@automicgold.com\" target=\"_blank\" title=\"Automic Gold customer service email\"><span style=\"text-decoration:underline\">Contact us<\/span><\/a> for repairs and current processing times!<\/p>"
+          }
+        },
+        "item_JJz8ey": {
+          "type": "item",
+          "settings": {
+            "title": "Do I have to pay to ship you the repair?",
+            "text": "<p>If you’re in the US and you request the repair within the 30-day return window, then we’ll provide a prepaid shipping label. If you’re outside the US or you request a repair outside of the 30-day window, you’ll need to pay for shipping.<\/p>"
+          }
+        },
+        "item_RyiBxn": {
+          "type": "item",
+          "settings": {
+            "title": "Can you fix this non-Automic Gold item I have?",
+            "text": "<p>Yes! We are open to repairs and modifications for any fine jewelry. We can work with any gold, silver, or platinum. <a href=\"mailto:care@automicgold.com\" target=\"_blank\" title=\"Automic Gold customer service email\">Reach out<\/a> to us with pictures and details.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_BhBCpe",
+        "item_fH7eEU",
+        "item_JJz8ey",
+        "item_RyiBxn"
+      ],
+      "settings": {
+        "tab_name": "Repairs"
+      }
+    },
+    "section_faq_hide_list_PfjiYC": {
+      "type": "section-faq-hide-list",
+      "blocks": {
+        "item_tWc87j": {
+          "type": "item",
+          "settings": {
+            "title": "I emailed and haven’t heard back.",
+            "text": "<p>Our reply might’ve gone to your spam folder! If it’s not there, we promise we didn’t forget about you—we just get a ton of orders and messages every day. Our business hours are Monday, Tuesday, Thursday, and Friday from 9AM-5PM EST (excluding holidays). We value all your emails and aim to connect with you as soon as we can, so we appreciate your patience.<\/p>"
+          }
+        },
+        "item_zHVPLG": {
+          "type": "item",
+          "settings": {
+            "title": "Can I collaborate with Automic Gold?",
+            "text": "<p>Contact our <a href=\"mailto:hello@automicgold.com\" target=\"_blank\" title=\"Automic Gold business email\">business email<\/a> and we’ll reach back out if we think we’re a good fit for each other.<\/p>"
+          }
+        },
+        "item_7XjTnn": {
+          "type": "item",
+          "settings": {
+            "title": "Are you hiring?",
+            "text": "<p>We love that you’re interested, but if we don’t post a job opening on our Instagram, then we’re not looking for new employees. Please don’t send us unsolicited resumes. We will not look at them or respond.<\/p>"
+          }
+        },
+        "item_Bpi9GJ": {
+          "type": "item",
+          "settings": {
+            "title": "Do you offer internships?",
+            "text": "<p>We love that you’re interested, but we only hire full-time, long-term employees.<\/p>"
+          }
+        },
+        "item_bkfMCE": {
+          "type": "item",
+          "settings": {
+            "title": "Can I recycle my jewelry with you?",
+            "text": "<p>Yep! We can recycle your Automic Gold jewelry and your non-Automic Gold pieces. We buy any gold, silver, platinum, and natural precious gemstones (i.e., natural diamonds, sapphires, rubies, and emeralds). For a quote, show our <a href=\"mailto:custom@automicgold.com\" target=\"_blank\" title=\"Automic Gold custom email\"><span style=\"text-decoration:underline\">customs department<\/span><\/a> photos of what you have along with a brief description. We also recommend weighing your jewelry on a scale.<\/p>"
+          }
+        },
+        "item_YQyKHn": {
+          "type": "item",
+          "settings": {
+            "title": "Do you offer wholesale?",
+            "text": "<p>Sadly, we’re unable to at this time.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_tWc87j",
+        "item_zHVPLG",
+        "item_7XjTnn",
+        "item_Bpi9GJ",
+        "item_bkfMCE",
+        "item_YQyKHn"
+      ],
+      "settings": {
+        "tab_name": "Communication & Collaboration"
+      }
+    },
+    "faq-custom": {
+      "type": "faq-custom-text",
+      "settings": {
+        "text_1": "<p>Have any more questions? Email us <a href=\"mailto:care@automicgold.com\" target=\"_blank\" title=\"Automic Gold customer service email\">care@automicgold.com<\/a><\/p>",
+        "text_2": "<p>Have any more questions? Email us.<br\/><a href=\"mailto:care@automicgold.com\" target=\"_blank\" title=\"Automic Gold customer service email\">care@automicgold.com<\/a><\/p>",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "padding_top_mb": 24,
+        "padding_bottom_mb": 24
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "section_faq_list_mbXNzx",
+    "section_faq_list_NCFjKN",
+    "section_faq_list_QcMHtV",
+    "section_faq_hide_list_eFFLWm",
+    "section_faq_hide_list_VUL4WN",
+    "section_faq_hide_list_PahYT8",
+    "section_faq_hide_list_MmyFBq",
+    "section_faq_hide_list_PfjiYC",
+    "faq-custom"
+  ]
+}

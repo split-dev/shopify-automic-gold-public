@@ -1,0 +1,2050 @@
+<div class="text-center no--mobile-padding custom__intro">
+    <h1>
+        <img
+            alt="Custom Jewelry Orders and Unique Jewelry Designs"
+            srcset="
+                {{ 'custom-orders-header.png' | file_img_url: '1440x520' }} 1440w,
+                {{ 'custom-orders-header.png' | file_img_url: '1080x390' }} 1080w,
+                {{ 'custom-orders-header.png' | file_img_url: '820x260' }} 820w,
+                {{ 'custom-orders-header.png' | file_img_url: '360x130' }} 360w,
+            "
+            sizes="(max-width: 767.98px) 360px, 820px"/>
+    </h1>
+
+    <div class="spaced">
+        <div class="custom__header-description">
+            <h2 style="font-weight: 600;">Your Idea, Now a Reality.</h2>
+
+            <p>Automic Gold works with solid gold, platinum and silver. We can provide diamonds or any gemstones for your jewelry and prefer to work with our stones.</p>
+
+            <small>
+            Custom projects take 3-8 weeks to make after full payment is received, depending on its difficulty.
+            </small>
+        </div>
+    </div>
+
+    <div class="spaced space-bottom-x3">
+
+        <a href="{{ page.content }}" title="Send us a custom order request" class="btn btn--wide">Get started</a>
+        <p class="custom__header--link">If link above does not work, please email custom@automicgold.com</p>
+    </div>
+</div>
+
+{% comment %} <div class="custom__email" style="padding: 2rem 0;">
+    <div class="custom__email-inner" style="max-width: 1000px; margin: 0 auto;">
+        <div class="custom__email-text">
+            <h2>Join our customs email list</h2>
+            <p> You’ll be the first to know about new gemstone arrivals and receive tips on how to care for your new engagement ring or custom jewelry.</p>
+            <p>We take email seriously - you will not be spammed.</p>
+
+            <!-- Begin Mailchimp Signup Form -->
+            <div id="mc_embed_signup">
+                <form 
+                    action="https://automicgold.us4.list-manage.com/subscribe/post?u=e24fff2f64939a02dbbecb334&amp;id=84ea7cf858"
+                    method="post" 
+                    id="mc-embedded-subscribe-form" 
+                    name="mc-embedded-subscribe-form" 
+                    class="validate" 
+                    target="_blank" 
+                    novalidate>
+
+                    <div id="mc_embed_signup_scroll">
+                        <label for="mce-EMAIL">Subscribe</label>
+                        <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email Address" required>
+                        
+                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                        <div class="hidden-section" style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e24fff2f64939a02dbbecb334_84ea7cf858" tabindex="-1" value=""></div>
+                    
+                        <div class="clear">
+                            <input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe" class="button btn">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="custom__email-image">
+            <img
+                class="lazyload content"
+                data-srcset="
+                    {{ 'customs--email-img.png' | file_img_url: '1200x1400' }} 1200w,
+                    {{ 'customs--email-img.png' | file_img_url: '900x1050' }} 900w,
+                    {{ 'customs--email-img.png' | file_img_url: '600x700' }} 600w
+                "
+                sizes="
+                    (max-width: 767.98px) 100vw,
+                    (min-width: 768px) and (max-width: 1152px) calc((100vw - 120px) * 0.5),
+                    (min-width: 1200px) calc((100vw - 180px) * 0.5)
+                "
+                alt="Collage of three past Automic custom rings and diamond graphics"
+            />
+        </div>
+    </div>
+</div> {% endcomment %}
+
+{% assign sizes = '
+    (max-width: 479px) calc((100vw - 30px - 15px) * 0.5),
+    (min-width: 480px) and (max-width: 767.98px) calc((100vw - 60px - 15px) * 0.5),
+    (min-width: 768px) and (max-width: 1199.98px) calc((100vw - 120px - 30px) * 0.333334),
+    (min-width: 1200px) calc((100vw - 180px - 45px) * 0.25)'
+%}
+
+<div class="spaced page-width">
+    <h2 class="custom__orders-header spaced text-center">Past Custom Orders</h2>
+      
+        <div class="custom__order-filternav text-center" id="btnContainer">
+            <nav>
+                <ul>
+                    <li><p class="btn active" onclick="filterSelection('all')">All</p></li>
+                    <li><p class="btn" onclick="filterSelection('metal')">Metal Only</p></li>
+                    <li><p class="btn" onclick="filterSelection('sapphire')">Sapphire</p></li>
+                    <li><p class="btn" onclick="filterSelection('diamond')">Diamond</p></li>
+                    <li><p class="btn" onclick="filterSelection('emerald')">Emerald</p></li>
+                    <li><p class="btn" onclick="filterSelection('ruby')">Ruby</p></li>
+                    <li><p class="btn" onclick="filterSelection('alexandrite')">Alexandrite</p></li>
+                    <li><p class="btn" onclick="filterSelection('moissanite')">Moissanite</p></li>
+                    <li><p class="btn" onclick="filterSelection('other')">Other Stones</p></li>
+                </ul>
+            </nav>
+        </div>
+
+  <div class="spaced custom__orders-container" data-custom-orders-container>
+
+
+   {% comment %}Start of Custom Products Grid {% endcomment %}
+
+    <div class="custom__order filterImg metal">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A pendant of a unicorn in a running position with a flowing mane made from solid 14k yellow gold on a gold chain '
+            data-featherlight="{{ 'Unicorn_Pendant.jpg' | file_img_url: '1080x1350' }}"
+            srcset="
+            {{ 'Unicorn_Pendant.jpg' | file_img_url: '540x675' }} 540w,
+            {{ 'Unicorn_Pendant.jpg' | file_img_url: '1080x1350' }} 1080w
+            "
+            sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Unicorn Pendant</h3>
+            <p>14k yellow gold • 20mm</p>
+            <div class="custom__order-price">$500</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg moissanite">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='Two Solid gold rings with sun detailing on the sides and moissanite center stones are stacked on a blue cloth'
+                data-featherlight="{{ 'Moissanite_Sun_Ring_Set.jpg' | file_img_url: '1080x1350' }}"
+                srcset="
+                {{ 'Moissanite_Sun_Ring_Set.jpg' | file_img_url: '540x675' }} 540w,
+                {{ 'Moissanite_Sun_Ring_Set.jpg' | file_img_url: '1080x1350' }} 1080w
+                "
+                sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Moissanite Sun Ring Set</h3>
+            <p>14k yellow gold • 4.5mm round moissanites • sizes 4.5 & 5.5</p>
+            <div class="custom__order-price">$950 each</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg metal">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A pendant of a panda bear face on a slipper made from solid 14k gold on a yellow gold chain'
+                data-featherlight="{{ 'Panda_Slipper_Pendant.jpg' | file_img_url: '1080x1350' }}"
+                srcset="
+                {{ 'Panda_Slipper_Pendant.jpg' | file_img_url: '540x675' }} 540w,
+                {{ 'Panda_Slipper_Pendant.jpg' | file_img_url: '1080x1350' }} 1080w
+                "
+                sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Panda Slipper Pendant</h3>
+            <p>14k yellow gold • 10mm</p>
+            <div class="custom__order-price">$400</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg emerald">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A solid 14k gold ring with a long hexagon shaped emerald center stone and a baguette emerald on each side'
+                data-featherlight="{{ 'Elongated_Hexagon_Baguette_Lab_Emerald_Engagement_Ring.jpg' | file_img_url: '1080x1350' }}"
+                srcset="
+                {{ 'Elongated_Hexagon_Baguette_Lab_Emerald_Engagement_Ring.jpg' | file_img_url: '540x675' }} 540w,
+                {{ 'Elongated_Hexagon_Baguette_Lab_Emerald_Engagement_Ring.jpg' | file_img_url: '1080x1350' }} 1080w
+                "
+                sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Elongated Hexagon & Baguette Lab Emerald Engagement Ring</h3>
+            <p>14k yellow gold • 17x4mm hexagon lab emerald, 8x4mm baguette lab emeralds • size 5</p>
+            <div class="custom__order-price">$2,250</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg diamond">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='An engagement ring with a pear salt and pepper diamond center stone and two side stones atop a v-shaped diamond wedding band'
+                data-featherlight="{{ 'Pear_Diamond_Engagement_Ring_Set.jpg' | file_img_url: '1080x1350' }}"
+                srcset="
+                {{ 'Pear_Diamond_Engagement_Ring_Set.jpg' | file_img_url: '540x675' }} 540w,
+                {{ 'Pear_Diamond_Engagement_Ring_Set.jpg' | file_img_url: '1080x1350' }} 1080w
+                "
+                sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Pear Diamond Engagement Ring Set</h3>
+            <p>14k yellow gold • 1.01ct green pear diamond, 0.70ctw pear, marquise, baguette, and round diamonds • size 6 </p>
+            <div class="custom__order-price">$5300</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg metal">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A model holding two 18k yellow gold wedding bands made to look like twisting interlocking tree branches '
+                data-featherlight="{{ 'Winding_Branches_Engagement_Ring_Set.jpg' | file_img_url: '1080x1350' }}"
+                srcset="
+                {{ 'Winding_Branches_Engagement_Ring_Set.jpg' | file_img_url: '540x675' }} 540w,
+                {{ 'Winding_Branches_Engagement_Ring_Set.jpg' | file_img_url: '1080x1350' }} 1080w
+                "
+                sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Winding Branches Engagement Ring Set</h3>
+            <p>18k yellow gold • size 9.5 & 10.25</p>
+            <div class="custom__order-price">$1,750 each</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg metal">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A 14k yellow gold pendant of a witch with a witches hat on a dark blue background'
+                data-featherlight="{{ 'Witch_Pendant.jpg' | file_img_url: '1080x1350' }}"
+                srcset="
+                {{ 'Witch_Pendant.jpg' | file_img_url: '540x675' }} 540w,
+                {{ 'Witch_Pendant.jpg' | file_img_url: '1080x1350' }} 1080w
+                "
+                sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Witch Pendant</h3>
+            <p>14k white gold • 16mm</p>
+            <div class="custom__order-price">$500</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg metal">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A solid 14k rose gold Ottoman Empire coin signet ring on a models pinky finger'
+                data-featherlight="{{ 'Ottoman_Coin_Ring.jpg' | file_img_url: '1080x1350' }}"
+                srcset="
+                {{ 'Ottoman_Coin_Ring.jpg' | file_img_url: '540x675' }} 540w,
+                {{ 'Ottoman_Coin_Ring.jpg' | file_img_url: '1080x1350' }} 1080w
+                "
+                sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Ottoman Coin Ring</h3>
+            <p>14k rose gold • size 4.5</p>
+            <div class="custom__order-price">$1,250</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg alexandrite">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='Two highly detailed otters flank a hexagon shaped alexandrite center stone in a 950 platinum wedding band'
+                data-featherlight="{{ 'Alexandrite_Otters_Ring.jpg' | file_img_url: '1080x1350' }}"
+                srcset="
+                {{ 'Alexandrite_Otters_Ring.jpg' | file_img_url: '540x675' }} 540w,
+                {{ 'Alexandrite_Otters_Ring.jpg' | file_img_url: '1080x1350' }} 1080w
+                "
+                sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Alexandrite Otters Ring</h3>
+            <p>950 platinum • 0.50ct hexagon lab alexandrite • size 10.75</p>
+            <div class="custom__order-price">$3,200</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg diamond sapphire">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A 14k rose gold ring with a large round diamond and clusters of pink sapphires on the top and bottom of the center stone'
+                 data-featherlight="{{ 'Cluster_Ring.jpg' | file_img_url: '1080x1350' }}"
+                 srcset="
+                   {{ 'Cluster_Ring.jpg' | file_img_url: '540x675' }} 540w,
+                   {{ 'Cluster_Ring.jpg' | file_img_url: '1080x1350' }} 1080w
+                 "
+                 sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Cluster Ring</h3>
+            <p>14k rose gold • 1.50ct round diamond • round pink sapphires • size 3.5</p>
+            <div class="custom__order-price">$6,200</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg emerald diamond">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='An art-deco style wedding and engagement ring set with a large emerald center stone on the engagement ring'
+                data-featherlight="{{ 'Emerald_and_Diamonds_Engagement_Ring_Set.jpg' | file_img_url: '1080x1350' }}"
+                srcset="
+                {{ 'Emerald_and_Diamonds_Engagement_Ring_Set.jpg' | file_img_url: '540x675' }} 540w,
+                {{ 'Emerald_and_Diamonds_Engagement_Ring_Set.jpg' | file_img_url: '1080x1350' }} 1080w
+                "
+                sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Emerald and Diamonds Engagement Ring Set</h3>
+            <p>14k yellow gold • 2.22ct emerald, 2.5mm round diamonds, 2x4mm marquise diamonds, 2mm round emeralds • size 7.5</p>
+            <div class="custom__order-price">$6,350</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg diamond">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='An oval salt and pepper diamond in a prong setting designed to look like a begonia leaf on a solid 14k gold engagement ring
+            '
+                data-featherlight="{{ 'Begonia_Leaf_Salt_and_Pepper_Diamond_Ring.jpg' | file_img_url: '1080x1350' }}"
+                srcset="
+                {{ 'Begonia_Leaf_Salt_and_Pepper_Diamond_Ring.jpg' | file_img_url: '540x675' }} 540w,
+                {{ 'Begonia_Leaf_Salt_and_Pepper_Diamond_Ring.jpg' | file_img_url: '1080x1350' }} 1080w
+                "
+                sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Begonia Leaf Salt-and-pepper Diamond Ring
+            </h3>
+            <p>14k yellow gold • 1.37ct oval salt-and-pepper diamond • size 4.25</p>
+            <div class="custom__order-price">$2,620</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg diamond">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A 14k rose gold engagement ring with leaf detailing flanking a rose-cut round salt and pepper diamond'
+                data-featherlight="{{ 'Salt-and-pepper_Diamond_&_Leaves_Ring.jpg' | file_img_url: '1080x1350' }}"
+                srcset="
+                {{ 'Salt-and-pepper_Diamond_Leaves_Ring.jpg' | file_img_url: '540x675' }} 540w,
+                {{ 'Salt-and-pepper_Diamond_Leaves_Ring.jpg' | file_img_url: '1080x1350' }} 1080w
+                "
+                sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Salt-and-pepper Diamond & Leaves Ring</h3>
+            <p>14k rose gold • 1.11ct round salt-and-pepper diamond • size 7</p>
+            <div class="custom__order-price">$2,900</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg sapphire">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='Two hammered champagne gold wedding bands one with blue and green sapphires and one with yellow and purple sapphires '
+                data-featherlight="{{ 'Sapphire_Hammered_Band_Set.jpg' | file_img_url: '1080x1350' }}"
+                srcset="
+                {{ 'Sapphire_Hammered_Band_Set.jpg' | file_img_url: '540x675' }} 540w,
+                {{ 'Sapphire_Hammered_Band_Set.jpg' | file_img_url: '1080x1350' }} 1080w
+                "
+                sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Sapphire Hammered Band Set</h3>
+            <p>14k champagne gold • round & oval sapphires • sizes 9 & 6.5</p>
+            <div class="custom__order-price">$850 each</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg platinum metal">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='a 950 platinum wedding band with a highly detailed basket weave design on a blue cloth background'
+                data-featherlight="{{ 'Basket_Weave_Ring.jpg' | file_img_url: '1080x1350' }}"
+                srcset="
+                {{ 'Basket_Weave_Ring.jpg' | file_img_url: '540x675' }} 540w,
+                {{ 'Basket_Weave_Ring.jpg' | file_img_url: '1080x1350' }} 1080w
+                "
+                sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Basket Weave Ring</h3>
+            <p>950 platinum • 6mm wide • size 12.5</p>
+            <div class="custom__order-price">$2,200</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg metal">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A 14k white gold pendant of a bumble bee with a smiley face on a blue cloth background'
+                 data-featherlight="{{ 'Bumblebee_Pendant.jpg' | file_img_url: '1080x1350' }}"
+                 srcset="
+                   {{ 'Bumblebee_Pendant.jpg' | file_img_url: '540x675' }} 540w,
+                   {{ 'Bumblebee_Pendant.jpg' | file_img_url: '1080x1350' }} 1080w
+                 "
+                 sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Bumblebee Pendant</h3>
+            <p>14k white gold</p>
+            <div class="custom__order-price">$450</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg ruby">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='Two 14k gold ruby rings with leaf details, one with a thin band and prong setting, one with a thicker band and bezel setting'
+                data-featherlight="{{ 'Engraved_Leaves_Ruby_Ring_Set.jpg' | file_img_url: '1080x1350' }}"
+                srcset="
+                {{ 'Engraved_Leaves_Ruby_Ring_Set.jpg' | file_img_url: '540x675' }} 540w,
+                {{ 'Engraved_Leaves_Ruby_Ring_Set.jpg' | file_img_url: '1080x1350' }} 1080w
+                "
+                sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Engraved Leaves Ruby Ring Set</h3>
+            <p>14k yellow gold • 5mm round ruby • size 5 & size 6 </p>
+            <div class="custom__order-price">$1,600 & $1,800</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg alexandrite diamond">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A round alexandrite center stone with a crescent moon, stars, green diamonds, and celtic knot details on a 950 platinum ring'
+                 data-featherlight="{{ 'Stars_Moon_Alexandrite_Ring.jpg' | file_img_url: '1080x1350' }}"
+                 srcset="
+                   {{ 'Stars_Moon_Alexandrite_Ring.jpg' | file_img_url: '540x675' }} 540w,
+                   {{ 'Stars_Moon_Alexandrite_Ring.jpg' | file_img_url: '1080x1350' }} 1080w
+                 "
+                 sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Stars & Moon Alexandrite Ring</h3>
+            <p>950 platinum • round 7mm lab alexandrite • green round diamonds • size 9</p>
+            <div class="custom__order-price">$2,400</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg metal">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A pair of 14k yellow gold gauges with honeycomb detailing on a blue cloth background'
+                    data-featherlight="{{ 'Honeycomb_gauges.jpg' | file_img_url: '1080x1350' }}"
+                    srcset="
+                    {{ 'Honeycomb_gauges.jpg' | file_img_url: '540x675' }} 540w,
+                    {{ 'Honeycomb_gauges.jpg' | file_img_url: '1080x1350' }} 1080w
+                    "
+                    sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Honeycomb Gauges</h3>
+            <p>14k yellow gold 12.7mm wide, ½” thick</p>
+            <div class="custom__order-price">$1,200</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg diamond">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A kite shaped dark salt and pepper diamond engagement ring stacked with two wedding bands with diamond accents'
+                data-featherlight="{{ 'Engagement_and_Wedding_3_Rings_Set.jpg' | file_img_url: '1080x1350' }}"
+                srcset="
+                {{ 'Engagement_and_Wedding_3_Rings_Set.jpg' | file_img_url: '540x675' }} 540w,
+                {{ 'Engagement_and_Wedding_3_Rings_Set.jpg' | file_img_url: '1080x1350' }} 1080w
+                "
+                sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Engagement and Wedding 3-Rings Set</h3>
+            <p>14k yellow gold • kite salt-and-pepper diamond, round white diamonds • size 7.25</p>
+            <div class="custom__order-price">$3,800</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg emerald">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='Two hammered yellow gold wedding bands one with a princess cut emerald stone and the other with several round emeralds'
+                data-featherlight="{{ 'Emerald_Matching_Rings.jpg' | file_img_url: '1080x1350' }}"
+                srcset="
+                {{ 'Emerald_Matching_Rings.jpg' | file_img_url: '540x675' }} 540w,
+                {{ 'Emerald_Matching_Rings.jpg' | file_img_url: '1080x1350' }} 1080w
+                "
+                sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Emerald Hammered Rings Set</h3>
+            <p>14k yellow gold • princess-cut 4mm emerald, round emeralds • sizes 7 & 8</p>
+            <div class="custom__order-price">$3,200</div>
+        </div> 
+    </div> 
+
+    <div class="custom__order filterImg alexandrite moissanite">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='Two rings with alexandrite center stones and moissanite side stones stacked with matching leaf and moissanite bands'
+                data-featherlight="{{ 'Alexandrite_Moissanite_Matching_Ring_set.jpg' | file_img_url: '1080x1350' }}"
+                srcset="
+                {{ 'Alexandrite_Moissanite_Matching_Ring_set.jpg' | file_img_url: '540x675' }} 540w,
+                {{ 'Alexandrite_Moissanite_Matching_Ring_set.jpg' | file_img_url: '1080x1350' }} 1080w
+                "
+                sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Alexandrite & Moissanite Matching Ring Set</h3>
+            <p>14k rose gold • lab alexandrites, moissanites • size 7 & 10.5</p>
+            <div class="custom__order-price">$2,700 per set</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg diamond tourmaline">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A round green tourmaline and pear diamond 3 stone engagement ring stacked with a wedding band with different shaped diamonds'
+                data-featherlight="{{ 'Tourmaline_Diamonds_Engagement_Set.jpg' | file_img_url: '1080x1350' }}"
+                srcset="
+                {{ 'Tourmaline_Diamonds_Engagement_Set.jpg' | file_img_url: '540x675' }} 540w,
+                {{ 'Tourmaline_Diamonds_Engagement_Set.jpg' | file_img_url: '1080x1350' }} 1080w
+                "
+                sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Tourmaline & Diamonds Engagement Set</h3>
+            <p>14k white gold • 0.80ct tourmaline; pear, baguette, & round diamonds • size 6.25</p>
+            <div class="custom__order-price">$4,400</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg emerald sapphire ruby">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A solid gold ring with multiple round gemstones in various colors stacked with a perfectly matched band'
+                data-featherlight="{{ 'Rainbow_Ring.jpg' | file_img_url: '1080x1350' }}"
+                srcset="
+                {{ 'Rainbow_Ring.jpg' | file_img_url: '540x675' }} 540w,
+                {{ 'Rainbow_Ring.jpg' | file_img_url: '1080x1350' }} 1080w
+                "
+                sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Rainbow Cluster Ring</h3>
+            <p>14k champagne gold • rubies, emeralds, sapphires • size 9.75</p>
+            <div class="custom__order-price">$1,500</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg diamnond">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='Matching salt and pepper diamond engagement rings, one with black trillion diamond side stones, one with diamonds on the band'
+                data-featherlight="{{ 'Hexagon_Diamonds_Matching_Engagement_Rings.jpg' | file_img_url: '1080x1350' }}"
+                srcset="
+                {{ 'Hexagon_Diamonds_Matching_Engagement_Rings.jpg' | file_img_url: '540x675' }} 540w,
+                {{ 'Hexagon_Diamonds_Matching_Engagement_Rings.jpg' | file_img_url: '1080x1350' }} 1080w
+                "
+                sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Hexagon Diamonds Matching Engagement Rings</h3>
+            <p>14k rose gold • 1.21ct salt-and-pepper diamonds, round pave diamonds, trillion diamonds • sizes 5 & 6</p>
+            <div class="custom__order-price">$3,800 each</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg diamond sapphire">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='Two solid gold open bangles each with a pear diamond on one side and round sapphires on the other'
+                    data-featherlight="{{ 'Open_Bangles.jpg' | file_img_url: '1080x1350' }}"
+                    srcset="
+                    {{ 'Open_Bangles.jpg' | file_img_url: '540x675' }} 540w,
+                    {{ 'Open_Bangles.jpg' | file_img_url: '1080x1350' }} 1080w
+                    "
+                    sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Open Bangles</h3>
+            <p>14k yellow & white gold • pear diamonds, round sapphires </p>
+            <div class="custom__order-price">$2,500 each</div>
+        </div> 
+    </div>
+
+    {% comment %} <div class="custom__order filterImg diamond">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A solid gold ring with braided detailing and round diamonds in the centers of the braid along the band'
+                data-featherlight="{{ 'Diamond_Braided_Band.jpg' | file_img_url: '1080x1350' }}"
+                srcset="
+                {{ 'Diamond_Braided_Band.jpg' | file_img_url: '540x675' }} 540w,
+                {{ 'Diamond_Braided_Band.jpg' | file_img_url: '1080x1350' }} 1080w
+                "
+                sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Diamond Braided Band</h3>
+            <p>14k yellow gold • rose-cut round diamonds • size 4.5</p>
+            <div class="custom__order-price">$1,600</div>
+        </div> 
+    </div> {% endcomment %}
+
+    <div class="custom__order filterImg diamond">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A cushion cut diamond flanked by yellow, white, and rose gold leaves on a 14k yellow gold band'
+                data-featherlight="{{ 'Yellow_Gold_Ring_with_White_and_Rose_Leaves.jpg' | file_img_url: '1080x1350' }}"
+                srcset="
+                {{ 'Yellow_Gold_Ring_with_White_and_Rose_Leaves.jpg' | file_img_url: '540x675' }} 540w,
+                {{ 'Yellow_Gold_Ring_with_White_and_Rose_Leaves.jpg' | file_img_url: '1080x1350' }} 1080w
+                "
+                sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Multicolor Gold Leaves Ring</h3>
+            <p>14k yellow, white, & rose gold • 0.83ct cushion-cut diamond • size 7.25</p>
+            <div class="custom__order-price">$4,000 </div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg diamond">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A thick rose gold band stacked with a marquise salt and pepper ring with round diamonds along the band'
+                data-featherlight="{{ 'Marquise_Salt-and-Pepper_Diamond_Ring.jpg' | file_img_url: '1080x1350' }}"
+                srcset="
+                {{ 'Marquise_Salt-and-Pepper_Diamond_Ring.jpg' | file_img_url: '540x675' }} 540w,
+                {{ 'Marquise_Salt-and-Pepper_Diamond_Ring.jpg' | file_img_url: '1080x1350' }} 1080w
+                "
+                sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Marquise Salt-and-Pepper Diamond Ring</h3>
+            <p>14k rose gold • 1.55ct marquise salt-and-pepper diamond, round diamonds • size 9.5</p>
+            <div class="custom__order-price">$3,700</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg metal">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A 925 sterling silver cuff bracelet in the shape of a skeletal hand as though it is gripping your wrist'
+                    data-featherlight="{{ 'Silver_Claws_Bracelet.jpg' | file_img_url: '1080x1350' }}"
+                    srcset="
+                    {{ 'Silver_Claws_Bracelet.jpg' | file_img_url: '540x675' }} 540w,
+                    {{ 'Silver_Claws_Bracelet.jpg' | file_img_url: '1080x1350' }} 1080w
+                    "
+                    sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Gripping Hand Bracelet</h3>
+            <p>925 oxidized sterling silver • 6-7”</p>
+            <div class="custom__order-price">$950</div>
+        </div> 
+    </div> 
+
+    <div class="custom__order filterImg diamond">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A white gold engagement ring with a hexagon salt and pepper diamond center stone and two marquise diamonds on each side'
+                    data-featherlight="{{ 'Hexagon_Diamond_Ring.jpg' | file_img_url: '1080x1350' }}"
+                    srcset="
+                    {{ 'Hexagon_Diamond_Ring.jpg' | file_img_url: '540x675' }} 540w,
+                    {{ 'Hexagon_Diamond_Ring.jpg' | file_img_url: '1080x1350' }} 1080w
+                    "
+                    sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Hexagon Diamond Ring</h3>
+            <p>14k white gold • 1.4ct salt-and-pepper diamond, marquise diamonds • size 5</p>
+            <div class="custom__order-price">$2,725</div>
+        </div> 
+    </div> 
+
+    <div class="custom__order filterImg diamond sapphire">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='An engagement ring with a kite salt and pepper diamond over a row or purple sapphires stacked with a matching solid gold band'
+                    data-featherlight="{{ 'Kite_Diamond_Purple_Sapphires_Ring_Set.jpg' | file_img_url: '1080x1350' }}"
+                    srcset="
+                    {{ 'Kite_Diamond_Purple_Sapphires_Ring_Set.jpg' | file_img_url: '540x675' }} 540w,
+                    {{ 'Kite_Diamond_Purple_Sapphires_Ring_Set.jpg' | file_img_url: '1080x1350' }} 1080w
+                    "
+                    sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Kite Diamond & Purple Sapphires Ring Set</h3>
+            <p>14k rose gold • 1.14ct kite diamond, sapphires • size 11 </p>
+            <div class="custom__order-price">$2,600</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg diamond emerald">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A champagne gold engagement ring with a round salt and pepper diamond center stone and diamonds in different geometric shapes'
+                    data-featherlight="{{ 'Diamond_Cluster_Engagement_Ring.jpg' | file_img_url: '1080x1350' }}"
+                    srcset="
+                    {{ 'Diamond_Cluster_Engagement_Ring.jpg' | file_img_url: '540x675' }} 540w,
+                    {{ 'Diamond_Cluster_Engagement_Ring.jpg' | file_img_url: '1080x1350' }} 1080w
+                    "
+                    sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Diamond Cluster Engagement Ring</h3>
+            <p>14k champagne gold • 1.5ct salt-and-pepper diamond; 0.38ctw round, emerald, & carre cut diamonds • size 8.75</p>
+            <div class="custom__order-price">$3,700</div>
+        </div> 
+    </div> 
+
+    <div class="custom__order filterImg diamond">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A 950 platinum floral filigree vintage style ring with a round diamond center stone'
+                    data-featherlight="{{ 'Vintage_Floral_Diamond_Ring.jpg' | file_img_url: '1080x1350' }}"
+                    srcset="
+                    {{ 'Vintage_Floral_Diamond_Ring.jpg' | file_img_url: '540x675' }} 540w,
+                    {{ 'Vintage_Floral_Diamond_Ring.jpg' | file_img_url: '1080x1350' }} 1080w
+                    "
+                    sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Vintage Floral Diamond Ring</h3>
+            <p>950 platinum • 0.55ct round diamond • size 8</p>
+            <div class="custom__order-price">$2,450</div>
+        </div> 
+    </div>
+
+    {% comment %} <div class="custom__order filterImg diamond">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A 14k white gold ring designed to look like interwoven branches with leaves and small round diamonds'
+                    data-featherlight="{{ 'Diamond_Leaves_Band.jpg' | file_img_url: '1080x1350' }}"
+                    srcset="
+                    {{ 'Diamond_Leaves_Band.jpg' | file_img_url: '540x675' }} 540w,
+                    {{ 'Diamond_Leaves_Band.jpg' | file_img_url: '1080x1350' }} 1080w
+                    "
+                    sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Diamond Leaves Band</h3>
+            <p>14k white gold • round diamonds • size 4.5</p>
+            <div class="custom__order-price">$1,200</div>
+        </div> 
+    </div>  {% endcomment %}
+
+    <div class="custom__order filterImg other ruby">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A white enamel band ring with the name Mia held above a black enamel band ring with the name Morte and a bezel set ruby'
+                    data-featherlight="{{ 'Enamel_Rings.jpg' | file_img_url: '1080x1350' }}"
+                    srcset="
+                    {{ 'Enamel_Rings.jpg' | file_img_url: '540x675' }} 540w,
+                    {{ 'Enamel_Rings.jpg' | file_img_url: '1080x1350' }} 1080w
+                    "
+                    sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Enamel Name Rings</h3>
+            <p>14K yellow gold • rubies, enamel • sizes 5.5 & 9</p>
+            <div class="custom__order-price">$1,600 each</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg diamond">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A white gold name plate in Elvish script embellished with diamonds on a gold Butch Chain'
+                    data-featherlight="{{ 'Elvish_Nameplate.jpg' | file_img_url: '1080x1350' }}"
+                    srcset="
+                    {{ 'Elvish_Nameplate.jpg' | file_img_url: '540x675' }} 540w,
+                    {{ 'Elvish_Nameplate.jpg' | file_img_url: '1080x1350' }} 1080w
+                    "
+                    sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Elvish Nameplate</h3>
+            <p>14k white gold • diamonds • 18” rounded paperclip chain</p>
+            <div class="custom__order-price">$2,500</div>
+        </div> 
+    </div> 
+
+    {% comment %} <div class="custom__order filterImg diamond">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A 14k white gold ring with leaves and round diamonds flanking a pear shaped salt and pepper diamond'
+                    data-featherlight="{{ 'Dark_Forest_Engagement_Ring.jpg' | file_img_url: '1080x1350' }}"
+                    srcset="
+                    {{ 'Dark_Forest_Engagement_Ring.jpg' | file_img_url: '540x675' }} 540w,
+                    {{ 'Dark_Forest_Engagement_Ring.jpg' | file_img_url: '1080x1350' }} 1080w
+                    "
+                    sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Dark Forest Engagement Ring</h3>
+            <p>14k white gold • 0.91ct pear salt-and-pepper diamond, round diamonds • size 6</p>
+            <div class="custom__order-price">$2,250</div>
+        </div> 
+    </div>  {% endcomment %}
+
+    <div class="custom__order filterImg diamond">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A 14k solid yellow gold ring with claw prongs in the shape of a hand gripping a raw diamond'
+                    data-featherlight="{{ 'HandGrippingRawDiamondRing.jpg' | file_img_url: '1080x1350' }}"
+                    srcset="
+                    {{ 'HandGrippingRawDiamondRing.jpg' | file_img_url: '540x675' }} 540w,
+                    {{ 'HandGrippingRawDiamondRing.jpg' | file_img_url: '1080x1350' }} 1080w
+                    "
+                    sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Hand Gripping Raw Diamond Ring</h3>
+            <p>14k yellow gold • 1.87ct raw diamond • size 4.5</p>
+            <div class="custom__order-price">$8,000</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg metal">
+        <div class="custom__order-image">
+            <img loading="lazy" alt="A 14k gold hollow cross pendant with a solid gold Rope Chain in a model's hand"
+                    data-featherlight="{{ 'Cremations_Holding_Cross_Pendant.jpg' | file_img_url: '1080x1350' }}"
+                    srcset="
+                    {{ 'Cremations_Holding_Cross_Pendant.jpg' | file_img_url: '540x675' }} 540w,
+                    {{ 'Cremations_Holding_Cross_Pendant.jpg' | file_img_url: '1080x1350' }} 1080w
+                    "
+                    sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Engraved Cremation-holding Cross Pendant</h3>
+            <p>14k yellow gold • 1.5” tall</p>
+            <div class="custom__order-price">$2,500</div>
+        </div> 
+    </div>
+
+    {% comment %} <div class="custom__order filterImg sapphire">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A round pink sapphire on a solid 14k gold band with engraved leaf detailing'
+                    data-featherlight="{{ 'Pink_Sapphire_Ring.jpg' | file_img_url: '1080x1350' }}"
+                    srcset="
+                    {{ 'Pink_Sapphire_Ring.jpg' | file_img_url: '540x675' }} 540w,
+                    {{ 'Pink_Sapphire_Ring.jpg' | file_img_url: '1080x1350' }} 1080w
+                    "
+                    sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Pink Sapphire Floral Ring</h3>
+            <p>14k yellow gold • 2.02ct oval sapphire • size 6.25</p>
+            <div class="custom__order-price">$3,400</div>
+        </div> 
+    </div> {% endcomment %}
+
+    {% comment %} <div class="custom__order filterImg diamond">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A round diamond centerstone flanked by two solid gold roses with black diamonds in the centers on a solid 14k gold ring'
+                data-featherlight="{{ 'Diamond_Roses_Ring.jpg' | file_img_url: '1080x1350' }}"
+                srcset="
+                {{ 'Diamond_Roses_Ring.jpg' | file_img_url: '540x675' }} 540w,
+                {{ 'Diamond_Roses_Ring.jpg' | file_img_url: '1080x1350' }} 1080w
+                "
+                sizes="{{ sizes }}"
+        />
+        </div>
+        <div class="custom__order-description">
+            <h3>Diamond & Roses Ring</h3>
+            <p>14k champagne gold • 1.01ct round diamond, round diamonds • size 6</p>
+            <div class="custom__order-price">$2,715</div>
+        </div> 
+    </div> {% endcomment %}
+
+    <div class="custom__order filterImg diamond sapphire">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A platinum ring with a cluster of clear and colorful diamond and sapphires in different geometric shapes'
+                data-featherlight="{{ 'Sapphires_Diamonds_Ring.jpg' | file_img_url: '1080x1350' }}"
+                srcset="
+                {{ 'Sapphires_Diamonds_Ring.jpg' | file_img_url: '540x675' }} 540w,
+                {{ 'Sapphires_Diamonds_Ring.jpg' | file_img_url: '1080x1350' }} 1080w
+                "
+                sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Sapphires & Diamonds Cluster Ring</h3>
+            <p>950 platinum • 1.9ctw pear, moon, trillion & round diamonds, 2.2ctw emerald-cut & round sapphires • size 7.5</p>
+            <div class="custom__order-price">$10,150</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg diamond peridot">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='An engagement ring with winding branches and leaf details leading to a peridot side stone and lab diamond round center stone[ ALT TEXT ]'
+                data-featherlight="{{ 'Lab_Diamond_Peridots_Engagement_Ring.jpg' | file_img_url: '1080x1350' }}"
+                srcset="
+                {{ 'Lab_Diamond_Peridots_Engagement_Ring.jpg' | file_img_url: '540x675' }} 540w,
+                {{ 'Lab_Diamond_Peridots_Engagement_Ring.jpg' | file_img_url: '1080x1350' }} 1080w
+                "
+                sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Lab Diamond & Peridots Engagement Ring</h3>
+            <p>14k yellow gold • 1.65ct round lab diamond & peridots • size 8</p>
+            <div class="custom__order-price">$3,300</div>
+            <small>(<strong class="highlighted">fun fact:</strong> trans activist <a href="https://en.wikipedia.org/wiki/Erin_Reed_(journalist)" target="_blank">erin reed</a> got this engagement ring for montana’s first trans legislator, <a href="https://en.wikipedia.org/wiki/Zooey_Zephyr" target="_blank">zooey zephyr</a>! <a href="https://www.nbcnews.com/nbc-out/out-news/trans-montana-rep-zooey-zephyr-proposes-girlfriend-queer-prom-rcna83377" target="_blank">zooey proposed first</a> though!)</small>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg diamond">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A solid gold band with triforce detailing all around the band and three triangle diamonds on top'
+                data-featherlight="{{ 'Triforce-inspired_Diamond_Ring.jpg' | file_img_url: '1080x1350' }}"
+                srcset="
+                {{ 'Triforce-inspired_Diamond_Ring.jpg' | file_img_url: '540x675' }} 540w,
+                {{ 'Triforce-inspired_Diamond_Ring.jpg' | file_img_url: '1080x1350' }} 1080w
+                "
+                sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Triforce-inspired Diamond Ring</h3>
+            <p>14k yellow gold • 3 trillion diamonds • size 9.5</p>
+            <div class="custom__order-price">$1,500</div>
+        </div> 
+    </div> 
+
+    <div class="custom__order filterImg emerald">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A pair of solid gold open circle stud earrings with a halo of round emeralds on the outside of the circle'
+                data-featherlight="{{ 'Emerald_Hoop_Earrings.jpg' | file_img_url: '1080x1350' }}"
+                srcset="
+                {{ 'Emerald_Hoop_Earrings.jpg' | file_img_url: '540x675' }} 540w,
+                {{ 'Emerald_Hoop_Earrings.jpg' | file_img_url: '1080x1350' }} 1080w
+                "
+                sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Emerald Hoop Earrings</h3>
+            <p>14k yellow gold • 0.72ctw round emeralds</p>
+            <div class="custom__order-price">$1,400 pair</div>
+        </div> 
+    </div>
+
+    {% comment %} <div class="custom__order filterImg diamond">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A model holding a solid 14k yellow gold round diamond tennis bracelet'
+                data-featherlight="{{ 'Diamond_Tennis_Bracelet.jpg' | file_img_url: '1080x1350' }}"
+                srcset="
+                {{ 'Diamond_Tennis_Bracelet.jpg' | file_img_url: '540x675' }} 540w,
+                {{ 'Diamond_Tennis_Bracelet.jpg' | file_img_url: '1080x1350' }} 1080w
+                "
+                sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Diamond Tennis Bracelet</h3>
+            <p>14k yellow gold • 1.50ctw 2mm round diamonds • 6.5”</p>
+            <div class="custom__order-price">$2,500</div>
+        </div> 
+    </div> {% endcomment %}
+
+    <div class="custom__order filterImg diamond">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A 14k white gold band ring made to look like the skyline of New Orleans'
+                data-featherlight="{{ 'New_Orleans_Ring.jpg' | file_img_url: '1080x1350' }}"
+                srcset="
+                {{ 'New_Orleans_Ring.jpg' | file_img_url: '540x675' }} 540w,
+                {{ 'New_Orleans_Ring.jpg' | file_img_url: '1080x1350' }} 1080w
+                "
+                sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>New Orleans Ring</h3>
+            <p>14k white gold • round diamonds • size 14</p>
+            <div class="custom__order-price">$2,250</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg diamond">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A large oval diamond center stone is flanked by two pear diamonds on a solid 14k gold ring'
+                data-featherlight="{{ 'Oval_Pear_Diamond_Ring.jpg' | file_img_url: '1080x1350' }}"
+                srcset="
+                {{ 'Oval_Pear_Diamond_Ring.jpg' | file_img_url: '540x675' }} 540w,
+                {{ 'Oval_Pear_Diamond_Ring.jpg' | file_img_url: '1080x1350' }} 1080w
+                "
+                sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Oval & Pear Diamond Ring</h3>
+            <p>14k yellow gold • 1.5ct d/vs1 oval diamond, 0.5ct pear diamonds • size 6</p>
+            <div class="custom__order-price">$15,000</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg metal">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A shiny 14k yellow gold skateboard pendant with wheels on a blue cloth background'
+                data-featherlight="{{ 'Skateboard_Pendant.jpg' | file_img_url: '1080x1350' }}"
+                srcset="
+                {{ 'Skateboard_Pendant.jpg' | file_img_url: '540x675' }} 540w,
+                {{ 'Skateboard_Pendant.jpg' | file_img_url: '1080x1350' }} 1080w
+                "
+                sizes="{{ sizes }}"
+            />
+        </div>
+
+        <div class="custom__order-description">
+            <h3>Skateboard Pendant</h3>
+            <p>14k yellow gold</p>
+            <div class="custom__order-price">$750</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg sapphire diamond">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A 14 karat white gold band ring with three rows of sapphires in the trans flag colors of blue, white and pink '
+                data-featherlight="{{ 'Trans_Pride_Ring.jpg' | file_img_url: '1080x1350' }}"
+                srcset="
+                {{ 'Trans_Pride_Ring.jpg' | file_img_url: '540x675' }} 540w,
+                {{ 'Trans_Pride_Ring.jpg' | file_img_url: '1080x1350' }} 1080w
+                "
+                sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Trans Pride Ring</h3>
+            <p>14k white gold • round diamonds & sapphires • size 7</p>
+            <div class="custom__order-price">$2,000</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg diamond other">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A platinum ring with a marquise diamond center stone surrounded by colorful gemstones in different geometric shapes'
+                data-featherlight="{{ 'Gemstones_Platinum_Ring.jpg' | file_img_url: '1080x1350' }}"
+                srcset="
+                {{ 'Gemstones_Platinum_Ring.jpg' | file_img_url: '540x675' }} 540w,
+                {{ 'Gemstones_Platinum_Ring.jpg' | file_img_url: '1080x1350' }} 1080w
+                "
+                sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Platinum Gemstones Cluster Ring</h3>
+            <p>950 platinum • 1ct h/vvs marquise diamond, trillion peridot, trillion citrine, cushion sapphire, cushion garnet, pear amethyst • size 6.5
+            </p>
+            <div class="custom__order-price">$6,900</div>
+        </div> 
+    </div>
+
+    {% comment %} <div class="custom__order filterImg diamond">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A 14k rose gold ring with a round salt and pepper diamond center stone in a prong setting shaped to resemble a tulip flower'
+                data-featherlight="{{ 'Salt-and-pepper_Diamond_in_Tulip_setting.jpg' | file_img_url: '1080x1350' }}"
+                srcset="
+                {{ 'Salt-and-pepper_Diamond_in_Tulip_setting.jpg' | file_img_url: '540x675' }} 540w,
+                {{ 'Salt-and-pepper_Diamond_in_Tulip_setting.jpg' | file_img_url: '1080x1350' }} 1080w
+                "
+                sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Salt-and-pepper Diamond Tulip Ring</h3>
+            <p>14k rose gold 0.95ct brilliant-cut round salt-and-pepper diamond • size 5.75</p>
+            <div class="custom__order-price">$1,750</div>
+        </div> 
+    </div> {% endcomment %}
+
+    <div class="custom__order filterImg sapphire">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A round green sapphire center stone with double claw prongs on a vintage style solid gold band'
+                data-featherlight="{{ 'Green_Vintage_Sapphire_Ring.jpg' | file_img_url: '1080x1350' }}"
+                srcset="
+                {{ 'Green_Vintage_Sapphire_Ring.jpg' | file_img_url: '540x675' }} 540w,
+                {{ 'Green_Vintage_Sapphire_Ring.jpg' | file_img_url: '1080x1350' }} 1080w
+                "
+                sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Vintage Green Sapphire Ring</h3>
+            <p>14k rose gold • 1.70ct sapphire • size 6</p>
+            <div class="custom__order-price">$2,300</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg metal">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A 925 silver pendant of a chicken skull with a silver chain on a blue cloth background'
+                data-featherlight="{{ 'Chicken_Skull_Necklace.jpg' | file_img_url: '1080x1350' }}"
+                srcset="
+                {{ 'Chicken_Skull_Necklace.jpg' | file_img_url: '540x675' }} 540w,
+                {{ 'Chicken_Skull_Necklace.jpg' | file_img_url: '1080x1350' }} 1080w
+                "
+                sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Chicken Skull Necklace</h3>
+            <p>925 oxidized sterling silver</p>
+            <div class="custom__order-price">$850</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg diamond ruby">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A mixed metal pendant in the shape of a beetroot with round diamond and rubies '
+                data-featherlight="{{ 'Beetroot_Pendant.jpg' | file_img_url: '1080x1350' }}"
+                srcset="
+                {{ 'Beetroot_Pendant.jpg' | file_img_url: '540x675' }} 540w,
+                {{ 'Beetroot_Pendant.jpg' | file_img_url: '1080x1350' }} 1080w
+                "
+                sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Beetroot Pendant</h3>
+            <p>14k yellow gold • 950 platinum • round rubies • round diamonds • 1” tall</p>
+            <div class="custom__order-price">$2,000</div>
+        </div> 
+    </div>
+
+    {% comment %} <div class="custom__order filterImg diamond">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A round gold pendant with the Pisces constellation depicted in diamonds, two detailed fish underneath, and a diamond border'
+                 data-featherlight="{{ 'Fish_Constellation_Diamond_Border_Pendant.jpg' | file_img_url: '1080x1350' }}"
+                 srcset="
+                   {{ 'Fish_Constellation_Diamond_Border_Pendant.jpg' | file_img_url: '540x675' }} 540w,
+                   {{ 'Fish_Constellation_Diamond_Border_Pendant.jpg' | file_img_url: '1080x1350' }} 1080w
+                 "
+                 sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Pisces Constellation Pendant</h3>
+            <p>customer’s gold & customer’s round diamonds</p>
+            <div class="custom__order-price">$1,200</div>
+        </div> 
+    </div> {% endcomment %}
+    
+    <div class="custom__order filterImg diamond">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A round pendant with a gold rose, two marquise diamonds as the leaves on the flower stem, and small round diamonds for stars'
+                 data-featherlight="{{ 'Stars_and_Roses_Necklaces.jpg' | file_img_url: '1080x1350' }}"
+                 srcset="
+                   {{ 'Stars_and_Roses_Necklaces.jpg' | file_img_url: '540x675' }} 540w,
+                   {{ 'Stars_and_Roses_Necklaces.jpg' | file_img_url: '1080x1350' }} 1080w
+                 "
+                 sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Stars and Roses Necklaces</h3>
+            <p>14k yellow gold, customer's round & marquise diamonds</p>
+            <div class="custom__order-price">$1,500 each</div>
+        </div> 
+    </div>
+    
+    <div class="custom__order filterImg other pearl">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A sterling silver body chain made to look like a spiders web and a 925 silver spider with a pearl body at its center'
+                 data-featherlight="{{ 'Spider_w_Pearl_Web_Body_Chain.jpg' | file_img_url: '1080x1350' }}"
+                 srcset="
+                   {{ 'Spider_w_Pearl_Web_Body_Chain.jpg' | file_img_url: '540x675' }} 540w,
+                   {{ 'Spider_w_Pearl_Web_Body_Chain.jpg' | file_img_url: '1080x1350' }} 1080w
+                 "
+                 sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Spider w/ Pearl & Web Body Chain</h3>
+            <p>925 sterling silver • pearl</p>
+            <div class="custom__order-price">$1,200</div>
+        </div> 
+    </div>
+    
+    <div class="custom__order filterImg metal">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A round 18k gold ring depicting the sun with a textured center and detailed sun rays'
+                 data-featherlight="{{ 'Golden_Sun_Ring.jpg' | file_img_url: '1080x1350' }}"
+                 srcset="
+                   {{ 'Golden_Sun_Ring.jpg' | file_img_url: '540x675' }} 540w,
+                   {{ 'Golden_Sun_Ring.jpg' | file_img_url: '1080x1350' }} 1080w
+                 "
+                 sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Golden Sun Ring</h3>
+            <p>18k yellow gold • size 7</p>
+            <div class="custom__order-price">$1,500</div>
+        </div> 
+    </div>
+    
+    <div class="custom__order filterImg emerald diamond">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A yellow gold ring a round emerald stone half-surrounded by alternating baguette and round diamonds to form a crown'
+                 data-featherlight="{{ 'Crown_Ring.jpg' | file_img_url: '1080x1350' }}"
+                 srcset="
+                   {{ 'Crown_Ring.jpg' | file_img_url: '540x675' }} 540w,
+                   {{ 'Crown_Ring.jpg' | file_img_url: '1080x1350' }} 1080w
+                 "
+                 sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Crown Ring</h3>
+            <p>14k yellow gold • 5mm round emerald • 0.7ctw round & baguette diamonds • size 7.25</p>
+            <div class="custom__order-price">$2,600</div>
+        </div> 
+    </div>
+    
+    <div class="custom__order filterImg diamond">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A 14k gold pendant of a hand holding a scepter with a round diamond center and filigree detailing'
+                data-featherlight="{{ 'Hand_Holding_Diamond_Pendant.jpg' | file_img_url: '1080x1350' }}"
+                srcset="
+                {{ 'Hand_Holding_Diamond_Pendant.jpg' | file_img_url: '540x675' }} 540w,
+                {{ 'Hand_Holding_Diamond_Pendant.jpg' | file_img_url: '1080x1350' }} 1080w
+                "
+                sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Hand Holding Diamond Pendant</h3>
+            <p>14k yellow gold • 0.87ct round diamond • 26mm tall</p>
+            <div class="custom__order-price">$2,800</div>
+        </div> 
+    </div>
+    
+    <div class="custom__order filterImg diamond">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A bezel set round diamond on a 14 karat champagne gold band with floral thistle embossing'
+                    data-featherlight="{{ 'Thistles_and_Foliage_Ring.jpg' | file_img_url: '1080x1350' }}"
+                    srcset="
+                    {{ 'Thistles_and_Foliage_Ring.jpg' | file_img_url: '540x675' }} 540w,
+                    {{ 'Thistles_and_Foliage_Ring.jpg' | file_img_url: '1080x1350' }} 1080w
+                    "
+                    sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Thistles and Foliage Ring</h3>
+            <p>14k champagne gold • 0.50ct rose-cut round diamond • size 6.5</p>
+            <div class="custom__order-price">$2,300</div>
+        </div> 
+    </div>
+    
+    <div class="custom__order filterImg metal">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='Sneakers Pendants'
+                 data-featherlight="{{ 'Sneakers_Pendants.jpg' | file_img_url: '1080x1350' }}"
+                 srcset="
+                   {{ 'Sneakers_Pendants.jpg' | file_img_url: '540x675' }} 540w,
+                   {{ 'Sneakers_Pendants.jpg' | file_img_url: '1080x1350' }} 1080w
+                 "
+                 sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Sneakers Pendants</h3>
+            <p>14k yellow gold</p>
+            <div class="custom__order-price">$750 each</div>
+        </div> 
+    </div>
+    
+    <div class="custom__order filterImg metal">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='Two gold lobsters holding hands with one claw and held up by a Butch Chain with their other claw'
+                 data-featherlight="{{ 'Lobsters_Necklace.jpg' | file_img_url: '1080x1350' }}"
+                 srcset="
+                   {{ 'Lobsters_Necklace.jpg' | file_img_url: '540x675' }} 540w,
+                   {{ 'Lobsters_Necklace.jpg' | file_img_url: '1080x1350' }} 1080w
+                 "
+                 sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Lobsters Necklace</h3>
+            <p>14k yellow gold • 1.5” wide • 18" butch chain</p>
+            <div class="custom__order-price">$1,100</div>
+        </div> 
+    </div>
+    
+    <div class="custom__order filterImg metal">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='Two solid gold bands with piano key detailing all around the rings'
+                 data-featherlight="{{ 'Piano_Keys_Rings.jpg' | file_img_url: '1080x1350' }}"
+                 srcset="
+                   {{ 'Piano_Keys_Rings.jpg' | file_img_url: '540x675' }} 540w,
+                   {{ 'Piano_Keys_Rings.jpg' | file_img_url: '1080x1350' }} 1080w
+                 "
+                 sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Piano Keys Rings</h3>
+            <p>14k yellow gold & white gold • size 5.5 & 8.5</p>
+            <div class="custom__order-price">$950 each</div>
+        </div> 
+    </div>
+    
+    <div class="custom__order filterImg metal">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A solid 14k yellow gold nameplate in Korean Hangul script on a Cable Chain'
+                 data-featherlight="{{ 'Korean_Hangul_Nameplate.jpg' | file_img_url: '1080x1350' }}"
+                 srcset="
+                   {{ 'Korean_Hangul_Nameplate.jpg' | file_img_url: '540x675' }} 540w,
+                   {{ 'Korean_Hangul_Nameplate.jpg' | file_img_url: '1080x1350' }} 1080w
+                 "
+                 sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Korean Hangul Nameplate</h3>
+            <p>14k yellow gold • 30mm wide • 18” cable chain</p>
+            <div class="custom__order-price">$550</div>
+        </div> 
+    </div>
+    
+    <div class="custom__order filterImg metal">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A solid 14k yellow gold nameplate in Chinese script on a Curb Chain'
+                 data-featherlight="{{ 'Chinese_Nameplate.jpg' | file_img_url: '1080x1350' }}"
+                 srcset="
+                   {{ 'Chinese_Nameplate.jpg' | file_img_url: '540x675' }} 540w,
+                   {{ 'Chinese_Nameplate.jpg' | file_img_url: '1080x1350' }} 1080w
+                 "
+                 sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Chinese Nameplate</h3>
+            <p>14k yellow gold • 20” curb chain</p>
+            <div class="custom__order-price">$2500</div>
+        </div> 
+    </div>
+    
+    <div class="custom__order filterImg amethyst other">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A 14 karat white gold ying yang ring with an amethyst center stone, textured detailing, and black enamel'
+                 data-featherlight="{{ 'Textured_Yin_Yang_Ring.jpg' | file_img_url: '1080x1350' }}"
+                 srcset="
+                   {{ 'Textured_Yin_Yang_Ring.jpg' | file_img_url: '540x675' }} 540w,
+                   {{ 'Textured_Yin_Yang_Ring.jpg' | file_img_url: '1080x1350' }} 1080w
+                 "
+                 sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Textured Yin Yang Ring</h3>
+            <p>14k white gold • round amethyst • size 5</p>
+            <div class="custom__order-price">$1,400</div>
+        </div> 
+    </div>
+    
+    <div class="custom__order filterImg diamond">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A 14 karat yellow gold smiley face signet ring with round diamonds for the eyes'
+                data-featherlight="{{ 'Smiley_Diamonds_Face.jpg' | file_img_url: '1080x1350' }}"
+                srcset="
+                {{ 'Smiley_Diamonds_Face.jpg' | file_img_url: '540x675' }} 540w,
+                {{ 'Smiley_Diamonds_Face.jpg' | file_img_url: '1080x1350' }} 1080w
+                "
+                sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Diamond Smiley Face Pinky Ring</h3>
+            <p>14k yellow gold • 0.50ct diamonds • size 6</p>
+            <div class="custom__order-price">$1,500</div>
+        </div> 
+    </div>
+    
+    {% comment %} <div class="custom__order filterImg other opal diamond">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A model&#39;s ear wearing a large solid gold hoop earring with two round opals a diamond soldered on the inside of the hoop'
+                 data-featherlight="{{ 'Soldered_Opal_Diamonds_Earrings.jpg' | file_img_url: '1080x1350' }}"
+                 srcset="
+                   {{ 'Soldered_Opal_Diamonds_Earrings.jpg' | file_img_url: '540x675' }} 540w,
+                   {{ 'Soldered_Opal_Diamonds_Earrings.jpg' | file_img_url: '1080x1350' }} 1080w
+                 "
+                 sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Soldered Opal & Diamonds Earrings</h3>
+            <p>14k yellow gold • 3mm round opals, 0.42ct round diamond</p>
+            <div class="custom__order-price">$1200 pair</div>
+        </div> 
+    </div> {% endcomment %}
+    
+    <div class="custom__order filterImg diamond">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='Two 14k white gold rings with the yin and yang symbols and black and white center stones'
+                    data-featherlight="{{ 'Yin_Yang_Engagement_Stacking_Rings.jpg' | file_img_url: '1080x1350' }}"
+                    srcset="
+                    {{ 'Yin_Yang_Engagement_Stacking_Rings.jpg' | file_img_url: '540x675' }} 540w,
+                    {{ 'Yin_Yang_Engagement_Stacking_Rings.jpg' | file_img_url: '1080x1350' }} 1080w
+                    "
+                    sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Yin & Yang Rings Set</h3>
+            <p>14k white gold • 0.70ct brilliant diamond, 0.7ct black rose-cut diamond</p>
+            <div class="custom__order-price">$3,700</div>
+        </div> 
+    </div>
+    
+    <div class="custom__order filterImg other diamond">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A white gold ring with a rainbow moonstone centerstone with crescent moon detailing and round diamonds along the band'
+                data-featherlight="{{ 'Moonstone_with_Moon_Ring.jpg' | file_img_url: '1080x1350' }}"
+                srcset="
+                {{ 'Moonstone_with_Moon_Ring.jpg' | file_img_url: '540x675' }} 540w,
+                {{ 'Moonstone_with_Moon_Ring.jpg' | file_img_url: '1080x1350' }} 1080w
+                "
+                sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Moonstone with Moon Ring</h3>
+            <p>14k white gold • 6.5mm faceted moonstone, 0.4ct diamonds • size 6</p>
+            <div class="custom__order-price">$1,950</div>
+        </div> 
+    </div>
+    
+    <div class="custom__order filterImg diamond peridot citrine sapphire garnet amethyst other">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A platinum ring with a marquise diamond center stone surrounded by colorful gemstones in different geometric shapes'
+                data-featherlight="{{ 'Gemstones_Platinum_Ring.jpg' | file_img_url: '1080x1350' }}"
+                srcset="
+                {{ 'Gemstones_Platinum_Ring.jpg' | file_img_url: '540x675' }} 540w,
+                {{ 'Gemstones_Platinum_Ring.jpg' | file_img_url: '1080x1350' }} 1080w
+                "
+                sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Platinum Gemstones Cluster Ring</h3>
+            <p>950 platinum • 1ct h/vvs marquise diamond, trillion peridot, trillion citrine, cushion sapphire, cushion garnet, pear amethyst • size 6.5 </p>
+            <div class="custom__order-price">$6,900</div>
+        </div> 
+    </div>
+    
+    {% comment %} <div class="custom__order filterImg sapphire diamond other">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A cluster ring with a bezel set sapphire and diamond, prong set rainbow moonstone, and an engraved rose on a white gold band'
+                    data-featherlight="{{ 'Moonstone_Sapphire_Diamond_and_Engraved_Rose_Ring.jpg' | file_img_url: '1080x1350' }}"
+                    srcset="
+                    {{ 'Moonstone_Sapphire_Diamond_and_Engraved_Rose_Ring.jpg' | file_img_url: '540x675' }} 540w,
+                    {{ 'Moonstone_Sapphire_Diamond_and_Engraved_Rose_Ring.jpg' | file_img_url: '1080x1350' }} 1080w
+                    "
+                    sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Moonstone, Sapphire, Diamond and Engraved Rose Ring</h3>
+            <p>14k white gold • 5mm cabochon moonstone, 4mm sapphire, 3mm diamond </p>
+            <div class="custom__order-price">$1,650</div>
+        </div> 
+    </div> {% endcomment %}
+    
+    <div class="custom__order filterImg other">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='Five Baguette moss agate gemstones on 14k yellow gold filigree band'
+                    data-featherlight="{{ 'Moss_Agate_Ring.jpg' | file_img_url: '1080x1350' }}"
+                    srcset="
+                    {{ 'Moss_Agate_Ring.jpg' | file_img_url: '540x675' }} 540w,
+                    {{ 'Moss_Agate_Ring.jpg' | file_img_url: '1080x1350' }} 1080w
+                    "
+                    sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Moss Agate Ring</h3>
+            <p>14k yellow gold • baguette cut moss agates • size 7.5</p>
+            <div class="custom__order-price">$1,900</div>
+        </div> 
+    </div>
+    
+    <div class="custom__order filterImg diamond other">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='An oval green Tsavorite center stone with a halo of diamonds and milgrain detailing on a platinum ring'
+                    data-featherlight="{{ 'Diamond_Halo_Tsavorite_Ring.jpg' | file_img_url: '1080x1350' }}"
+                    srcset="
+                    {{ 'Diamond_Halo_Tsavorite_Ring.jpg' | file_img_url: '540x675' }} 540w,
+                    {{ 'Diamond_Halo_Tsavorite_Ring.jpg' | file_img_url: '1080x1350' }} 1080w
+                    "
+                    sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Diamond Halo & Tsavorite Ring</h3>
+            <p>950 platinum • oval tsavorite, 0.44ctw round & pear diamonds • 4.25</p>
+            <div class="custom__order-price">$4,500 </div>
+        </div> 
+    </div>
+    
+    <div class="custom__order filterImg metal">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='Two rose gold skull stud earrings with screw back backings'
+                 data-featherlight="{{ 'Skull_Earrings.jpg' | file_img_url: '1080x1350' }}"
+                 srcset="
+                   {{ 'Skull_Earrings.jpg' | file_img_url: '540x675' }} 540w,
+                   {{ 'Skull_Earrings.jpg' | file_img_url: '1080x1350' }} 1080w
+                 "
+                 sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Skull Earrings</h3>
+            <p>14k rose gold • screw back</p>
+            <div class="custom__order-price">$350 pair</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg sapphire">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A multicolor sapphire cluster ring and a blue pear sapphire ring with wave carvings both with custom-fit solid gold bands'
+            data-featherlight="{{ 'SapphiresEngagementRingSet.jpg' | file_img_url: '1080x1350' }}"
+            srcset="
+            {{ 'SapphiresEngagementRingSet.jpg' | file_img_url: '540x675' }} 540w,
+            {{ 'SapphiresEngagementRingSet.jpg' | file_img_url: '1080x1350' }} 1080w
+            "
+            sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Sapphires Engagement Ring Set</h3>
+            <p>14k yellow gold • 0.58ct pear sapphire • sizes 6.5 & 7</p>
+            <div class="custom__order-price">$3,950</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg metal">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A 925 sterling silver pendant of a smiling scarecrow with x&#39;s on its eyes on a blue cloth background'
+            data-featherlight="{{ 'ScarecrowPendant.jpg' | file_img_url: '1080x1350' }}"
+            srcset="
+            {{ 'ScarecrowPendant.jpg' | file_img_url: '540x675' }} 540w,
+            {{ 'ScarecrowPendant.jpg' | file_img_url: '1080x1350' }} 1080w
+            "
+            sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Scarecrow Pendant</h3>
+            <p>925 sterling silver • 1.5” tall</p>
+            <div class="custom__order-price">$600</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg diamond">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='An octagon salt and pepper diamond held with leaf-shaped prongs on a band of twisted branches made from 14k champagne gold'
+            data-featherlight="{{ 'Salt-and-pepperTwistingBranchesEngagementRing.jpg' | file_img_url: '1080x1350' }}"
+            srcset="
+            {{ 'Salt-and-pepperTwistingBranchesEngagementRing.jpg' | file_img_url: '540x675' }} 540w,
+            {{ 'Salt-and-pepperTwistingBranchesEngagementRing.jpg' | file_img_url: '1080x1350' }} 1080w
+            "
+            sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Salt-and-pepper Twisting Branches Engagement Ring</h3>
+            <p>14k champagne gold • 1.61ct octagon salt-and-pepper diamond • size 7</p>
+            <div class="custom__order-price">$2,600</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg diamond">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A bezel set round diamond and two smaller diamonds on a thick white gold band with a stripe of rose gold in the center'
+            data-featherlight="{{ 'TwoToneDiamondsBand.jpg' | file_img_url: '1080x1350' }}"
+            srcset="
+            {{ 'TwoToneDiamondsBand.jpg' | file_img_url: '540x675' }} 540w,
+            {{ 'TwoToneDiamondsBand.jpg' | file_img_url: '1080x1350' }} 1080w
+            "
+            sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Two Tone Diamonds Band</h3>
+            <p>14k white & rose gold • customer’s center diamond, small round diamonds • size 8</p>
+            <div class="custom__order-price">$2,000</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg metal">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='Three matte finish rocket pendants with raised polished finish details made from 14k yellow gold'
+            data-featherlight="{{ 'RocketLogoPendants.jpg' | file_img_url: '1080x1350' }}"
+            srcset="
+            {{ 'RocketLogoPendants.jpg' | file_img_url: '540x675' }} 540w,
+            {{ 'RocketLogoPendants.jpg' | file_img_url: '1080x1350' }} 1080w
+            "
+            sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Rocket Logo Pendants</h3>
+            <p>14k yellow gold • 1.25” tall</p>
+            <div class="custom__order-price">$250 each</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg diamond">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A pear black diamond surrounded by a cluster of black diamonds in various shapes on a yellow gold band of leaves and vines'
+            data-featherlight="{{ 'BlackDiamondVinesLeavesRing.jpg' | file_img_url: '1080x1350' }}"
+            srcset="
+            {{ 'BlackDiamondVinesLeavesRing.jpg' | file_img_url: '540x675' }} 540w,
+            {{ 'BlackDiamondVinesLeavesRing.jpg' | file_img_url: '1080x1350' }} 1080w
+            "
+            sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Black Diamond Vines & Leaves Ring</h3>
+            <p>14k yellow gold • 1.34ct pear black diamond, round black diamonds • size 5</p>
+            <div class="custom__order-price">$2,400</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg moissanite">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A ring with a tilted oval moissanite center stone with a star and circle on each side embellished with round moissanites'
+            data-featherlight="{{ 'MoissaniteStarsRing.jpg' | file_img_url: '1080x1350' }}"
+            srcset="
+            {{ 'MoissaniteStarsRing.jpg' | file_img_url: '540x675' }} 540w,
+            {{ 'MoissaniteStarsRing.jpg' | file_img_url: '1080x1350' }} 1080w
+            "
+            sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Moissanite Stars Ring</h3>
+            <p>14k yellow gold • 5.5x3.5mm oval moissanite, round moissanites • size 6</p>
+            <div class="custom__order-price">$1,200</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg metal">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A rectangular pendant made from solid 14k yellow gold depicting a green enamel tree above blue enamel waves'
+            data-featherlight="{{ 'MemorialTreeTattooPendant.jpg' | file_img_url: '1080x1350' }}"
+            srcset="
+            {{ 'MemorialTreeTattooPendant.jpg' | file_img_url: '540x675' }} 540w,
+            {{ 'MemorialTreeTattooPendant.jpg' | file_img_url: '1080x1350' }} 1080w
+            "
+            sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Memorial Tree & Tattoo Pendant</h3>
+            <p>18k yellow gold • green & blue enamel • 20mm tall</p>
+            <div class="custom__order-price">$1,150</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg diamond sapphire">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A 14k gold ring with a row of round diamonds and sapphires in the non-binary flag colors of yellow, white, purple, and black'
+            data-featherlight="{{ 'NonbinaryPrideRing.jpg' | file_img_url: '1080x1350' }}"
+            srcset="
+            {{ 'NonbinaryPrideRing.jpg' | file_img_url: '540x675' }} 540w,
+            {{ 'NonbinaryPrideRing.jpg' | file_img_url: '1080x1350' }} 1080w
+            "
+            sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Nonbinary Pride Ring</h3>
+            <p>14k yellow gold • white/yellow/black round diamonds & round purple sapphires • size 5.75</p>
+            <div class="custom__order-price">$1,450</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg diamond">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A 14k yellow gold engagement ring with a large oval lab diamond in a half-bezel setting that leaves the top and bottom open'
+            data-featherlight="{{ 'ClassicHalfBezelEngagementRing.jpg' | file_img_url: '1080x1350' }}"
+            srcset="
+            {{ 'ClassicHalfBezelEngagementRing.jpg' | file_img_url: '540x675' }} 540w,
+            {{ 'ClassicHalfBezelEngagementRing.jpg' | file_img_url: '1080x1350' }} 1080w
+            "
+            sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Classic Half Bezel Engagement Ring</h3>
+            <p>14k yellow gold • 2.08ct h/vs 10.45x7.2mm oval lab diamond • size 7.75</p>
+            <div class="custom__order-price">$3,620</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg diamond">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='An engagement ring with a round lab diamond with leaves curing around the stone in place of prongs and marquise side stones'
+            data-featherlight="{{ 'HuggingLeavesEngagementRing.jpg' | file_img_url: '1080x1350' }}"
+            srcset="
+            {{ 'HuggingLeavesEngagementRing.jpg' | file_img_url: '540x675' }} 540w,
+            {{ 'HuggingLeavesEngagementRing.jpg' | file_img_url: '1080x1350' }} 1080w
+            "
+            sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Hugging Leaves Engagement Ring</h3>
+            <p>14k yellow gold • 1.60ct e/vs 7.5mm round lab diamond, small round lab diamonds • size 7</p>
+            <div class="custom__order-price">$2,400</div>
+        </div> 
+    </div>     
+    
+    <div class="custom__order filterImg sapphire ruby other">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A large yellow gold open box shaped pendant with a dragon holding a blue lab sapphire and breathing a round lab ruby flame'
+            data-featherlight="{{ 'DragonScorpionBoxPendant.jpg' | file_img_url: '1080x1350' }}"
+            srcset="
+            {{ 'DragonScorpionBoxPendant.jpg' | file_img_url: '540x675' }} 540w,
+            {{ 'DragonScorpionBoxPendant.jpg' | file_img_url: '1080x1350' }} 1080w
+            "
+            sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Dragon & Scorpion Box Pendant</h3>
+            <p>14k yellow gold • 2.5mm lab sapphire, 2.5mm lab ruby, 2.5mm yellow & london blue topaz • 1”x1”x1”</p>
+            <div class="custom__order-price">$3,650</div>
+        </div> 
+    </div>
+    
+    <div class="custom__order filterImg sapphire emerald">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A yellow gold ring with a pink pear sapphire flanked by two green marquises and a round orange sapphire on each side'
+            data-featherlight="{{ 'FloralSapphireEngagementRing.jpg' | file_img_url: '1080x1350' }}"
+            srcset="
+            {{ 'FloralSapphireEngagementRing.jpg' | file_img_url: '540x675' }} 540w,
+            {{ 'FloralSapphireEngagementRing.jpg' | file_img_url: '1080x1350' }} 1080w
+            "
+            sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Floral Sapphire Engagement Ring</h3>
+            <p>14k yellow gold • 1.15ct pear pink sapphire, round orange sapphires, marquise emeralds • size 4</p>
+            <div class="custom__order-price">$3,400</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg diamond">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A thick 14k gold ring with a round brown diamond center stone held by four finger-like prongs on each side'
+            data-featherlight="{{ 'HandsHoldingDiamondRing.jpg' | file_img_url: '1080x1350' }}"
+            srcset="
+            {{ 'HandsHoldingDiamondRing.jpg' | file_img_url: '540x675' }} 540w,
+            {{ 'HandsHoldingDiamondRing.jpg' | file_img_url: '1080x1350' }} 1080w
+            "
+            sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Hands Holding Diamond Ring</h3>
+            <p>14k yellow gold • 1.25ct brown round diamond • size 4.5</p>
+            <div class="custom__order-price">$3,000</div>
+        </div> 
+    </div>
+    
+    <div class="custom__order filterImg diamond">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='An engagement ring with a green diamond center stone with leaf-shaped prongs and leaf detailing on the 14k yellow gold band'
+            data-featherlight="{{ 'LeafyGreenDiamondEngagementRing.jpg' | file_img_url: '1080x1350' }}"
+            srcset="
+            {{ 'LeafyGreenDiamondEngagementRing.jpg' | file_img_url: '540x675' }} 540w,
+            {{ 'LeafyGreenDiamondEngagementRing.jpg' | file_img_url: '1080x1350' }} 1080w
+            "
+            sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Leafy Green Diamond Engagement Ring</h3>
+            <p>14k yellow gold • 1ct round green diamond • 4mm band • size 4.25</p>
+            <div class="custom__order-price">$4,000</div>
+        </div> 
+    </div>
+    
+    <div class="custom__order filterImg other">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A solid 14k yellow gold band with a dark cyan enamel inlay stripe in the center'
+            data-featherlight="{{ 'TwoToneEnamelRing.jpg' | file_img_url: '1080x1350' }}"
+            srcset="
+            {{ 'TwoToneEnamelRing.jpg' | file_img_url: '540x675' }} 540w,
+            {{ 'TwoToneEnamelRing.jpg' | file_img_url: '1080x1350' }} 1080w
+            "
+            sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Two Tone Enamel Ring</h3>
+            <p>14k yellow gold • dark cyan enamel • size 5.75</p>
+            <div class="custom__order-price">$750</div>
+        </div> 
+    </div>
+    
+    <div class="custom__order filterImg metal">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A 14k yellow gold pendant depicting a basketball player about to slam dunk the ball'
+            data-featherlight="{{ 'SlamDunkPendant.jpg' | file_img_url: '1080x1350' }}"
+            srcset="
+            {{ 'SlamDunkPendant.jpg' | file_img_url: '540x675' }} 540w,
+            {{ 'SlamDunkPendant.jpg' | file_img_url: '1080x1350' }} 1080w
+            "
+            sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Slam Dunk Pendant</h3>
+            <p>14k yellow gold • 1.5” tall</p>
+            <div class="custom__order-price">$750</div>
+        </div> 
+    </div>
+
+    <div class="custom__order filterImg other">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='Five graduated marquise alexandrite stones on a 14k yellow gold engagement ring'
+            data-featherlight="{{ 'MarquiseAlexandriteEngagementRing.jpg' | file_img_url: '1080x1350' }}"
+            srcset="
+            {{ 'MarquiseAlexandriteEngagementRing.jpg' | file_img_url: '540x675' }} 540w,
+            {{ 'MarquiseAlexandriteEngagementRing.jpg' | file_img_url: '1080x1350' }} 1080w
+            "
+            sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Marquise Alexandrite Engagement Ring</h3>
+            <p>14k yellow gold • 8x4mm, 6x3mm, & 5x2mm marquise lab alexandrites • size 7</p>
+            <div class="custom__order-price">$1,400</div>
+        </div> 
+    </div>
+    
+    <div class="custom__order filterImg sapphire other">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='An18k yellow gold signet ring depicting a scorpion and the Virgo zodiac symbol and two round sapphires in light and dark blue'
+            data-featherlight="{{ 'ScorpioVirgoSignetEngagementRing.jpg' | file_img_url: '1080x1350' }}"
+            srcset="
+            {{ 'ScorpioVirgoSignetEngagementRing.jpg' | file_img_url: '540x675' }} 540w,
+            {{ 'ScorpioVirgoSignetEngagementRing.jpg' | file_img_url: '1080x1350' }} 1080w
+            "
+            sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Scorpio & Virgo Signet Engagement Ring</h3>
+            <p>18k yellow gold • round dark blue & light blue sapphires • black enamel • size 6</p>
+            <div class="custom__order-price">$3,140</div>
+        </div> 
+    </div>
+    
+    <div class="custom__order filterImg sapphire">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='An engagement ring with a marquise purple sapphire stone and leaf band and an open wedding band with purple and green stones'
+            data-featherlight="{{ 'SapphireLeavesEngagementRingSet.jpg' | file_img_url: '1080x1350' }}"
+            srcset="
+            {{ 'SapphireLeavesEngagementRingSet.jpg' | file_img_url: '540x675' }} 540w,
+            {{ 'SapphireLeavesEngagementRingSet.jpg' | file_img_url: '1080x1350' }} 1080w
+            "
+            sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Sapphire Leaves Engagement Ring Set</h3>
+            <p>14k yellow gold •1.01ct purple marquise sapphire, round green & purple sapphire • size 9.25</p>
+            <div class="custom__order-price">$3,500</div>
+        </div> 
+    </div>
+    
+    <div class="custom__order filterImg diamond">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='A rose gold engagement ring with branches as the band, a salt and pepper diamond center stone and smaller round diamonds'
+            data-featherlight="{{ 'Salt-and-pepperDiamondBranchesRing.jpg' | file_img_url: '1080x1350' }}"
+            srcset="
+            {{ 'Salt-and-pepperDiamondBranchesRing.jpg' | file_img_url: '540x675' }} 540w,
+            {{ 'Salt-and-pepperDiamondBranchesRing.jpg' | file_img_url: '1080x1350' }} 1080w
+            "
+            sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Salt-and-pepper Diamond Branches Ring</h3>
+            <p>14k rose gold • 0.37ct round salt-and-pepper diamond, small round diamonds • size 12</p>
+            <div class="custom__order-price">$2,000</div>
+        </div> 
+    </div>
+    
+    <div class="custom__order filterImg sapphire">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='Six pear-shaped sapphires in multiple colors form a flower in the center of a 14k yellow gold ring with leaves along the band'
+            data-featherlight="{{ 'RainbowSapphireFlowerRing.jpg' | file_img_url: '1080x1350' }}"
+            srcset="
+            {{ 'RainbowSapphireFlowerRing.jpg' | file_img_url: '540x675' }} 540w,
+            {{ 'RainbowSapphireFlowerRing.jpg' | file_img_url: '1080x1350' }} 1080w
+            "
+            sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Rainbow Sapphire Flower Ring</h3>
+            <p>14k yellow gold • 4x3mm pear sapphires, 1.3mm round dark green sapphire • size 9</p>
+            <div class="custom__order-price">$2,200</div>
+        </div> 
+    </div>
+    
+    <div class="custom__order filterImg sapphire">
+        <div class="custom__order-image">
+            <img loading="lazy" alt='Two cluster rings with different colors and shapes of sapphire with matching custom-fit 14k yellow gold bands '
+            data-featherlight="{{ 'NaturePaletteClusterRingSets.jpg' | file_img_url: '1080x1350' }}"
+            srcset="
+            {{ 'NaturePaletteClusterRingSets.jpg' | file_img_url: '540x675' }} 540w,
+            {{ 'NaturePaletteClusterRingSets.jpg' | file_img_url: '1080x1350' }} 1080w
+            "
+            sizes="{{ sizes }}"
+            />
+        </div>
+        <div class="custom__order-description">
+            <h3>Nature Palette Cluster Ring Sets</h3>
+            <p>14k yellow gold • 1.36ct green sapphire & 3.2ct light green oval sapphire • sizes 6.5 & 8.5</p>
+            <div class="custom__order-price">$8,600</div>
+        </div> 
+    </div>
+
+
+
+
+
+
+</div>
+
+    {% comment %} End of Custom Products Grid {% endcomment %}
+
+    <div class="spaced text-center" id="custom-disclaimer">
+        <div class="custom-disclaimer">
+            <p class="highlighted"><strong>All custom orders are final sale.</strong></p>
+            <p>Prices shown here are examples of prices for past orders. Price quotes will change due to fluctuations in the market of gold and precious stones.</p>
+            <p>Custom orders typically take 3-8 weeks depending on difficulty. Full payment required to start production. (We accept all credit cards, Paypal, Affirm and Afterpay).</p>
+        </div>
+    </div>
+
+    <div class="spaced space-bottom-x3 text-center">
+        <a href="{{ page.content }}" title="Send us a custom order request" class="btn btn--wide">Get started</a>
+        <p class="custom__header--link">If link above does not work, please email custom@automicgold.com</p>
+    </div>
+
+    <section class="molecule spaced--twice no--mobile-overlay see-process-container">
+        <div class="molecule__text see-process-left">
+            <p class="highlighted">Prices shown here are examples of prices for past orders.</p>
+            <p>The cost of your piece may change with trends in the metal, gemstone, and labor markets. </p>
+            <p>Custom orders typically take 3-8 weeks to complete depending on complexity. Full payment is needed to start production. We accept all credit and debit cards, PayPal, Shop Pay, Affirm, Afterpay, Google Pay, and Apple Pay!</p>
+        </div>
+        <div class="see-process-right">
+            <div class="molecule__image text-right-desktop">
+                <img loading="lazy" alt="Automic Gold Gift Card"
+                    srcset="
+                    {{ 'customrings.jpg' | file_img_url: '1000x1000' }} 1000w,
+                    {{ 'customrings.jpg' | file_img_url: '500x500' }} 500w
+                    "
+                    sizes="500px"
+                />
+            </div>
+            <div class="molecule__text molecule__text--left">
+                <h2>Want to see the process?</h2>
+
+                <p class="space-bottom-x1">Visit our blog to learn more about the process of how we create your beautiful custom jewelery!</p>
+
+                <a href="https://www.automicgold.com/blogs/automic-blog/how-we-make-your-dream-jewelry" title="How We Make Your Dream Jewelry" class="btn btn--wide">See the Process!</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="molecule spaced--twice no--mobile-overlay" id="custom-recycle">
+        <div class="molecule__image text-right-desktop">
+            <img loading="lazy" alt="Automic Gold Gift Card"
+                 srcset="
+                   {{ 'custom-giftcard.png' | file_img_url: '1000x1000' }} 1000w,
+                   {{ 'custom-giftcard.png' | file_img_url: '500x500' }} 500w
+                 "
+                 sizes="500px"
+            />
+        </div>
+        <div class="molecule__text molecule__text--left">
+            <h2>Want store credit?</h2>
+
+            <p class="space-bottom-x1">If you would like to recycle your gold, platinum, silver and diamonds for store credit  email us photos of your jewelry, and we will respond with the quote!</p>
+
+            <a href="{{ page.content }}" title="Send us a custom order request" class="btn btn--wide">Recycle</a>
+        </div>
+    </section>
+</div>
+
+<script>
+    filterSelection("all")
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("filterImg");
+      if (c == "all") c = "";
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "filterImgShow");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "filterImgShow");
+      }
+    }
+    
+    function w3AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+      }
+    }
+    
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);     
+        }
+      }
+      element.className = arr1.join(" "); 
+    }
+    
+    // Add active class to the current button
+    var btnContainer = document.getElementById("btnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function(){
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
+    </script>

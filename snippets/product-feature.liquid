@@ -1,0 +1,320 @@
+{% case feature %}
+    {% when 'box' %}
+        <div class="molecule no--mobile-overlay product-feature-box">
+            <div class="molecule__uhaul">
+                <span class="visually-hidden">Video showing signature Automic Gold jewelry box</span>
+                <div>
+                    <video class="content lazy" loop muted autoplay playsinline>
+                        <source data-src="//dfaankvzyirrl.cloudfront.net/website/shared/product-feature-box.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="molecule__text product-feature-box__text">
+                <h3 class="bold space-bottom-x025">Signature Box</h3>
+                <p>
+                    Our jewelry box is a miniature book - open the cover and discover all the fun things inside!
+                    All Automic Gold packaging is <a href="//www.automicgold.com/pages/sustainability" target="_blank">100% recyclable</a>.
+                </p>
+            </div>
+        </div>
+    {% when 'three-backs' %}
+        <div class="product-feature-backings">
+            <div class="product-feature-backings__header">
+                <h3 class="bold space-bottom-x025">
+                    Backs
+                </h3>
+                <div class="product-feature-backings__description">
+                    Stud earrings are offered with three back options.
+                </div>
+            </div>
+
+            <div class="product-feature-backings__container">
+                <div class="product-feature-backings__section">
+                    <div class="product-feature-backings__explanation">
+                        <h4>Standard Pushback</h4> / Our pick for the perfect backing - small and comfy.
+                    </div>
+                    <img
+                        class="lazyload product-feature-backings__image"
+                        data-srcset="
+                            {{ 'product-feature--standard-pushbackings.jpg' | file_img_url: '150x119' }} 150w,
+                            {{ 'product-feature--standard-pushbackings.jpg' | file_img_url: '240x190' }} 240w,
+                            {{ 'product-feature--standard-pushbackings.jpg' | file_img_url: '300x285' }} 300w,
+                            {{ 'product-feature--standard-pushbackings.jpg' | file_img_url: '360x285' }} 360w
+                        "
+                        sizes="
+                            (max-width: 479px) calc((100vw - 30px) * .4),
+                            (min-width: 480px) and (max-width: 767.98px) calc((100vw - 60px) * .4),
+                            (min-width: 768px) 150px
+                        "
+                        alt="Automic Gold 14k Gold Standard Size Push Backing"
+                    />
+                </div>
+                <div class="product-feature-backings__section">
+                    <div class="product-feature-backings__explanation">
+                        <h4>Large Pushback</h4> / Easiest to grip. Also works wonders for stretched piercings.
+                    </div>
+                    <img
+                        class="lazyload product-feature-backings__image"
+                        data-srcset="
+                            {{ 'product-feature--large-pushbackings.jpg' | file_img_url: '150x119' }} 150w,
+                            {{ 'product-feature--large-pushbackings.jpg' | file_img_url: '240x190' }} 240w,
+                            {{ 'product-feature--large-pushbackings.jpg' | file_img_url: '300x285' }} 300w,
+                            {{ 'product-feature--large-pushbackings.jpg' | file_img_url: '360x285' }} 360w
+                        "
+                        sizes="
+                            (max-width: 479px) calc((100vw - 30px) * .4),
+                            (min-width: 480px) and (max-width: 767.98px) calc((100vw - 60px) * .4),
+                            (min-width: 768px) 150px
+                        "
+                        alt="Automic Gold 14k Gold Large Size Push Backing"
+                    />
+                </div>
+                <div class="product-feature-backings__section">
+                    <div class="product-feature-backings__explanation">
+                        <h4>Screwbacks</h4> / Extra secure backs. For people who like to screw around.
+                    </div>
+                    <img
+                        class="lazyload product-feature-backings__image"
+                        data-srcset="
+                            {{ 'product-feature--screwbacks.jpg' | file_img_url: '150x119' }} 150w,
+                            {{ 'product-feature--screwbacks.jpg' | file_img_url: '240x190' }} 240w,
+                            {{ 'product-feature--screwbacks.jpg' | file_img_url: '300x285' }} 300w,
+                            {{ 'product-feature--screwbacks.jpg' | file_img_url: '360x285' }} 360w
+                        "
+                        sizes="
+                            (max-width: 479px) calc((100vw - 30px) * .4),
+                            (min-width: 480px) and (max-width: 767.98px) calc((100vw - 60px) * .4),
+                            (min-width: 768px) 150px
+                        "
+                        alt="Automic Gold 14k Gold Screw-on Backing"
+                    />
+                </div>
+            </div>
+        </div>
+    {% when 'two-backs' %}
+        <div class="product-feature-backings">
+            <div class="product-feature-backings__header">
+                <h3 class="bold space-bottom-x025">
+                    Backs
+                </h3>
+                <div class="product-feature-backings__description">
+                    These earrings are offered with two back options.
+                </div>
+            </div>
+
+            <div class="product-feature-backings__container">
+                <div class="product-feature-backings__section">
+                    <div class="product-feature-backings__explanation">
+                        <h4>Large Pushback</h4> / Easiest to grip. Also works wonders for stretched piercings.
+                    </div>
+                    <img
+                        class="lazyload product-feature-backings__image"
+                        data-srcset="
+                            {{ 'product-feature--large-pushbackings.jpg' | file_img_url: '150x119' }} 150w,
+                            {{ 'product-feature--large-pushbackings.jpg' | file_img_url: '240x190' }} 240w,
+                            {{ 'product-feature--large-pushbackings.jpg' | file_img_url: '300x285' }} 300w,
+                            {{ 'product-feature--large-pushbackings.jpg' | file_img_url: '360x285' }} 360w
+                        "
+                        sizes="
+                            (max-width: 479px) calc((100vw - 30px) * .4),
+                            (min-width: 480px) and (max-width: 767.98px) calc((100vw - 60px) * .4),
+                            (min-width: 768px) 150px
+                        "
+                        alt="Automic Gold 14k Gold Large Size Push Backing"
+                    />
+                </div>
+                <div class="product-feature-backings__section">
+                    <div class="product-feature-backings__explanation">
+                        <h4>Screwbacks</h4> / Extra secure backs. For people who like to screw around.
+                    </div>
+                    <img
+                        class="lazyload product-feature-backings__image"
+                        data-srcset="
+                            {{ 'product-feature--screwbacks.jpg' | file_img_url: '150x119' }} 150w,
+                            {{ 'product-feature--screwbacks.jpg' | file_img_url: '240x190' }} 240w,
+                            {{ 'product-feature--screwbacks.jpg' | file_img_url: '300x285' }} 300w,
+                            {{ 'product-feature--screwbacks.jpg' | file_img_url: '360x285' }} 360w
+                        "
+                        sizes="
+                            (max-width: 479px) calc((100vw - 30px) * .4),
+                            (min-width: 480px) and (max-width: 767.98px) calc((100vw - 60px) * .4),
+                            (min-width: 768px) 150px
+                        "
+                        alt="Automic Gold 14k Gold Screw-on Backing"
+                    />
+                </div>
+            </div>
+        </div>
+    {% when 'wedding-engraving' %}
+        <div class="product-feature-wedding-engraving molecule no--mobile-overlay molecule--reversed">
+            <div class="molecule__uhaul">
+                <span class="visually-hidden">Video showing engraving on Automic Gold wedding band</span>
+                <div>
+                    <video class="content lazy" loop muted autoplay playsinline>
+                        <source data-src="//dfaankvzyirrl.cloudfront.net/website/shared/engravedweddingband.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="molecule__text">
+                <h3 class="bold space-bottom-x025">Engraved & personal</h3>
+                <p>
+                    Up to thirty characters can be engraved<br/>on the inside of the band.
+                </p>
+
+                <p>
+                    Want to engrave something special<br/>inside or outside the ring?<br/>
+                    <a href="{{ shop.url }}/pages/custom-orders">We can make it happen</a>.
+                </p>
+            </div>
+        </div>
+    {% when 'bead-chain' %}
+        <div class="molecule product-feature-chain">
+            <div class="molecule__uhaul">
+                <video class="lazy" loop muted autoplay playsinline>
+                    <source data-src="//dfaankvzyirrl.cloudfront.net/website/shared/product-feature-bead-chain.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="molecule__text product-feature-chain__text text-left">
+                <h3 class="bold space-bottom-x025">Bead chain</h3>
+                <p>
+                    Soft comfortable chain where each bead is diamond-cut for extra magical sparkle.
+                </p>
+            </div>
+        </div>
+    {% when 'essential-chain' %}
+        <div class="molecule product-feature-chain">
+            <div class="molecule__image">
+                <img
+                    class="lazyload"
+                    data-srcset="
+                        {{ 'product-feature--essential-chain.jpg' | file_img_url: '1305x1305' }} 1305w,
+                        {{ 'product-feature--essential-chain.jpg' | file_img_url: '1200x1200' }} 1200w,
+                        {{ 'product-feature--essential-chain.jpg' | file_img_url: '1000x1000' }} 1000w,
+                        {{ 'product-feature--essential-chain.jpg' | file_img_url: '800x800' }} 800w
+                    "
+                    sizes="
+                        (max-width: 479px) calc(100vw - 30px),
+                        (min-width: 480px) and (max-width: 767.98px) calc(100vw - 60px),
+                        (min-width: 768px) and (max-width: 1199.98px) calc((100vw - 120px) * 0.5),
+                        (min-width: 1200px) calc((100vw - 180px) * 0.5)
+                    "
+                    alt="Automic Gold 14k Solid Yellow Gold Essential Chain"
+                >
+            </div>
+            <div class="molecule__text product-feature-chain__text text-left">
+                <h3 class="bold space-bottom-x025">Essential chain</h3>
+                <p>
+                    Feather light, gold strong chain you won't notice you have on
+                </p>
+            </div>
+        </div>
+    {% when 'cable-chain' %}
+        <div class="molecule product-feature-chain">
+            <div class="molecule__image">
+                <img
+                    class="lazyload"
+                    data-srcset="
+                        {{ 'product-feature--cable-chain.jpg' | file_img_url: '1305x1305' }} 1305w,
+                        {{ 'product-feature--cable-chain.jpg' | file_img_url: '1200x1200' }} 1200w,
+                        {{ 'product-feature--cable-chain.jpg' | file_img_url: '1000x1000' }} 1000w,
+                        {{ 'product-feature--cable-chain.jpg' | file_img_url: '800x800' }} 800w
+                    "
+                        sizes="
+                        (max-width: 479px) calc(100vw - 30px),
+                        (min-width: 480px) and (max-width: 767.98px) calc(100vw - 60px),
+                        (min-width: 768px) and (max-width: 1199.98px) calc((100vw - 120px) * 0.5),
+                        (min-width: 1200px) calc((100vw - 180px) * 0.5)
+                    "
+                    alt="Automic Gold 14k Solid Yellow Gold Cable Chain"
+                >
+            </div>
+            <div class="molecule__text product-feature-chain__text text-left">
+                <h3 class="bold space-bottom-x025">Cable chain</h3>
+                <p>
+                    It's strong, it's thin and it's shiny
+                </p>
+            </div>
+        </div>
+    {% when 'butch-chain' %}
+        <div class="molecule product-feature-chain">
+            <div class="molecule__image">
+                <img
+                    class="lazyload"
+                    data-srcset="
+                        {{ 'product-feature--butch-chain.jpg' | file_img_url: '1305x1305' }} 1305w,
+                        {{ 'product-feature--butch-chain.jpg' | file_img_url: '1200x1200' }} 1200w,
+                        {{ 'product-feature--butch-chain.jpg' | file_img_url: '1000x1000' }} 1000w,
+                        {{ 'product-feature--butch-chain.jpg' | file_img_url: '800x800' }} 800w
+                    "
+                    sizes="
+                        (max-width: 479px) calc(100vw - 30px),
+                        (min-width: 480px) and (max-width: 767.98px) calc(100vw - 60px),
+                        (min-width: 768px) and (max-width: 1199.98px) calc((100vw - 120px) * 0.5),
+                        (min-width: 1200px) calc((100vw - 180px) * 0.5)
+                    "
+                    alt="Automic Gold 14k Solid Yellow Gold Butch Chain"
+                >
+            </div>
+            <div class="molecule__text product-feature-chain__text text-left">
+                <h3 class="bold space-bottom-x025">Butch chain</h3>
+                <p>
+                    Strong and substantial, with sharp shine
+                </p>
+            </div>
+        </div>
+    {% when 'lobster-lock' %}
+        <div class="molecule product-feature-lock">
+            <div class="molecule__image">
+                <img
+                    class="lazyload"
+                    data-srcset="
+                        {{ 'product-feature--lock.jpg' | file_img_url: '1305x1305' }} 1305w,
+                        {{ 'product-feature--lock.jpg' | file_img_url: '1200x1200' }} 1200w,
+                        {{ 'product-feature--lock.jpg' | file_img_url: '1000x1000' }} 1000w,
+                        {{ 'product-feature--lock.jpg' | file_img_url: '800x800' }} 800w
+                    "
+                    sizes="
+                        (max-width: 479px) calc(100vw - 30px),
+                        (min-width: 480px) and (max-width: 767.98px) calc(100vw - 60px),
+                        (min-width: 768px) and (max-width: 1199.98px) calc((100vw - 120px) * 0.5),
+                        (min-width: 1200px) calc((100vw - 180px) * 0.5)
+                    "
+                    alt="Automic Gold 14k Solid Yellow Gold Lobster Lock"
+                >
+            </div>
+            <div class="molecule__text product-feature-lock__text text-left">
+                <h3 class="bold space-bottom-x025">Lock</h3>
+                <p>
+                    Comfortable and elegant lobster lock that is substantial and easy to open and close.
+                </p>
+            </div>
+        </div>
+    {% when 'spring-lock' %}
+        <div class="molecule product-feature-lock">
+            <div class="molecule__image">
+                <img
+                    class="lazyload"
+                    data-srcset="
+                        {{ 'product-feature--spring-lock.jpg' | file_img_url: '1305x1305' }} 1305w,
+                        {{ 'product-feature--spring-lock.jpg' | file_img_url: '1200x1200' }} 1200w,
+                        {{ 'product-feature--spring-lock.jpg' | file_img_url: '1000x1000' }} 1000w,
+                        {{ 'product-feature--spring-lock.jpg' | file_img_url: '800x800' }} 800w
+                    "
+                    sizes="
+                        (max-width: 479px) calc(100vw - 30px),
+                        (min-width: 480px) and (max-width: 767.98px) calc(100vw - 60px),
+                        (min-width: 768px) and (max-width: 1199.98px) calc((100vw - 120px) * 0.5),
+                        (min-width: 1200px) calc((100vw - 180px) * 0.5)
+                    "
+                    alt="Automic Gold 14k Solid Yellow Gold Spring Ring Lock"
+                >
+            </div>
+            <div class="molecule__text product-feature-lock__text text-left">
+                <h3 class="bold space-bottom-x025">Lock</h3>
+                <p>
+                    Minimalist, simple geometry of a spring lock is superbly lightweight.
+                </p>
+            </div>
+        </div>
+    {% else %}
+{% endcase %}

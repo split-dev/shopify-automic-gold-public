@@ -1,0 +1,166 @@
+{% assign is_collection_sorted = false %}
+{% if collection.sort_by and collection.sort_by != '' and collection.sort_by != 'manual' %}
+    {% assign is_collection_sorted = true %}
+{% endif %}
+
+<style>
+  .title-desktop {
+      display: none;
+  }
+  @media (min-width: 650px) {
+    .title-desktop {
+      display: block;
+  }
+    .title-mobile {
+      display: none;
+    }
+  }
+</style>
+
+{% comment %} <div class="page-cover">
+    <div class="no--padding">
+        <header class="cover wedding-header">
+            <div class="cover__image">
+                <picture>
+                    {% comment %}iPad-like ratio, width to height ratio of 3/4 to 5/4 (square image){% endcomment %}
+                    <source
+                        srcset="
+                            {{ 'flatback-heroine--square.jpg' | file_img_url: '1000x1000' }} 1000w,
+                            {{ 'flatback-heroine--square.jpg' | file_img_url: '1500x1500' }} 1500w
+                        "
+                        sizes="100vw"
+                        media="(min-aspect-ratio: 3/4) and (max-aspect-ratio: 5/4)"
+                    />
+
+                    {% comment %}Narrow screens, up tp width to height ratio of 3/2 (tall image){% endcomment %}
+                    <source
+                        srcset="
+                            {{ 'flatback-heroine--mobile.jpg' | file_img_url: '750x960' }} 750w,
+                            {{ 'flatback-heroine--mobile.jpg' | file_img_url: '1125x1440' }} 1125w,
+                            {{ 'flatback-heroine--mobile.jpg' | file_img_url: '1200x2262' }} 1200w
+                        "
+                        sizes="100vw"
+                        media="(max-aspect-ratio: 3/4)"
+                    />
+
+                    {% comment %}Ratios wider than width to height 3/2 (wide image){% endcomment %}
+                    <img
+                        srcset="
+                            {{ 'flatback-heroine--desktop.jpg' | file_img_url: '2000x1179' }} 2000w,
+                            {{ 'flatback-heroine--desktop.jpg' | file_img_url: '1500x884' }} 1500w,
+                            {{ 'flatback-heroine--desktop.jpg' | file_img_url: '1200x707' }} 1200w,
+                            {{ 'flatback-heroine--desktop.jpg' | file_img_url: '900x530' }} 900w
+                        "
+                        sizes="100vw"
+                        alt="Snake, Star, Opal, and Triangle Flatback Piercings lined up on a blue background"
+                    />
+                </picture>
+            </div>
+
+            <div class="page-width title-desktop">
+                <div class="cover__text wedding-header__text">
+                    <h1>Flatbacks</h1>
+                </div>
+            </div>
+        </header>
+      <div class="cover__text text-center wedding-header__text title-mobile">
+        <h1 style="margin-top: 10px; font-size: 11vw; line-height: 0.85;">Flatbacks</h1>
+      </div>
+    </div>
+</div> {% endcomment %}
+
+<div class="collection-header">
+    {% render 'collection-header', tag: 'flatbacks', name: 'Flatbacks', subheader: 'Perfect for all of your piercings, our Flatbacks are designed to be comfortable and secure.', alt: 'A 14k yellow gold Mini Butterfly Flatback and a Triangle Flatback resting on the back of a model&#39;s hand' %}
+</div>
+
+<div class="collection-hat">
+    <nav class="collection-navigation">
+        <ul>
+            <li><a href="{{ shop.url }}/collections/all">All</a></li>
+            <li><a href="{{ shop.url }}/collections/rings">Rings</a></li>
+            <li><a href="{{ shop.url }}/collections/earrings">Earrings</a></li>
+            <li><a href="{{ shop.url }}/collections/necklaces">Necklaces</a></li>
+            <li><a href="{{ shop.url }}/collections/bracelets">Bracelets</a></li>
+            <li><a href="{{ shop.url }}/collections/charms">Charms</a></li>
+            <li><a href="{{ shop.url }}/collections/body-jewelry">Body&nbsp;Jewelry</a></li>
+            <li><a href="{{ shop.url }}/collections/wedding">Wedding</a></li>
+        </ul>
+    </nav>
+</div>
+
+{% capture base %}{{ shop.url }}/collections/flatbacks{% endcapture %}
+
+<div class="collection-utils page-width">
+    {% include 'breadcrumb' %}
+    {% include 'collection-sorting' %}
+</div>
+
+{% paginate collection.products by 50 %}
+
+    <div class="pgrid collection-pgrid page-width">
+        {% for product in collection.products %}
+            {% include 'product-card' %}
+        {% endfor %}
+
+        {% if collection.image %}
+            <div class="collection-inline-image">
+                <img
+                    class="lazyload"
+                    data-srcset="
+                        {{ collection.image | img_url: '1242x1490' }} 1242w,
+                        {{ collection.image | img_url: '1152x1382' }} 1152w,
+                        {{ collection.image | img_url: '1035x1241' }} 1035w,
+                        {{ collection.image | img_url: '768x921' }} 768w,
+                        {{ collection.image | img_url: '600x720' }} 600w
+                    "
+                    sizes="
+                        (max-width: 479px) calc(100vw - 30px),
+                        (min-width: 480px) and (max-width: 767.98px) calc(100vw - 60px),
+                        (min-width: 768px) and (max-width: 1199.98px) calc((100vw - 120px - 15px) * 0.666667),
+                        (min-width: 1200px) calc((100vw - 180px - 30px) * 0.5)
+                    "
+                    alt="Automic Gold Shop All Radically Wearable Earrings"
+                />
+            </div>
+        {% endif %}
+    </div>
+
+    {% if paginate.pages > 1 %}
+        <div class="collection-pagination pagination">
+            {{ paginate | default_pagination }}
+        </div>
+    {% endif %}
+
+{% endpaginate %}
+
+<section class="flatback-module flatback-length spaced page-width">
+    <div class="molecule">
+        <div class="text-block">
+            <h2>Choosing <br>Flatback length.</h2>
+            <p>
+                The best way to determine the correct length for your flat back piercing is to measure the post of a 
+                piece of body jewelry you already have that fits you well. You can also measure your piercing itself 
+                by measuring the length between the two holes using a ruler or caliper. Otherwise check with your piercer 
+                for which length suits your needs.
+            </p>
+        </div>
+
+        <div class="image-block">
+            <img src="{{ 'flatback-length.jpg' | file_url }}" alt="Snake, Star, Opal and Triangle Flatback Piercings shown in flatback options of 10mm, 8mm, 6mm and 4mm respectively" />
+        </div>
+    </div>
+    
+    <div class="molecule">
+        <div class="text-block">
+            <h3>All bodies and piercings are different</h3>
+            <p>
+                If you are unsure where to start we suggest 10mm for lobe, 8mm for upper lobe, 6mm for tragus or lip, and 
+                4mm for conch and helix based on average measurements for these piercings.
+            </p>
+        </div>
+
+        <div class="image-block">
+            <img src="{{ 'flatback-table.png' | file_url }}" alt="Graph: 4mm is 0.16 inch or 3/16 in, 6mm is 0.23 inches or ¼ in, 8mm is 0.31 inches or 5/16 in, 10mm is 0.9 inches or 7/16 in" />
+        </div>
+    </div>
+</section> 

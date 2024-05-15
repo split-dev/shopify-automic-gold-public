@@ -1,0 +1,143 @@
+{
+  "sections": {
+    "richtext": {
+      "type": "rich-text",
+      "settings": {
+        "rich_text": "<h1><strong>The Only Fine Jewelry Brand To Stock Rings In Sizes 2 To 16.<\/strong><\/h1><h2>It’s a fact, and it’s something that we could not believe ourselves to see.<\/h2>",
+        "max_width": 600,
+        "content_alignment": "center",
+        "content_alignment_mobile": "center",
+        "horizontal_alignment": "center",
+        "padding_top": 32,
+        "padding_bottom": 50,
+        "padding_top_mobile": 24,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "d322e4e5-0f02-47a5-8e4d-f838d133cddd": {
+      "type": "info-tiles",
+      "blocks": {
+        "template--14481151164510__d322e4e5-0f02-47a5-8e4d-f838d133cddd-tile-1": {
+          "type": "tile",
+          "settings": {
+            "text": "<h2>It’s Not A Plus Size Campaign<\/h2><p>We come in all sizes and shapes, and so should jewelry. That’s why we’ve made all of our pieces in a wide range from our very first sale. We didn’t expect to be the only fine jewelry brand taking such basic accessibility seriously when we launched, yet we’re still taking the lead to this day (and we’re frankly pissed about it).<\/p>",
+            "image": "shopify:\/\/shop_images\/size-inclusive-jewelry-3.jpg",
+            "image_height": 460,
+            "image_height_mobile": 240
+          }
+        }
+      },
+      "block_order": [
+        "template--14481151164510__d322e4e5-0f02-47a5-8e4d-f838d133cddd-tile-1"
+      ],
+      "custom_css": [
+        "@media screen and (min-width: 768px) {.info-tiles__item-image img {max-width: 550px; }}"
+      ],
+      "settings": {
+        "first_starts_with": "text",
+        "gaps_desktop": 0,
+        "gaps_mobile": 10,
+        "vertical_alignment": "center",
+        "text_align": "left",
+        "text_max_width": 600,
+        "fit_images_to_full_screen": "none",
+        "padding_top": 0,
+        "padding_bottom": 32,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 24
+      }
+    },
+    "9b511927-947a-45ee-acb4-214c7c743a6d": {
+      "type": "rich-text",
+      "custom_css": [
+        "h2:nth-of-type(-n + 2) {font-size: 32px;}",
+        "h2:nth-of-type(2n) {margin-bottom: 28px;}",
+        "@media screen and (min-width: 768px) {h2:first-of-type {font-size: 62px; } h2:nth-of-type(2n) {margin-bottom: 32px; }}"
+      ],
+      "settings": {
+        "rich_text": "<h2><strong>57 Ring Sizes<\/strong><\/h2><p>Including half and quarter sizes!<\/p>",
+        "max_width": 1000,
+        "content_alignment": "center",
+        "content_alignment_mobile": "center",
+        "horizontal_alignment": "center",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "padding_top_mobile": 24,
+        "padding_bottom_mobile": 24
+      }
+    },
+    "00d92334-b219-44c9-8f58-e1c5bcd25556": {
+      "type": "info-tiles",
+      "blocks": {
+        "template--14481151164510__00d92334-b219-44c9-8f58-e1c5bcd25556-tile-1": {
+          "type": "tile",
+          "settings": {
+            "text": "<h2><strong>We Shouldn’t Be Alone<\/strong><\/h2><p>We’re not asking for a prize, we’re demanding that the rest of the jewelry catches up. Our competitors cling to narrow assumptions of how big people “should” be, despite having ample means and demand for more inclusive product lines. If a team of less than 15 people can pull it off effortlessly, why can’t bigger brands? Why <em>won’t<\/em> they?<\/p>",
+            "image": "shopify:\/\/shop_images\/size-inclusive-jewelry-1.jpg",
+            "image_height": 620,
+            "image_height_mobile": 500
+          }
+        }
+      },
+      "block_order": [
+        "template--14481151164510__00d92334-b219-44c9-8f58-e1c5bcd25556-tile-1"
+      ],
+      "custom_css": [
+        ".info-tiles__item-text-content h2 strong {color: #fce1e6;}"
+      ],
+      "settings": {
+        "first_starts_with": "text",
+        "gaps_desktop": 50,
+        "gaps_mobile": 24,
+        "vertical_alignment": "center",
+        "text_align": "left",
+        "text_max_width": 540,
+        "fit_images_to_full_screen": "mobile",
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "padding_top_mobile": 24,
+        "padding_bottom_mobile": 24
+      }
+    },
+    "068ecd19-3284-46c7-9003-f94844cd077b": {
+      "type": "rich-text",
+      "custom_css": [
+        ".rich-text__content h2 {color: rgb(var(--color-highlighted-elements));}",
+        "@media screen and (max-width: 767.98px) {.rich-text__content {text-align: left; }}"
+      ],
+      "settings": {
+        "rich_text": "<h2>All Jewelry In All Sizes.<\/h2><p>Necklaces, bracelets, anklets, rings—every Automic Gold jewelry piece comes in a vast range of sizes. Still can’t find yours? We’ll gladly custom-make you a perfect fit (that won’t make your wallet cry).<\/p>",
+        "max_width": 940,
+        "content_alignment": "center",
+        "content_alignment_mobile": "center",
+        "horizontal_alignment": "center",
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "padding_top_mobile": 24,
+        "padding_bottom_mobile": 10
+      }
+    },
+    "7588c299-6657-4ebe-8085-16e0a7fc82ae": {
+      "type": "double-image",
+      "settings": {
+        "first_image": "shopify:\/\/shop_images\/size-inclusive-jewelry-4.jpg",
+        "second_image": "shopify:\/\/shop_images\/size-inclusive-jewelry-2.jpg",
+        "image_height": 500,
+        "image_height_mobile": 290,
+        "desktop_first_image_width": 58,
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 24
+      }
+    }
+  },
+  "order": [
+    "richtext",
+    "d322e4e5-0f02-47a5-8e4d-f838d133cddd",
+    "9b511927-947a-45ee-acb4-214c7c743a6d",
+    "00d92334-b219-44c9-8f58-e1c5bcd25556",
+    "068ecd19-3284-46c7-9003-f94844cd077b",
+    "7588c299-6657-4ebe-8085-16e0a7fc82ae"
+  ]
+}

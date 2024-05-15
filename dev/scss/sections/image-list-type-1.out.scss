@@ -1,0 +1,56 @@
+@import "../settings/variables";
+@import "../settings/bootstrap-media";
+
+.beyond-boundaries-text-container {
+    max-width: 50rem;
+    padding-bottom: 2rem;
+    strong {
+        color: rgb(var(--color-highlighted-elements));
+    }
+}
+.beyond-boundaries-image-container {
+    //display: flex;
+    //flex-direction: row;
+    //flex-wrap: wrap;
+    //justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+
+    @include media-breakpoint-up(sm) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include media-breakpoint-up(md) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include media-breakpoint-up(lg) {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    @include media-breakpoint-up(xl) {
+        grid-template-columns: repeat(7, 1fr);
+    }
+}
+.beyond-boundaries-image-container {
+    img {
+        object-fit: cover;
+    }
+    svg {
+        fill: rgb(var(--color-highlighted-elements));
+    }
+    img, svg {
+        display: block;
+        width: 200px;
+        height: 250px;
+        border-radius: 25px;
+        border: solid 1px rgb(var(--color-highlighted-elements));
+        margin: 3px;
+    }
+}
+@media screen and (max-width: 767.98px) {
+    .beyond-boundaries-text-container {
+      width: auto;
+    }
+} 

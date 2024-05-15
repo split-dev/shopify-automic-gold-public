@@ -1,0 +1,112 @@
+@import "../settings/variables";
+@import "../settings/bootstrap-media";
+
+.secondary-image-banner {
+  background-color: #08003c;
+
+  // .secondary-image-banner__row
+  &__row {
+    display: flex;
+    flex-direction: column-reverse;
+
+    @include media-breakpoint-up(sm) {
+      row-gap: 20px;
+    }
+
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+      row-gap: 50px;
+      column-gap: 40px;
+    }
+  }
+
+  // .secondary-image-banner__column
+  &__column {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 50%;
+  }
+}
+
+.column-image {
+  // .column-image_secondary
+  &_secondary {
+    margin-right: calc(var(--page-width-x-paddings-mobile) * -1);
+    margin-left: calc(var(--page-width-x-paddings-mobile) * -1);
+
+    @include media-breakpoint-up(sm) {
+      margin-right: calc(var(--page-width-x-paddings-tablet) * -1);
+      margin-left: calc(var(--page-width-x-paddings-tablet) * -1);
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-left: calc(var(--page-width-x-paddings-desktop) * -1);
+    }
+
+    @include media-breakpoint-up(xxl) {
+      margin-left: calc((100vw - (var(--page-width) - var(--page-width-x-paddings-desktop) * 2)) / 2 * -1);
+    }
+  }
+
+  // .column-image__image
+  &__image {
+    &.column-image__image_secondary {
+      display: block;
+      width: 100vw;
+      height: 100%;
+      min-height: 230px;
+      max-height: 320px;
+      object-fit: cover;
+      max-width: 100%;
+      min-width: unset;
+
+      @include media-breakpoint-up(md) {
+      	width: 100%;
+      	max-width: 692px;
+      }
+
+      @include media-breakpoint-up(xxl) {
+      	min-width: 692px;
+      }
+    }
+
+    // .column-image__image_secondary
+    &_secondary {
+    }
+  }
+}
+
+.column-text {
+  // .column-text_secondary
+  &_secondary {
+    display: flex;
+    align-items: center;
+
+    @include media-breakpoint-up(lg) {
+      justify-content: flex-start;
+    }
+  }
+
+  // .column-text__wrapper
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    max-width: 493px;
+    padding-left: 0;
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+      padding-left: var(--page-width-x-paddings-tablet);
+    }
+  }
+
+  // .column-text__title
+  &__title {
+    &.column-text__title_secondary {
+      text-transform: capitalize;
+      margin-bottom: 16px;
+    }
+  }
+}

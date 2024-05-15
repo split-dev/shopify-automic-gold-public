@@ -1,0 +1,254 @@
+<style>
+    .wrapper--three {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .section__img-text--horizontal .img-text-{{ section.id }}.img-text--horizontal {
+        margin-top: {{ section.settings.mt-d }}px;
+        margin-bottom: {{ section.settings.mb-d }}px;
+    }
+    {% if section.settings.svg-m != blank %}
+    .img-text__svg-m {
+        display: none;
+    }
+    {% endif %}
+    @media (max-width: 767.98px) {
+        {% if section.settings.svg-m != blank %}
+            .img-text__svg-d {
+                display: none;
+            }
+            .img-text__svg-m {
+                display: block;
+            }
+            .img-text__svg-m svg {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        {% endif %}
+        .section__img-text--horizontal .img-text-{{ section.id }}.img-text--horizontal {
+            margin-top: {{ section.settings.mt-m }}px;
+            margin-bottom: {{ section.settings.mb-m }}px;
+        }  
+    }
+
+    {% if section.settings.svg-gap != 0 %}
+    @media screen and (min-width: 768px) {
+        .img-text-{{ section.id }} .icon-img {
+            {% if section.settings.reverse != false %}
+                margin-right: {{ section.settings.svg-gap }}px;
+            {% else %}
+                margin-left: {{ section.settings.svg-gap }}px;
+            {% endif %}
+        }
+    }
+    {% endif %}
+</style>
+
+<div class="page-width img-text-{{ section.id }} img-text--horizontal wrapper--three" {% if section.settings.reverse != false %}style="flex-direction: row-reverse;"{% endif %}>
+    <div class="img-text__img-wrapp" {% if section.settings.reverse != false %}style="margin-left: 34px;"{%else%}style="margin-right: 34px;"{% endif %}>
+        {{ section.settings.img | image_url: width: 1300 | image_tag: widths: '375, 550, 750, 1100, 1300' }}
+    </div>
+    <div class="img-text__text-wrapp" {% if section.settings.justify-content-center != false %}style="display: flex; height: unset; flex-direction: column; justify-content: center;"{% endif %}>
+        {% for block in section.blocks %}
+            {% case block.type %}
+                {% when 'title' %}
+                    <h2 class="img-text__title" {% if block.settings.text-mt != 0 %}style="margin-top: {{block.settings.text-mt}}px;"{% endif %}>{{ block.settings.title }}</h2>
+                {% when 'text' %}
+                    <div class="img-text__text">{{ block.settings.text }}</div>
+            {% endcase %}
+        {% endfor %}
+        {% if section.settings.svg != blank %}
+            <div class="img-text__svg img-text__svg-d" style="transform: rotate({{ section.settings.rotate }}deg); {% if section.settings.svg-gap != 0 %}{% if section.settings.reverse != false %}margin-right: {{section.settings.svg-gap}}px;{% else %}margin-left: {{section.settings.svg-gap}}px;{% endif %}{% endif %}">{{ section.settings.svg }}</div>
+        {% endif %}
+        {% if section.settings.svg-m != blank %}
+            <div class="img-text__svg img-text__svg-m" style="transform: rotate({{ section.settings.rotate-m }}deg);">{{ section.settings.svg-m }}</div>
+        {% endif %}
+        {% if section.settings.svg == blank and section.settings.icon-img != blank %}
+            <img class="icon-img{% if section.settings.icon-img-m != blank %} icon-img-d{% endif %}" style="transform: rotate({{ section.settings.rotate }}deg);" src="{{ section.settings.icon-img | img_url: 'master' }}" alt="{{ section.settings.icon-img.alt }}">
+
+            {% if section.settings.icon-img-m != blank %}
+                <img class="icon-img icon-img-m" style="transform: rotate({{ section.settings.rotate-m }}deg);" src="{{ section.settings.icon-img-m | img_url: 'master' }}" alt="{{ section.settings.icon-img-m.alt }}">
+            {% endif %}
+        {% endif %}
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Img-Text (Horizontal)",
+    "tag": "section",
+    "class": "section__img-text--horizontal",
+    "disabled_on": {
+        "groups": ["header", "footer"]
+    },
+    "settings": [
+        {
+            "type": "checkbox",
+            "id": "reverse",
+            "label": "Reverse",
+            "default": false
+        },
+        {
+            "type": "checkbox",
+            "id": "justify-content-center",
+            "label": "Сontent center",
+            "default": false
+        },
+        {
+            "type": "image_picker",
+            "id": "img",
+            "label": "Image"
+        },
+        {
+            "type": "header",
+            "content": "SVG for desktop"
+        },
+        {
+            "type": "html",
+            "id": "svg",
+            "label": "SVG",
+            "info": "Paste here svg code"
+        },
+        {
+            "type": "image_picker",
+            "id": "icon-img",
+            "label": "Icon img"
+        },
+        {
+            "type": "range",
+            "id": "rotate",
+            "label": "Rotate svg",
+            "unit": "deg",
+            "min": 0,
+            "max": 180,
+            "step": 2,
+            "default": 0
+        },
+        {
+            "type": "range",
+            "id": "svg-gap",
+            "label": "SVG distance to the picture",
+            "unit": "px",
+            "min": 0,
+            "max": 80,
+            "step": 1,
+            "default": 0
+        },
+        {
+            "type": "header",
+            "content": "SVG for mobile"
+        },
+        {
+            "type": "html",
+            "id": "svg-m",
+            "label": "SVG",
+            "info": "Paste here svg code"
+        },
+        {
+            "type": "image_picker",
+            "id": "icon-img-m",
+            "label": "Icon img"
+        },
+        {
+            "type": "range",
+            "id": "rotate-m",
+            "label": "Rotate svg",
+            "unit": "deg",
+            "min": 0,
+            "max": 180,
+            "step": 2,
+            "default": 0
+        },
+        {
+            "type": "header",
+            "content": "Spacings (Desktop)"
+        },
+        {
+            "type": "range",
+            "id": "mt-d",
+            "label": "Margin-top",
+            "unit": "px",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "default": 20
+        },
+        {
+            "type": "range",
+            "id": "mb-d",
+            "label": "Margin-bottom",
+            "unit": "px",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "default": 20
+        },
+        {
+            "type": "header",
+            "content": "Spacings (Mobile)"
+        },
+        {
+            "type": "range",
+            "id": "mt-m",
+            "label": "Margin-top",
+            "unit": "px",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "default": 20
+        },
+        {
+            "type": "range",
+            "id": "mb-m",
+            "label": "Margin-bottom",
+            "unit": "px",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "default": 20
+        }
+    ],
+    "blocks": [
+        {
+            "name": "title",
+            "type": "title",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title",
+                    "default": "Durable Materials"
+                },
+                {
+                    "type": "range",
+                    "id": "text-mt",
+                    "label": "Text block margin-top",
+                    "unit": "px",
+                    "min": 0,
+                    "max": 100,
+                    "step": 1,
+                    "default": 0
+                }
+            ]
+        },
+        {
+            "name": "text",
+            "type": "text",
+            "settings": [
+                {
+                    "type": "richtext",
+                    "id": "text",
+                    "label": "Text",
+                    "default": "<p>When you buy Automic Gold, you support sustainable, eco-friendly, and ethical manufacturing practices from start to finish.</p>"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "category": "img-text",
+            "name": "Img Text (Horizontal)"
+        }
+    ]
+}
+{% endschema %}

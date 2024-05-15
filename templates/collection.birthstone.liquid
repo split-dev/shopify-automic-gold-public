@@ -1,0 +1,124 @@
+{% include 'cover', image: 'birthstone', title: 'Birthstone<br/>Collection', alt: 'Close-up of two models hands with different skin tones wearing Automic Gold birthstone rings in rose, white, and yellow gold', subtitle: 'All 12 gemstones are ethically sourced - from garnet to turquoise. Each piece is hand-made in NYC from solid reclaimed gold.' %}
+
+<div class="space-top-x2 space-bottom-x1 text-center">
+    <div class="birthstone-rainbow">
+        <div class="bg-birthstone"></div>
+        <div class="bg-birthstone"></div>
+        <div class="bg-birthstone"></div>
+        <div class="bg-birthstone"></div>
+        <div class="bg-birthstone"></div>
+        <div class="bg-birthstone"></div>
+        <div class="bg-birthstone"></div>
+    </div>
+    <h3>Slide to see your birthstone collection!</h3>
+</div>
+
+<div class="page-width" id="react-node"></div>
+
+
+<div class="spaced--twice page-width">
+    <h2 class="space-bottom-x2 lavender">Mix&match Your Gold</h2>
+
+    <div class="no--mobile-padding">
+        <div class="birthstone-examples">
+            <div class="birthstone-grid">
+                <div class="birthstone-example">
+                    <div class="space-bottom-x05">
+                        <img class="lazyload"
+                             data-srcset="
+                                {{ 'birthstones--example-ear.jpg' | file_img_url: '1035x1294' }} 1035w,
+                                {{ 'birthstones--example-ear.jpg' | file_img_url: '840x1050' }} 858w,
+                                {{ 'birthstones--example-ear.jpg' | file_img_url: '420x525' }} 420w
+                             "
+                             sizes="
+                                (max-width: 767.98px) 100vw,
+                                (min-width: 768px) and (max-width: 1152px) calc((100vw - 120px) * 0.33),
+                                (min-width: 1200px) calc((100vw - 180px) * 0.33)
+                             "
+                             alt="A model's ear wearing 3 yellow gold Sapphire birthstone earrings in different piercings with a connector and a rope cuff"
+                        />
+                    </div>
+                    <h3>
+                        Birthstone Earrings styled with<br/><a href="{{ shop.url }}/collections/all/products/rope-cuff" title="Automic Gold Rope Cuff">Rope Cuff</a> and <a href="{{ shop.url }}/collections/all/products/connector" title="Automic Gold Connector">Connector</a>
+                    </h3>
+                </div>
+                <div class="birthstone-example">
+                    <div class="space-bottom-x05">
+                        <img class="lazyload"
+                             data-srcset="
+                                {{ 'birthstones--example-necklace.jpg' | file_img_url: '1035x1294' }} 1035w,
+                                {{ 'birthstones--example-necklace.jpg' | file_img_url: '840x1050' }} 858w,
+                                {{ 'birthstones--example-necklace.jpg' | file_img_url: '420x525' }} 420w
+                             "
+                             sizes="
+                                (max-width: 767.98px) 100vw,
+                                (min-width: 768px) and (max-width: 1152px) calc((100vw - 120px) * 0.33),
+                                (min-width: 1200px) calc((100vw - 180px) * 0.33)
+                             "
+                             alt="A model wearing a yellow gold bead chain necklace as a choker with a peridot charm and an emerald charm"
+                        />
+                    </div>
+                    <h3>
+                        Birthstone charm styled with<br/><a href="{{ shop.url }}/products/bead-necklace" title="Automic Gold Bead Necklace">Bead necklace</a>
+                    </h3>
+                </div>
+                <div class="birthstone-example">
+                    <div class="space-bottom-x05">
+                        <img class="lazyload"
+                             data-srcset="
+                                {{ 'birthstones--example-wrist.jpg' | file_img_url: '1035x1294' }} 1035w,
+                                {{ 'birthstones--example-wrist.jpg' | file_img_url: '840x1050' }} 858w,
+                                {{ 'birthstones--example-wrist.jpg' | file_img_url: '420x525' }} 420w
+                             "
+                             sizes="
+                                (max-width: 767.98px) 100vw,
+                                (min-width: 768px) and (max-width: 1152px) calc((100vw - 120px) * 0.33),
+                                (min-width: 1200px) calc((100vw - 180px) * 0.33)
+                             "
+                             alt="Automic Gold jewelry with birthstone gemstones"
+                        />
+                    </div>
+                    <h3>
+                        Birthstone charms styled with<br/><a href="{{ shop.url }}/collections/all/products/essential-bracelet" title="Automic Gold Essential Bracelet">Essential Bracelet</a> and <a href="{{ shop.url }}/collections/all/products/sapphire-bracelet" title="Automic Gold Sapphire Bracelet">Sapphire Bracelet</a>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="spaced--twice">
+    <div class="molecule no--mobile-overlay birthstone-colors">
+        <div class="molecule__image">
+            <img class="lazyload"
+                 data-srcset="
+                    {{ 'birthstone-colors.jpg' | file_img_url: '1035x752' }} 1035w,
+                    {{ 'birthstone-colors.jpg' | file_img_url: '960x697' }} 960w,
+                    {{ 'birthstone-colors.jpg' | file_img_url: '769x558' }} 769w,
+                    {{ 'birthstone-colors.jpg' | file_img_url: '600x436' }} 600w,
+                    {{ 'birthstone-colors.jpg' | file_img_url: '400x290' }} 400w
+                 "
+                 sizes="
+                    (max-width: 767.98px) 100vw,
+                    (min-width: 768px) and (max-width: 1152px) calc((100vw - 120px) * 0.5),
+                    (min-width: 1200px) calc((100vw - 180px) * 0.5)
+                 "
+                 alt="Nine different gemstone necklaces in 14k yellow gold laid out in a circle on a dark blue background"
+            />
+        </div>
+        <div class="molecule__text">
+            <h2>Available in Yellow,<br/>White and Rose Gold.</h2>
+            <p>Solid gold that is 24/7 wearable.</p>
+
+            <div class="birthstone-rainbow">
+                <div class="bg-birthstone"></div>
+                <div class="bg-birthstone"></div>
+                <div class="bg-birthstone"></div>
+                <div class="bg-birthstone"></div>
+                <div class="bg-birthstone"></div>
+                <div class="bg-birthstone"></div>
+                <div class="bg-birthstone"></div>
+            </div>
+        </div>
+    </div>
+</div>

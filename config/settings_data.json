@@ -1,0 +1,55 @@
+{
+  "current": {
+    "logo": "shopify:\/\/shop_images\/logo.svg",
+    "logo_width": 120,
+    "favicon": "shopify:\/\/shop_images\/favicon.png",
+    "colors_background_1": "#18084d",
+    "colors_background_2": "#08003c",
+    "highlighted_elements": "#ffcc33",
+    "free_product_enable": false,
+    "free_product_id": "free-travel-case",
+    "page_width": 1420,
+    "footer_social_enable": true,
+    "footer_newsletter_enable": true,
+    "cart_notes_enable": true,
+    "ajax_cart_method": "drawer",
+    "social_facebook_link": "https:\/\/www.facebook.com\/automicgold",
+    "social_instagram_link": "https:\/\/www.instagram.com\/automicgold",
+    "social_youtube_link": "https:\/\/www.youtube.com\/channel\/UCOMGpLYg3hBOR2eeMhrWS_A",
+    "social_tiktok_link": "https:\/\/tiktok.com\/@automicgold",
+    "social_twitter_link": "https:\/\/twitter.com\/automicgold",
+    "social_snapchat_link": "https:\/\/snapchat.com\/automicgold",
+    "social_pinterest_link": "https:\/\/www.pinterest.com\/weareautomicgold",
+    "logo_use_image": false,
+    "favicon_enable": false,
+    "content_for_index": [
+
+    ],
+    "blocks": {
+      "733389323033596483": {
+        "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/theme-settings\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+        "disabled": true,
+        "settings": {
+          "show_preview_data": true
+        }
+      }
+    }
+  },
+  "presets": {
+    "Default": {
+      "ajax_cart_method": "drawer",
+      "cart_notes_enable": true,
+      "favicon_enable": false,
+      "footer_newsletter_enable": true,
+      "footer_social_enable": true,
+      "logo_use_image": false,
+      "social_facebook_link": "",
+      "social_twitter_link": ""
+    }
+  },
+  "platform_customizations": {
+    "custom_css": [
+
+    ]
+  }
+}

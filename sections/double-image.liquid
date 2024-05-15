@@ -1,0 +1,157 @@
+{{ 'double-image.out.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+    .section--{{ section.id }} {
+        padding-top: {{ section.settings.padding_top_mobile }}px;
+        padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+
+    @media screen and (min-width: 768px) {
+        .section--{{ section.id }} {
+            padding-top: {{ section.settings.padding_top }}px;
+            padding-bottom: {{ section.settings.padding_bottom }}px;
+        }
+    }
+
+    .section--{{ section.id }} svg,
+    .section--{{ section.id }} img {
+        height: {{ section.settings.image_height_mobile }}px;
+    }
+    
+    @media screen and (min-width: 768px) {
+        .section--{{ section.id }} svg,
+        .section--{{ section.id }} img {
+            height: {{ section.settings.image_height }}px;
+        }
+        .section--{{ section.id }} svg:first-child,
+        .section--{{ section.id }} img:first-child {
+            width: {{ section.settings.desktop_first_image_width }}%;
+        }
+        .section--{{ section.id }} svg:last-child,
+        .section--{{ section.id }} img:last-child {
+            width: {{ 100 | minus: section.settings.desktop_first_image_width }}%;
+        }
+    }
+{%- endstyle -%}
+
+<div class="double-image section--{{ section.id }}">
+    {%- if section.settings.first_image != blank -%}
+        {{ section.settings.first_image | image_url: width: 1780 | image_tag: class: section.settings.first_image, widths: '375, 550, 750, 1100, 1500, 1780' }}
+    {%- else -%}
+        {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+    {%- endif -%}
+    {%- if section.settings.second_image != blank -%}
+        {{ section.settings.second_image | image_url: width: 1780 | image_tag: class: section.settings.second_image, widths: '375, 550, 750, 1100, 1500, 1780' }}
+    {%- else -%}
+        {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+    {%- endif -%}
+</div>
+
+{% schema %}
+{
+    "name": "Double image",
+    "tag": "section",
+    "disabled_on": {
+        "groups": ["header", "footer"]
+    },
+    "settings": [
+        {
+            "type": "header",
+            "content": "Image settings"
+        },
+        {
+            "type": "image_picker",
+            "id": "first_image",
+            "label": "First image"
+        },
+        {
+            "type": "image_picker",
+            "id": "second_image",
+            "label": "Second image"
+        },
+        {
+            "type": "range",
+            "id": "image_height",
+            "min": 300,
+            "max": 700,
+            "step": 10,
+            "unit": "px",
+            "label": "Image height on desktop",
+            "default": 500
+        },
+        {
+            "type": "range",
+            "id": "image_height_mobile",
+            "min": 200,
+            "max": 600,
+            "step": 10,
+            "unit": "px",
+            "label": "Image height on mobile",
+            "default": 290
+        },
+        {
+            "type": "range",
+            "id": "desktop_first_image_width",
+            "min": 30,
+            "max": 70,
+            "step": 1,
+            "unit": "%",
+            "label": "First image width on desktop",
+            "default": 58
+        },
+        {
+            "type": "header",
+            "content": "t:sections.all.padding.section_padding_heading"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 100,
+            "step": 2,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_top",
+            "default": 32
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 100,
+            "step": 2,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_bottom",
+            "default": 32
+        },
+        {
+            "type": "header",
+            "content": "t:sections.all.padding.section_padding_mobile_heading"
+        },
+        {
+            "type": "range",
+            "id": "padding_top_mobile",
+            "min": 0,
+            "max": 100,
+            "step": 2,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_top",
+            "default": 24
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom_mobile",
+            "min": 0,
+            "max": 100,
+            "step": 2,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_bottom",
+            "default": 24
+        }
+    ],
+    "presets": [
+        {
+            "name": "Double image"
+        }
+    ]
+}
+{% endschema %}

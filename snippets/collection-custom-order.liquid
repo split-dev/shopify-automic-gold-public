@@ -1,0 +1,35 @@
+<section class="molecule no--mobile-overlay custom-callout space-bottom-x2">
+    <div class="molecule__image">
+        <picture>
+            <source
+                data-srcset="
+                    {{ 'custom--orders--al.jpg' | file_img_url: '750x926' }} 750w,
+                    {{ 'custom--orders--al.jpg' | file_img_url: '1125x1389' }} 1125w,
+                    {{ 'custom--orders--al.jpg' | file_img_url: '1200x1482' }} 1200w
+                "
+                sizes="100vw"
+                media="(max-width: 767.98px)"
+            />
+
+            <img
+                class="lazyload"
+                data-srcset="
+                    {{ 'custom--orders--al.jpg' | file_img_url: '1305x1632' }} 1305w,
+                    {{ 'custom--orders--al.jpg' | file_img_url: '783x979' }} 783w,
+                    {{ 'custom--orders--al.jpg' | file_img_url: '435x544' }} 435w
+                "
+                sizes="50vw"
+                alt="Automic Gold custom jewelry is hand-made in New York City by AL, founder of Automic Gold"
+            />
+        </picture>
+    </div>
+    <div class="molecule__text">
+        <div class="custom-callout__text">
+            <h2>Custom Orders</h2>
+
+            <p>AL, the designer behind Automic Gold collection, also does custom orders!</p>
+
+            <a href="{{ shop.url }}/pages/custom-orders" class="btn btn--wide btn--on-dark">See examples</a>
+        </div>
+    </div>
+</section>

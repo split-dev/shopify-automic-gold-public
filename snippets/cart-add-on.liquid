@@ -1,0 +1,47 @@
+{% comment %}
+  Replace the text below with the handle of your add-on product.
+{% endcomment %}
+
+{% assign product = all_products['journal'] %}
+
+{% unless cart.item_count == 0 or product.empty? or product.variants.first.available == false %}
+
+  {% assign variant_id = product.variants.first.id %}
+
+  <script>
+  (function($) {
+
+    var cartPrice = {{ cart.total_price | json }},
+        minAmount = 99,
+        cartUpdates = {};
+
+    {% comment %} for (var i=0; i<cartPrice.length; i++) {
+      if ( cartPrice[i].id === {{ variant_id }} ) {
+        minAmount = cartPrice[i].quantity;
+        break;
+      }
+    } {% endcomment %}
+
+    if ( ( cartPrice.value > minAmount ) ) {
+      cartUpdates = { {{ variant_id }}: 0 }
+    }
+    else {
+      return;
+    }
+
+    var params = {
+      type: 'POST',
+      url: '/cart/update.js',
+      data: { updates: cartUpdates },
+      dataType: 'json',
+      success: function(stuff) { 
+        window.location.href = '/cart';
+      }
+    };
+
+    $.ajax(params);
+
+  })(jQuery);
+  </script>
+
+{% endunless %}

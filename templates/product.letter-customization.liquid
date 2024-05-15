@@ -1,0 +1,289 @@
+{% comment %} Get first variant, or deep linked one {% endcomment %}
+{% assign current_variant = product.selected_or_first_available_variant %}
+
+<script>
+    window.productVariants = {{ product.variants | json }};
+    window.moneyFormat = {{ shop.money_format | json }};
+</script>
+
+<div itemscope itemtype="http://schema.org/Product" id="ProductWrapper">
+
+    <meta itemprop="url" content="{{ shop.url }}{{ product.url }}">
+    <meta itemprop="image" content="{{ product.featured_image.src | img_url: 'grande' }}">
+    <meta itemprop="brand" content="Automic Gold">
+    <meta itemprop="material" content="Solid 14k Gold">
+    <span class="visually-hidden" itemprop="name">{{ product.title }}</span>
+
+    <div class="product">
+        <div class="page-width">
+            <div id="customizer"></div>
+        </div>
+
+        <div class="minimal-padding">
+            <div id="customizer"></div>
+        </div>
+
+        <div class="product-buybox page-width" itemprop="offers" itemscope itemtype="http://schema.org/Offer" style="width: 100%;">
+            <meta itemprop="priceCurrency" content="USD">
+            <meta itemprop="url" content="{{ product.url }}">
+            <link itemprop="availability" href="http://schema.org/InStock">
+
+            <div id="ProductPrice" class="product-header__price" itemprop="price" content="{{ current_variant.price | money_without_currency }}">
+                <span class="product-header__price-sign">$</span>{{ current_variant.price | money_without_trailing_zeros | remove: "$"  }}
+            </div>
+
+            <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm" class="product-plate__section space-top-x05">
+                <button type="submit" name="add" id="AddToCart" data-js="add-to-cart" class="btn btn--wide buy-box__buy btn--swimming-pink-peach">
+                    <span id="AddToCartText">Add to Cart</span>
+                </button>
+
+                <div class="final-sale-text">Final Sale</div>
+
+                {% if product.handle == 'custom-letter-necklace' %}
+                    <p class="final-sale-notice">Custom necklaces cannot be returned <br/>but can be resized for a fee.</p>
+                    <input id="gold-color" type="hidden" name="properties[Gold color]" value="Yellow Gold">
+                    <input id="letter-orientation" type="hidden" name="properties[Letter orientation]" value="Standard">
+                    <input id="necklace-text" type="hidden" name="properties[Text]" value="ABC">
+                {% elsif product.handle == 'custom-letter-bracelet' %}
+                    <p class="final-sale-notice">Custom bracelets cannot be returned <br/>but can be resized for a fee.</p>
+                    <input id="gold-color" type="hidden" name="properties[Gold color]" value="Yellow Gold">
+                    <input id="letter-orientation" type="hidden" name="properties[Letter orientation]" value="Standard">
+                    <input id="bracelet-length" type="hidden" name="properties[Length]" value="7.5">
+                    <input id="bracelet-text" type="hidden" name="properties[Text]" value="ABC">
+                {% elsif product.handle == 'custom-letter-charm' %}
+                    <p class="final-sale-notice">Custom charms cannot be returned <br/>but can be adjusted for a fee.</p>
+                    <input id="gold-color" type="hidden" name="properties[Gold color]" value="Yellow Gold">
+                    <input id="charm-orientation" type="hidden" name="properties[Letter orientation]" value="One line">
+                    <input id="charm-text" type="hidden" name="properties[Text]" value="ABC">
+                {% elsif product.handle == 'custom-letter-earring' %}
+                    <p class="final-sale-notice">Custom earrings cannot be returned <br/>but can be adjusted for a fee.</p>
+                    <input id="gold-color" type="hidden" name="properties[Gold color]" value="Yellow Gold">
+                    <input id="earring-quantity" type="hidden" name="properties[Quantity]" value="One">
+                    <input id="earring-text" type="hidden" name="properties[Text]" value="">
+                {% elsif product.handle == 'custom-letter-ring' %}
+                    <p class="final-sale-notice">Custom rings cannot be returned <br/>but can be resized for a fee.</p>
+                    <input id="gold-color" type="hidden" name="properties[Gold color]" value="Yellow Gold">
+                    <input id="ring-size" type="hidden" name="properties[Ring size]" value="9">
+                    <input id="ring-text" type="hidden" name="properties[Text]" value="ABC">
+                {% endif %}
+
+                <!-- <p class="affirm-as-low-as" data-page-type="product" data-affirm-color="white" data-amount="{{ current_variant.price }}"></p> -->
+
+                <div class="product__shipping-notice">
+                    Handmade to order &bull; Ships from New York City &bull; Free Shipping takes 3 to 10 business days
+                </div>
+
+                <select name="id" data-js="master-select" id="productSelect" class="visually-hidden">
+                    {% for variant in product.variants %}
+                        {% if variant.available %}
+                            <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} data-sku="{{ variant.sku }}" value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money_with_currency }}</option>
+                        {% else %}
+                            <option disabled="disabled">
+                                {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+                            </option>
+                        {% endif %}
+                    {% endfor %}
+                </select>
+            </form>
+        </div>
+
+        {% comment %} <div class="customizer-samples page-width">
+            <div>
+                <h2>Examples</h2>
+            </div>
+            {% assign sizes = '
+                (max-width: 479px) 100vw,
+                (min-width: 480px) and (max-width: 767.98px) 100vw,
+                (min-width: 768px) 50vw'
+            %}
+
+            {% if product.handle == 'custom-letter-necklace' %}
+                <div class="customizer-samples__grid">
+                    <img class="lazyload"
+                         data-srcset="
+                        {{ 'custom-letter--gay.jpg' | file_img_url: '500x500' }} 500w,
+                        {{ 'custom-letter--gay.jpg' | file_img_url: '1000x1000' }} 1000w,
+                        {{ 'custom-letter--gay.jpg' | file_img_url: '1500x1500' }} 1500w
+                     "
+                         sizes="{{ sizes }}"
+                         alt="Automic Gold GAY necklace from a queer owned brand"
+                    />
+                    <img class="lazyload"
+                         data-srcset="
+                        {{ 'custom-letter--mom.jpg' | file_img_url: '500x500' }} 500w,
+                        {{ 'custom-letter--mom.jpg' | file_img_url: '1000x1000' }} 1000w,
+                        {{ 'custom-letter--mom.jpg' | file_img_url: '1500x1500' }} 1500w
+                     "
+                         sizes="{{ sizes }}"
+                         alt="Automic Gold custom-made MOM necklace"
+                    />
+                    <img class="lazyload"
+                         data-srcset="
+                        {{ 'custom-letter--lara.jpg' | file_img_url: '500x500' }} 500w,
+                        {{ 'custom-letter--lara.jpg' | file_img_url: '1000x1000' }} 1000w,
+                        {{ 'custom-letter--lara.jpg' | file_img_url: '1500x1500' }} 1500w
+                     "
+                         sizes="{{ sizes }}"
+                         alt="Automic Gold custom letter necklace"
+                    />
+                    <img class="lazyload"
+                         data-srcset="
+                        {{ 'custom-letter--fuckoff.jpg' | file_img_url: '500x500' }} 500w,
+                        {{ 'custom-letter--fuckoff.jpg' | file_img_url: '1000x1000' }} 1000w,
+                        {{ 'custom-letter--fuckoff.jpg' | file_img_url: '1500x1500' }} 1500w
+                     "
+                         sizes="{{ sizes }}"
+                         alt="Automic Gold customized letter necklace that reads FUCKOFF"
+                    />
+                    <img class="lazyload"
+                         data-srcset="
+                        {{ 'custom-letter--boss.jpg' | file_img_url: '500x500' }} 500w,
+                        {{ 'custom-letter--boss.jpg' | file_img_url: '1000x1000' }} 1000w,
+                        {{ 'custom-letter--boss.jpg' | file_img_url: '1500x1500' }} 1500w
+                     "
+                         sizes="{{ sizes }}"
+                         alt="Automic Gold BOSS custom letter necklace"
+                    />
+                </div>
+
+            {% elsif product.handle == 'custom-letter-bracelet' %}
+                <div class="customizer-samples__grid">
+                    <img class="lazyload"
+                         data-srcset="
+                            {{ 'custom-letter--mom.jpg' | file_img_url: '500x500' }} 500w,
+                            {{ 'custom-letter--mom.jpg' | file_img_url: '1000x1000' }} 1000w,
+                            {{ 'custom-letter--mom.jpg' | file_img_url: '1500x1500' }} 1500w
+                         "
+                         sizes="{{ sizes }}"
+                         alt="Automic Gold custom-made MOM bracelet"
+                    />
+
+                    <img class="lazyload"
+                         data-srcset="
+                            {{ 'custom-letter--thother.jpg' | file_img_url: '500x500' }} 500w,
+                            {{ 'custom-letter--thother.jpg' | file_img_url: '1000x1000' }} 1000w,
+                            {{ 'custom-letter--thother.jpg' | file_img_url: '1500x1500' }} 1500w
+                         "
+                         sizes="{{ sizes }}"
+                         alt="Automic Gold custom-made Thother bracelet"
+                    />
+                </div>
+
+            {% elsif product.handle == 'custom-letter-earring' %}
+                <div class="customizer-samples__grid">
+                    <img class="lazyload"
+                         data-srcset="
+                            {{ 'custom-earring--yes.jpg' | file_img_url: '500x500' }} 500w,
+                            {{ 'custom-earring--yes.jpg' | file_img_url: '1000x1000' }} 1000w,
+                            {{ 'custom-earring--yes.jpg' | file_img_url: '1500x1500' }} 1500w
+                         "
+                         sizes="{{ sizes }}"
+                         alt="Automic Gold custom-made YES earring"
+                    />
+                    <img class="lazyload"
+                         data-srcset="
+                            {{ 'custom-earring--yesno.jpg' | file_img_url: '500x500' }} 500w,
+                            {{ 'custom-earring--yesno.jpg' | file_img_url: '1000x1000' }} 1000w,
+                            {{ 'custom-earring--yesno.jpg' | file_img_url: '1500x1500' }} 1500w
+                         "
+                         sizes="{{ sizes }}"
+                         alt="Automic Gold custom-made YES and NO earrings"
+                    />
+                    <img class="lazyload"
+                         data-srcset="
+                            {{ 'custom-earring--theythem.jpg' | file_img_url: '500x500' }} 500w,
+                            {{ 'custom-earring--theythem.jpg' | file_img_url: '1000x1000' }} 1000w,
+                            {{ 'custom-earring--theythem.jpg' | file_img_url: '1500x1500' }} 1500w
+                         "
+                         sizes="{{ sizes }}"
+                         alt="Automic Gold custom-made THEY/THEM earrings"
+                    />
+                    <img class="lazyload"
+                         data-srcset="
+                            {{ 'custom-earring--love.jpg' | file_img_url: '500x500' }} 500w,
+                            {{ 'custom-earring--love.jpg' | file_img_url: '1000x1000' }} 1000w,
+                            {{ 'custom-earring--love.jpg' | file_img_url: '1500x1500' }} 1500w
+                         "
+                         sizes="{{ sizes }}"
+                         alt="Automic Gold custom-made LOVE earring"
+                    />
+                    <img class="lazyload"
+                         data-srcset="
+                            {{ 'custom-earring--lovehope.jpg' | file_img_url: '500x500' }} 500w,
+                            {{ 'custom-earring--lovehope.jpg' | file_img_url: '1000x1000' }} 1000w,
+                            {{ 'custom-earring--lovehope.jpg' | file_img_url: '1500x1500' }} 1500w
+                         "
+                         sizes="{{ sizes }}"
+                         alt="Automic Gold custom-made LOVE and HOPE earrings"
+                    />
+                </div>
+
+            {% elsif product.handle == 'custom-letter-charm' %}
+                <div class="customizer-samples__grid">
+                    <img class="lazyload"
+                         data-srcset="
+                        {{ 'custom-charm--that-bitch.jpg' | file_img_url: '500x500' }} 500w,
+                        {{ 'custom-charm--that-bitch.jpg' | file_img_url: '1000x1000' }} 1000w,
+                        {{ 'custom-charm--that-bitch.jpg' | file_img_url: '1500x1500' }} 1500w
+                     "
+                         sizes="{{ sizes }}"
+                         alt="Automic Gold custom-made THAT BITCH charm"
+                    />
+                    <img class="lazyload"
+                         data-srcset="
+                        {{ 'custom-charm--no.jpg' | file_img_url: '500x500' }} 500w,
+                        {{ 'custom-charm--no.jpg' | file_img_url: '1000x1000' }} 1000w,
+                        {{ 'custom-charm--no.jpg' | file_img_url: '1500x1500' }} 1500w
+                     "
+                         sizes="{{ sizes }}"
+                         alt="Automic Gold custom-made NO charms"
+                    />
+                    <img class="lazyload"
+                         data-srcset="
+                        {{ 'custom-charm--16.jpg' | file_img_url: '500x500' }} 500w,
+                        {{ 'custom-charm--16.jpg' | file_img_url: '1000x1000' }} 1000w,
+                        {{ 'custom-charm--16.jpg' | file_img_url: '1500x1500' }} 1500w
+                     "
+                         sizes="{{ sizes }}"
+                         alt="Automic Gold custom-made 16 charm"
+                    />
+                </div>
+
+            {% elsif product.handle == 'custom-letter-ring' %}
+                <div class="customizer-samples__grid">
+                    <img class="lazyload"
+                         data-srcset="
+                            {{ 'custom-ring--k.jpg' | file_img_url: '1000x1000' }} 1000w,
+                            {{ 'custom-ring--k.jpg' | file_img_url: '750x750' }} 750w,
+                        "
+                         sizes="{{ sizes }}"
+                         alt="Automic Gold custom-made K initial ring"
+                    />
+
+                    <img class="lazyload"
+                         data-srcset="
+                            {{ 'custom-ring--no.jpg' | file_img_url: '1000x1000' }} 1000w,
+                            {{ 'custom-ring--no.jpg' | file_img_url: '750x750' }} 750w,
+                        "
+                         sizes="{{ sizes }}"
+                         alt="Automic Gold custom-made NO ring"
+                    />
+                </div>
+            {% endif %}
+        </div> {% endcomment %}
+
+        <section class="product__description page-width">
+            <h2 class="product__section-heading">The Deets</h2>
+
+            <div class="product__description-text rte" itemprop="description">
+                {{ product.description }}
+            </div>
+
+            <div class="product__specifications">
+                {% include 'product-specifications' %}
+            </div>
+        </section>
+
+        {% render 'okendo-reviews-widget', product: product %}
+    </div>
+</div>

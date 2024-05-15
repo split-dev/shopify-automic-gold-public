@@ -1,0 +1,32 @@
+{{ 'faq-list.out.css' | asset_url | stylesheet_tag }}
+
+<div class="faq-list page-width faq-list--{{ section.id }}">
+  <div class="faq-list__title">
+    <a href="{{section.settings.url}}">< Back</a>
+    <h2>{{ page.title }}</h2>
+  </div>
+  <div class="faq-list__head-tabs">
+  </div>
+  <div class="faq-list__quests">
+      
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.main-faq-list.name",
+  "class": "section",
+  "settings": [
+    {
+      "type": "url",
+      "id": "url",
+      "label": "Select back url"
+    }
+  ],
+  "presets": [
+      {
+        "name": "Faq list info"
+      }
+    ]
+}
+{% endschema %}

@@ -1,0 +1,132 @@
+{% if product.images.size > 1 %}
+    <div>
+        <div class="slider swipe" data-js="slider">
+            <div class="swipe-wrap">
+                {% for image in product.images %}
+                    <img class="swipe__element lazyload"
+                        alt="{{ image.alt | escape }}"
+                        data-srcset="
+                            {{ image.src | img_url: '500x500' }} 500w,
+                            {{ image.src | img_url: '750x750' }} 750w,
+                            {{ image.src | img_url: '922x922' }} 922w,
+                            {{ image.src | img_url: '1000x1000' }} 1000w,
+                            {{ image.src | img_url: '1125x1125' }} 1125w,
+                            {{ image.src | img_url: '1242x1242' }} 1242w,
+                            {{ image.src | img_url: '1382x1382' }} 1382w,
+                            {{ image.src | img_url: '2000x2000' }} 2000w
+                        "
+                        sizes="
+                            (max-width: 767.98px) calc(100vw),
+                            (min-width: 768px) calc(100vw * 0.6)
+                        "
+                    />
+                {% endfor %}
+
+                {% if product.metafields.product_gallery.video != blank %}
+                <video class="swipe__element" loop muted autoplay playsinline
+                    poster="{{ 'loading-image.png' | file_img_url: '720x720', crop: 'center' }}">
+                    <source src="{{ product.metafields.product_gallery.video | media_tag }}" type="video/mp4">
+                </video>
+                {% endif %}
+
+            </div>
+
+            <button class="swipe-controls__prev" data-js="slider-prev">
+                <svg role="presentation" width="12px" height="26px" viewBox="0 0 12 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <title>Chevron pointing left</title>
+                    <g id="chevron-left" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <polygon id="Rectangle-4" fill="white" transform="translate(6.000000, 6.500000) scale(-1, 1) translate(-6.000000, -6.500000) " points="1.89633299 0 12 13 8.9688999 13 0.174802103 1.68497237 1.0658141e-13 1.46006123"></polygon>
+                        <polygon id="Rectangle-4-Copy" fill="white" transform="translate(6.000000, 19.500000) scale(-1, 1) translate(-6.000000, -19.500000) " points="8.95505408 13 12 13 1.85018027 26 9.9475983e-14 24.4697311"></polygon>
+                    </g>
+                </svg>
+            </button>
+            <button class="swipe-controls__next" data-js="slider-next">
+                <svg role="presentation" width="12px" height="26px" viewBox="0 0 12 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <title>Chevron pointing right</title>
+                    <g id="Artboard-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <polygon id="Rectangle-4" fill="white" points="1.89633299 0 12 13 8.9688999 13 0.174802103 1.68497237 1.0658141e-13 1.46006123"></polygon>
+                        <polygon id="Rectangle-4-Copy" fill="white" points="8.95505408 13 12 13 1.85018027 26 9.9475983e-14 24.4697311"></polygon>
+                    </g>
+                </svg>
+            </button>
+
+            <div class="swipe-note" data-js="photo-note">
+                <button class="swipe-note__toggle" data-js="photo-note-toggle">
+                    <svg role="presentation" width="28px" height="28px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <title>Note about Automic Gold images</title>
+                        <g id="Product" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Artboard">
+                                <g id="button" transform="translate(1.000000, 1.000000)">
+                                    <circle id="background-circle" stroke="#A974FF" cx="11" cy="11" r="11.5"></circle>
+                                    <path d="M12,14.04 L10.06,14.04 L10.06,10.72 C11.64,10.18 13.26,9.52 13.26,7.68 C13.26,6.58 12.38,5.64 11.16,5.64 C9.86,5.64 9.02,6.5 9.02,7.88 L9.02,8.04 L7.2,8.04 L7.2,7.96 C7.2,5.62 9.04,4 11.16,4 C13.46,4 15.08,5.88 15.08,7.62 C15.08,10.12 13.52,11.06 12,11.76 L12,14.04 Z M12.08,18.24 L9.98,18.24 L9.98,15.92 L12.08,15.92 L12.08,18.24 Z" id="question-mark" fill="#A974FF" fill-rule="nonzero"></path>
+                                    <g id="cross" transform="translate(7.000000, 7.000000)" stroke="#FF9E70" stroke-linecap="square">
+                                        <path d="M0,0 L8,8" id="Line-Copy"></path>
+                                        <path d="M0,0 L8,8" id="Line-Copy-2" transform="translate(4.000000, 4.000000) scale(-1, 1) translate(-4.000000, -4.000000) "></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </button>
+
+                <div class="swipe-note__contents">
+                    <div class="swipe-note__text">
+                        We never retouch people.<br/>
+                        It’s not a campaign. It’s honesty.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slider-thumbnails" data-js="slider-thumbnail-container">
+        {% if product.metafields.product_gallery.video %}
+            <div role="button" data-js="slider-thumbnail" data-js-index="{% increment index %}" class="slider-thumbnails__dot-container">
+                <div class="slider-thumbnails__dot"></div>
+            </div>
+        {% endif %}
+
+        {% for image in product.images %}
+            <div role="button" data-js="slider-thumbnail" data-js-index="{% increment index %}" class="slider-thumbnails__dot-container">
+                <div class="slider-thumbnails__dot"></div>
+            </div>
+        {% endfor %}
+    </div>
+
+    {% comment %}
+        Output list of photo ids so that they can be referenced later by their index
+        Note: Account for video slide
+    {% endcomment %}
+
+    <script type="text/javascript">
+        window.galleryImages = [
+            {% if product.metafields.product_gallery.video %}null,{% endif %}
+            {% for image in product.images %}
+            {{ image.id }},
+            {% endfor %}
+        ];
+    </script>
+
+{% endif %}
+
+{% if product.images.size == 1 %}
+    {% for image in product.images %}
+        <img class=""
+             alt="{{ image.alt | escape }}"
+             srcset="
+                {{ image.src | img_url: '500x500' }} 500w,
+                {{ image.src | img_url: '750x750' }} 750w,
+                {{ image.src | img_url: '922x922' }} 922w,
+                {{ image.src | img_url: '1000x1000' }} 1000w,
+                {{ image.src | img_url: '1125x1125' }} 1125w,
+                {{ image.src | img_url: '1242x1242' }} 1242w,
+                {{ image.src | img_url: '1382x1382' }} 1382w,
+                {{ image.src | img_url: '2000x2000' }} 2000w
+             "
+             sizes="
+                (max-width: 767.98px) calc(100vw),
+                (min-width: 768px) calc(100vw * 0.6)
+             "
+        />
+    {% endfor %}
+{% endif %}

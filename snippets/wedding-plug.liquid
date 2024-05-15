@@ -1,0 +1,35 @@
+<div class="wedding-plug" data-js="pgrid-plug">
+    <div class="wedding-plug__image">
+        <picture>
+            <source
+                data-srcset="
+                    {{ 'wedding-plug--mobile.jpg' | file_img_url: '1440x960' }} 1440w,
+                    {{ 'wedding-plug--mobile.jpg' | file_img_url: '720x480' }} 720w,
+                    {{ 'wedding-plug--mobile.jpg' | file_img_url: '360x240' }} 360w
+                "
+                sizes="100vw"
+                media="(max-width: 767.98px)"
+            />
+            <img
+                class="lazyload"
+                data-srcset="
+                    {{ 'wedding-plug--desktop.jpg' | file_img_url: '1440x1440' }} 1440w,
+                    {{ 'wedding-plug--desktop.jpg' | file_img_url: '720x720' }} 720w,
+                    {{ 'wedding-plug--desktop.jpg' | file_img_url: '360x360' }} 360w
+                "
+                sizes="
+                    (min-width: 768px) and (max-width: 1199.98px) calc((100vw - 120px) * 0.66),
+                    (min-width: 1200px) calc((100vw - 180px) * 0.5)
+                "
+                alt="Automic Gold wedding bands"
+            />
+        </picture>
+    </div>
+
+    <div class="wedding-plug__text v-center">
+        <h2>Wedding rings<br/>are here!</h2>
+        <p>Automic Gold’s very own line of wedding rings is sustainably made, responsibly sized and ethically sourced.</p>
+
+        <a class="btn btn--small" href="{{ shop.url }}/collections/wedding">Wedding collection</a>
+    </div>
+</div>

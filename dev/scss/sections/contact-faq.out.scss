@@ -1,0 +1,27 @@
+@import "../settings/variables";
+@import "../settings/bootstrap-media";
+
+.contact-faq {
+    &-wrapper {
+        text-align: center;
+        max-width: 360px;
+        margin: 0 auto;
+        @include media-breakpoint-down(sm) {
+            max-width: 240px;
+        }
+    }
+    &-title {
+        color: #18084d;
+        line-height: 100% !important;
+        @include media-breakpoint-down(sm) {
+            line-height: 128% !important;
+        }
+    }
+    &-subtitle {
+        color: #18084d;
+        line-height: 156%;
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
+    }
+}

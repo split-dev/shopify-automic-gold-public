@@ -1,0 +1,190 @@
+<div class="related-products">
+    {% if
+        product.handle == 'garnet-ring' or
+        product.handle == 'amethyst-ring' or
+        product.handle == 'aquamarine-ring' or
+        product.handle == 'diamond-ring' or
+        product.handle == 'emerald-ring' or
+        product.handle == 'moonstone-ring' or
+        product.handle == 'ruby-ring' or
+        product.handle == 'peridot-ring' or
+        product.handle == 'sapphire-ring' or
+        product.handle == 'opal-ring' or
+        product.handle == 'blue-topaz-ring' or
+        product.handle == 'turquoise-ring'
+    %}
+        {% assign sizes = '
+            (max-width: 479px) calc((100vw - 30px) * 0.25),
+            (min-width: 480px) and (max-width: 767.98px) calc((100vw - 60px) * 0.125),
+            (min-width: 768px) calc((100vw - 120px) * 0.125)'
+        %}
+        <h2 class="related-products__header product__section-heading">Birthstone Collection</h2>
+        <div class="pgrid dense-six related-products__products {{ product.handle }}">
+                {% include 'product-card', product: all_products.garnet-ring, class: 'product-card-item garnet-ring', sizes: sizes %}
+                {% include 'product-card', product: all_products.amethyst-ring, class: 'product-card-item amethyst-ring', sizes: sizes %}
+                {% include 'product-card', product: all_products.aquamarine-ring, class: 'product-card-item aquamarine-ring', sizes: sizes %}
+                {% include 'product-card', product: all_products.diamond-ring, class: 'product-card-item diamond-ring', sizes: sizes %}
+                {% include 'product-card', product: all_products.emerald-ring, class: 'product-card-item emerald-ring', sizes: sizes %}
+                {% include 'product-card', product: all_products.moonstone-ring, class: 'product-card-item moonstone-ring', sizes: sizes %}
+                {% include 'product-card', product: all_products.ruby-ring, class: 'product-card-item ruby-ring', sizes: sizes %}
+                {% include 'product-card', product: all_products.peridot-ring, class: 'product-card-item peridot-ring', sizes: sizes %}
+                {% include 'product-card', product: all_products.sapphire-ring, class: 'product-card-item sapphire-ring', sizes: sizes %}
+                {% include 'product-card', product: all_products.opal-ring, class: 'product-card-item opal-ring', sizes: sizes %}
+                {% include 'product-card', product: all_products.blue-topaz-ring, class: 'product-card-item blue-topaz-ring', sizes: sizes %}
+                {% include 'product-card', product: all_products.turquoise-ring, class: 'product-card-item turquoise-ring', sizes: sizes %}
+        </div>
+    {% elsif
+        product.handle == 'teeny-tiny-circle-earring' or
+        product.handle == 'tiny-circle-earring' or
+        product.handle == 'medium-circle-earring' or
+        product.handle == 'large-circle-earring'
+    %}
+        {% assign sizes = '
+            (max-width: 479px) calc((100vw - 30px - 7px) * 0.5 - 2px),
+            (min-width: 480px) and (max-width: 767.98px) calc((100vw - 60px - 7px) * 0.5 - 2px),
+            (min-width: 768px) calc((800px - 15px) * 0.4 - 2px)'
+        %}
+            <h2 class="related-products__header product__section-heading">Circle studs are available in 4 sizes</h2>
+            <div class="pgrid related-products__products {{ product.handle }}">
+                {% include 'product-card', product: all_products.teeny-tiny-circle-earring, class: 'product-card-item teeny-tiny-circle-earring', sizes: sizes %}
+                {% include 'product-card', product: all_products.tiny-circle-earring, class: 'product-card-item tiny-circle-earring', sizes: sizes %}
+                {% include 'product-card', product: all_products.medium-circle-earring, class: 'product-card-item medium-circle-earring', sizes: sizes %}
+                {% include 'product-card', product: all_products.large-circle-earring, class: 'product-card-item large-circle-earring', sizes: sizes %}
+            </div>
+    {% elsif
+        product.handle == 'tiny-square-earring' or
+        product.handle == 'medium-square-earring'
+    %}
+        {% assign sizes = '
+            (max-width: 479px) calc((100vw - 30px - 7px) * 0.5 - 2px),
+            (min-width: 480px) and (max-width: 767.98px) calc((100vw - 60px - 7px) * 0.5 - 2px),
+            (min-width: 768px) calc((800px - 15px) * 0.4 - 2px)'
+        %}
+            <h2 class="related-products__header product__section-heading">Square studs are available in 2 sizes</h2>
+            <div class="pgrid related-products__products {{ product.handle }}">
+                {% include 'product-card', product: all_products.tiny-square-earring, class: 'tiny-square-earring product-card-item', sizes: sizes %}
+                {% include 'product-card', product: all_products.medium-square-earring, class: 'medium-square-earring product-card-item', sizes: sizes %}
+            </div>
+    {% elsif
+        product.handle == 'tiny-line-earring' or
+        product.handle == 'medium-line-earring' or
+        product.handle == 'tall-line-earring'
+    %}
+        <h2 class="related-products__header product__section-heading">Line studs are available in 3 sizes</h2>
+        <div class="pgrid related-products__products {{ product.handle }}">
+            {% include 'product-card', product: all_products.tiny-line-earring, class: 'tiny-line-earring product-card-item', sizes: sizes %}
+            {% include 'product-card', product: all_products.medium-line-earring, class: 'medium-line-earring product-card-item', sizes: sizes %}
+            {% include 'product-card', product: all_products.tall-line-earring, class: 'tall-line-earring product-card-item', sizes: sizes %}
+        </div>
+    {% elsif
+        product.handle == 'small-hoop-earring' or
+        product.handle == 'medium-hoop-earring' or
+        product.handle == 'large-hoop-earring'
+    %}
+        {% comment %} <h2 class="related-products__header product__section-heading">Hoops are available in 3 sizes</h2>
+        <div class="pgrid related-products__products {{ product.handle }}">
+            {% include 'product-card', product: all_products.small-hoop-earring, class: 'small-hoop-earring product-card-item', sizes: sizes %}
+            {% include 'product-card', product: all_products.medium-hoop-earring, class: 'medium-hoop-earring product-card-item', sizes: sizes %}
+            {% include 'product-card', product: all_products.large-hoop-earring, class: 'large-hoop-earring product-card-item', sizes: sizes %}
+        </div> {% endcomment %}
+    {% elsif
+        product.handle == 'mini-huggie-hoops' or
+        product.handle == 'small-huggie-hoops' or
+        product.handle == 'medium-huggie-hoops'
+    %}
+        <h2 class="related-products__header product__section-heading">Huggies are available in 3 sizes</h2>
+        <div class="pgrid related-products__products {{ product.handle }}">
+            {% include 'product-card', product: all_products.mini-huggie-hoops, class: 'smallest-huggie-hoops product-card-item', sizes: sizes %}
+            {% include 'product-card', product: all_products.small-huggie-hoops, class: 'smaller-huggie-hoops product-card-item', sizes: sizes %}
+            {% include 'product-card', product: all_products.medium-huggie-hoops, class: 'small-huggie-hoops product-card-item', sizes: sizes %}
+        </div>
+    {% elsif
+        product.handle == 'mini-threader' or
+        product.handle == 'threader' or
+        product.handle == 'circle-threader'
+    %}
+        <h2 class="related-products__header product__section-heading">Threader earrings family</h2>
+        <div class="pgrid related-products__products {{ product.handle }}">
+            {% include 'product-card', product: all_products.mini-threader, class: 'mini-threader product-card-item', sizes: sizes %}
+            {% include 'product-card', product: all_products.threader, class: 'threader product-card-item', sizes: sizes %}
+            {% include 'product-card', product: all_products.circle-threader, class: 'circle-threader product-card-item', sizes: sizes %}
+        </div>
+    {% elsif
+        product.handle == 'disk-ring' or
+        product.handle == 'diamond-ring' or
+        product.handle == 'opal-ring' or
+        product.handle == 'line-ring' or
+        product.handle == 'bead-chain-ring' or
+        product.handle == 'wave-ring'
+    %}
+        <h2 class="related-products__header product__section-heading">Most Popular Rings</h2>
+        <div class="pgrid related-products__products {{ product.handle }}">
+            {% include 'product-card', product: all_products.bead-chain-ring,  class: 'bead-chain-ring product-card-item', sizes: sizes %}
+            {% include 'product-card', product: all_products.line-ring, class: 'line-ring product-card-item', sizes: sizes %}
+            {% include 'product-card', product: all_products.wave-ring, class: 'wave-ring product-card-item', sizes: sizes %}
+        </div>
+    {% elsif
+        product.handle == 'bar-earring' or
+        product.handle == 'triangle-earring' or
+        product.handle == 'open-circle-earring' or
+        product.handle == 'heart-earring'
+    %}
+        <h2 class="related-products__header product__section-heading">Geometric Earrings</h2>
+        <div class="pgrid related-products__products {{ product.handle }}">
+            {% include 'product-card', product: all_products.bar-earring,  class: 'bar-earring product-card-item', sizes: sizes %}
+            {% include 'product-card', product: all_products.triangle-earring, class: 'triangle-earring product-card-item', sizes: sizes %}
+            {% include 'product-card', product: all_products.open-circle-earring, class: 'open-circle-earring product-card-item', sizes: sizes %}
+            {% include 'product-card', product: all_products.heart-earring, class: 'heart-earring product-card-item', sizes: sizes %}
+        </div>
+    {% elsif
+        product.handle == 'chain-loop' or
+        product.handle == 'line-dangle'
+    %}
+        <h2 class="related-products__header product__section-heading">Loops and Dangles</h2>
+        <div class="pgrid related-products__products {{ product.handle }}">
+            {% include 'product-card', product: all_products.chain-loop,  class: 'chain-loop product-card-item', sizes: sizes %}
+            {% include 'product-card', product: all_products.line-dangle, class: 'line-dangle product-card-item', sizes: sizes %}
+        </div>
+    {% elsif
+        product.handle == 'numbers' or
+        product.handle == 'initials'
+    %}
+        <h2 class="related-products__header product__section-heading">Initials and Numbers</h2>
+        <div class="pgrid related-products__products {{ product.handle }}">
+            {% include 'product-card', product: all_products.numbers,  class: 'numbers product-card-item', sizes: sizes %}
+            {% include 'product-card', product: all_products.initials, class: 'initials product-card-item', sizes: sizes %}
+        </div>
+    {% elsif
+        product.handle == 'chain-bracelet' or
+        product.handle == 'line-bracelet' or
+        product.handle == 'hand-bracelet' or
+        product.handle == 'line-bangle'
+    %}
+        <h2 class="related-products__header product__section-heading">Popular Bracelets</h2>
+        <div class="pgrid related-products__products {{ product.handle }}"> 
+            {% include 'product-card', product: all_products.essential-bracelet, class: 'essential-bracelet product-card-item', sizes: sizes %}
+            {% include 'product-card', product: all_products.bound-together-bracelet, class: 'bound-together-bracelet product-card-item', sizes: sizes %}
+            {% include 'product-card', product: all_products.hand-bracelet, class: 'hand-bracelet product-card-item', sizes: sizes %}
+            {% include 'product-card', product: all_products.line-bangle, class: 'line-bangle product-card-item', sizes: sizes %}
+        </div>
+    {% elsif
+        product.handle == 'connector' or
+        product.handle == 'extender'
+    %}
+        <h2 class="related-products__header product__section-heading">Instant Earring Glow-ups</h2>
+        <div class="pgrid related-products__products {{ product.handle }}">
+            {% include 'product-card', product: all_products.connector,  class: 'connector product-card-item', sizes: sizes %}
+            {% include 'product-card', product: all_products.extender, class: 'extender product-card-item', sizes: sizes %}
+        </div>
+    {% elsif
+        product.handle == 'heart-bracelet' or
+        product.handle == 'heart-necklace'
+    %}
+        <h2 class="related-products__header product__section-heading">Hearts</h2>
+        <div class="pgrid related-products__products {{ product.handle }}">
+            {% include 'product-card', product: all_products.heart-earring, class: 'heart-earring product-card-item', sizes: sizes %}
+            {% include 'product-card', product: all_products.heart-bracelet,  class: 'heart-bracelet product-card-item', sizes: sizes %}
+            {% include 'product-card', product: all_products.heart-necklace, class: 'heart-necklace product-card-item', sizes: sizes %}
+        </div>
+    {% endif %}
+</div>
